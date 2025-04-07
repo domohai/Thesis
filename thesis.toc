@@ -1,0 +1,52 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{LỜI CẢM ƠN}{i}{Doc-Start}%
+\contentsline {chapter}{LỜI CAM ĐOAN}{ii}{Doc-Start}%
+\contentsline {chapter}{TÓM TẮT}{iii}{Doc-Start}%
+\contentsline {chapter}{MỤC LỤC}{iv}{Doc-Start}%
+\contentsline {chapter}{DANH MỤC HÌNH VẼ}{vii}{Doc-Start}%
+\contentsline {chapter}{DANH MỤC BẢNG}{ix}{Doc-Start}%
+\contentsline {chapter}{DANH MỤC TỪ VIẾT TẮT VÀ THUẬT NGỮ}{x}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}KIẾN THỨC NỀN TẢNG}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Giới thiệu}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Tổng quan về công nghệ chuỗi khối}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Công nghệ chuỗi khối}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Các mô hình chuỗi khối}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Hợp đồng thông minh}{7}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Tổng quan về tài chính phi tập trung (DeFi)}{9}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Giới thiệu về tài chính phi tập trung}{9}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Giới thiệu về sàn giao dịch phi tập trung (DEX)}{9}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Tổng quan về token và kiến trúc của token trên các chuỗi khối khác nhau}{10}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Tổng quan về token}{10}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Kiến trúc token trên Ethereum}{11}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Kiến trúc token trên Solana}{13}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}Kiến trúc token trên Aptos}{17}{subsection.1.4.4}%
+\contentsline {section}{\numberline {1.5}Automated Market Maker (AMM)}{20}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Công thức trao đổi token trên AMM}{20}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Công thức tính lượng token share khi cung cấp thanh khoản}{22}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Công thức tính lượng token nhận được khi rút thanh khoản}{23}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Tổng quan về các thư viện và ngôn ngữ lập trình được sử dụng trong khóa luận}{24}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Ngôn ngữ lập trình Typescript, thư viện Reactjs và Nestjs}{24}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Ngôn ngữ lập trình Solidity, Rust và Move}{27}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}Tổng kết chương}{28}{section.1.7}%
+\contentsline {chapter}{\numberline {2}PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG}{29}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Giới thiệu}{29}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Đặc tả yêu cầu}{29}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Mô tả bài toán}{29}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Mô hình ca sử dụng}{31}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Đặc tả ca sử dụng}{38}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Yêu cầu phi chức năng}{52}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Thiết kế kiến trúc}{52}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Tổng quan kiến trúc}{52}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Điểm nổi bật của kiến trúc}{54}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Chi tiết các layer}{54}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Thiết kế chi tiết}{57}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Thiết kế cơ sở dữ liệu}{57}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Thiết kế giao diện}{64}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Cài đặt và thực nghiệm}{70}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Xây dựng ứng dụng}{71}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Thư viện và công cụ sử dụng}{71}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Kết quả thực nghiệm}{71}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Kiểm thử}{75}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Đánh giá hiệu năng và phương hướng cải thiện của hệ thống}{79}{section.3.3}%
+\contentsline {chapter}{KẾT LUẬN}{81}{section.3.3}%
+\contentsline {chapter}{DANH MỤC TÀI LIỆU THAM KHẢO}{83}{chapter*.61}%

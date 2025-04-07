@@ -1,0 +1,105 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{ERC20}{manual}{}{}
+      \list{organization}{1}{%
+        {Ethereum}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-02-17}
+      \field{title}{ERC20 Documentation}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://ethereum.org/vi/developers/docs/standards/tokens/erc-20/
+      \endverb
+      \verb{url}
+      \verb https://ethereum.org/vi/developers/docs/standards/tokens/erc-20/
+      \endverb
+    \endentry
+    \entry{FA}{manual}{}{}
+      \list{organization}{1}{%
+        {Aptos lab}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-02-18}
+      \field{title}{Fungible Asset Standard}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://aptos.dev/en/build/smart-contracts/fungible-asset
+      \endverb
+      \verb{url}
+      \verb https://aptos.dev/en/build/smart-contracts/fungible-asset
+      \endverb
+    \endentry
+    \entry{SPL}{manual}{}{}
+      \list{organization}{1}{%
+        {Solana}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-02-17}
+      \field{title}{SPL Token Program Documentation}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://solana.com/vi/docs/core/tokens
+      \endverb
+      \verb{url}
+      \verb https://solana.com/vi/docs/core/tokens
+      \endverb
+    \endentry
+    \entry{AMM}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=7ba4b3eed18f23b5fc0e7189eea39065}{%
+           family={Tomar},
+           familyi={T\bibinitperiod},
+           given={Pari},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{fullhash}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{fullhashraw}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{bibnamehash}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{authorbibnamehash}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{authornamehash}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{authorfullhash}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \strng{authorfullhashraw}{7ba4b3eed18f23b5fc0e7189eea39065}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-02-19}
+      \field{title}{Constant Product Automated Market Maker: Everything you need to know}
+      \verb{urlraw}
+      \verb https://medium.com/@tomarpari90/constant-product-automated-market-maker-everything-you-need-to-know-5bfeb0251ef2
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@tomarpari90/constant-product-automated-market-maker-everything-you-need-to-know-5bfeb0251ef2
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
