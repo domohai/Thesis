@@ -1,7 +1,7 @@
 \babel@toc {vietnamese}{}\relax 
-\contentsline {chapter}{LỜI CẢM ƠN}{i}{Doc-Start}%
-\contentsline {chapter}{LỜI CAM ĐOAN}{ii}{Doc-Start}%
-\contentsline {chapter}{TÓM TẮT}{iii}{Doc-Start}%
+\contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{Doc-Start}%
+\contentsline {chapter}{DECLARATION}{ii}{Doc-Start}%
+\contentsline {chapter}{ABSTRACT}{iii}{Doc-Start}%
 \contentsline {chapter}{MỤC LỤC}{iv}{Doc-Start}%
 \contentsline {chapter}{DANH MỤC HÌNH VẼ}{vii}{Doc-Start}%
 \contentsline {chapter}{DANH MỤC BẢNG}{ix}{Doc-Start}%
@@ -49,4 +49,4 @@
 \contentsline {section}{\numberline {3.2}Kiểm thử}{75}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Đánh giá hiệu năng và phương hướng cải thiện của hệ thống}{79}{section.3.3}%
 \contentsline {chapter}{KẾT LUẬN}{81}{section.3.3}%
-\contentsline {chapter}{DANH MỤC TÀI LIỆU THAM KHẢO}{83}{chapter*.61}%
+\contentsline {chapter}{DANH MỤC TÀI LIỆU THAM KHẢO}{82}{chapter*.61}%

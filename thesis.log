@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  7 APR 2025 14:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  10 APR 2025 14:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1569,7 +1569,7 @@ Package pdftex.def Info: figures/uet.jpg  used on input line 18.
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/vntex/t5.enc} <./figures/uet.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 57--59
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
@@ -1618,16 +1618,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
 [2
 
 
-] (./chapters/abtract_vi.tex)
+] (./chapters/abtract_en.tex)
 
 [3
 
 
-] (./chapters/abtract_en.tex) (./thesis.toc
+] (./thesis.toc
 
 [4
-
-
 
 
 ]
@@ -2174,14 +2172,12 @@ Package pdftex.def Info: figures/c3/StatsRel.png  used on input line 92.
 
 [79]))
 
-[80] (./chapters/conclusion.tex
+[80] (./chapters/conclusion.tex)
 
 [81
 
 
-])
-
-[82]
+]
 
 Package biblatex Warning: Using fallback definition for \mkbibdatelong.
 (biblatex)                The command should be defined in the .lbx file.
@@ -2215,7 +2211,7 @@ Overfull \hbox (6.81458pt too wide) in paragraph at lines 176--176
 
 
 
-[83
+[82
 
 
 
@@ -2232,24 +2228,24 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C3893436D85B31BA0827612298160E38;10948.
+(rerunfilecheck)             Checksum: F83AB20BFD99E79C11A59253982F20A5;10942.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40233 strings out of 473189
- 758958 string characters out of 5719958
+ 40222 strings out of 473189
+ 758691 string characters out of 5719958
  1733987 words of memory out of 5000000
- 62497 multiletter control sequences out of 15000+600000
+ 62490 multiletter control sequences out of 15000+600000
  667752 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,13n,107p,759b,2199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmbi8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vnr9.pfb>
-Output written on thesis.pdf (95 pages, 3227324 bytes).
+Output written on thesis.pdf (94 pages, 3222078 bytes).
 PDF statistics:
- 1086 PDF objects out of 1200 (max. 8388607)
- 876 compressed objects within 9 object streams
- 278 named destinations out of 1000 (max. 500000)
+ 1082 PDF objects out of 1200 (max. 8388607)
+ 873 compressed objects within 9 object streams
+ 277 named destinations out of 1000 (max. 500000)
  611 words of extra memory for PDF output out of 10000 (max. 10000000)
 
