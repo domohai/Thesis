@@ -1,11 +1,11 @@
 \babel@toc {vietnamese}{}\relax 
+\contentsline {chapter}{ABSTRACT}{}{Doc-Start}%
+\contentsline {chapter}{DECLARATION}{}{Doc-Start}%
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{Doc-Start}%
-\contentsline {chapter}{DECLARATION}{ii}{Doc-Start}%
-\contentsline {chapter}{ABSTRACT}{iii}{Doc-Start}%
-\contentsline {chapter}{MỤC LỤC}{iv}{Doc-Start}%
-\contentsline {chapter}{DANH MỤC HÌNH VẼ}{vii}{Doc-Start}%
-\contentsline {chapter}{DANH MỤC BẢNG}{ix}{Doc-Start}%
-\contentsline {chapter}{DANH MỤC TỪ VIẾT TẮT VÀ THUẬT NGỮ}{x}{chapter*.1}%
+\contentsline {chapter}{TABLE OF CONTENTS}{ii}{Doc-Start}%
+\contentsline {chapter}{LIST OF FIGURES}{v}{Doc-Start}%
+\contentsline {chapter}{LIST OF TABLES}{vii}{Doc-Start}%
+\contentsline {chapter}{DANH MỤC TỪ VIẾT TẮT VÀ THUẬT NGỮ}{viii}{chapter*.1}%
 \contentsline {chapter}{\numberline {1}KIẾN THỨC NỀN TẢNG}{4}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Giới thiệu}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Tổng quan về công nghệ chuỗi khối}{4}{section.1.2}%

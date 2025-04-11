@@ -1,68 +1,71 @@
 \begin{center}
-    \textbf{\large{ABSTRACT}	}
-  \end{center}
-  
-  \addcontentsline{toc}{chapter}{ABSTRACT}
-  
-  \begin{small}
-  
-    \textbf{Abstract:} Khóa luận tập trung nghiên cứu và phát triển ứng dụng
-    LaunchCrypt,
-    một nền tảng đổi mới trong lĩnh vực tài chính phi tập trung (DeFi), nhằm đơn
-    giản hóa
-    quá trình tạo và giao dịch token cho người dùng không có kiến thức chuyên sâu
-    về
-    công nghệ. Để xây dựng nền tảng này, khóa luận đề xuất sử dụng stack công
-    nghệ hiện
-    đại bao gồm ReactJS cho phần frontend, NestJS cho backend, và các ngôn ngữ
-    lập
-    trình hợp đồng thông minh như Move, Solidity, và Rust để hỗ trợ đa chuỗi. Bài toán
-    chính mà
-    khóa luận giải quyết là tạo ra một hệ sinh thái toàn diện cho việc tạo, giao
-    dịch, và
-    phát triển token một cách an toàn và hiệu quả. Để có thể hiểu và áp dụng đúng
-    các
-    công nghệ cho bài toán này, khóa luận trước tiên đã nêu một số kiến thức nền
-    tảng về
-    công nghệ chuỗi khối, hợp đồng thông minh, các nguyên lý hoạt động của DeFi, cũng như các
-    giao thức
-    và chuẩn token trên các chuỗi khối khác nhau. Sau khi tìm hiểu tất cả các
-    kiến thức
-    nền tảng liên quan, khóa luận vận dụng phát triển ba mô đun chính của
-    LaunchCrypt:
-    (1) mô đun tạo token, cho phép người dùng dễ dàng tạo ra token của riêng họ
-    trên các
-    chuỗi được hỗ trợ, (2) mô đun giao dịch token, tự động tạo cặp giao dịch
-    và cung
-    cấp giao diện cho việc mua bán token, và (3) mô đun tốt nghiệp token, quản lý
-    quá
-    trình chuyển token lên các sàn giao dịch phi tập trung lớn hơn khi đạt đủ
-    thanh khoản.
-    Bên cạnh đó, khóa luận cũng phát triển các tính năng bổ sung như stake token,
-    khả năng tương tác, kết nối giữa các đối tượng người dùng cùng với khả năng hỗ
-    trợ đa chuỗi, bao gồm Aptos, Solana và Avalanche. Điều này không chỉ mở rộng
-    phạm vi tiếp cận của dự án mà còn thúc đẩy tính linh hoạt và khả năng tương tác
-    giữa các chuỗi khối khác nhau. Bằng
-    cách cung cấp các công cụ như giao diện Tradingview cho giao dịch nâng cao,
-    tính năng
-    mua/bán tự động và thông tin chi tiết về token, LaunchCrypt không chỉ phục vụ
-    người
-    dùng mới mà còn đáp ứng nhu cầu của các nhà giao dịch có kinh nghiệm. Hơn
-    nữa,
-    việc tích hợp với các giải pháp để hỗ trợ người dùng Web 2.0 thể hiện tầm
-    nhìn dài hạn
-    của dự án trong việc thu hẹp khoảng cách giữa tài chính truyền thống và DeFi.
-    Cuối
-    cùng, khóa luận sẽ đề cập cách triển khai và thử nghiệm nền tảng LaunchCrypt
-    trên
-    môi trường thực tế, đánh giá hiệu quả của giải pháp trong việc giải quyết các
-    thách
-    thức của DeFi, và đưa ra các kết luận cũng như hướng phát triển tiếp theo cho
-    dự án.
-  
-    \textbf{Keywords}: \textit{}
-  
-    % \vspace*{1cm}
-    % \textbf{Keywords}: \textit{SGP, SAT, SAT Encoding, CNF Encoding.}
-  
-  \end{small}
+  \textbf{\large{ABSTRACT}	}
+\end{center}
+
+\addcontentsline{toc}{chapter}{ABSTRACT}
+
+\begin{small}
+
+\textbf{Abstract:} 
+
+
+\textbf{Keywords}: \textit{}
+
+  % \vspace*{1cm}
+  % \textbf{Keywords}: \textit{SGP, SAT, SAT Encoding, CNF Encoding.}
+  % Khoá luận của tôi sẽ được sử dụng một công cụ tên USE (UML-based Specification Environment), công cụ này hỗ trợ đặc tả mô hình theo cú pháp của uml và ocl. Công cụ còn có một plugin là Model Validator. USE Model Validator sẽ hỗ trợ validate mô hình trên các ocl  constraints đã định nghĩa, nó sẽ trả về một object diagram nếu mô hình có thể thoả mãn (SATISFIABLE case) hoặc UNSATISFIABLE. Nhưng mô hình uml và ocl chỉ đặc tả các thuộc tính cấu trúc mà không thể hiện được thuộc tính thời gian (system execution path). Tôi sẽ sử dụng một plugin khác của USE để chuyển đổi mô hình ban đầu thành dạng filmstrip (là mô hình gốc ban đầu và thêm các class Snapshot, OperationCall) để thể hiện system execution path thành dạng sequence of snapshot.
+  % tôi đang viết khoá luận của mình với đề tài: "A SUPPORT TOOL TO SPECIFY AND VERIFY TEMPORAL PROPERTIES IN OCL". Mục tiêu chính của khoá luận là mở rộng ngôn ngữ ocl để hỗ trợ đặc tả thuộc tính thời gian (temporal properties) và sự kiện (event) từ đó kiểm tra tính đúng đắn của mô hình trong kỹ thuật model-driven engineering. Khoá luận của tôi sẽ được sử dụng một công cụ tên USE (UML-based Specification Environment), công cụ này hỗ trợ đặc tả mô hình theo cú pháp của uml và ocl. Công cụ còn có một plugin là Model Validator. USE Model Validator sẽ hỗ trợ validate mô hình trên các ocl  constraints đã định nghĩa, nó sẽ trả về một object diagram nếu mô hình có thể thoả mãn (SATISFIABLE case) hoặc UNSATISFIABLE. Nhưng mô hình uml và ocl chỉ đặc tả các thuộc tính cấu trúc mà không thể hiện được thuộc tính thời gian (system execution path). Tôi sẽ sử dụng một plugin khác của USE để chuyển đổi mô hình ban đầu thành dạng filmstrip (là mô hình gốc ban đầu và thêm các class Snapshot, OperationCall) để thể hiện system execution path thành dạng sequence of snapshot.. tôi muốn bạn đóng vai một giáo sư giúp tôi cấu trúc khoá luận của tôi. Hiện tại tôi đang dự kiến khoá luận sẽ có 5 phần chính. Phần 1 introduction sẽ giới thiệu về bài toán xoay quanh model-driven engineering và việc đảm bảo tính đúng đắn của mô hình và việc validate chúng. Nhưng hiện tại OCL có những giới hạn về việc đặc tả các thuộc tính thời gian và event. Phần 2: Foundational Knowledge sẽ tập trung và các kiến thức nền tảng (kiến thức về mde, ocl, USE tool, Filmstrip model, antlr4, TOCL operators, events trong OOP paradigm, ...). Phần 3: OCL Extension sẽ là phần trình bày về phương pháp mà tôi đã sử dụng (phần đóng góp chính). Khoá luận của tôi sử dụng TOCL operators (always P, sometime P, sometime P before Q, next P, previous P, ...) là kết quả của một bài báo khác, họ áp dụng cho mô hình STM (Snpashot Transition Model) (Khác với Filmstrip của tôi một chút). Tôi có tận dụng kết quả đó và điều chỉnh cho mô hình Filmstrip của tôi, bên cạnh đó  tôi còn mở rộng định nghĩa event cho ocl (isCalled(operation) =  operation (call/start/end) events in OOP paradigm, becomesTrue(P) = state change events in OOP paradigm). Phần 4: Implementation and Experiments, tôi thực hiện phương pháp đưa ra bằng việc phát triển một plugin của công cụ USE. Plugin này sẽ thực hiện việc chuyển đổi TOCL (định nghĩa dựa trên UML&OCL Application model) sang OCL thông thường (Định nghĩa trên Filmstrip model). Phần 5 là kết luận.  
+\end{small}
+  % Khóa luận tập trung nghiên cứu và phát triển ứng dụng
+  %   LaunchCrypt,
+  %   một nền tảng đổi mới trong lĩnh vực tài chính phi tập trung (DeFi), nhằm đơn
+  %   giản hóa
+  %   quá trình tạo và giao dịch token cho người dùng không có kiến thức chuyên sâu
+  %   về
+  %   công nghệ. Để xây dựng nền tảng này, khóa luận đề xuất sử dụng stack công
+  %   nghệ hiện
+  %   đại bao gồm ReactJS cho phần frontend, NestJS cho backend, và các ngôn ngữ
+  %   lập
+  %   trình hợp đồng thông minh như Move, Solidity, và Rust để hỗ trợ đa chuỗi. Bài toán
+  %   chính mà
+  %   khóa luận giải quyết là tạo ra một hệ sinh thái toàn diện cho việc tạo, giao
+  %   dịch, và
+  %   phát triển token một cách an toàn và hiệu quả. Để có thể hiểu và áp dụng đúng
+  %   các
+  %   công nghệ cho bài toán này, khóa luận trước tiên đã nêu một số kiến thức nền
+  %   tảng về
+  %   công nghệ chuỗi khối, hợp đồng thông minh, các nguyên lý hoạt động của DeFi, cũng như các
+  %   giao thức
+  %   và chuẩn token trên các chuỗi khối khác nhau. Sau khi tìm hiểu tất cả các
+  %   kiến thức
+  %   nền tảng liên quan, khóa luận vận dụng phát triển ba mô đun chính của
+  %   LaunchCrypt:
+  %   (1) mô đun tạo token, cho phép người dùng dễ dàng tạo ra token của riêng họ
+  %   trên các
+  %   chuỗi được hỗ trợ, (2) mô đun giao dịch token, tự động tạo cặp giao dịch
+  %   và cung
+  %   cấp giao diện cho việc mua bán token, và (3) mô đun tốt nghiệp token, quản lý
+  %   quá
+  %   trình chuyển token lên các sàn giao dịch phi tập trung lớn hơn khi đạt đủ
+  %   thanh khoản.
+  %   Bên cạnh đó, khóa luận cũng phát triển các tính năng bổ sung như stake token,
+  %   khả năng tương tác, kết nối giữa các đối tượng người dùng cùng với khả năng hỗ
+  %   trợ đa chuỗi, bao gồm Aptos, Solana và Avalanche. Điều này không chỉ mở rộng
+  %   phạm vi tiếp cận của dự án mà còn thúc đẩy tính linh hoạt và khả năng tương tác
+  %   giữa các chuỗi khối khác nhau. Bằng
+  %   cách cung cấp các công cụ như giao diện Tradingview cho giao dịch nâng cao,
+  %   tính năng
+  %   mua/bán tự động và thông tin chi tiết về token, LaunchCrypt không chỉ phục vụ
+  %   người
+  %   dùng mới mà còn đáp ứng nhu cầu của các nhà giao dịch có kinh nghiệm. Hơn
+  %   nữa,
+  %   việc tích hợp với các giải pháp để hỗ trợ người dùng Web 2.0 thể hiện tầm
+  %   nhìn dài hạn
+  %   của dự án trong việc thu hẹp khoảng cách giữa tài chính truyền thống và DeFi.
+  %   Cuối
+  %   cùng, khóa luận sẽ đề cập cách triển khai và thử nghiệm nền tảng LaunchCrypt
+  %   trên
+  %   môi trường thực tế, đánh giá hiệu quả của giải pháp trong việc giải quyết các
+  %   thách
+  %   thức của DeFi, và đưa ra các kết luận cũng như hướng phát triển tiếp theo cho
+  %   dự án.
