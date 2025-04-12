@@ -1,41 +1,41 @@
 \babel@toc {vietnamese}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Cấu trúc của Mint Account trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{15}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Account relationship trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{16}{figure.caption.8}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Associated Token Account trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{17}{figure.caption.9}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Quan hệ giữa các loại tài khoản trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{17}{figure.caption.10}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Mối quan hệ giữa Metadata và Fungible Store trong Aptos.~\blx@tocontentsinit {0}\cite {FA}}}{19}{figure.caption.11}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Trạng thái của AMM trước và sau 1 lệnh bán dX.~\blx@tocontentsinit {0}\cite {AMM}}}{21}{figure.caption.12}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Sử dụng Typescript SDK để tương tác với chuỗi khối.}}{26}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Cấu trúc của Mint Account trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{15}{figure.caption.3}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Account relationship trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{15}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Associated Token Account trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{16}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Quan hệ giữa các loại tài khoản trên solana.~\blx@tocontentsinit {0}\cite {SPL}}}{16}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Mối quan hệ giữa Metadata và Fungible Store trong Aptos.~\blx@tocontentsinit {0}\cite {FA}}}{18}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Trạng thái của AMM trước và sau 1 lệnh bán dX.~\blx@tocontentsinit {0}\cite {AMM}}}{20}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Sử dụng Typescript SDK để tương tác với chuỗi khối.}}{25}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Biểu đồ ca sử dụng tổng quát.}}{31}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Biểu đồ phân rã ca sử dụng quản lý tài khoản.}}{32}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Biểu đồ phân rã ca sử dụng giao dịch token.}}{33}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Biểu đồ phân rã ca sử dụng gửi tiết kiệm token.}}{34}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Biểu đồ phân rã ca sử dụng bình luận.}}{35}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Biểu đồ phân rã ca sử dụng tạo mới token.}}{36}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Biểu đồ phân rã ca sử dụng điều chỉnh hệ số phí.}}{37}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Biểu đồ tuần tự ca sử dụng quản lý tài khoản.}}{39}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Biểu đồ tuần tự ca sử dụng giao dịch token.}}{41}{figure.caption.24}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Biểu đồ tuần tự ca sử dụng tự động giao dịch token.}}{43}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Biểu đồ tuần tự ca sử dụng gửi tiết kiệm token.}}{45}{figure.caption.28}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Biểu đồ tuần tự ca sử dụng bình luận.}}{47}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Biểu đồ tuần tự ca sử dụng tạo token.}}{49}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Biểu đồ tuần tự ca sử dụng điều chỉnh hệ số phí.}}{51}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Sơ đồ kiến trúc tổng quan của hệ thống.}}{53}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Biểu đồ thực thể liên kết.}}{58}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Biểu đồ lớp persistence.}}{59}{figure.caption.38}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Thiết kế trang chủ.}}{64}{figure.caption.46}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Thiết kế trang thông tin người dùng.}}{65}{figure.caption.47}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Thiết kế trang gửi tiết kiệm token.}}{66}{figure.caption.48}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Thiết kế trang hiển thị các cặp giao dịch.}}{67}{figure.caption.49}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Thiết kế trang thống kê thông số.}}{68}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces Thiết kế trang giao dịch token.}}{69}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Biểu đồ ca sử dụng tổng quát.}}{31}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Biểu đồ phân rã ca sử dụng quản lý tài khoản.}}{32}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Biểu đồ phân rã ca sử dụng giao dịch token.}}{33}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Biểu đồ phân rã ca sử dụng gửi tiết kiệm token.}}{34}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Biểu đồ phân rã ca sử dụng bình luận.}}{35}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Biểu đồ phân rã ca sử dụng tạo mới token.}}{36}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Biểu đồ phân rã ca sử dụng điều chỉnh hệ số phí.}}{37}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Biểu đồ tuần tự ca sử dụng quản lý tài khoản.}}{39}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Biểu đồ tuần tự ca sử dụng giao dịch token.}}{41}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Biểu đồ tuần tự ca sử dụng tự động giao dịch token.}}{43}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Biểu đồ tuần tự ca sử dụng gửi tiết kiệm token.}}{45}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Biểu đồ tuần tự ca sử dụng bình luận.}}{47}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Biểu đồ tuần tự ca sử dụng tạo token.}}{49}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Biểu đồ tuần tự ca sử dụng điều chỉnh hệ số phí.}}{51}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Sơ đồ kiến trúc tổng quan của hệ thống.}}{53}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Biểu đồ thực thể liên kết.}}{58}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Biểu đồ lớp persistence.}}{59}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Thiết kế trang chủ.}}{64}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Thiết kế trang thông tin người dùng.}}{65}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Thiết kế trang gửi tiết kiệm token.}}{66}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Thiết kế trang hiển thị các cặp giao dịch.}}{67}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Thiết kế trang thống kê thông số.}}{68}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Thiết kế trang giao dịch token.}}{69}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Giao diện màn hình chính của ứng dụng.}}{72}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Giao diện chức năng quản lý thông tin cá nhân.}}{72}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Giao diện chức năng tạo token mới.}}{73}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Giao diện chức năng gửi tiết kiệm token.}}{73}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Giao diện chức năng thao tác với các cặp giao dịch.}}{74}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Giao diện màn chức năng giao dịch token.}}{74}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Giao diện màn hình thống kê thông số của ứng dụng.}}{75}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Giao diện màn hình chính của ứng dụng.}}{72}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Giao diện chức năng quản lý thông tin cá nhân.}}{72}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Giao diện chức năng tạo token mới.}}{73}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Giao diện chức năng gửi tiết kiệm token.}}{73}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Giao diện chức năng thao tác với các cặp giao dịch.}}{74}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Giao diện màn chức năng giao dịch token.}}{74}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Giao diện màn hình thống kê thông số của ứng dụng.}}{75}{figure.caption.55}%

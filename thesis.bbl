@@ -19,87 +19,46 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
-    \entry{ERC20}{manual}{}{}
-      \list{organization}{1}{%
-        {Ethereum}%
+    \entry{MDE}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=cd9a678ef0b3bbf984c7b14f37bcd23b}{%
+           family={France},
+           familyi={F\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c2b5a72fd30b6844022c3e1189390301}{%
+           family={Rumpe},
+           familyi={R\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
       }
+      \strng{namehash}{24376de1522eb823479598a13aec78fe}
+      \strng{fullhash}{24376de1522eb823479598a13aec78fe}
+      \strng{fullhashraw}{24376de1522eb823479598a13aec78fe}
+      \strng{bibnamehash}{24376de1522eb823479598a13aec78fe}
+      \strng{authorbibnamehash}{24376de1522eb823479598a13aec78fe}
+      \strng{authornamehash}{24376de1522eb823479598a13aec78fe}
+      \strng{authorfullhash}{24376de1522eb823479598a13aec78fe}
+      \strng{authorfullhashraw}{24376de1522eb823479598a13aec78fe}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-02-17}
-      \field{title}{ERC20 Documentation}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://ethereum.org/vi/developers/docs/standards/tokens/erc-20/
-      \endverb
-      \verb{url}
-      \verb https://ethereum.org/vi/developers/docs/standards/tokens/erc-20/
-      \endverb
-    \endentry
-    \entry{FA}{manual}{}{}
-      \list{organization}{1}{%
-        {Aptos lab}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-02-18}
-      \field{title}{Fungible Asset Standard}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://aptos.dev/en/build/smart-contracts/fungible-asset
-      \endverb
-      \verb{url}
-      \verb https://aptos.dev/en/build/smart-contracts/fungible-asset
-      \endverb
-    \endentry
-    \entry{SPL}{manual}{}{}
-      \list{organization}{1}{%
-        {Solana}%
-      }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-02-17}
-      \field{title}{SPL Token Program Documentation}
-      \field{year}{2025}
-      \verb{urlraw}
-      \verb https://solana.com/vi/docs/core/tokens
-      \endverb
-      \verb{url}
-      \verb https://solana.com/vi/docs/core/tokens
-      \endverb
-    \endentry
-    \entry{AMM}{manual}{}{}
-      \name{author}{1}{}{%
-        {{hash=7ba4b3eed18f23b5fc0e7189eea39065}{%
-           family={Tomar},
-           familyi={T\bibinitperiod},
-           given={Pari},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{fullhash}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{fullhashraw}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{bibnamehash}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{authorbibnamehash}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{authornamehash}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{authorfullhash}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \strng{authorfullhashraw}{7ba4b3eed18f23b5fc0e7189eea39065}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-02-19}
-      \field{title}{Constant Product Automated Market Maker: Everything you need to know}
-      \verb{urlraw}
-      \verb https://medium.com/@tomarpari90/constant-product-automated-market-maker-everything-you-need-to-know-5bfeb0251ef2
+      \field{booktitle}{Future of Software Engineering (FOSE '07)}
+      \field{title}{Model-driven Development of Complex Software: A Research Roadmap}
+      \field{year}{2007}
+      \field{pages}{37\bibrangedash 54}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1109/FOSE.2007.14
       \endverb
-      \verb{url}
-      \verb https://medium.com/@tomarpari90/constant-product-automated-market-maker-everything-you-need-to-know-5bfeb0251ef2
-      \endverb
+      \keyw{Software systems;Model driven engineering;Programming;Computer science;Unified modeling language;Software testing;Systems engineering and theory;Computer industry;Streaming media;Reliability engineering}
     \endentry
   \enddatalist
+  \missing{AMM}
+  \missing{ERC20}
+  \missing{FA}
+  \missing{SPL}
 \endrefsection
 \endinput
 

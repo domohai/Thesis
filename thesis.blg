@@ -1,14 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'thesis.blg'
-[207] biber-MSWIN64:340> INFO - === 
-[264] Biber.pm:420> INFO - Reading 'thesis.bcf'
-[415] Biber.pm:994> INFO - Found 4 citekeys in bib section 0
-[445] Biber.pm:4463> INFO - Processing section 0
-[459] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[556] bibtex.pm:1713> INFO - LaTeX decoding ...
-[595] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[654] UCollate.pm:68> INFO - Overriding locale 'vi-VN' defaults 'variable = shifted' with 'variable = non-ignorable'
-[655] UCollate.pm:68> INFO - Overriding locale 'vi-VN' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[655] Biber.pm:4283> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'vi-VN'
-[665] bbl.pm:676> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
-[667] bbl.pm:779> INFO - Output to thesis.bbl
+[319] biber-MSWIN64:340> INFO - === 
+[439] Biber.pm:420> INFO - Reading 'thesis.bcf'
+[588] Biber.pm:994> INFO - Found 5 citekeys in bib section 0
+[624] Biber.pm:4463> INFO - Processing section 0
+[662] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[758] bibtex.pm:1713> INFO - LaTeX decoding ...
+[773] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[889] UCollate.pm:68> INFO - Overriding locale 'vi-VN' defaults 'variable = shifted' with 'variable = non-ignorable'
+[890] UCollate.pm:68> INFO - Overriding locale 'vi-VN' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[890] Biber.pm:4283> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'vi-VN'
+[893] bbl.pm:676> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[895] bbl.pm:779> INFO - Output to thesis.bbl
+[895] Biber.pm:131> WARN - I didn't find a database entry for 'ERC20' (section 0)
+[896] Biber.pm:131> WARN - I didn't find a database entry for 'SPL' (section 0)
+[896] Biber.pm:131> WARN - I didn't find a database entry for 'FA' (section 0)
+[896] Biber.pm:131> WARN - I didn't find a database entry for 'AMM' (section 0)
+[897] Biber.pm:133> INFO - WARNINGS: 4
