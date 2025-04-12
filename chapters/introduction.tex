@@ -11,7 +11,7 @@
 
 % \subsection*{Background and Significance of the Study}
 
-\hspace{\parindent}Model-Driven Engineering (MDE) approaches system development 
+\hspace{\parindent}Model-Driven Engineering (MDE) \cite{MDE} approaches system development 
 by emphasizing models over source code. Through modeling languages such as UML 
 and OCL, developers construct models that abstract the system complexity and serve as primary development artifacts. 
 These models can then be transformed into executable code, documentation, and test cases using automated 
@@ -28,35 +28,45 @@ This limitation stems from the absence of built-in constructs for handling time 
 
 % \subsection*{Research Objectives}
 
-In this work, we aim to extend OCL to support temporal properties and events,
-
-\hspace{\parindent}
-
-% \subsection*{Research Methodology}
-Để đạt được các mục tiêu trên, khóa luận sẽ áp dụng các phương pháp nghiên cứu
-sau:
-% \begin{itemize}
-%   \item \textbf{Nghiên cứu lý thuyết}:
-
-%   \item \textbf{Phát triển phần mềm}: 
-
-%   \item \textbf{Thử nghiệm và đánh giá}:
-% \end{itemize}
+In this thesis, we extend OCL to support the specification of temporal properties and 
+event-based behaviors, aiming to enhance its expressiveness in modeling dynamic system 
+aspects. Our approach is implemented within the UML-based Specification Environment (USE) \cite{USE}, 
+a tool that supports specification, and validation of software systems using UML and OCL. 
+USE allows modelers to work with various UML diagrams and define constraints through invariants and 
+pre-/postconditions. It also provides validation and verification capabilities via the model 
+validator component, which translates models and properties into relational logic using Kodkod. 
+As a realization of this thesis, we worked on a plugin for USE that called USE-TemporalOCL, 
+which allows users to specify temporal properties and events in OCL.
 
 % \subsection*{Structure of the Thesis}
-Cấu trúc khóa luận gồm 4 phần như sau:
+The thesis is structured as follows:
 \begin{itemize}
-  \item \textbf{Chương 1}: 
+  \item \textbf{Chapter 1}: This chapter lays the foundation for the background of this thesis.
+  We explore theoretical concepts and tools that are used in this thesis.
+  
+  \item \textbf{Chapter 2}: This chapter presents our OCL extension to specify temporal properties and events.
 
-  \item \textbf{Chương 2}: 
+  \item \textbf{Chapter 3}: This chapter describes the implementation and evaluation of the USE-TemporalOCL plugin. 
 
-  \item \textbf{Chương 3}: 
-
-  \item \textbf{Kết luận}: 
+  \item \textbf{Conclusion}: This chapter summarizes the contributions of this thesis and discusses future work.
 \end{itemize}
 
+Each chapter starts with an \textit{Introduction} section, then ends with a \textit{Summary} section.
+
+% \subsection*{Research Methodology}
+% To achieve the above objectives, the thesis will apply the following research methods
+%:
+% \begin{itemize}
+%   \item \textbf{Theoretical Research}:
+
+%   \item \textbf{Software Development}: 
+
+%   \item \textbf{Experimentation and Evaluation}:
+% \end{itemize}
+
+
 % Model-driven engineering (MDE) takes a view on system development focusing on
-% models than on code. Using modeling languages like UML and OCL, developers create models 
+% models rather than on code. Using modeling languages like UML and OCL, developers create models 
 % that abstract the system’s complexity and serve as the central artifacts 
 % in MDE. From these models, code, documentation, and test cases can be 
 % automatically generated through model transformations. Techniques like validation 
