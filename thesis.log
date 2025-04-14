@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  12 APR 2025 15:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  14 APR 2025 08:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -316,16 +316,11 @@ Package: babel 2025/03/10 v25.5 The multilingual framework for pdfLaTeX, LuaLaTe
  (c:/texlive/2025/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count297
- (c:/texlive/2025/texmf-dist/tex/generic/babel-vietnamese/vietnamese.ldf
-Language: vietnamese 
- Loading definitions for the Vietnamese font encoding (c:/texlive/2025/texmf-dist/tex/latex/vntex/t5enc.def
-File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
-LaTeX Font Info:    Redeclaring font encoding T5 on input line 75.
-)
-Package babel Info: Making " an active character on input line 147.
-)) (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/vi/babel-vietnamese.tex
-Package babel Info: Importing font and identification data for vietnamese
-(babel)             from babel-vi.ini. Reported on input line 11.
+ (c:/texlive/2025/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+)) (c:/texlive/2025/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
 ) (c:/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -1365,19 +1360,11 @@ Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
-
-
-Package csquotes Warning: No style for language 'vietnamese'.
-(csquotes)                Using fallback style on input line 133.
-
-Package csquotes Info: Redefining alias 'default' -> 'fallback'.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T5+lmr on input line 133.
-(c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmr.fd
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmr.fd
 File: t5lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./thesis.aux
-Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported  on input line 11.
-
 
 LaTeX Warning: Label `fig:feature_interaction_example' multiply defined.
 
@@ -1568,13 +1555,11 @@ Package hyperref Info: Link coloring OFF on input line 133.
 (c:/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
-Package biblatex Info: Trying to load language 'vietnamese'...
-Package biblatex Info: ... file 'vietnamese.lbx' not found.
-
-
-Package biblatex Warning: Language 'vietnamese' not supported.
-(biblatex)                Using dummy definitions on input line 133.
-
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1582,38 +1567,14 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
-(./thesis.bbl
+ (./thesis.bbl
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 56.
 
 
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                AMM
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ERC20
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                FA
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                SPL
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 113.
 
 )
 Package biblatex Info: Reference section=0 on input line 133.
@@ -1651,13 +1612,9 @@ l.139 \input{chapters/abtract_en}\newpage
 
 
 ] (./chapters/assurance.tex
-Overfull \hbox (14.20511pt too wide) in paragraph at lines 8--14
-\T5/lmr/bx/it/14 Specify and Verify Temporal Properties in OCL"\T5/lmr/m/n/14 , under the supervision
- []
-
 LaTeX Font Info:    Calculating math sizes for size <14> on input line 23.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 23.
-(c:/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 23.
@@ -1698,17 +1655,7 @@ l.141 \input{chapters/assurance}\newpage
                                         \cleardoublepage [4
 
 
-] (./chapters/acknowledgement.tex
-Overfull \hbox (4.82639pt too wide) in paragraph at lines 11--14
-\T5/lmr/m/n/14 throughout the research and writing of this thesis. His expertise and dedication
- []
-
-
-Overfull \hbox (5.42776pt too wide) in paragraph at lines 19--23
-[]\T5/lmr/m/n/14 Furthermore, I extend my thanks to the faculty members of the University
- []
-
-)
+] (./chapters/acknowledgement.tex)
 
 [1
 
@@ -1749,47 +1696,24 @@ Overfull \hbox (5.42776pt too wide) in paragraph at lines 19--23
 [7
 
 ] (./chapters/introduction.tex
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 14.
-
-
-Overfull \hbox (12.35962pt too wide) in paragraph at lines 14--21
-[] \T5/lmr/m/n/14 Model-Driven Engineering (MDE) [[]1[]] approaches system development
- []
-
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 33.
-
-
-LaTeX Warning: Citation 'USE' on page 1 undefined on input line 33.
-
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 44.
-(c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 22.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+))
 
 [1
 
 
-]
-Overfull \hbox (0.10597pt too wide) in paragraph at lines 47--48
-[]\T5/lmr/bx/n/14 Chapter 2\T5/lmr/m/n/14 : This chapter presents our OCL extension to specify temporal
- []
+{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./chapters/c1/c1_chapter.tex
+Chapter 1.
+(./chapters/c1/c1_introduction.tex))
 
-)
-
-[2{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] (./chapters/c1/c1_introduction.tex
-Ch\uhorn \ohorn ng 1.
-(./chapters/c1/c1_overview.tex))
-
-[3
+[2
 
 
 
 ] (./chapters/c2/c2_chapter.tex
-Ch\uhorn \ohorn ng 2.
+Chapter 2.
 
 Overfull \hbox (4.2259pt too wide) in paragraph at lines 1--1
 |\T5/lmr/bx/n/22.46396 PHÖN TùCH VÄ THIòT Kò Hõ TH»NG| 
@@ -1797,74 +1721,74 @@ Overfull \hbox (4.2259pt too wide) in paragraph at lines 1--1
 
 (./chapters/c2/c2_overview.tex) (./chapters/c2/c2_introduction.tex
 
-[4
+[3
 
 
 
 ]
-<figures/c2/UC Overall.png, id=326, 768.8725pt x 532.99126pt>
+<figures/c2/UC Overall.png, id=320, 768.8725pt x 532.99126pt>
 File: figures/c2/UC Overall.png Graphic file (type png)
 <use figures/c2/UC Overall.png>
 Package pdftex.def Info: figures/c2/UC Overall.png  used on input line 47.
 (pdftex.def)             Requested size: 455.24411pt x 315.58444pt.
 
 
-[5]
+[4]
 Overfull \hbox (6.7749pt too wide) in paragraph at lines 58--60
 []\T5/lmr/bx/n/14 Ng˜Ìi dÚng\T5/lmr/m/n/14 : Ng˜Ìi c‚ nhu c¶u s˚ dˆng d‡ch vˆ cıa hª thËng LaunchCrypt. 
  []
 
-<figures/c2/User Management.png, id=333, 963.6pt x 512.91624pt>
+<figures/c2/User Management.png, id=326, 963.6pt x 512.91624pt>
 File: figures/c2/User Management.png Graphic file (type png)
 <use figures/c2/User Management.png>
 Package pdftex.def Info: figures/c2/User Management.png  used on input line 74.
 (pdftex.def)             Requested size: 455.24411pt x 242.3229pt.
 
 
-[6 <./figures/c2/UC Overall.png>]
+[5 <./figures/c2/UC Overall.png>]
 
-[7 <./figures/c2/User Management.png>]
-<figures/c2/TradeUCDiagram.png, id=344, 873.2625pt x 422.57875pt>
+[6 <./figures/c2/User Management.png>]
+<figures/c2/TradeUCDiagram.png, id=338, 873.2625pt x 422.57875pt>
 File: figures/c2/TradeUCDiagram.png Graphic file (type png)
 <use figures/c2/TradeUCDiagram.png>
 Package pdftex.def Info: figures/c2/TradeUCDiagram.png  used on input line 86.
 (pdftex.def)             Requested size: 455.24411pt x 220.29674pt.
 
 
-[8
+[7
 
  <./figures/c2/TradeUCDiagram.png>]
-<figures/c2/GuiTKUCDiagram.png, id=351, 722.7pt x 410.53375pt>
+<figures/c2/GuiTKUCDiagram.png, id=344, 722.7pt x 410.53375pt>
 File: figures/c2/GuiTKUCDiagram.png Graphic file (type png)
 <use figures/c2/GuiTKUCDiagram.png>
 Package pdftex.def Info: figures/c2/GuiTKUCDiagram.png  used on input line 99.
 (pdftex.def)             Requested size: 455.24411pt x 258.60631pt.
 
 
-[9
+[8
 
  <./figures/c2/GuiTKUCDiagram.png>]
-<figures/c2/Comment.png, id=357, 518.93875pt x 312.16624pt>
+<figures/c2/Comment.png, id=351, 518.93875pt x 312.16624pt>
 File: figures/c2/Comment.png Graphic file (type png)
 <use figures/c2/Comment.png>
 Package pdftex.def Info: figures/c2/Comment.png  used on input line 112.
 (pdftex.def)             Requested size: 455.24411pt x 273.86404pt.
 
 
-[10
+[9
 
  <./figures/c2/Comment.png>]
-<figures/c2/CreateToken.png, id=363, 539.01375pt x 472.76625pt>
+<figures/c2/CreateToken.png, id=357, 539.01375pt x 472.76625pt>
 File: figures/c2/CreateToken.png Graphic file (type png)
 <use figures/c2/CreateToken.png>
 Package pdftex.def Info: figures/c2/CreateToken.png  used on input line 126.
 (pdftex.def)             Requested size: 455.24411pt x 399.29951pt.
 
 
-[11
+[10
 
  <./figures/c2/CreateToken.png>]
-<figures/c2/FeeManagement.png, id=369, 645.41125pt x 322.20375pt>
+<figures/c2/FeeManagement.png, id=363, 645.41125pt x 322.20375pt>
 File: figures/c2/FeeManagement.png Graphic file (type png)
 <use figures/c2/FeeManagement.png>
 Package pdftex.def Info: figures/c2/FeeManagement.png  used on input line 140.
@@ -1884,117 +1808,107 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.80008> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 154.
 
 
-[12
+[11
 
  <./figures/c2/FeeManagement.png>]
-<figures/c2/ViewProfile.png, id=375, 1304.875pt x 1241.63875pt>
+<figures/c2/ViewProfile.png, id=369, 1304.875pt x 1241.63875pt>
 File: figures/c2/ViewProfile.png Graphic file (type png)
 <use figures/c2/ViewProfile.png>
 Package pdftex.def Info: figures/c2/ViewProfile.png  used on input line 198.
 (pdftex.def)             Requested size: 455.24411pt x 433.17809pt.
 
 
-[13]
+[12]
 Underfull \hbox (badness 5231) in paragraph at lines 231--231
-\T5/lmr/m/n/13 dÚng khÊng ^^_ı token
+\T5/lmr/m/n/13 dÚng khÊng ^^_ı to-ken
  []
 
 
 
-[14 <./figures/c2/ViewProfile.png>]
-<figures/c2/TradeSeq.png, id=386, 1304.875pt x 1361.085pt>
+[13 <./figures/c2/ViewProfile.png>]
+<figures/c2/TradeSeq.png, id=379, 1304.875pt x 1361.085pt>
 File: figures/c2/TradeSeq.png Graphic file (type png)
 <use figures/c2/TradeSeq.png>
 Package pdftex.def Info: figures/c2/TradeSeq.png  used on input line 244.
 (pdftex.def)             Requested size: 455.24411pt x 474.85002pt.
 
 
-[15]
+[14]
 
-[16 <./figures/c2/TradeSeq.png>]
-<figures/c2/AutoTradeSeq.png, id=396, 1304.875pt x 1609.01125pt>
+[15 <./figures/c2/TradeSeq.png>]
+<figures/c2/AutoTradeSeq.png, id=390, 1304.875pt x 1609.01125pt>
 File: figures/c2/AutoTradeSeq.png Graphic file (type png)
 <use figures/c2/AutoTradeSeq.png>
 Package pdftex.def Info: figures/c2/AutoTradeSeq.png  used on input line 288.
 (pdftex.def)             Requested size: 455.24411pt x 561.34557pt.
 
 
-[17]
+[16]
 
-[18 <./figures/c2/AutoTradeSeq.png>]
-<figures/c2/StakingSeq.png, id=406, 1304.875pt x 1396.21625pt>
+[17 <./figures/c2/AutoTradeSeq.png>]
+<figures/c2/StakingSeq.png, id=400, 1304.875pt x 1396.21625pt>
 File: figures/c2/StakingSeq.png Graphic file (type png)
 <use figures/c2/StakingSeq.png>
 Package pdftex.def Info: figures/c2/StakingSeq.png  used on input line 333.
 (pdftex.def)             Requested size: 455.24411pt x 487.10648pt.
 
 
-[19]
+[18]
 
-[20 <./figures/c2/StakingSeq.png>]
-<figures/c2/CommentSeq.png, id=417, 1304.875pt x 1758.57pt>
+[19 <./figures/c2/StakingSeq.png>]
+<figures/c2/CommentSeq.png, id=410, 1304.875pt x 1758.57pt>
 File: figures/c2/CommentSeq.png Graphic file (type png)
 <use figures/c2/CommentSeq.png>
 Package pdftex.def Info: figures/c2/CommentSeq.png  used on input line 378.
 (pdftex.def)             Requested size: 455.24411pt x 613.52304pt.
 
 
-[21]
+[20]
 
-[22 <./figures/c2/CommentSeq.png>]
-<figures/c2/TokenCreatedSeq.png, id=427, 1304.875pt x 948.54375pt>
+[21 <./figures/c2/CommentSeq.png>]
+<figures/c2/TokenCreatedSeq.png, id=421, 1304.875pt x 948.54375pt>
 File: figures/c2/TokenCreatedSeq.png Graphic file (type png)
 <use figures/c2/TokenCreatedSeq.png>
 Package pdftex.def Info: figures/c2/TokenCreatedSeq.png  used on input line 419.
 (pdftex.def)             Requested size: 455.24411pt x 330.92424pt.
 
 
-[23]
-Underfull \hbox (badness 1668) in paragraph at lines 445--445
-\T5/lmr/m/n/13 ^^_ı token trong vΩ cıa
- []
+[22]
 
-
-
-[24 <./figures/c2/TokenCreatedSeq.png>]
-<figures/c2/ChangeFeeSeq.png, id=437, 1304.875pt x 1235.61626pt>
+[23 <./figures/c2/TokenCreatedSeq.png>]
+<figures/c2/ChangeFeeSeq.png, id=431, 1304.875pt x 1235.61626pt>
 File: figures/c2/ChangeFeeSeq.png Graphic file (type png)
 <use figures/c2/ChangeFeeSeq.png>
 Package pdftex.def Info: figures/c2/ChangeFeeSeq.png  used on input line 456.
 (pdftex.def)             Requested size: 455.24411pt x 431.07698pt.
 
 
-[25]
+[24]
 Underfull \hbox (badness 4254) in paragraph at lines 475--475
 []|\T5/lmr/m/n/13 D˙ liªu nhßt
  []
 
 
 
-[26 <./figures/c2/ChangeFeeSeq.png>]
+[25 <./figures/c2/ChangeFeeSeq.png>]
 
-[27]
-<figures/c2/ArchitectureOverall.png, id=452, 643.40375pt x 804.00375pt>
+[26]
+<figures/c2/ArchitectureOverall.png, id=446, 643.40375pt x 804.00375pt>
 File: figures/c2/ArchitectureOverall.png Graphic file (type png)
 <use figures/c2/ArchitectureOverall.png>
 Package pdftex.def Info: figures/c2/ArchitectureOverall.png  used on input line 524.
 (pdftex.def)             Requested size: 364.19667pt x 455.12173pt.
 
 
-[28 <./figures/c2/ArchitectureOverall.png>]
+[27 <./figures/c2/ArchitectureOverall.png>]
 LaTeX Font Info:    Trying to load font information for T5+lmtt on input line 565.
  (c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmtt.fd
 File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[29]
+[28]
 LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <8.66673> not available
 (Font)              Font shape `T5/lmtt/b/n' tried instead on input line 571.
-
-Overfull \hbox (18.0821pt too wide) in paragraph at lines 587--590
-[]\T5/lmr/bx/n/14 Request Handling: \T5/lmr/m/n/14 X˚ l˛ c°c HTTP requests thÊng qua c°c decorators
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
@@ -2002,29 +1916,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
 
 
-[30]
+[29]
 
-[31]
-<figures/c2/DBdesign.png, id=528, 3389.66376pt x 3854.4pt>
+[30]
+<figures/c2/DBdesign.png, id=522, 3389.66376pt x 3854.4pt>
 File: figures/c2/DBdesign.png Graphic file (type png)
 <use figures/c2/DBdesign.png>
 Package pdftex.def Info: figures/c2/DBdesign.png  used on input line 700.
 (pdftex.def)             Requested size: 455.24411pt x 517.61615pt.
 
 
-[32
+[31
 
 ]
-<figures/c2/persistenceClass.png, id=556, 733.74126pt x 543.02875pt>
+<figures/c2/persistenceClass.png, id=549, 733.74126pt x 543.02875pt>
 File: figures/c2/persistenceClass.png Graphic file (type png)
 <use figures/c2/persistenceClass.png>
 Package pdftex.def Info: figures/c2/persistenceClass.png  used on input line 707.
 (pdftex.def)             Requested size: 455.24411pt x 336.92291pt.
 
 
-[33 <./figures/c2/DBdesign.png>]
+[32 <./figures/c2/DBdesign.png>]
 
-[34 <./figures/c2/persistenceClass.png>]
+[33 <./figures/c2/persistenceClass.png>]
+
+[34
+
+]
 
 [35
 
@@ -2033,66 +1951,62 @@ Package pdftex.def Info: figures/c2/persistenceClass.png  used on input line 707
 [36
 
 ]
-
-[37
-
-]
-<figures/c2/MainScreen.png, id=580, 1203.49625pt x 1128.215pt>
+<figures/c2/MainScreen.png, id=574, 1203.49625pt x 1128.215pt>
 File: figures/c2/MainScreen.png Graphic file (type png)
 <use figures/c2/MainScreen.png>
 Package pdftex.def Info: figures/c2/MainScreen.png  used on input line 955.
 (pdftex.def)             Requested size: 455.24411pt x 426.76363pt.
 
 
-[38
+[37
 
 ]
-<figures/c2/Profile.png, id=586, 1203.49625pt x 1128.215pt>
+<figures/c2/Profile.png, id=579, 1203.49625pt x 1128.215pt>
 File: figures/c2/Profile.png Graphic file (type png)
 <use figures/c2/Profile.png>
 Package pdftex.def Info: figures/c2/Profile.png  used on input line 962.
 (pdftex.def)             Requested size: 455.24411pt x 426.76363pt.
 
 
-[39 <./figures/c2/MainScreen.png>]
-<figures/c2/Stake.png, id=592, 1203.49625pt x 1128.215pt>
+[38 <./figures/c2/MainScreen.png>]
+<figures/c2/Stake.png, id=586, 1203.49625pt x 1128.215pt>
 File: figures/c2/Stake.png Graphic file (type png)
 <use figures/c2/Stake.png>
 Package pdftex.def Info: figures/c2/Stake.png  used on input line 969.
 (pdftex.def)             Requested size: 455.24411pt x 426.76363pt.
 
 
-[40 <./figures/c2/Profile.png>]
-<figures/c2/Swap.png, id=598, 1203.49625pt x 1128.215pt>
+[39 <./figures/c2/Profile.png>]
+<figures/c2/Swap.png, id=592, 1203.49625pt x 1128.215pt>
 File: figures/c2/Swap.png Graphic file (type png)
 <use figures/c2/Swap.png>
 Package pdftex.def Info: figures/c2/Swap.png  used on input line 976.
 (pdftex.def)             Requested size: 455.24411pt x 426.76363pt.
 
 
-[41 <./figures/c2/Stake.png>]
-<figures/c2/Stats.png, id=604, 1203.49625pt x 1128.215pt>
+[40 <./figures/c2/Stake.png>]
+<figures/c2/Stats.png, id=598, 1203.49625pt x 1128.215pt>
 File: figures/c2/Stats.png Graphic file (type png)
 <use figures/c2/Stats.png>
 Package pdftex.def Info: figures/c2/Stats.png  used on input line 983.
 (pdftex.def)             Requested size: 455.24411pt x 426.76363pt.
 
 
-[42 <./figures/c2/Swap.png>]
-<figures/c2/Trade.png, id=610, 1203.49625pt x 1128.215pt>
+[41 <./figures/c2/Swap.png>]
+<figures/c2/Trade.png, id=604, 1203.49625pt x 1128.215pt>
 File: figures/c2/Trade.png Graphic file (type png)
 <use figures/c2/Trade.png>
 Package pdftex.def Info: figures/c2/Trade.png  used on input line 990.
 (pdftex.def)             Requested size: 455.24411pt x 426.76363pt.
 )
 
-[43 <./figures/c2/Stats.png>])
+[42 <./figures/c2/Stats.png>])
 
-[44 <./figures/c2/Trade.png>] (./chapters/c3/c3_chapter.tex
-Ch\uhorn \ohorn ng 3.
+[43 <./figures/c2/Trade.png>] (./chapters/c3/c3_chapter.tex
+Chapter 3.
 (./chapters/c3/c3_process_overview.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--12
-[]|\T5/lmr/m/n/13 Visual
+Underfull \hbox (badness 6380) in paragraph at lines 12--12
+[]|\T5/lmr/m/n/13 Visual Stu-
  []
 
 
@@ -2107,7 +2021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--20
-\T5/lmr/m/n/13 Mermaid,
+\T5/lmr/m/n/13 Mer-maid,
  []
 
 
@@ -2127,70 +2041,70 @@ Overfull \hbox (28.45276pt too wide) in paragraph at lines 32--36
 
 
 
-[45
+[44
 
 
 
 ]
-<figures/c3/MainScreenRel.png, id=626, 1153.30875pt x 525.162pt>
+<figures/c3/MainScreenRel.png, id=620, 1153.30875pt x 525.162pt>
 File: figures/c3/MainScreenRel.png Graphic file (type png)
 <use figures/c3/MainScreenRel.png>
 Package pdftex.def Info: figures/c3/MainScreenRel.png  used on input line 50.
 (pdftex.def)             Requested size: 455.24411pt x 207.29648pt.
 
 
-[46]
-<figures/c3/UserProfileRel.png, id=631, 1151.502pt x 525.76425pt>
+[45]
+<figures/c3/UserProfileRel.png, id=625, 1151.502pt x 525.76425pt>
 File: figures/c3/UserProfileRel.png Graphic file (type png)
 <use figures/c3/UserProfileRel.png>
 Package pdftex.def Info: figures/c3/UserProfileRel.png  used on input line 57.
 (pdftex.def)             Requested size: 455.24411pt x 207.86313pt.
-<figures/c3/CreateTokenRel.png, id=632, 798.5835pt x 663.6795pt>
+<figures/c3/CreateTokenRel.png, id=626, 798.5835pt x 663.6795pt>
 File: figures/c3/CreateTokenRel.png Graphic file (type png)
 <use figures/c3/CreateTokenRel.png>
 Package pdftex.def Info: figures/c3/CreateTokenRel.png  used on input line 64.
 (pdftex.def)             Requested size: 455.24411pt x 378.34175pt.
 
 
-[47 <./figures/c3/MainScreenRel.png> <./figures/c3/UserProfileRel.png>]
-<figures/c3/StakingRel.png, id=639, 1540.5555pt x 744.98325pt>
+[46 <./figures/c3/MainScreenRel.png> <./figures/c3/UserProfileRel.png>]
+<figures/c3/StakingRel.png, id=633, 1540.5555pt x 744.98325pt>
 File: figures/c3/StakingRel.png Graphic file (type png)
 <use figures/c3/StakingRel.png>
 Package pdftex.def Info: figures/c3/StakingRel.png  used on input line 71.
 (pdftex.def)             Requested size: 455.24411pt x 220.14328pt.
-<figures/c3/SwapRel.png, id=640, 1155.1155pt x 525.76425pt>
+<figures/c3/SwapRel.png, id=634, 1155.1155pt x 525.76425pt>
 File: figures/c3/SwapRel.png Graphic file (type png)
 <use figures/c3/SwapRel.png>
 Package pdftex.def Info: figures/c3/SwapRel.png  used on input line 78.
 (pdftex.def)             Requested size: 455.24411pt x 207.20528pt.
 
 
-[48 <./figures/c3/CreateTokenRel.png> <./figures/c3/StakingRel.png>]
-<figures/c3/TradeRel.png, id=647, 1151.502pt x 524.55975pt>
+[47 <./figures/c3/CreateTokenRel.png> <./figures/c3/StakingRel.png>]
+<figures/c3/TradeRel.png, id=641, 1151.502pt x 524.55975pt>
 File: figures/c3/TradeRel.png Graphic file (type png)
 <use figures/c3/TradeRel.png>
 Package pdftex.def Info: figures/c3/TradeRel.png  used on input line 85.
 (pdftex.def)             Requested size: 455.24411pt x 207.38692pt.
-<figures/c3/StatsRel.png, id=648, 1539.351pt x 746.79pt>
+<figures/c3/StatsRel.png, id=642, 1539.351pt x 746.79pt>
 File: figures/c3/StatsRel.png Graphic file (type png)
 <use figures/c3/StatsRel.png>
 Package pdftex.def Info: figures/c3/StatsRel.png  used on input line 92.
 (pdftex.def)             Requested size: 455.24411pt x 220.8481pt.
 
 
-[49 <./figures/c3/SwapRel.png> <./figures/c3/TradeRel.png>]
+[48 <./figures/c3/SwapRel.png> <./figures/c3/TradeRel.png>]
 
-[50 <./figures/c3/StatsRel.png>] [51
+[49 <./figures/c3/StatsRel.png>] [50
 
-] [52] [53]
+] [51] [52]
 
-[54]))
+[53]))
 
-[55]
+[54]
 
-[56] (./chapters/conclusion.tex)
+[55] (./chapters/conclusion.tex)
 
-[57
+[56
 
 
 ]
@@ -2199,27 +2113,8 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 179.
 
 
-Package biblatex Warning: Bibliography string 'and' untranslated
-(biblatex)                at entry 'MDE' on input line 179.
 
-
-Package biblatex Warning: Bibliography string 'in' untranslated
-(biblatex)                at entry 'MDE' on input line 179.
-
-
-Package biblatex Warning: Using fallback definition for \mkbibdatelong.
-(biblatex)                The command should be defined in the .lbx file.
-(biblatex)                If you see this message, the .lbx file could not be
-(biblatex)                loaded, is faulty or does not contain a definition
-(biblatex)                for \mkbibdatelong.
-
-
-Package biblatex Warning: Bibliography string 'pages' untranslated
-(biblatex)                at entry 'MDE' on input line 179.
-
-
-
-[58
+[57
 
 
 
@@ -2247,18 +2142,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40723 strings out of 473189
- 767608 string characters out of 5719958
- 1752289 words of memory out of 5000000
- 63052 multiletter control sequences out of 15000+600000
+ 41427 strings out of 473189
+ 780967 string characters out of 5719958
+ 1780784 words of memory out of 5000000
+ 63754 multiletter control sequences out of 15000+600000
  744312 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,13n,107p,3163b,2244s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,13n,107p,3163b,2265s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on thesis.pdf (69 pages, 3019649 bytes).
+Output written on thesis.pdf (68 pages, 3028614 bytes).
 PDF statistics:
  788 PDF objects out of 1000 (max. 8388607)
- 630 compressed objects within 7 object streams
+ 631 compressed objects within 7 object streams
  216 named destinations out of 1000 (max. 500000)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 

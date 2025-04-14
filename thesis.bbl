@@ -54,11 +54,64 @@
       \endverb
       \keyw{Software systems;Model driven engineering;Programming;Computer science;Unified modeling language;Software testing;Systems engineering and theory;Computer industry;Streaming media;Reliability engineering}
     \endentry
+    \entry{USE}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0734b8612ed54ba8e3a062d49aac875d}{%
+           family={Büttner},
+           familyi={B\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d4951d9371b4c7e1d3218815de6e26a2}{%
+           family={Richters},
+           familyi={R\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier North-Holland, Inc.}%
+      }
+      \strng{namehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{fullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{fullhashraw}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{bibnamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authorbibnamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authornamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authorfullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authorfullhashraw}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Unified Modeling Language (UML) is accepted today as an important standard for developing software. UML tools however provide little support for validating and checking models in early development phases. There is also no substantial support for the Object Constraint Language (OCL). We present an approach for the validation of UML models and OCL constraints based on animation and certification. The USE tool (UML-based Specification Environment) supports analysts, designers and developers in executing UML models and checking OCL constraints and thus enables them to employ model-driven techniques for software production.}
+      \field{issn}{0167-6423}
+      \field{journaltitle}{Sci. Comput. Program.}
+      \field{month}{12}
+      \field{number}{1–3}
+      \field{title}{USE: A UML-based specification environment for validating UML and OCL}
+      \field{volume}{69}
+      \field{year}{2007}
+      \field{pages}{27\bibrangedash 34}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.scico.2007.01.013
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.scico.2007.01.013
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.scico.2007.01.013
+      \endverb
+      \keyw{Constraint,Invariant,Model,Model certification,Model execution,Model validation,OCL,Pre- and post-conditions,UML}
+    \endentry
   \enddatalist
-  \missing{AMM}
-  \missing{ERC20}
-  \missing{FA}
-  \missing{SPL}
 \endrefsection
 \endinput
 

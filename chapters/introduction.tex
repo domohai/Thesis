@@ -11,32 +11,10 @@
 
 % \subsection*{Background and Significance of the Study}
 
-\hspace{\parindent}Model-Driven Engineering (MDE) \cite{MDE} approaches system development 
-by emphasizing models over source code. Through modeling languages such as UML 
-and OCL, developers construct models that abstract the system complexity and serve as primary development artifacts. 
-These models can then be transformed into executable code, documentation, and test cases using automated 
-model transformation techniques. Techniques like validation and verification help 
-ensure the models’ quality, with structural aspects, represented by class and object 
-diagrams, being particularly important.
-
-The Unified Modeling Language (UML) offers a standard way to create diagrams that show 
-a system’s structure and behavior, while the Object Constraint Language (OCL) adds precise 
-rules to these models. OCL uses simple logic to define conditions that must always be true 
-or requirements for operations. However, it lacks the expressive power to model temporal properties 
-that involve different states of the model or depend on event occurrences. 
-This limitation stems from the absence of built-in constructs for handling time and events in OCL.
-
-% \subsection*{Research Objectives}
-
-In this thesis, we extend OCL to support the specification of temporal properties and 
-event-based behaviors, aiming to enhance its expressiveness in modeling dynamic system 
-aspects. Our approach is implemented within the UML-based Specification Environment (USE) \cite{USE}, 
-a tool that supports specification, and validation of software systems using UML and OCL. 
-USE allows modelers to work with various UML diagrams and define constraints through invariants and 
-pre-/postconditions. It also provides validation and verification capabilities via the model 
-validator component, which translates models and properties into relational logic using Kodkod. 
-As a realization of this thesis, we worked on a plugin for USE that called USE-TemporalOCL, 
-which allows users to specify temporal properties and events in OCL.
+\hspace{\parindent} Modern software development faces significant challenges as
+systems grow increasingly complex. Traditional development approaches relying on 
+manual coding often struggle to manage this complexity, leading to higher error
+rates, extended development cycles
 
 % \subsection*{Structure of the Thesis}
 The thesis is structured as follows:
@@ -53,18 +31,35 @@ The thesis is structured as follows:
 
 Each chapter starts with an \textit{Introduction} section, then ends with a \textit{Summary} section.
 
-% \subsection*{Research Methodology}
-% To achieve the above objectives, the thesis will apply the following research methods
-%:
-% \begin{itemize}
-%   \item \textbf{Theoretical Research}:
+%%% Version 2
+% Model-Driven Engineering (MDE) \cite{MDE} approaches system development 
+% by emphasizing models over source code. Through modeling languages such as UML 
+% and OCL, developers construct models that abstract the system complexity and serve as primary development artifacts. 
+% These models can then be transformed into executable code, documentation, and test cases using automated 
+% model transformation techniques. Techniques like validation and verification help 
+% ensure the models’ quality, with structural aspects-represented by class and object 
+% diagrams-being particularly important.
 
-%   \item \textbf{Software Development}: 
+% The Unified Modeling Language (UML) offers a standard way to create diagrams that show 
+% a system’s structure and behavior, while the Object Constraint Language (OCL) adds precise 
+% rules to these models. OCL uses simple logic to define conditions that must always be true 
+% or requirements for operations. However, it lacks the expressive power to model temporal properties 
+% that involve different states of the model or depend on event occurrences. 
+% This limitation stems from the absence of built-in constructs for handling time and events in OCL.
 
-%   \item \textbf{Experimentation and Evaluation}:
-% \end{itemize}
+% In this thesis, we extend OCL to support the specification of temporal properties and 
+% event-based behaviors, aiming to enhance its expressiveness in modeling dynamic system 
+% aspects. 
+% Our approach is implemented within the UML-based Specification Environment (USE) \cite{USE}, 
+% a tool that supports specification, and validation of software systems using UML and OCL. 
+% USE allows modelers to work with various UML diagrams and define constraints through invariants and 
+% pre-/postconditions. It also provides validation and verification capabilities via the model 
+% validator component, which translates models and properties into relational logic using Kodkod. 
+% As a realization of this thesis, we worked on a plugin for USE that called USE-TemporalOCL, 
+% which allows users to specify temporal properties and events in OCL.
 
 
+%%% Version 1
 % Model-driven engineering (MDE) takes a view on system development focusing on
 % models rather than on code. Using modeling languages like UML and OCL, developers create models 
 % that abstract the system’s complexity and serve as the central artifacts 
