@@ -10,11 +10,33 @@
 \addcontentsline{toc}{chapter}{INTRODUCTION}
 
 % \subsection*{Background and Significance of the Study}
-
-\hspace{\parindent} Modern software development faces significant challenges as
+Modern software development faces significant challenges as
 systems grow increasingly complex. Traditional development approaches relying on 
 manual coding often struggle to manage this complexity, leading to higher error
-rates, extended development cycles
+rates and extended development cycles. These problems often come from the development 
+process, not the system requirements. Model-Driven Engineering (MDE) helps solve 
+this by shifting the focus to models instead of code. In MDE, developers use 
+models to design systems, and tools can automatically generate code, documentation, 
+and tests from them. The Unified Modeling Language (UML) and the Object Constraint 
+Language (OCL) have become the \textit{de facto} standards for model-driven approaches. 
+UML provides a rich set of visual modeling concepts to represent the structural 
+and behavioral aspects of a system, while OCL allows specifying constraints and
+structural properties of UML models. However, for complex systems, it is often necessary to
+specify and verify dynamic behaviors that involve temporal constraints and event-driven
+conditions. Unfortunately, OCL lacks the expressiveness to model these dynamic aspects,
+which limits its ability to specify and verify temporal properties and event-based behaviors.
+
+This thesis aims to address this limitation by extending OCL with constructs for
+temporal properties and events, enhancing its expressiveness in modeling dynamic system aspects.
+We implement this extension as a plugin, called TemporalOCL, for the UML-based Specification Environment (USE),
+a tool that supports the specification and validation of software systems using UML and OCL.
+To enable not only specification but also verification of temporal properties, we employ a technique
+known as filmstripping, which transforms models with dynamic temporal constraints into structurally
+equivalent models that can be analyzed using existing verification tools. Our plugin
+automatically translates temporal OCL expressions into standard OCL constraints on a filmstrip model,
+allowing modelers to leverage the existing USE model validator for verification. This approach bridges
+the gap between expressing temporal requirements and verifying them, providing a complete solution that
+integrates seamlessly with the established USE environment and its validation capabilities.
 
 % \subsection*{Structure of the Thesis}
 The thesis is structured as follows:

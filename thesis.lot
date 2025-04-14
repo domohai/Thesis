@@ -1,22 +1,22 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Đặc tả ca sử dụng quản lý tài khoản.}}{12}{table.caption.10}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Đặc tả ca sử dụng giao dịch token}}{14}{table.caption.12}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Đặc tả ca sử dụng tự động đặt lệnh giao dịch token}}{16}{table.caption.14}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Đặc tả ca sử dụng gửi tiết kiệm token}}{18}{table.caption.16}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces Đặc tả ca sử dụng bình luận}}{20}{table.caption.18}%
-\contentsline {table}{\numberline {2.6}{\ignorespaces Đặc tả ca sử dụng tạo token}}{22}{table.caption.20}%
-\contentsline {table}{\numberline {2.7}{\ignorespaces Đặc tả ca sử dụng điều chỉnh hệ số phí.}}{24}{table.caption.22}%
-\contentsline {table}{\numberline {2.8}{\ignorespaces Yêu cầu phi chức năng của hệ thống}}{26}{table.caption.24}%
-\contentsline {table}{\numberline {2.9}{\ignorespaces Bảng Users}}{34}{table.caption.28}%
-\contentsline {table}{\numberline {2.10}{\ignorespaces Bảng Tokens}}{34}{table.caption.29}%
-\contentsline {table}{\numberline {2.11}{\ignorespaces Bảng Chats}}{35}{table.caption.30}%
-\contentsline {table}{\numberline {2.12}{\ignorespaces Bảng Trading\_Pairs}}{35}{table.caption.31}%
-\contentsline {table}{\numberline {2.13}{\ignorespaces Bảng Liquidity\_Pairs}}{36}{table.caption.32}%
-\contentsline {table}{\numberline {2.14}{\ignorespaces Bảng Stakes}}{36}{table.caption.33}%
-\contentsline {table}{\numberline {2.15}{\ignorespaces Bảng Trades}}{37}{table.caption.34}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Đặc tả ca sử dụng quản lý tài khoản.}}{13}{table.caption.10}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Đặc tả ca sử dụng giao dịch token}}{15}{table.caption.12}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Đặc tả ca sử dụng tự động đặt lệnh giao dịch token}}{17}{table.caption.14}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Đặc tả ca sử dụng gửi tiết kiệm token}}{19}{table.caption.16}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Đặc tả ca sử dụng bình luận}}{21}{table.caption.18}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Đặc tả ca sử dụng tạo token}}{23}{table.caption.20}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Đặc tả ca sử dụng điều chỉnh hệ số phí.}}{25}{table.caption.22}%
+\contentsline {table}{\numberline {2.8}{\ignorespaces Yêu cầu phi chức năng của hệ thống}}{27}{table.caption.24}%
+\contentsline {table}{\numberline {2.9}{\ignorespaces Bảng Users}}{35}{table.caption.28}%
+\contentsline {table}{\numberline {2.10}{\ignorespaces Bảng Tokens}}{35}{table.caption.29}%
+\contentsline {table}{\numberline {2.11}{\ignorespaces Bảng Chats}}{36}{table.caption.30}%
+\contentsline {table}{\numberline {2.12}{\ignorespaces Bảng Trading\_Pairs}}{36}{table.caption.31}%
+\contentsline {table}{\numberline {2.13}{\ignorespaces Bảng Liquidity\_Pairs}}{37}{table.caption.32}%
+\contentsline {table}{\numberline {2.14}{\ignorespaces Bảng Stakes}}{37}{table.caption.33}%
+\contentsline {table}{\numberline {2.15}{\ignorespaces Bảng Trades}}{38}{table.caption.34}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Bảng tổng hợp các công cụ được sử dụng trong đề tài}}{45}{table.caption.41}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Các trường hợp kiểm thử.}}{53}{table.3.2}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Kết quả kiểm thử chức năng}}{53}{table.caption.49}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Bảng tổng hợp các công cụ được sử dụng trong đề tài}}{46}{table.caption.41}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Các trường hợp kiểm thử.}}{54}{table.3.2}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Kết quả kiểm thử chức năng}}{54}{table.caption.49}%

@@ -5,29 +5,29 @@
 \contentsline {chapter}{TABLE OF CONTENTS}{ii}{Doc-Start}%
 \contentsline {chapter}{LIST OF FIGURES}{iv}{Doc-Start}%
 \contentsline {chapter}{LIST OF TABLES}{vi}{Doc-Start}%
-\contentsline {chapter}{GLOSARY OF ABBREVIATIONS AND TERMS}{vii}{chapter*.1}%
+\contentsline {chapter}{ABBREVIATION AND TERMS}{vii}{chapter*.1}%
 \contentsline {chapter}{INTRODUCTION}{1}{section*.2}%
-\contentsline {chapter}{\numberline {1}FOUNDATIONAL KNOWLEDGE}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
-\contentsline {chapter}{\numberline {2}PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Giới thiệu}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Đặc tả yêu cầu}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Mô tả bài toán}{3}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Mô hình ca sử dụng}{5}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Đặc tả ca sử dụng}{12}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Yêu cầu phi chức năng}{26}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Thiết kế kiến trúc}{26}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Tổng quan kiến trúc}{26}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Điểm nổi bật của kiến trúc}{28}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Chi tiết các layer}{28}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Thiết kế chi tiết}{31}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Thiết kế cơ sở dữ liệu}{31}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Thiết kế giao diện}{38}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {3}Cài đặt và thực nghiệm}{44}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Xây dựng ứng dụng}{45}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Thư viện và công cụ sử dụng}{45}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Kết quả thực nghiệm}{45}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Kiểm thử}{49}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Đánh giá hiệu năng và phương hướng cải thiện của hệ thống}{53}{section.3.3}%
-\contentsline {chapter}{KẾT LUẬN}{56}{section.3.3}%
-\contentsline {chapter}{REFERENCES}{57}{chapter*.50}%
+\contentsline {chapter}{\numberline {1}FOUNDATIONAL KNOWLEDGE}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
+\contentsline {chapter}{\numberline {2}PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Giới thiệu}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Đặc tả yêu cầu}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Mô tả bài toán}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Mô hình ca sử dụng}{6}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Đặc tả ca sử dụng}{13}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Yêu cầu phi chức năng}{27}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Thiết kế kiến trúc}{27}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Tổng quan kiến trúc}{27}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Điểm nổi bật của kiến trúc}{29}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Chi tiết các layer}{29}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Thiết kế chi tiết}{32}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Thiết kế cơ sở dữ liệu}{32}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Thiết kế giao diện}{39}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Cài đặt và thực nghiệm}{45}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Xây dựng ứng dụng}{46}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Thư viện và công cụ sử dụng}{46}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Kết quả thực nghiệm}{46}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Kiểm thử}{50}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Đánh giá hiệu năng và phương hướng cải thiện của hệ thống}{54}{section.3.3}%
+\contentsline {chapter}{KẾT LUẬN}{57}{section.3.3}%
+\contentsline {chapter}{REFERENCES}{58}{chapter*.50}%
