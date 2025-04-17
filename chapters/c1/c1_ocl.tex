@@ -2,12 +2,60 @@
 
 \subsection{Overview}
 
-\hspace{1cm} As explained in Sect. 2.1, UML is a graphical language for visualization of the system
-state. But visual modeling with the UML alone is not enough for the development of
-accurate and consistent software model. For this reason, Object Management Group
-(OMG), in 1997, developed Object Constraint Language (OCL), which describes 
-expressions on UML models and thus extends further the functionality of UML [60].
+\hspace{1cm} As explained in the previous section, UML is a graphical language for 
+visualizing system structure and behavior. However, visual modeling with UML alone 
+is insufficient for developing accurate and consistent software models, as UML 
+diagrams cannot express all necessary constraints. The Object Management Group (OMG) 
+developed the Object Constraint Language (OCL) in 1997 to address this limitation. 
+OCL is a formal assertion language with precise semantics that extends UML by 
+allowing developers to specify constraints that cannot be expressed graphically. 
 
-% insert example here
+For example, while a UML class diagram can show that a Bank has multiple Accounts, 
+it cannot express that "an Account must maintain a minimum balance of 
+\$100" - this requires OCL. OCL provides two kinds of descriptions: expressions 
+that evaluate to values, and constraints that must evaluate to true. 
+OCL is type-rich, supporting basic types (Boolean, Real, Integer, String), 
+collection types (Set, Bag, Sequence, OrderedSet), and special types (tuples, 
+OclAny, OclType). The language includes navigation operators to traverse model 
+relationships, comprehensive collection operations, and quantifiers for building 
+logical statements. OCL constraints typically appear as class invariants 
+(conditions that must always be true for all instances) and operation 
+pre/postconditions (conditions that must be true before and after operation execution).
+
+%%% Sample 1
+% As explained in Sect. 2.1, UML is a graphical language for visualization of the system
+% state. But visual modeling with the UML alone is not enough for the development of
+% accurate and consistent software model. For this reason, Object Management Group
+% (OMG), in 1997, developed Object Constraint Language (OCL), which describes 
+% expressions on UML models and thus extends further the functionality of UML [60].
+% [For example, ... (write about limitation of UML and how OCL can help to overcome 
+% it in the context of an example)]
+% OCL provides two kinds of descriptions, (a) OCL expression, which is defined
+%  in the context of the constrained elements and evaluates some values, and (b) OCL
+%  constraint, which is restrictive statements concerning some underlying model that
+%  should evaluate to true. Basically, an OCL constraint is referred to as an OCL
+%  expression of the Boolean type.
+% The OCLprovides variables and operations which can be combined in various ways
+% to build expressions. There are many OCL expression types. The simplest types are
+% the basic type which consists of the types Boolean, Real, Integer and String. The
+% concrete collection types are Bag, Sequence, Set and OrderedSet. The other types
+% include tuples, which can contain one to many values of other types and special types
+% such as OclAny, OclType, OclExpression, and OclState.
+% There are three different types of OCL constraints, namely invariants of classes,
+%  preconditions and postconditions of operations, which are used to describe model
+%  properties. An invariant is a restriction in the form of expression which is applied
+%  to all instances of the class diagram and that must be true for all instances, i.e., an
+%  invariant must be satisfied after the creation of an instance of the class for which
+%  the invariant is defined.
+
+%%% Sample 2
+% OCL is a formal assertion language, easy to use, with precise and unambiguous semantics [5]. It allows the annotation
+%  of any object-oriented model, even if it is most used within UML diagrams. OCL is very rich, it includes fairly complete
+%  support for:
+%  – Navigation operators to navigate within the object-oriented model;
+%  – Set/sequence operations to manipulate sets and sequences of objects;
+%  – Universal/existential quantifiers to build first order (logic) statemeents;
 
 \subsection{OCL Limitations}
+
+%%% Sample
