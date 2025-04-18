@@ -19,97 +19,135 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
-    \entry{MDE}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{hash=cd9a678ef0b3bbf984c7b14f37bcd23b}{%
-           family={France},
-           familyi={F\bibinitperiod},
-           given={Robert},
-           giveni={R\bibinitperiod}}}%
-        {{hash=c2b5a72fd30b6844022c3e1189390301}{%
-           family={Rumpe},
-           familyi={R\bibinitperiod},
-           given={Bernhard},
-           giveni={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{24376de1522eb823479598a13aec78fe}
-      \strng{fullhash}{24376de1522eb823479598a13aec78fe}
-      \strng{fullhashraw}{24376de1522eb823479598a13aec78fe}
-      \strng{bibnamehash}{24376de1522eb823479598a13aec78fe}
-      \strng{authorbibnamehash}{24376de1522eb823479598a13aec78fe}
-      \strng{authornamehash}{24376de1522eb823479598a13aec78fe}
-      \strng{authorfullhash}{24376de1522eb823479598a13aec78fe}
-      \strng{authorfullhashraw}{24376de1522eb823479598a13aec78fe}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Future of Software Engineering (FOSE '07)}
-      \field{title}{Model-driven Development of Complex Software: A Research Roadmap}
-      \field{year}{2007}
-      \field{pages}{37\bibrangedash 54}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1109/FOSE.2007.14
-      \endverb
-      \keyw{Software systems;Model driven engineering;Programming;Computer science;Unified modeling language;Software testing;Systems engineering and theory;Computer industry;Streaming media;Reliability engineering}
-    \endentry
-    \entry{USE}{article}{}{}
+    \entry{UML_Reference_Manual}{book}{}{}
       \name{author}{3}{}{%
-        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
-           family={Gogolla},
-           familyi={G\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=0734b8612ed54ba8e3a062d49aac875d}{%
-           family={Büttner},
-           familyi={B\bibinitperiod},
-           given={Fabian},
-           giveni={F\bibinitperiod}}}%
-        {{hash=d4951d9371b4c7e1d3218815de6e26a2}{%
-           family={Richters},
+        {{hash=b8ace965f1ffa84dd4512f7e64c62d75}{%
+           family={Rumbaugh},
            familyi={R\bibinitperiod},
-           given={Mark},
-           giveni={M\bibinitperiod}}}%
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3e8f03cc324f52193ab00c1fab4df61a}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Ivar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e4f07715269e006a4d4a4efa3ce3f996}{%
+           family={Booch},
+           familyi={B\bibinitperiod},
+           given={Grady},
+           giveni={G\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {USA}%
+        {GBR}%
       }
       \list{publisher}{1}{%
-        {Elsevier North-Holland, Inc.}%
+        {Addison-Wesley Longman Ltd.}%
       }
-      \strng{namehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{fullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{fullhashraw}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{bibnamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{authorbibnamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{authornamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{authorfullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
-      \strng{authorfullhashraw}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{namehash}{6385cf8d48142625a33e857e6f69df87}
+      \strng{fullhash}{6385cf8d48142625a33e857e6f69df87}
+      \strng{fullhashraw}{6385cf8d48142625a33e857e6f69df87}
+      \strng{bibnamehash}{6385cf8d48142625a33e857e6f69df87}
+      \strng{authorbibnamehash}{6385cf8d48142625a33e857e6f69df87}
+      \strng{authornamehash}{6385cf8d48142625a33e857e6f69df87}
+      \strng{authorfullhash}{6385cf8d48142625a33e857e6f69df87}
+      \strng{authorfullhashraw}{6385cf8d48142625a33e857e6f69df87}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{020130998X}
+      \field{title}{The Unified Modeling Language reference manual}
+      \field{year}{1998}
+      \verb{doi}
+      \verb 10.5555/294049
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/book/10.5555/294049
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/book/10.5555/294049
+      \endverb
+    \endentry
+    \entry{UML}{manual}{}{}
+      \list{publisher}{1}{%
+        {Object Management Group}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Unified modeling language specification version 2.5.1}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.omg.org/spec/UML/2.5.1
+      \endverb
+      \verb{url}
+      \verb https://www.omg.org/spec/UML/2.5.1
+      \endverb
+    \endentry
+    \entry{TOCL}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=b886be6d961c9c7d500ed76bc5c2a5fd}{%
+           family={Lail},
+           familyi={L\bibinitperiod},
+           given={Mustafa\bibnamedelima Al},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9f75bb10fbf1dc39d97fd389232f4568}{%
+           family={Rosales},
+           familyi={R\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=730a7182d15c0fe2548d9523f023fc4b}{%
+           family={Cardenas},
+           familyi={C\bibinitperiod},
+           given={Hector},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8565c1d4f1042f88753e2da935654c0d}{%
+           family={Hamann},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b3bf172c5c6954c3a908fd512f16ff4f}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Montreal, Quebec, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{fullhash}{c5150dd12cdf17514ac52c99aabb2375}
+      \strng{fullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
+      \strng{bibnamehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{authorbibnamehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{authornamehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{authorfullhash}{c5150dd12cdf17514ac52c99aabb2375}
+      \strng{authorfullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Unified Modeling Language (UML) is accepted today as an important standard for developing software. UML tools however provide little support for validating and checking models in early development phases. There is also no substantial support for the Object Constraint Language (OCL). We present an approach for the validation of UML models and OCL constraints based on animation and certification. The USE tool (UML-based Specification Environment) supports analysts, designers and developers in executing UML models and checking OCL constraints and thus enables them to employ model-driven techniques for software production.}
-      \field{issn}{0167-6423}
-      \field{journaltitle}{Sci. Comput. Program.}
-      \field{month}{12}
-      \field{number}{1–3}
-      \field{title}{USE: A UML-based specification environment for validating UML and OCL}
-      \field{volume}{69}
-      \field{year}{2007}
-      \field{pages}{27\bibrangedash 34}
-      \range{pages}{8}
+      \field{abstract}{Specifying and verifying the temporal properties of UML-based systems can be challenging. Although there exist some extensions of OCL to support the specification of temporal properties, most of the approaches depend on using non-UML formalisms such as LTL, CTL, and CTL*. The approaches also rely on transforming the under-development UML models into non-UML model checking frameworks for verification. These approaches introduce complexities and relies on techniques and tools that are not within the UML spectrum. In this paper, we show how TOCL (one OCL extension for temporal properties specification) can be transformed into OCL for verification purposes. Towards this end, we created a formal EBNF grammar for TOCL, based on which a parser and a MOF metamodel were generated. To facilitate the analysis of the TOCL properties, we formally defined transformation rules from the TOCL metamodel to the OCL metamodel using QVTo. We validated the implementations of the transformation rules using USE.}
+      \field{booktitle}{Proceedings of the 25th International Conference on Model Driven Engineering Languages and Systems: Companion Proceedings}
+      \field{isbn}{9781450394673}
+      \field{series}{MODELS '22}
+      \field{title}{Transformation of TOCL temporal properties into OCL}
+      \field{year}{2022}
+      \field{pages}{899\bibrangedash 907}
+      \range{pages}{9}
       \verb{doi}
-      \verb 10.1016/j.scico.2007.01.013
+      \verb 10.1145/3550356.3563132
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1016/j.scico.2007.01.013
+      \verb https://doi.org/10.1145/3550356.3563132
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1016/j.scico.2007.01.013
+      \verb https://doi.org/10.1145/3550356.3563132
       \endverb
-      \keyw{Constraint,Invariant,Model,Model certification,Model execution,Model validation,OCL,Pre- and post-conditions,UML}
+      \keyw{transformation,temporal propeties,UML,TOCL,OCL}
     \endentry
   \enddatalist
 \endrefsection

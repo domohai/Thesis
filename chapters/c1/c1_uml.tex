@@ -2,19 +2,20 @@
 
 \hspace{1cm} The Unified Modeling Language (UML) is a graphical language for 
 visualizing, specifying, constructing, and documenting software-intensive systems. 
-This language is maintained by the Object Management Group (OMG) [58].
+This language is maintained by the Object Management Group (OMG) \cite{UML}.
 
 UML is one of the most widely used modeling languages for describing real-world 
 application domains. It works with various object and component methods to represent 
 software systems. As software systems grow in size, complexity, and distribution, 
 building and maintaining them becomes more challenging. UML helps reduce this 
 complexity by providing a high level of abstraction that captures essential 
-information needed for designing and developing software systems [50].
+information needed for designing and developing software systems.
 
 UML includes multiple diagram types, each focusing on different aspects of a design. 
 These diagrams fall into two main categories: (1) structural diagrams that represent 
 the static aspects of a system, and (2) behavioral diagrams that describe the dynamic 
-aspects. The UML 2.5 specification includes fourteen different diagram types [71].
+aspects. These structural and behavioral categories collectively contain fourteen 
+different diagram types, as specified in the UML Reference Manual \cite{UML_Reference_Manual}.
 
 For this thesis, two structural diagrams are particularly relevant:
 
@@ -42,10 +43,9 @@ For this thesis, two structural diagrams are particularly relevant:
 \subsection{Class Diagram}
 Class diagrams are the most common diagram type in object-oriented modeling. 
 They illustrate the static structure of a system by depicting classes, their 
-attributes, operations, and the relationships between classes [64]. Classes 
+attributes, operations, and the relationships between classes. Classes 
 represent sets of objects, where attributes describe the values these objects 
 may contain, and operations specify the behaviors objects can perform.
-
 Associations in class diagrams describe connections between different classes, 
 with multiplicity indicators showing how many objects of one class can be linked 
 to objects of another class. Class diagrams also include other relationship types: 
@@ -54,7 +54,20 @@ different levels of dependency), and generalization (inheritance relationship
 where specialized classes inherit properties from a general class).
 
 % Example here
-[Example here]
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{figures/c1/Class_diagram.png}
+        \caption{Class diagram of the Software System Model.}
+        \label{fig:class_diagram_software_system_model}
+    \end{center}
+\end{figure}
+
+Figure \ref{fig:class_diagram_software_system_model} shows an example class diagram
+of a software system. This system has id and freeMemory attributes. The id attribute
+is used to uniquely identify each instance of the software system. The freeMemory
+attribute is used to store the amount of free memory available in the system. The
+system also has three operations 
+% TODO: Finish this paragraph
 
 These diagrams form the foundation of object-oriented modeling and are essential 
 for understanding the system structure that our temporal and event-based extensions 
