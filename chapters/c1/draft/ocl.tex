@@ -1,0 +1,22 @@
+% This system contains two classes: \texttt{System} and \texttt{Application}. 
+% The \texttt{System} class has attributes \texttt{id} and \texttt{freeMemory}, while 
+% the \texttt{Application} class has attributes \texttt{id}, \texttt{size}, and an 
+% enumeration \texttt{state}. These classes are connected through the \texttt{SystemApplication} 
+% association, allowing a system to track multiple applications. The application state 
+% can be \texttt{\#None}, \texttt{\#Loaded}, \texttt{\#Installed}, or \texttt{\#Running}, 
+% representing different stages in the application lifecycle. The \texttt{System} class 
+% provides operations to manage applications: \texttt{load(app)}, \texttt{install(app)}, 
+% and \texttt{run(app)}.
+
+% While the class diagram shows this structure, it cannot express many important constraints. Using OCL, we can specify constraints such as: "a system's free memory must always be non-negative," "an application can only be installed if its size is less than the system's free memory," or "an application must be in the Loaded state before it can be installed." These constraints can be expressed as invariants, preconditions, and postconditions. For example, an invariant could ensure that application IDs are unique within a system, a precondition on the \texttt{install} operation could verify that an application is in the \texttt{\#Loaded} state, and a postcondition could specify that after the \texttt{run} operation, the application state becomes \texttt{\#Running}. This example illustrates how OCL complements UML by allowing precise specification of constraints that maintain system integrity.
+% We will describe OCL capabilities by means of an example. The UML class diagram 
+% in figure \ref{fig:class_diagram_software_system} represents the structure of a
+% simple software system. 
+% The software system contains 2 classes: System and Application. The System class
+% has id and freeMemory attributes. The Application class has id, size, state (enum) attributes.
+% The System class and Application class has an association SystemApplication. The System
+% track installed applications by its state. An application can be #None, #Loaded, #Installed
+% #Running. #None means the app is not downloaded or installed. #Loaded means the app has been downloaded. 
+% #Installed means the app has been #Installed. And #Running means the app is running.
+% The system use its operations: load(app), install(app), running(app). We will use
+% this illustrative example to along this thesis.

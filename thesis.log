@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  18 APR 2025 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  20 APR 2025 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1608,39 +1608,15 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 Chapter 1.
 (./chapters/c1/c1_introduction.tex
 
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 7.
-
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 8.
-
-
-LaTeX Warning: Citation 'OCL' on page 3 undefined on input line 8.
-
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 10.
-
-
-LaTeX Warning: Citation 'USE' on page 3 undefined on input line 10.
-
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 14.
-
-) (./chapters/c1/c1_mde.tex) (./chapters/c1/c1_uml.tex
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 5.
-
-
-
 [3
 
 
 
-]
+]) (./chapters/c1/c1_mde.tex) (./chapters/c1/c1_uml.tex
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 5.
+
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 18.
@@ -1648,22 +1624,47 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 [4]
-<figures/c1/Class_diagram.png, id=253, 403.5075pt x 138.5175pt>
-File: figures/c1/Class_diagram.png Graphic file (type png)
-<use figures/c1/Class_diagram.png>
-Package pdftex.def Info: figures/c1/Class_diagram.png  used on input line 59.
-(pdftex.def)             Requested size: 364.19667pt x 125.0239pt.
+<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=254, 332.442pt x 130.68825pt>
+File: figures/c1/BankAccount/BankAccount_ClassDiagram.png Graphic file (type png)
+<use figures/c1/BankAccount/BankAccount_ClassDiagram.png>
+Package pdftex.def Info: figures/c1/BankAccount/BankAccount_ClassDiagram.png  used on input line 52.
+(pdftex.def)             Requested size: 364.19667pt x 143.17122pt.
+LaTeX Font Info:    Trying to load font information for T5+lmtt on input line 58.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmtt.fd
+File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+[5 <./figures/c1/BankAccount/BankAccount_ClassDiagram.png>]
+
+[6]
+<figures/c1/BankAccount/BA_ObjectDiagram.png, id=267, 558.28575pt x 118.64325pt>
+File: figures/c1/BankAccount/BA_ObjectDiagram.png Graphic file (type png)
+<use figures/c1/BankAccount/BA_ObjectDiagram.png>
+Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on input line 139.
+(pdftex.def)             Requested size: 364.19667pt x 77.39598pt.
+) (./chapters/c1/c1_ocl.tex
+
+[7 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]
+<figures/c1/SoftwareSystem/SS_Ver4.png, id=275, 407.72325pt x 145.14224pt>
+File: figures/c1/SoftwareSystem/SS_Ver4.png Graphic file (type png)
+<use figures/c1/SoftwareSystem/SS_Ver4.png>
+Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver4.png  used on input line 22.
+(pdftex.def)             Requested size: 364.19667pt x 129.6479pt.
 
 
-[5 <./figures/c1/Class_diagram.png>]) (./chapters/c1/c1_ocl.tex
+[8 <./figures/c1/SoftwareSystem/SS_Ver4.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 54.
+LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <11.86258> not available
+(Font)              Font shape `T5/lmtt/b/n' tried instead on input line 55.
 
-[6]) (./chapters/c1/c1_use.tex))
 
-[7] (./chapters/c2/c2_chapter.tex
+[9]) (./chapters/c1/c1_use.tex))
+
+[10] (./chapters/c2/c2_chapter.tex
 Chapter 2.
 (./chapters/c2/c2_introduction.tex
 
-[8
+[11
 
 
 
@@ -1674,24 +1675,17 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[9]
+[12]
 
-[10{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
-LaTeX Font Info:    Trying to load font information for T5+lmtt on input line 105.
- (c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmtt.fd
-File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <11.86258> not available
-(Font)              Font shape `T5/lmtt/b/n' tried instead on input line 106.
+[13{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 
+[14]
 
-[11]
+[15{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
-[12{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+[16]))
 
-[13]))
-
-[14] (./chapters/c3/c3_chapter.tex
+[17] (./chapters/c3/c3_chapter.tex
 Chapter 3.
 
 Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
@@ -1700,13 +1694,13 @@ Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
 
 )
 
-[15
+[18
 
 
 
 ] (./chapters/conclusion.tex)
 
-[16
+[19
 
 
 ]
@@ -1734,7 +1728,7 @@ Overfull \hbox (12.4554pt too wide) in paragraph at lines 199--199
 
 
 
-[17
+[20
 
 
 
@@ -1748,7 +1742,7 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5F6FD2761E55637736DBC24C54233E02;5545.
+(rerunfilecheck)             Checksum: F986A947E80CEB5670CA3C7BC64F4237;5545.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
@@ -1759,18 +1753,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40714 strings out of 473189
- 766345 string characters out of 5719958
- 1712009 words of memory out of 5000000
- 63184 multiletter control sequences out of 15000+600000
+ 40758 strings out of 473189
+ 767614 string characters out of 5719958
+ 1724200 words of memory out of 5000000
+ 63216 multiletter control sequences out of 15000+600000
  743925 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,6n,107p,3163b,2259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (27 pages, 349428 bytes).
+Output written on thesis.pdf (30 pages, 369622 bytes).
 PDF statistics:
- 408 PDF objects out of 1000 (max. 8388607)
- 348 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 373 compressed objects within 4 object streams
+ 78 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
