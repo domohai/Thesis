@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  20 APR 2025 15:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  22 APR 2025 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1480,7 +1480,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 Package biblatex Info: Reference section=0 on input line 153.
 Package biblatex Info: Reference segment=0 on input line 153.
  (./cover.tex
-<figures/uet.jpg, id=145, 1125.20375pt x 1125.20375pt>
+<figures/uet.jpg, id=153, 1125.20375pt x 1125.20375pt>
 File: figures/uet.jpg Graphic file (type jpg)
 <use figures/uet.jpg>
 Package pdftex.def Info: figures/uet.jpg  used on input line 18.
@@ -1624,7 +1624,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 [4]
-<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=254, 332.442pt x 130.68825pt>
+<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=264, 332.442pt x 130.68825pt>
 File: figures/c1/BankAccount/BankAccount_ClassDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BankAccount_ClassDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BankAccount_ClassDiagram.png  used on input line 52.
@@ -1637,7 +1637,7 @@ File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [5 <./figures/c1/BankAccount/BankAccount_ClassDiagram.png>]
 
 [6]
-<figures/c1/BankAccount/BA_ObjectDiagram.png, id=267, 558.28575pt x 118.64325pt>
+<figures/c1/BankAccount/BA_ObjectDiagram.png, id=277, 558.28575pt x 118.64325pt>
 File: figures/c1/BankAccount/BA_ObjectDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BA_ObjectDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on input line 139.
@@ -1645,47 +1645,61 @@ Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on in
 ) (./chapters/c1/c1_ocl.tex
 
 [7 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]
-<figures/c1/SoftwareSystem/SS_Ver4.png, id=275, 407.72325pt x 145.14224pt>
-File: figures/c1/SoftwareSystem/SS_Ver4.png Graphic file (type png)
-<use figures/c1/SoftwareSystem/SS_Ver4.png>
-Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver4.png  used on input line 22.
-(pdftex.def)             Requested size: 364.19667pt x 129.6479pt.
+<figures/c1/SoftwareSystem/SS_Ver2.png, id=285, 338.4645pt x 181.8795pt>
+File: figures/c1/SoftwareSystem/SS_Ver2.png Graphic file (type png)
+<use figures/c1/SoftwareSystem/SS_Ver2.png>
+Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver2.png  used on input line 15.
+(pdftex.def)             Requested size: 364.19667pt x 195.722pt.
+
+Overfull \hbox (4.23929pt too wide) in paragraph at lines 21--29
+\T5/lmtt/m/n/14 installedApps\T5/lmr/m/n/14 , and \T5/lmtt/m/n/14 runningApps\T5/lmr/m/n/14 , which track ap-pli-ca-tions in dif-fer-ent states
+ []
 
 
-[8 <./figures/c1/SoftwareSystem/SS_Ver4.png>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 54.
+
+[8 <./figures/c1/SoftwareSystem/SS_Ver2.png>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 58.
 LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <11.86258> not available
-(Font)              Font shape `T5/lmtt/b/n' tried instead on input line 55.
+(Font)              Font shape `T5/lmtt/b/n' tried instead on input line 59.
 
 
-[9]) (./chapters/c1/c1_use.tex))
+[9]
 
-[10] (./chapters/c2/c2_chapter.tex
+[10]
+
+[11]
+
+[12{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]) (./chapters/c1/c1_use.tex))
+
+[13] (./chapters/c2/c2_chapter.tex
 Chapter 2.
 (./chapters/c2/c2_introduction.tex
 
-[11
+[14
 
 
 
-]) (./chapters/c2/c2_extension.tex
+]) (./chapters/c2/c2_specification.tex
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 7.
+(csquotes)                Punctuation tracker may fail on input line 6.
 
 
 
-[12]
+[15]
 
-[13{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+[16]
 
-[14]
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 51.
 
-[15{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
-[16]))
 
-[17] (./chapters/c3/c3_chapter.tex
+[17]
+
+[18]) (./chapters/c2/c2_verification.tex))
+
+[19] (./chapters/c3/c3_chapter.tex
 Chapter 3.
 
 Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
@@ -1694,13 +1708,13 @@ Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
 
 )
 
-[18
+[20
 
 
 
 ] (./chapters/conclusion.tex)
 
-[19
+[21
 
 
 ]
@@ -1728,7 +1742,7 @@ Overfull \hbox (12.4554pt too wide) in paragraph at lines 199--199
 
 
 
-[20
+[22
 
 
 
@@ -1741,8 +1755,11 @@ L3 programming layer <2025-01-18>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F986A947E80CEB5670CA3C7BC64F4237;5545.
+(rerunfilecheck)             Checksum: 213935B6BA3843A13448CAA8B63F0EB6;5774.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                thesis
@@ -1753,18 +1770,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40758 strings out of 473189
- 767614 string characters out of 5719958
- 1724200 words of memory out of 5000000
- 63216 multiletter control sequences out of 15000+600000
- 743925 words of font info for 114 fonts, out of 8000000 for 9000
+ 40785 strings out of 473189
+ 768241 string characters out of 5719958
+ 1761219 words of memory out of 5000000
+ 63232 multiletter control sequences out of 15000+600000
+ 754434 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,6n,107p,3163b,2259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (30 pages, 369622 bytes).
+Output written on thesis.pdf (32 pages, 372490 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 373 compressed objects within 4 object streams
- 78 named destinations out of 1000 (max. 500000)
- 321 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 337 words of extra memory for PDF output out of 10000 (max. 10000000)
 
