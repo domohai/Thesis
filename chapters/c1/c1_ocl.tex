@@ -1,4 +1,5 @@
 \section{Object Constraint Language (OCL)}
+\label{sec:ocl}
 
 \subsection{Overview}
 
@@ -114,19 +115,40 @@ and quantifiers (forAll, exists) for building complex logical statements.
 \subsection{OCL Limitations}
 
 \subsubsection{Temporal Dimension}
-To illustrate the temporal limits of OCL, let us consider the following temporal properties of our software system: 
-
-\begin{itemize} 
-    \item \textbf{Safety 1:} An application loading must precede its run (i.e., an 
-    application can only be run if the \texttt{load} operation has previously been 
-    called on it) 
-    \item \textbf{Safety 2:} There must be an install operation between an 
-    application's loading and its running (i.e., an application must have the 
-    \texttt{install} operation called on it after loading and before running) 
-    \item \textbf{Liveness:} Every application in the \texttt{runningApps} collection 
-    will eventually be removed from it (i.e., the \texttt{stop} operation will 
-    eventually be called for every running application) 
-\end{itemize}
+To illustrate the temporal limits of OCL, let us consider the following temporal 
+properties of our software system: 
+% \begin{itemize} 
+%     \item \textbf{Safety 1:} An application loading must precede its run (i.e., an 
+%     application can only be run if the \texttt{load} operation has previously been 
+%     called on it) 
+%     \item \textbf{Safety 2:} There must be an install operation between an 
+%     application's loading and its running (i.e., an application must have the 
+%     \texttt{install} operation called on it after loading and before running) 
+%     \item \textbf{Safety 3:} Each application can be loaded only once (i.e., the
+%     \texttt{load} operation can only be called once for each application)
+%     \item \textbf{Liveness:} Every application in the \texttt{runningApps} collection 
+%     will eventually be removed from it (i.e., the \texttt{stop} operation will 
+%     eventually be called for every running application) 
+% \end{itemize}
+% \begin{table}[h]
+    
+%     \label{tab:temporal_properties}
+%     \begin{tabular}{p{0.95\textwidth}}
+%         \textbf{Safety 1:} An application loading must precede its run. \\
+%         \textbf{Safety 2:} There must be an install operation between an application's loading and its running. \\
+%         \textbf{Safety 3:} Each application can be loaded at most one time. \\
+%         \textbf{Liveness:} Every loaded application will eventually be installed. \\
+%     \end{tabular}
+%     \caption{Expression 1}
+% \end{table}
+\begin{mdframed}
+    \item \textbf{Safety 1:} An application loading must precede its run.
+    \item \textbf{Safety 2:} There must be an install operation between an application's loading and its running.
+    \item \textbf{Safety 3:} Each application can be loaded at most one time.
+    \item \textbf{Liveness:} Every loaded application will eventually be installed.
+    \captionof{figure}{Temporal properties of the software system.}
+    \label{fig:temporal_properties}
+\end{mdframed}
 
 Such temporal properties are impossible to specify in OCL without at least enriching 
 the model structure with state variables. In temporal logics, we formally distinguish 
@@ -143,12 +165,12 @@ dimension.
 
 \subsubsection{Events}
 OCL also has significant limitations in handling events. An event is a predicate that 
-holds at different instants of time. Mathematically, it can be represented as a 
+holds at different instants of time . Mathematically, it can be represented as a 
 function 
 $P : \text{Time} \rightarrow {\text{true}, \text{false}}$ 
 which indicates, at each instant, whether the event is triggered. The subset 
 ${t \in \text{Time} \mid P(t)} \subseteq \text{Time}$ 
-represents all time instants at which the event $P$ occurs.
+represents all time instants at which the event $P$ occurs \cite{TemporalAndEventOCL}.
 
 In the object-oriented paradigm, we commonly distinguish five kinds of events: 
 \begin{itemize} 
@@ -167,8 +189,8 @@ quantifies over all instances when this operation is called.
 
 However, OCL lacks explicit constructs for the finest type of events which is state change 
 events. These events, which occur when attribute values or object relationships 
-change, are particularly important for reactive systems that must respond to changes 
-in their environment. This limitation, combined with OCL's restricted temporal 
+change, are particularly important for dynamic systems that must detect and 
+respond to changes in their operating environment. This limitation, combined with OCL's restricted temporal 
 expressiveness, makes it difficult to specify many realistic system requirements 
 that involve reactions to events occurring over time.
 

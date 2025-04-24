@@ -68,6 +68,51 @@
       \verb https://dl.acm.org/doi/book/10.5555/294049
       \endverb
     \endentry
+    \entry{TemporalAndEventOCL}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1b87cd8f0cbd100c9433a8f809a36c21}{%
+           family={Kanso},
+           familyi={K\bibinitperiod},
+           given={Bilal},
+           giveni={B\bibinitperiod}}}%
+        {{hash=6f56568ef372d5485d61cc700dc28637}{%
+           family={Taha},
+           familyi={T\bibinitperiod},
+           given={Safouan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{24c7c863856e394adc47593456b96bd6}
+      \strng{fullhash}{24c7c863856e394adc47593456b96bd6}
+      \strng{fullhashraw}{24c7c863856e394adc47593456b96bd6}
+      \strng{bibnamehash}{24c7c863856e394adc47593456b96bd6}
+      \strng{authorbibnamehash}{24c7c863856e394adc47593456b96bd6}
+      \strng{authornamehash}{24c7c863856e394adc47593456b96bd6}
+      \strng{authorfullhash}{24c7c863856e394adc47593456b96bd6}
+      \strng{authorfullhashraw}{24c7c863856e394adc47593456b96bd6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Object Constraint Language (OCL) is widely used to express static constraints on models and object-oriented systems. However, the notion of dynamic constraints, controlling the system behavior over time, has not been natively supported. Such dynamic constraints are necessary to handle temporal and real-time properties of systems. In this paper, we first add a temporal layer to the OCL language, based syntactically on Dwyer et al.'s specification patterns. We enrich it with formal scenario-based semantics and integrate it into the current Eclipse OCL plug-in. Second, we translate, with a compositional approach, OCL temporal properties into finite-state automata and we connect our framework to automatic test generators. This way, we create a bridge linking model driven engineering and usual formal methods.}
+      \field{issn}{0167-6423}
+      \field{journaltitle}{Science of Computer Programming}
+      \field{note}{Selected Papers from the Fifth International Conference on Software Language Engineering (SLE 2012)}
+      \field{title}{Specification of temporal properties with OCL}
+      \field{volume}{96}
+      \field{year}{2014}
+      \field{pages}{527\bibrangedash 551}
+      \range{pages}{25}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.scico.2014.02.029
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167642314000963
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0167642314000963
+      \endverb
+      \keyw{OCL,Temporal patterns,Eclipse/MDT,Model-driven engineering,Formal methods}
+    \endentry
     \entry{UML}{manual}{}{}
       \list{publisher}{1}{%
         {Object Management Group}%

@@ -1,0 +1,168 @@
+%%% TOCL
+%%% Version 1
+% TOCL enhances the Object Constraint Language (OCL) by enabling the 
+% specification of properties that must hold over time, across multiple states of 
+% a system. While standard OCL is limited to evaluating constraints within a 
+% single system state or across a single state transition (via pre- and postconditions), 
+% many system requirements involve dynamic behaviors that unfold over sequences of states. 
+% Examples include properties such as "eventually, the system will reach a stable state" 
+% or "once a condition is met, it must remain true thereafter." To address this, 
+% TOCL, as introduced by Ziemann and Gogolla \cite{TOCL}, extends OCL with 
+% elements of linear temporal logic, allowing these temporal properties to be expressed 
+% directly within a familiar OCL-like syntax.
+
+% TOCL introduces a comprehensive set of temporal operators, divided into future 
+% and past categories, which are adopted in TOCL+ as the foundation for temporal 
+% reasoning. Below, we review these operators, their syntax, semantics, and provide 
+% illustrative examples.
+
+%%% Version 1
+% These operators enable precise specification of temporal relationships, making TOCL suitable for modeling and verifying dynamic system behaviors.
+
+%%% Sample
+% Future Operators:
+
+% next e: True if the expression e holds in the next state.
+% always e: True if e holds in the current state and all subsequent states.
+% sometime e: True if e holds in the current state or at least one future state.
+% always e1 until e2: True if e1 remains true until e2 becomes true, or if e1 remains true indefinitely if e2 never becomes true.
+% sometime e1 before e2: True if e1 becomes true at some point before e2 does, or if e1 becomes true and e2 never does.
+
+% Past Operators:
+
+% previous e: True if e was true in the previous state (or if there is no previous state, i.e., at the initial state).
+% alwaysPast e: True if e was true in all past states.
+% sometimePast e: True if e was true in at least one past state.
+% always e1 since e2: True if e1 has been true since the last time e2 was true.
+% sometime e1 since e2: True if e1 has been true at some point since the last time e2 was true.
+
+%
+% \subsubsection{Syntax and Semantics}
+% The original syntax of TOCL in [29] was defined using mathematical notations as opposed to EBNF.
+% author = {Lail, Mustafa Al and Rosales, Antonio and Cardenas, Hector and Hamann, Lars and Perez, Alfredo},
+% created EBNF grammar of TOCL in \cite{TOCL2OCL}. We also adopted this EBNF grammar to define the syntax of TOCL in our work.
+% The syntax of TOCL integrates these temporal operators seamlessly into OCL expressions, allowing them to be used within invariants, preconditions, and postconditions. For example:
+
+% An invariant using \textit{always} operator:
+% \begin{lstlisting}[style=toclstyle]
+% context C inv: always (self.attribute > 0)
+% \end{lstlisting}
+% context C inv:
+%   always (self.attribute > 0)
+
+% A condition using \textit{next} operator:
+% \begin{lstlisting}[style=toclstyle]
+% context C inv:
+%   self.state = #active implies next (self.state = #idle)
+% \end{lstlisting}
+
+% The semantics of these operators are defined over sequences of system states, with 
+% formal definitions provided by Ziemann and Gogolla \cite{TOCL} based on state 
+% sequences ($\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$). For the 
+% complete formal treatment, readers are referred to the original research.
+
+% The semantics of these operators are defined over infinite sequences of system states, where each state represents a snapshot of the system at a given time. 
+% Formal definitions of the semantics are provided in [28], based on a state sequence ($\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$), ensuring a rigorous foundation for TOCL. For a detailed formal treatment, readers are referred to the original paper.
+% The evaluation of an expression depends on its position within this sequence:
+
+% \begin{itemize}
+%   \item \textbf{next $e$:} True if $e$ holds at the state immediately following the current one.
+%   \item \textbf{always $e$:} True if $e$ holds at the current state and all future states.
+%   \item \textbf{sometime $e$:} True if $e$ holds at the current state or some future state.
+%   \item \textbf{For past operators:} The evaluation considers the sequence of states preceding the current state, with \textit{previous $e$} being true if $e$ held in the prior state, and so forth.
+% \end{itemize}
+% next e is true if e holds at the state immediately following the current one.
+% always e is true if e holds at the current state and all future states.
+% sometime e is true if e holds at the current state or some future state.
+% For past operators, the evaluation considers the sequence of states preceding the current state, with previous e being true if e held in the prior state, and so forth.
+
+%%% Event extension
+
+
+%%%%% Refactoring
+% TOCL (Temporal OCL), introduced by Ziemann and Gogolla \cite{TOCL}, extends OCL with temporal operators for specifying properties that must hold across multiple system states. It incorporates elements of linear temporal logic while maintaining OCL's familiar syntax, enabling developers to express temporal constraints directly within their models. TOCL extends standard OCL with a comprehensive set of temporal operators categorized into future operators (next, always, sometime, until, before) and past operators (previous, alwaysPast, sometimePast, since), each with well-defined semantics for reasoning about system behavior over time. These operators follow the principles of linear temporal logic but are adapted to work within OCL's object-oriented context, preserving OCL's typing system and navigation capabilities. By integrating temporal reasoning directly into OCL, TOCL provides a unified formalism that addresses the fundamental limitations of standard OCL when specifying dynamic system aspects, particularly those involving sequences of states or temporal relationships between conditions.
+
+% In this thesis, we leverage TOCL, as introduced by Ziemann and Gogolla \cite{TOCL}, 
+% as the temporal foundation for specifying properties that must hold over time across 
+% multiple states of a system. Standard Object Constraint Language (OCL) is limited to 
+% evaluating constraints within a single system state or across a single state transition 
+% (via pre- and postconditions), which is insufficient for capturing the dynamic behaviors 
+% inherent in many system requirements. For instance, properties such as "eventually, 
+% the system will reach a stable state" or "once a condition is met, it must remain 
+% true thereafter" require reasoning over sequences of states. TOCL addresses this limitation 
+% by extending OCL with elements of linear temporal logic, enabling the expression of such 
+% temporal properties within a familiar OCL-like syntax.
+
+% TOCL's comprehensive set of temporal operators, categorized into future and past 
+% operators, provides the essential temporal reasoning capabilities for our work. 
+% In this thesis, we adopt these operators unchanged as the basis for modeling and 
+% verifying dynamic system behaviors over time. However, to address systems that 
+% exhibit reactive behaviors driven by specific events, we extend TOCL into TOCL+ 
+% by integrating novel event-based constructs. This extension, detailed in the next 
+% section, complements TOCL’s temporal framework, enabling a more holistic specification 
+% of both state-based temporal properties and event-driven dynamics. Below, we review 
+% the adopted TOCL temporal operators, their syntax, and semantics, which serve as 
+% the cornerstone of TOCL+.
+
+%%%
+% \subsubsection{Adopted TOCL Temporal Operators}
+% TOCL defines two categories of temporal operators that we adopt in our work:
+
+% \paragraph{Future Operators:}
+% \begin{itemize}
+%     \item \textbf{next $e$:} True if the expression $e$ holds in the next state.
+%     \item \textbf{always $e$:} True if $e$ holds in the current state and all subsequent states.
+%     \item \textbf{sometime $e$:} True if $e$ holds in the current state or at least one future state.
+%     \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true, or if $e_1$ remains true indefinitely if $e_2$ never becomes true.
+%     \item \textbf{sometime $e_1$ before $e_2$:} True if $e_1$ becomes true at some point before $e_2$ does, or if $e_1$ becomes true and $e_2$ never does.
+% \end{itemize}
+
+% \paragraph{Past Operators:}
+% \begin{itemize}
+%     \item \textbf{previous $e$:} True if $e$ was true in the previous state (or if there is no previous state, i.e., at the initial state).
+%     \item \textbf{alwaysPast $e$:} True if $e$ was true in all past states.
+%     \item \textbf{sometimePast $e$:} True if $e$ was true in at least one past state.
+%     \item \textbf{always $e_1$ since $e_2$:} True if $e_1$ has been true since the last time $e_2$ was true.
+%     \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true.
+% \end{itemize}
+
+% For the formal semantics of these operators, we refer to the original work by 
+% Ziemann and Gogolla \cite{TOCL}, which defines them over sequences of system states.
+
+%%%
+% \subsubsection{Example Specifications}
+% To demonstrate the practical application of these operators, we apply them to 
+% the software system case study introduced in Chapter 1:
+
+
+\subsection{Event Constructs in OCL}
+% To overcome the limitations of TOCL in specifying event-based properties, we
+% we propose an extension to TOCL that supports specifying events. The notion of event is
+% borrowed from \cite{TemporalAndEventOCL}, which defines events as predicates that specify
+% a set of instants within the time line. In section \ref{sec:ocl}, we discussed the
+% different types of events in the object-oriented approach. There are operation
+% (call/start/end) events, time-triggered events, and state change events. In this work,
+% we focus on extending OCL with the necessary constructs for both operation and state change
+% events. We also adopt the synchronous paradigm, and we merge the operation
+% (call/start/end) events into one call event, named \texttt{isCalled}, that leads the
+% system from a pre-state to a post-state without considering intermediate change states.
+
+% The keyword ‘isCalled’ represents a call event, which corre
+% sponds to a call to an operation. Under the hypothesis of atomicity of operations,
+% we merge into a single call event, the events corresponding to the call, the start,
+% and the end of an operation. A call event has one parameter, which is the operation
+% being called with its parameters. The keyword ‘becomesTrue’ denotes a state change event
+% parameterized with the OCL expression provided as parameter: it corresponds
+% to the state in which the input expression becomes true (which implies that in
+% the previous state it evaluated to false).
+
+% \begin{itemize}
+%     \item \textbf{isCalled}: A generic event construct that unifies operation events. 
+%     It detects when an operation is invoked on an object, representing the atomic 
+%     transition from a pre-state to a post-state. It has one required parameter, 
+%     \texttt{op}, which is the operation being called with its parameters.
+    
+%     \item \textbf{becomesTrue}: A state change event that is parameterized by an OCL 
+%     boolean expression P. It designates a step in which P becomes true (i.e., P was 
+%     evaluated to false in the previous state and is true in the current state). 
+% \end{itemize}
