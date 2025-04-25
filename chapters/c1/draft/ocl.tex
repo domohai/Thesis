@@ -253,3 +253,29 @@
 % logical statements. OCL constraints typically appear as class invariants 
 % (conditions that must always be true for all instances) and operation 
 % pre/postconditions (conditions that must be true before and after operation execution).
+
+
+% \begin{itemize} 
+%     \item \textbf{Safety 1:} An application loading must precede its run (i.e., an 
+%     application can only be run if the \texttt{load} operation has previously been 
+%     called on it) 
+%     \item \textbf{Safety 2:} There must be an install operation between an 
+%     application's loading and its running (i.e., an application must have the 
+%     \texttt{install} operation called on it after loading and before running) 
+%     \item \textbf{Safety 3:} Each application can be loaded only once (i.e., the
+%     \texttt{load} operation can only be called once for each application)
+%     \item \textbf{Liveness:} Every application in the \texttt{runningApps} collection 
+%     will eventually be removed from it (i.e., the \texttt{stop} operation will 
+%     eventually be called for every running application) 
+% \end{itemize}
+% \begin{table}[h]
+    
+%     \label{tab:temporal_properties}
+%     \begin{tabular}{p{0.95\textwidth}}
+%         \textbf{Safety 1:} An application loading must precede its run. \\
+%         \textbf{Safety 2:} There must be an install operation between an application's loading and its running. \\
+%         \textbf{Safety 3:} Each application can be loaded at most one time. \\
+%         \textbf{Liveness:} Every loaded application will eventually be installed. \\
+%     \end{tabular}
+%     \caption{Expression 1}
+% \end{table}

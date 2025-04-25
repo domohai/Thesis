@@ -1,0 +1,4 @@
+{
+    "github.copilot.chat.completionContext.typescript.mode": "off",
+    "github.copilot.nextEditSuggestions.enabled": true
+}

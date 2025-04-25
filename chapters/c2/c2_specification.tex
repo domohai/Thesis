@@ -1,49 +1,46 @@
-\section{An Extended OCL for Temporal and Event Specifications}
+\section{Temporal and Event Extensions to OCL}
 
 %%%%% TOCL
-\subsection{Adopted TOCL Temporal Operators}
+\subsection{Temporal Operators in TOCL}
 
 \hspace{1cm} TOCL (Temporal OCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
-extends OCL with temporal operators for specifying properties that must hold across 
-multiple system states. It incorporates elements of linear temporal logic while 
-maintaining OCL's familiar syntax, enabling developers to express temporal constraints 
-directly within their models. TOCL extends standard OCL with a comprehensive set of 
-temporal operators categorized into future operators (next, always, sometime, until, 
-before) and past operators (previous, alwaysPast, sometimePast, since), each with 
-well-defined semantics for reasoning about system behavior over time. These operators 
-follow the principles of linear temporal logic but are adapted to work within OCL's 
-object-oriented context, preserving OCL's typing system and navigation capabilities. 
-By integrating temporal reasoning directly into OCL, TOCL provides a unified formalism 
-that addresses the fundamental limitations of standard OCL when specifying dynamic 
-system aspects, particularly those involving sequences of states or temporal 
-relationships between conditions.
+extends OCL with temporal operators for specifying properties across multiple system 
+states. It incorporates linear temporal logic elements while preserving OCL's familiar 
+syntax and type system. TOCL defines its semantics over an infinite sequence of states 
+$\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each operator is 
+evaluated in an environment $\tau = (\hat{\sigma}, i, \beta)$ with $i$ representing 
+the current state index and $\beta$ a variable assignment. TOCL organizes its operators 
+into two categories: future operators and past operators.
 
-In our work, we adopt the following temporal operators from TOCL:
+In our work, we adopt the following temporal operators:
 
 \paragraph{Future Operators:} 
 \begin{itemize} 
-    \item \textbf{next $e$:} True if the expression $e$ holds in the next state. 
-    \item \textbf{always $e$:} True if $e$ holds in the current state and all subsequent states. 
-    \item \textbf{sometime $e$:} True if $e$ holds in the current state or at least one future state. 
-    \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true, or if $e_1$ remains true indefinitely if $e_2$ never becomes true. 
-    \item \textbf{sometime $e_1$ before $e_2$:} True if $e_1$ becomes true at some point before $e_2$ does, or if $e_1$ becomes true and $e_2$ never does. 
+    \item \textbf{next $e$:} True if $e$ holds in the next state (state $i+1$). 
+    \item \textbf{always $e$:} True if $e$ holds in the current state and all subsequent states (all states $j \geq i$). 
+    \item \textbf{sometime $e$:} True if $e$ holds in the current state or at least one future state (some state $j \geq i$). 
+    \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true, or indefinitely if $e_2$ never occurs. 
+    \item \textbf{sometime $e_1$ before $e_2$:} True if $e_1$ becomes true at some point before $e_2$ does. 
 \end{itemize}
 
-\paragraph{Past Operators:} \begin{itemize} 
-    \item \textbf{previous $e$:} True if $e$ was true in the previous state (or if there is no previous state, i.e., at the initial state). 
-    \item \textbf{alwaysPast $e$:} True if $e$ was true in all past states. 
-    \item \textbf{sometimePast $e$:} True if $e$ was true in at least one past state. 
+\paragraph{Past Operators:} 
+\begin{itemize} 
+    \item \textbf{previous $e$:} True if $e$ was true in the previous state or if at the initial state ($i = 0$). 
+    \item \textbf{alwaysPast $e$:} True if $e$ was true in all past states (all states $0 \leq j < i$). 
+    \item \textbf{sometimePast $e$:} True if $e$ was true in at least one past state (some state $0 \leq j < i$). 
     \item \textbf{always $e_1$ since $e_2$:} True if $e_1$ has been true since the last time $e_2$ was true. 
     \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true. 
 \end{itemize}
-For the formal semantics of these operators, we refer to the original work by Ziemann and Gogolla \cite{TOCL}.
 
-To illustrate the capabilities of these operators, we will specify the temporal 
-properties of the Software System introduced in Chapter 1 (Figure \ref{fig:temporal_properties}).
-using TOCL.
+% For more details about TOCL's formal semantics, grammar specification, and integration with OCL, we refer readers to the original work by Ziemann and Gogolla \cite{TOCL}. Their comprehensive formalization establishes the theoretical foundation upon which we build our event extensions.
+For details regarding TOCL's formal semantics, grammar specification, and OCL integration, Ziemann and Gogolla \cite{TOCL} provide a comprehensive formalization that defines these operators over sequences of system states. Their work establishes how temporal expressions maintain OCL's type system while extending its scope to reason about multiple states. This formalization provides the theoretical foundation for our event extensions in the following section.
+
+To demonstrate TOCL's capabilities, we apply it to the first two temporal properties 
+from our Software System example \ref{fig:temporal_properties}:
+
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={TOCL Specification for Safety 1 and 2 property.}, 
+    caption={TOCL Specification for Safety Properties.}, 
     label={lst:tocl_safety12}
 ]
 context System 
@@ -56,7 +53,7 @@ inv safety1:
         sometimePast self.loadedApps->includes(app)
     )
 /*
-There must be an install operation between an application's loading and its running.
+There must be an install operation between loading and running.
 */
 inv safety2: 
     self.loadedApps->notEmpty() implies 
@@ -65,113 +62,216 @@ inv safety2:
         before self.runningApps->includes(app)
     )
 \end{lstlisting}
-As shown in Listing \ref{lst:tocl_safety12}, TOCL allows us to elegantly express 
-properties that span multiple system states. Safety 1 uses the \texttt{sometimePast} 
-operator to verify that any application in the \texttt{runningApps} collection must 
-have previously been in the \texttt{loadedApps} collection, capturing the temporal 
-ordering requirement. Safety 2 utilizes the \texttt{before} operator to specify that 
-an application must be in the \texttt{installedApps} collection before it appears 
-in the \texttt{runningApps} collection. These specifications are impossible to 
-formulate in standard OCL, which has no operators for referring to past or future 
-states beyond a single transition.
 
-However, TOCL still has important limitations when it comes to specifying event-based 
-properties. For Safety 3 ("Each application can be loaded at most one time"), TOCL 
-lacks the ability to detect and count specific occurrences of events like operation 
-calls. While TOCL can express that certain conditions hold across states, it doesn't 
-offer a direct way to identify the specific moments when operations are called or 
-when state changes happen. This limitation becomes particularly problematic when we 
-need to express constraints on the number of times an event occurs or when we need 
-to detect specific state changes.
+TOCL can express properties spanning multiple states through state-based workarounds, 
+as shown in Listing \ref{lst:tocl_safety12}. For Safety 1, rather than directly 
+detecting the \texttt{load} operation call, TOCL uses \texttt{sometimePast} with 
+state predicates to infer that loading occurred before running based on collection 
+membership. Similarly, for Safety 2, TOCL uses the \texttt{before} operator with 
+state predicates to infer the sequencing of operations through their effects on 
+system state. While indirect, these specifications work because they only need to 
+track the order of state changes, not count specific events.
+
+However, TOCL fundamentally cannot specify Safety 3: \textit{"Each application can 
+be loaded at most one time"}. This property requires counting operation call 
+occurrences, which cannot be inferred from state changes alone. Since TOCL lacks 
+constructs to identify when operations are called or to count events, it cannot 
+express constraints that limit how many times an operation occurs. This limitation 
+becomes a critical barrier when specifying common safety properties that restrict 
+operation frequencies.
 
 %%%%% Event
 \subsection{Event Constructs in OCL}
 
-\hspace{1cm} To address TOCL's limitations in expressing event-based properties, we 
-propose TOCL+, an extension that introduces explicit event specification capabilities. 
-We adopt the concept of events from \cite{TemporalAndEventOCL}, which defines events 
-as predicates identifying specific instants in time. As discussed in Section 
-\ref{sec:ocl}, object-oriented systems typically recognize multiple event types: 
-operation events (call/start/end), time-triggered events, and state change events. 
-Our extension focuses specifically on operation and state change events, as they 
-capture the fundamental interactions in object-oriented systems.
+\hspace{1cm} To address TOCL's limitations in expressing event-based properties, 
+we propose TOCL+, which extends TOCL with explicit event specification capabilities. 
+Following the synchronous paradigm, TOCL+ represents operation calls as atomic 
+transitions from pre-states to post-states without intermediate states. This approach 
+simplifies verification while preserving essential system behaviors.
 
-Following the synchronous paradigm for its well-defined formal semantics, TOCL+ 
-merges operation events (call/start/end) into a single construct named 
-\texttt{isCalled}. This construct represents the atomic transition from a pre-state 
-to a post-state without intermediate states, providing a clean abstraction for 
-verification. This atomicity assumption simplifies reasoning about system behavior 
-while still capturing essential reactive properties.
+TOCL+ introduces two primary event constructs:
 
-TOCL+ introduces two primary event constructs. The first construct, \textbf{isCalled}, 
-is a generic event construct that unifies operation events. It detects when an 
-operation is invoked on an object, representing the atomic transition from a 
-pre-state to a post-state. It has one required parameter, \texttt{op}, which is the 
-operation being called with its parameters.
+1. \textbf{isCalled}: Detects when an operation is invoked on an object. It takes 
+the operation call with its parameters as an argument and represents the atomic 
+transition from pre-state to post-state.
 
-The second construct, \textbf{becomesTrue}, represents a state change event 
-parameterized by an OCL boolean expression P. It designates a step in which P becomes 
-true (i.e., P was evaluated to false in the previous state and is true in the current 
-state).
+2. \textbf{becomesTrue}: Represents a state change event parameterized by an OCL 
+boolean expression P. It identifies transitions where P changes from false to true 
+between consecutive states.
 
-Both event constructs are illustrated in Figure \ref{fig:event_constructs}.
-
-% Event figures
 \begin{figure}
     \centering
     \includegraphics[width=1\textwidth]{figures/c2/events_visual.png}
-    \caption{Event constructs in OCL.}
+    \caption{Events.}
     \label{fig:event_constructs}
 \end{figure}
 
+We adopt the concept of events from \cite{TemporalAndEventOCL}, which defines events 
+as predicates identifying specific instants in time. As discussed in Section 
+\ref{sec:ocl}, object-oriented systems typically recognize operation events, 
+time-triggered events, and state change events. TOCL+ focuses on operation and 
+state change events as they capture the fundamental interactions in object-oriented 
+systems.
 
-\subsubsection{Formal Definition}
-
-Formally, we define events in terms of operations and state transitions. Let O be the set of all operations and E be the set of all OCL boolean expressions in a model. An event is either:
-
+In addition, TOCL+ supports bounded existence properties with constructs like:
 \begin{itemize}
-    \item isCalled(op) - representing a call to operation op, optionally with precondition pre and postcondition post
-    \item becomesTrue(P) - representing any operation call that transitions the system from a state where ¬P holds to a state where P holds
+    \item \texttt{at most \textit{k} times} - limiting event occurrences to no more 
+    than \textit{k}
+    \item \texttt{exactly \textit{k} times} - requiring precisely \textit{k} 
+    occurrences of an event
+    \item \texttt{at least \textit{k} times} - requiring event occurrences to be 
+    \textit{k} or more
 \end{itemize}
 
-This formal definition enables precise reasoning about when events occur during system execution and forms the foundation for our verification approach.
+Applying TOCL+ to our Software System example from Chapter 1, we can express all 
+four temporal properties from Figure \ref{fig:temporal_properties}:
+
+\begin{lstlisting}[
+    style=toclstyle, 
+    caption={TOCL+ Specifications.}, 
+    label={lst:tocl+}
+]
+context System
+/*
+An application loading must precede its run.
+*/
+inv safety1: 
+    self.runningApps->notEmpty() implies
+    self.runningApps->forAll(app |
+        isCalled(run(app : Application)) implies
+        sometimePast isCalled(load(app : Application))
+    )
+
+/*
+There must be an install operation between an application's loading and its running.
+*/
+inv safety2: 
+    self.runningApps->notEmpty() implies
+    self.runningApps->forAll(app |
+        isCalled(run(app : Application)) implies (
+            sometime isCalled(install())
+            since isCalled(load(app : Application))
+        )
+    )
+
+/*
+Each application can be loaded at most one time.
+*/
+inv safety3:
+    self.installedApps->notEmpty() implies
+    self.installedApps->forAll(app |
+        sometimePast isCalled(load(app : Application))
+        at most 1 times
+    )
+
+/*
+Every loaded application will eventually be installed.
+*/
+inv liveness:
+    self.loadedApps->notEmpty() implies
+    self.loadedApps->forAll(app | 
+        sometime isCalled(install())
+    )
+\end{lstlisting}
+
+These examples show TOCL+'s expressive power. With the \texttt{isCalled} construct, 
+safety properties 1 and 2 directly reference operation calls rather than inferring 
+them from state changes. Safety property 3 uses bounded existence ("at most 1 times") 
+to limit operation occurrences - something impossible in both standard OCL and TOCL. 
+The liveness property also benefits from direct operation call detection, making 
+the requirement clearer.
 
 
+\subsection{Formal Definition for Event constructs}
 
-%%% Sample
-% Events are predicates to specify sets of instants within the time line. In Section 1.4.2, we discussed the different types of
-% events in the object-oriented approach. There are operation (call/start/end) events, time-triggered events and state change
-% events. We have seen that when integrating the clock into the system, time-triggered events are particular state change
-% events. Hence, we only need to extend OCL with the necessary construct for both operation and state change events.
-% We aim to connect our OCL temporal extension to formal methods such as model-checking and test scenario generation.
-% Formal methods are mainly based on the synchronous paradigm that has well-founded mathematical semantics and that
-% allows formal verification of the programs and automatic code generation. The essence of the synchronous paradigm is the
-% atomicity of reactions (operation calls) where all the occurring events during such a reaction are considered simultaneous.
-% In our work, we adopt the synchronous paradigm, and we merge the operation (call/start/end) events into one call event,
-% named isCalled, that leads the system from a pre-state to a post-state without considering neither observing intermediate
-% change states.
-% isCalled: is a generic event construct that unifies both operation events and state change events.
-% becomesTrue: is a state change event that is parameterized by an OCL boolean expression P, and designates a step in
-%  which P becomes true, i.e. P was evaluated to false in the previous state. In the object-oriented paradigm, a state change
-%  is necessarily a consequence of some operation call, therefore the becomesTrue construct is a syntactic sugar and stands for
-%  any operation call switching P to true.
-% Formal semantics
-% A test case is a scenario in which a set of operations is executed in sequence with observations either before or after each
-%  operation execution. Since we are interested in test cases generation (see Section 10), we adopt a scenario-based semantics
-%  over the synchronous paradigm to formalize our temporal extension. The essence of that paradigm is the atomicity of
-%  reactions (operation calls) where all the events occurring during such a reaction are considered as simultaneous. A reaction
-%  is one atomic call event, that leads the system directly from a pre-state to a post-state without going through intermediate
-%  states.
-% We define the set of all atomic events of a given object model as follows:
-% Definition6.1 (Alphabetofatomicevents). Let O be the set of all operations and E be the set of all OCL boolean expressions of
-%  an object model M.ThealphabetΣM ofatomicevents (abbreviated as Σ in the following) is defined by the set O×E×E.
-%  An atomic event e ∈Σ takes the form: e =(op). It stands for a call of the operation op in a context where pre
-%  stands for the precondition satisfied in the pre-state and post stands for the postcondition satisfied in the post-state.
-%  We now give the formal meaning of the notion of events introduced in our OCL temporal extension.
-%  Definition 6.2 (Events). Let Σ be the alphabet of atomic events, O be the set of all operations and E the set of all OCL
-%  boolean expressions. An event is either an isCalled(op,pre,post) or a becomesTrue(P) with:
-%  isCalled(op,pre,post) = op,pre,post ∈ Σ pre⇒pre, post⇒post and
-%  becomesTrue(P) = (op,pre,post) ∈ Σ op∈O, pre⇒¬P, post⇒ P
-%  Definition 6.2 calls for the following comments:– An event does not represent a single atomic event, but a specific subset of atomic events. It is intuitively the set of all
-%  atomic events in which the operation op is invoked, in a pre-state which implies the expression pre and leading to a
-%  post-state which implies the expression post. The set of all events is then defined6 as the set 2Σ;
+\hspace{1cm} Formally, we define TOCL+ event constructs in terms of state transitions 
+within the semantic framework established by TOCL. Let 
+$\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$ 
+be an infinite sequence of states, and 
+$\tau = (\hat{\sigma}, i, \beta)$ 
+be an evaluation environment where $i$ represents the current state index and $\beta$ 
+is a variable assignment.
+
+Unlike the original TOCL approach with process types, we directly associate operation 
+calls with state transitions. We assume each transition from 
+$\sigma_{i-1}$ to $\sigma_i$ 
+is caused by exactly one atomic operation execution, with no intermediate states.
+
+Our event constructs are formally defined as follows:
+\vspace{-1.5em}
+\paragraph{isCalled(op(a$_1$, \ldots, a$_N$))}
+This construct detects when an operation $op$ is invoked on an object with specific 
+parameters. It evaluates to true at state $\sigma_i$ if the transition from 
+$\sigma_{i-1}$ to $\sigma_i$ was caused by the operation $op$ being called on the 
+context object with the specified parameters.
+
+For an operation $op$ defined in class $C$ with parameters 
+$param_1: type_1,$ $\ldots, param_N: type_N$, and context object $self$ of type $C$, 
+the semantics at state $\sigma_i$ in environment $\tau = (\hat{\sigma}, i, \beta)$ 
+is:
+\begin{equation}
+    \begin{split}
+    & I[\text{isCalled}(op(a_1, \ldots, a_N))](\tau) = \text{true} \iff \\
+    & \bullet\; i > 0 \text{ and} \\
+    & \bullet\; \text{The transition from } \sigma_{i-1} \text{ to } \sigma_i \text{ is labeled with a call } \text{call}_i = (\omega, o, \text{args}) \\
+    & \text{ where:} \\
+    & \quad \circ\; \omega = \text{op} \text{ and} \\
+    & \quad \circ\; o = I[\text{self}](\tau) \text{ and} \\
+    & \quad \circ\; \text{args} = (I[a_1](\tau), \ldots, I[a_N](\tau))
+    \end{split}
+\end{equation}
+% \begin{align}
+%     &I[\text{isCalled}(op(a_1, \ldots, a_N))](\tau) = \text{true} \notag\\
+%     &\quad \text{if and only if:}\notag\\
+%     &\quad \begin{cases}
+%     i > 0\\
+%     \text{The transition from } \sigma_{i-1} \text{ to } \sigma_i \text{ has: }\\
+%     \quad\omega = \text{op}\\
+%     \quad o = I[\text{self}](\tau)\\
+%     \quad\text{args} = (I[a_1](\tau), \ldots, I[a_N](\tau))
+%     \end{cases}
+% \end{align}
+
+\paragraph{becomesTrue(P)}
+This construct identifies transitions where a boolean expression $P$ changes from 
+false to true between consecutive states.
+
+For a boolean OCL expression $P$, the semantics at state $\sigma_i$ in environment 
+$\tau = (\hat{\sigma}, i, \beta)$ is:
+
+\begin{equation}
+    \begin{split}
+    & I[\text{becomesTrue}(P)](\tau) = \text{true} \iff \\
+    & \bullet\; i > 0 \text{ and} \\
+    & \bullet\; I[P](\hat{\sigma}, i-1, \beta) = \text{false} \text{ and} \\
+    & \bullet\; I[P](\hat{\sigma}, i, \beta) = \text{true}
+    \end{split}
+\end{equation}
+
+This definition is equivalent to:
+\begin{equation}
+I[\text{becomesTrue}(P)](\tau) = I[P \text{ and not previous } P](\tau)
+\end{equation}
+
+\paragraph{Bounded Existence Constructs}
+For the bounded existence constructs, we extend the semantics to count event 
+occurrences within a temporal scope. For an event $e$ and temporal scope $S$ 
+(e.g., all past states for \texttt{sometimePast}):
+\begin{equation}
+\text{count}(e, S) = |\{j \in S \mid I[e](\hat{\sigma}, j, \beta) = \text{true}\}|
+\vspace{-1em}
+\end{equation}
+Then:
+\begin{equation}
+\begin{split}
+I[e \text{ at most } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) \leq k \\
+I[e \text{  } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) = k \\
+I[e \text{ at least } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) \geq k
+\end{split}
+\end{equation}
+
+These formal definitions provide a clean, process-type-free semantics for TOCL+'s 
+event constructs and bounded existence operators. By directly associating events with 
+state transitions and state changes, we establish a foundation for the verification 
+approach described in the next section.
+
