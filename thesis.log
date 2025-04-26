@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  25 APR 2025 22:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  26 APR 2025 14:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1470,15 +1470,23 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 115.
+(csquotes)                Punctuation tracker may fail on input line 127.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 131.
+(csquotes)                Punctuation tracker may fail on input line 187.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 196.
+(csquotes)                Punctuation tracker may fail on input line 232.
+
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 248.
+
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 313.
 
 )
 Package biblatex Info: Reference section=0 on input line 153.
@@ -1616,7 +1624,7 @@ Chapter 1.
 
 
 
-]) (./chapters/c1/c1_mde.tex) (./chapters/c1/c1_uml.tex
+]) (./chapters/c1/c1_uml.tex
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 5.
@@ -1628,7 +1636,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 [4]
-<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=259, 332.442pt x 130.68825pt>
+<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=263, 332.442pt x 130.68825pt>
 File: figures/c1/BankAccount/BankAccount_ClassDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BankAccount_ClassDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BankAccount_ClassDiagram.png  used on input line 52.
@@ -1641,19 +1649,19 @@ File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [5 <./figures/c1/BankAccount/BankAccount_ClassDiagram.png>]
 
 [6]
-<figures/c1/BankAccount/BA_ObjectDiagram.png, id=272, 558.28575pt x 118.64325pt>
+<figures/c1/BankAccount/BA_ObjectDiagram.png, id=277, 558.28575pt x 118.64325pt>
 File: figures/c1/BankAccount/BA_ObjectDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BA_ObjectDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on input line 139.
 (pdftex.def)             Requested size: 364.19667pt x 77.39598pt.
-) (./chapters/c1/c1_ocl.tex
 
-[7 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]
-<figures/c1/SoftwareSystem/SS_Ver2.png, id=280, 338.4645pt x 181.8795pt>
-File: figures/c1/SoftwareSystem/SS_Ver2.png Graphic file (type png)
-<use figures/c1/SoftwareSystem/SS_Ver2.png>
-Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver2.png  used on input line 16.
-(pdftex.def)             Requested size: 364.19667pt x 195.722pt.
+
+[7 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]) (./chapters/c1/c1_ocl.tex
+<figures/c1/SoftwareSystem/SS_Ver2_Gray.png, id=286, 422.7795pt x 184.89075pt>
+File: figures/c1/SoftwareSystem/SS_Ver2_Gray.png Graphic file (type png)
+<use figures/c1/SoftwareSystem/SS_Ver2_Gray.png>
+Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver2_Gray.png  used on input line 16.
+(pdftex.def)             Requested size: 364.19667pt x 159.2794pt.
 
 Overfull \hbox (4.23929pt too wide) in paragraph at lines 22--30
 \T5/lmtt/m/n/14 installedApps\T5/lmr/m/n/14 , and \T5/lmtt/m/n/14 runningApps\T5/lmr/m/n/14 , which track ap-pli-ca-tions in dif-fer-ent states
@@ -1661,7 +1669,7 @@ Overfull \hbox (4.23929pt too wide) in paragraph at lines 22--30
 
 
 
-[8 <./figures/c1/SoftwareSystem/SS_Ver2.png>]
+[8 <./figures/c1/SoftwareSystem/SS_Ver2_Gray.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 59.
 LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <11.86258> not available
 (Font)              Font shape `T5/lmtt/b/n' tried instead on input line 60.
@@ -1684,13 +1692,60 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[12{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]) (./chapters/c1/c1_use.tex))
+[12{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]) (./chapters/c1/c1_use.tex
 
-[13] (./chapters/c2/c2_chapter.tex
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 5.
+
+
+
+[13]
+<figures/c1/USE_Overview.png, id=344, 420.06938pt x 198.7425pt>
+File: figures/c1/USE_Overview.png Graphic file (type png)
+<use figures/c1/USE_Overview.png>
+Package pdftex.def Info: figures/c1/USE_Overview.png  used on input line 23.
+(pdftex.def)             Requested size: 364.19667pt x 172.31018pt.
+
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 31.
+
+
+
+[14 <./figures/c1/USE_Overview.png (PNG copy)>]
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 53.
+
+
+
+[15]
+<figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png, id=357, 678.73575pt x 277.63725pt>
+File: figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png Graphic file (type png)
+<use figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png>
+Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png  used on input line 81.
+(pdftex.def)             Requested size: 455.24411pt x 186.21933pt.
+
+Overfull \hbox (10.40192pt too wide) in paragraph at lines 86--92
+\T5/lmtt/m/n/14 System \T5/lmr/m/n/14 and \T5/lmtt/m/n/14 Application \T5/lmr/m/n/14 with their \T5/lmtt/m/n/14 SystemApplication \T5/lmr/m/n/14 as-so-ci-a-tion^^Vremains
+ []
+
+
+
+[16 <./figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png>]
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 101.
+
+
+
+[17]))
+
+[18] (./chapters/c2/c2_chapter.tex
 Chapter 2.
 (./chapters/c2/c2_introduction.tex
 
-[14
+[19
 
 
 
@@ -1701,17 +1756,17 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[15]
+[20]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 36.
 
 
 
-[16]
+[21]
 
-[17]
-<figures/c2/events_visual.png, id=376, 1137.048pt x 245.11575pt>
+[22]
+<figures/c2/events_visual.png, id=423, 1137.048pt x 245.11575pt>
 File: figures/c2/events_visual.png Graphic file (type png)
 <use figures/c2/events_visual.png>
 Package pdftex.def Info: figures/c2/events_visual.png  used on input line 104.
@@ -1723,16 +1778,16 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[18 <./figures/c2/events_visual.png>]
+[23 <./figures/c2/events_visual.png>]
 
-[19]
+[24]
 Overfull \hbox (3.03842pt too wide) in paragraph at lines 187--194
 \T5/lmr/m/n/14 tions within the se-man-tic frame-work es-tab-lished by TOCL. Let $[] \OT1/lmr/m/n/14 = \OMS/lmsy/m/n/14 h\OML/lmm/m/it/14 ^^[[]; ^^[[]; []\OMS/lmsy/m/n/14 i$
  []
 
 
 
-[20]
+[25]
 LaTeX Font Info:    Calculating math sizes for size <13> on input line 203.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <13> on input line 203.
@@ -1748,9 +1803,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.80008> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
 
 
-[21]) (./chapters/c2/c2_verification.tex))
+[26]) (./chapters/c2/c2_verification.tex))
 
-[22] (./chapters/c3/c3_chapter.tex
+[27] (./chapters/c3/c3_chapter.tex
 Chapter 3.
 
 Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
@@ -1759,13 +1814,13 @@ Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
 
 )
 
-[23
+[28
 
 
 
 ] (./chapters/conclusion.tex)
 
-[24
+[29
 
 
 ]
@@ -1780,7 +1835,7 @@ Overfull \hbox (12.4554pt too wide) in paragraph at lines 199--199
 
 
 
-[25
+[30
 
 
 
@@ -1789,25 +1844,53 @@ Overfull \hbox (12.4554pt too wide) in paragraph at lines 199--199
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 18CC173DED0B94AB9C288304F90677CE;5719.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: CD85412E7A7DC65C28670F577BF03FA6;5706
+(rerunfilecheck)             After:  FF384A892C4A0116DABD329E9983DCCB;5528.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40896 strings out of 473189
- 770206 string characters out of 5719958
- 1803576 words of memory out of 5000000
- 63269 multiletter control sequences out of 15000+600000
+ 40940 strings out of 473189
+ 771530 string characters out of 5719958
+ 1803790 words of memory out of 5000000
+ 63298 multiletter control sequences out of 15000+600000
  754749 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,17n,107p,3163b,2259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,17n,107p,3163b,2263s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsubsection.1.5.3.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.1.5.3.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.1.5.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.1.5.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.1.5.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.1.5} has been referenced but does not exist, replaced by a fixed one
+
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on thesis.pdf (35 pages, 448661 bytes).
+Output written on thesis.pdf (40 pages, 480858 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
- 157 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 547 compressed objects within 6 object streams
+ 175 named destinations out of 1000 (max. 500000)
+ 336 words of extra memory for PDF output out of 10000 (max. 10000000)
 

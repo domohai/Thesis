@@ -9,34 +9,37 @@
 \contentsline {chapter}{INTRODUCTION}{1}{section*.2}%
 \contentsline {chapter}{\numberline {1}Backgrounds}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Model-Driven Engineering}{4}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Unified Modeling Language (UML)}{4}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Class Diagram}{5}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Object Diagram}{7}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Object Constraint Language (OCL)}{8}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Overview}{8}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}OCL Constraints}{9}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}OCL Limitations}{11}{subsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.3.1}Temporal Dimension}{11}{subsubsection.1.4.3.1}%
-\contentsline {subsubsection}{\numberline {1.4.3.2}Events}{12}{subsubsection.1.4.3.2}%
-\contentsline {section}{\numberline {1.5}UML-based Specification Environment (USE)}{13}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Overview}{13}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}USE Features}{13}{subsection.1.5.2}%
-\contentsline {subsection}{\numberline {1.5.3}USE Model Validator}{13}{subsection.1.5.3}%
-\contentsline {subsection}{\numberline {1.5.4}Filmstripping}{13}{subsection.1.5.4}%
-\contentsline {subsubsection}{\numberline {1.5.4.1}Filmstrip Model Transformation}{13}{subsubsection.1.5.4.1}%
-\contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{14}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{14}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Temporal and Event Extensions to OCL}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{15}{subsection.2.2.1}%
-\contentsline {paragraph}{Future Operators:}{15}{section*.6}%
-\contentsline {paragraph}{Past Operators:}{16}{section*.7}%
-\contentsline {subsection}{\numberline {2.2.2}Event Constructs in OCL}{18}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{20}{subsection.2.2.3}%
-\contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{21}{section*.9}%
-\contentsline {paragraph}{becomesTrue(P)}{21}{section*.10}%
-\contentsline {paragraph}{Bounded Existence Constructs}{22}{section*.11}%
-\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{22}{section.2.3}%
-\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{23}{chapter.3}%
-\contentsline {chapter}{KẾT LUẬN}{24}{chapter.3}%
-\contentsline {chapter}{REFERENCES}{25}{chapter*.12}%
+\contentsline {section}{\numberline {1.2}Unified Modeling Language (UML)}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Class Diagram}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Object Diagram}{7}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Object Constraint Language (OCL)}{8}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Overview}{8}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}OCL Constraints}{9}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}OCL Limitations}{11}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}Temporal Dimension}{11}{subsubsection.1.3.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}Events}{12}{subsubsection.1.3.3.2}%
+\contentsline {section}{\numberline {1.4}UML-based Specification Environment (USE)}{13}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Overview}{13}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}USE Model Validator}{14}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Filmstripping}{15}{subsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Overview}{15}{subsubsection.1.4.3.1}%
+\contentsline {subsubsection}{\numberline {1.4.3.2}Filmstrip Model Transformation}{16}{subsubsection.1.4.3.2}%
+\contentsline {paragraph}{Transformation of classes:}{17}{section*.8}%
+\contentsline {paragraph}{Transformation of associations:}{17}{section*.9}%
+\contentsline {paragraph}{Transformation of operation definitions and invariants:}{17}{section*.10}%
+\contentsline {paragraph}{Transformation of pre- and postconditions:}{17}{section*.11}%
+\contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Temporal and Event Extensions to OCL}{20}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{20}{subsection.2.2.1}%
+\contentsline {paragraph}{Future Operators:}{20}{section*.12}%
+\contentsline {paragraph}{Past Operators:}{21}{section*.13}%
+\contentsline {subsection}{\numberline {2.2.2}Event Constructs in OCL}{23}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{25}{subsection.2.2.3}%
+\contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{26}{section*.15}%
+\contentsline {paragraph}{becomesTrue(P)}{26}{section*.16}%
+\contentsline {paragraph}{Bounded Existence Constructs}{27}{section*.17}%
+\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{27}{section.2.3}%
+\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{28}{chapter.3}%
+\contentsline {chapter}{KẾT LUẬN}{29}{chapter.3}%
+\contentsline {chapter}{REFERENCES}{30}{chapter*.18}%

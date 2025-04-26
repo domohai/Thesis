@@ -24,12 +24,17 @@ attention to its strengths and limitations regarding temporal properties.
 
 Finally, we explore the UML-based Specification Environment (USE), the modeling and 
 verification tool that implements our approach. USE provides the infrastructure for 
-defining UML models with OCL constraints and validating them through automated 
-analysis. We describe USE's model validation capabilities that form the technical 
-foundation for our verification approach.
+defining UML models with OCL constraints and validating them. We introduce two key 
+plugins that extend USE's capabilities: the Filmstrip Plugin, which implements the 
+filmstripping method by transforming dynamic model checking into static verification 
+through sequences of snapshots connected by operation calls; and the Model Validator 
+Plugin, which enables automated analysis of models against their constraints through 
+systematic state space exploration. Together, these tools form the technical foundation 
+for our verification approach, enabling both the representation of temporal properties 
+and their efficient verification.
 
 Throughout this chapter, we emphasize the context and limitations of standard 
-modeling approaches regarding temporal specifications, setting the stage for our 
+modeling approaches regarding temporal specifications and verifications, setting the stage for our 
 extensions and contributions in subsequent chapters. Each section provides essential 
 background knowledge required to understand our approach to specifying and verifying 
 temporal properties in object-oriented systems.

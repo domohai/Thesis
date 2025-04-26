@@ -68,6 +68,123 @@
       \verb https://dl.acm.org/doi/book/10.5555/294049
       \endverb
     \endentry
+    \entry{USE}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0734b8612ed54ba8e3a062d49aac875d}{%
+           family={Büttner},
+           familyi={B\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d4951d9371b4c7e1d3218815de6e26a2}{%
+           family={Richters},
+           familyi={R\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier North-Holland, Inc.}%
+      }
+      \strng{namehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{fullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{fullhashraw}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{bibnamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authorbibnamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authornamehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authorfullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \strng{authorfullhashraw}{3cfa4d6a80f6fddf63f05f5cec1355db}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Unified Modeling Language (UML) is accepted today as an important standard for developing software. UML tools however provide little support for validating and checking models in early development phases. There is also no substantial support for the Object Constraint Language (OCL). We present an approach for the validation of UML models and OCL constraints based on animation and certification. The USE tool (UML-based Specification Environment) supports analysts, designers and developers in executing UML models and checking OCL constraints and thus enables them to employ model-driven techniques for software production.}
+      \field{issn}{0167-6423}
+      \field{journaltitle}{Sci. Comput. Program.}
+      \field{month}{12}
+      \field{number}{1–3}
+      \field{title}{USE: A UML-based specification environment for validating UML and OCL}
+      \field{volume}{69}
+      \field{year}{2007}
+      \field{pages}{27\bibrangedash 34}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.scico.2007.01.013
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.scico.2007.01.013
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.scico.2007.01.013
+      \endverb
+      \keyw{Constraint,Invariant,Model,Model certification,Model execution,Model validation,OCL,Pre- and post-conditions,UML}
+    \endentry
+    \entry{Filmstripping}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=7c0f27b233effd66fe3132dc2d195282}{%
+           family={Hilken},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8565c1d4f1042f88753e2da935654c0d}{%
+           family={Hamann},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=4f89e18da939d2df2931b7fb2951afb5}{%
+           family={Di\bibnamedelima Ruscio},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f54190ff266e02128b40dbab3fe1f605}{%
+           family={Varró},
+           familyi={V\bibinitperiod},
+           given={Dániel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{fullhash}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{fullhashraw}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{bibnamehash}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{authorbibnamehash}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{authornamehash}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{authorfullhash}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{authorfullhashraw}{b70560ea83e0b855644d3a83570fa78c}
+      \strng{editorbibnamehash}{562520ebd044e52b7930109e3f8505c8}
+      \strng{editornamehash}{562520ebd044e52b7930109e3f8505c8}
+      \strng{editorfullhash}{562520ebd044e52b7930109e3f8505c8}
+      \strng{editorfullhashraw}{562520ebd044e52b7930109e3f8505c8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This contribution presents an automatic transformation from UML and OCL models into enriched UML and OCL models, so-called filmstrip models, which embody temporal information when employing OCL while maintaining the same functionality as the original model. The approach uses a combination of object and sequence diagrams that allows for a wide range of possible OCL constraints about sequences of operation calls and their temporal properties. The modeler does not need to account for such properties while creating the original model. Errors found by constraints for the filmstrip model can easily be related back to the original model, as the elements of the filmstrip model are synchronized with the original model and the backwards calculation is generally simple. The approach is implemented in a UML and OCL modeling tool.}
+      \field{booktitle}{Theory and Practice of Model Transformations}
+      \field{isbn}{978-3-319-08789-4}
+      \field{title}{Transformation of UML and OCL Models into Filmstrip Models}
+      \field{year}{2014}
+      \field{pages}{170\bibrangedash 185}
+      \range{pages}{16}
+    \endentry
     \entry{TemporalAndEventOCL}{article}{}{}
       \name{author}{2}{}{%
         {{hash=1b87cd8f0cbd100c9433a8f809a36c21}{%
