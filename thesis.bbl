@@ -230,6 +230,63 @@
       \endverb
       \keyw{OCL,Temporal patterns,Eclipse/MDT,Model-driven engineering,Formal methods}
     \endentry
+    \entry{USE_Validator}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=c7be7484f5756de09889bc7fc297711c}{%
+           family={Przigoda},
+           familyi={P\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7c0f27b233effd66fe3132dc2d195282}{%
+           family={Hilken},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=79c6224fe8fae85ef516aa3c2671ed88}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Judith},
+           giveni={J\bibinitperiod}}}%
+        {{hash=942bfb89eecd82018713153f8561459b}{%
+           family={Wille},
+           familyi={W\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d5334bd4497bb7e7e325c924de1b59a1}{%
+           family={Drechsler},
+           familyi={D\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{de73e4aad9c3337798fea2a0ed8836dd}
+      \strng{fullhash}{f7df0e68754a016e2ceb2174f0fd4618}
+      \strng{fullhashraw}{f7df0e68754a016e2ceb2174f0fd4618}
+      \strng{bibnamehash}{de73e4aad9c3337798fea2a0ed8836dd}
+      \strng{authorbibnamehash}{de73e4aad9c3337798fea2a0ed8836dd}
+      \strng{authornamehash}{de73e4aad9c3337798fea2a0ed8836dd}
+      \strng{authorfullhash}{f7df0e68754a016e2ceb2174f0fd4618}
+      \strng{authorfullhashraw}{f7df0e68754a016e2ceb2174f0fd4618}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{MoDeVVa@ MoDELS}
+      \field{title}{Integrating an SMT-Based ModelFinder into USE.}
+      \field{year}{2016}
+      \field{pages}{40\bibrangedash 45}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/MoDeVVa.2016.10
+      \endverb
+    \endentry
     \entry{UML}{manual}{}{}
       \list{publisher}{1}{%
         {Object Management Group}%
@@ -288,6 +345,7 @@
       \strng{authornamehash}{b55098733766b3ddb34ed942dcd48dcd}
       \strng{authorfullhash}{c5150dd12cdf17514ac52c99aabb2375}
       \strng{authorfullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -310,6 +368,72 @@
       \verb https://doi.org/10.1145/3550356.3563132
       \endverb
       \keyw{transformation,temporal propeties,UML,TOCL,OCL}
+    \endentry
+    \entry{TOCL2OCL}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=b886be6d961c9c7d500ed76bc5c2a5fd}{%
+           family={Lail},
+           familyi={L\bibinitperiod},
+           given={Mustafa\bibnamedelima Al},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=9f75bb10fbf1dc39d97fd389232f4568}{%
+           family={Rosales},
+           familyi={R\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=730a7182d15c0fe2548d9523f023fc4b}{%
+           family={Cardenas},
+           familyi={C\bibinitperiod},
+           given={Hector},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8565c1d4f1042f88753e2da935654c0d}{%
+           family={Hamann},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b3bf172c5c6954c3a908fd512f16ff4f}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Montreal, Quebec, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{fullhash}{c5150dd12cdf17514ac52c99aabb2375}
+      \strng{fullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
+      \strng{bibnamehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{authorbibnamehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{authornamehash}{b55098733766b3ddb34ed942dcd48dcd}
+      \strng{authorfullhash}{c5150dd12cdf17514ac52c99aabb2375}
+      \strng{authorfullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Specifying and verifying the temporal properties of UML-based systems can be challenging. Although there exist some extensions of OCL to support the specification of temporal properties, most of the approaches depend on using non-UML formalisms such as LTL, CTL, and CTL*. The approaches also rely on transforming the under-development UML models into non-UML model checking frameworks for verification. These approaches introduce complexities and relies on techniques and tools that are not within the UML spectrum. In this paper, we show how TOCL (one OCL extension for temporal properties specification) can be transformed into OCL for verification purposes. Towards this end, we created a formal EBNF grammar for TOCL, based on which a parser and a MOF metamodel were generated. To facilitate the analysis of the TOCL properties, we formally defined transformation rules from the TOCL metamodel to the OCL metamodel using QVTo. We validated the implementations of the transformation rules using USE.}
+      \field{booktitle}{Proceedings of the 25th International Conference on Model Driven Engineering Languages and Systems: Companion Proceedings}
+      \field{isbn}{9781450394673}
+      \field{series}{MODELS '22}
+      \field{title}{Transformation of TOCL temporal properties into OCL}
+      \field{year}{2022}
+      \field{pages}{899\bibrangedash 907}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/3550356.3563132
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3550356.3563132
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3550356.3563132
+      \endverb
+      \keyw{OCL,TOCL,UML,temporal properties,transformation}
     \endentry
   \enddatalist
 \endrefsection

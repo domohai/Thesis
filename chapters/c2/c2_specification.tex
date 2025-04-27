@@ -1,4 +1,4 @@
-\section{Temporal and Event Extensions to OCL}
+\section{Specification of temporal properties}
 
 %%%%% TOCL
 \subsection{Temporal Operators in TOCL}
@@ -275,3 +275,71 @@ event constructs and bounded existence operators. By directly associating events
 state transitions and state changes, we establish a foundation for the verification 
 approach described in the next section.
 
+
+\subsection{TOCL+ Grammar}
+
+\hspace{1cm} To enable automated verification of TOCL+ specifications, we provide a 
+formal grammar that precisely defines the language syntax. The original TOCL by 
+Ziemann and Gogolla used mathematical notation to describe its syntax. 
+Later, Lail et al. \cite{TOCL2OCL} defined a formal EBNF grammar for TOCL using ANTLR4, 
+creating a parser-friendly representation of the language. Our work builds directly 
+upon this EBNF foundation, extending it with productions for our new event constructs 
+and bounded existence operators.
+
+We leverage the ANTLR4 grammar developed by Lail et al. and augment it with 
+additional productions to support TOCL+ features. This approach allows us to 
+maintain compatibility with their TOCL parser while adding our event-based 
+constructs. Listing \ref{lst:event_grammar} shows the key grammar productions 
+for our event extensions.
+
+\begin{lstlisting}[
+    caption={EBNF Grammar for Event constructs.}, 
+    label={lst:event_grammar}
+]
+events[Environment env] returns [ASTEvent ast]
+        : isCalledEvent[$env] { $ast = $isCalledEvent.ast; }
+        | becomesTrueEvent[$env] { $ast = $becomesTrueEvent.ast; }
+        ;
+
+isCalledEvent[Environment env] returns [ASTEvent ast]
+        : 'isCalled' LPAREN eventOp[$env] RPAREN bounds[$env]?
+        { $ast = new ASTEvent(); }
+        ;
+
+bounds[Environment env]
+        : quantif=('at least' | 'at most')? n=NATURAL_N 'times'
+        ;
+
+eventOp[Environment env]
+        : simpleName LPAREN parameters[$env]? RPAREN
+        ;
+
+becomesTrueEvent[Environment env] returns [ASTEvent ast]
+        : 'becomesTrue' LPAREN e=binaryOperationExp[$env] RPAREN
+        { $ast = new ASTEvent(); }
+        ;
+\end{lstlisting}
+
+In this grammar, the \texttt{events} production serves as the entry point for event 
+expressions, handling both \texttt{isCalled} and \texttt{becomesTrue} constructs. 
+Each production builds an abstract syntax tree (AST) node that represents the event 
+for further processing. The \texttt{isCalledEvent} production recognizes operation 
+call events with optional bounded existence constraints defined by the \texttt{bounds} 
+production. These bounds can be specified as "at least" or "at most" followed by 
+an integer and "times", directly mapping to the formal semantics defined earlier. 
+The \texttt{eventOp} production handles the operation name and parameters, while 
+\texttt{becomesTrueEvent} captures state change events parameterized by boolean 
+expressions.
+
+Our grammar integrates these event constructs with the full range of TOCL temporal 
+operators by defining events as a subtype of primary expressions (\texttt{primaryExp}). 
+This design allows event expressions to be used in any context where OCL expressions 
+are expected, including as arguments to temporal operators. For example, the grammar 
+enables expressions like \texttt{sometimePast isCalled(op()) at most 3 times}, which 
+combines a temporal operator, an event construct, and a bounded existence constraint.
+
+This formal grammar specification serves two critical purposes. First, it provides a 
+precise definition of the TOCL+ language syntax, complementing the semantic 
+foundation established in the previous section. Second, it enables automated 
+transformation from TOCL+ specifications to standard OCL constraints in our 
+verification framework, which will be described in the next section.

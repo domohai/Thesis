@@ -51,9 +51,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}OCL Limitations}{11}{subsection.1.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.3.1}Temporal Dimension}{11}{subsubsection.1.3.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Temporal properties of the software system.}}{11}{figure.1.4}\protected@file@percent }
+\newlabel{fig:temporal_properties}{{1.4}{11}{Temporal properties of the software system}{figure.1.4}{}}
 \abx@aux@cite{0}{TemporalAndEventOCL}
 \abx@aux@segm{0}{0}{TemporalAndEventOCL}
-\newlabel{fig:temporal_properties}{{1.4}{12}{Temporal properties of the software system}{figure.1.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.3.3.2}Events}{12}{subsubsection.1.3.3.2}\protected@file@percent }
 \abx@aux@cite{0}{USE}
 \abx@aux@segm{0}{0}{USE}
@@ -67,6 +67,7 @@
 \abx@aux@cite{0}{Filmstripping}
 \abx@aux@segm{0}{0}{Filmstripping}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Filmstripping}{15}{subsection.1.4.3}\protected@file@percent }
+\newlabel{subsec:filmstripping}{{1.4.3}{15}{Filmstripping}{subsection.1.4.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1.4.3.1}Overview}{15}{subsubsection.1.4.3.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Filmstrip Model Transformation.}}{16}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:filmstrip_model}{{1.6}{16}{Filmstrip Model Transformation}{figure.caption.7}{}}
@@ -77,6 +78,7 @@
 \@writefile{toc}{\contentsline {paragraph}{Transformation of associations:}{17}{section*.9}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Transformation of operation definitions and invariants:}{17}{section*.10}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Transformation of pre- and postconditions:}{17}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Summary}{18}{section.1.5}\protected@file@percent }
 \pp@pagectr{footnote}{2}{29}{19}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{19}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -84,7 +86,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{19}{section.2.1}\protected@file@percent }
 \abx@aux@cite{0}{TOCL}
 \abx@aux@segm{0}{0}{TOCL}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Temporal and Event Extensions to OCL}{20}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Specification of temporal properties}{20}{section.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{20}{subsection.2.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Future Operators:}{20}{section*.12}\protected@file@percent }
 \abx@aux@cite{0}{TOCL}
@@ -100,21 +102,44 @@
 \newlabel{lst:tocl+}{{2.2}{24}{TOCL+ Specifications}{lstlisting.2.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.2}{\ignorespaces TOCL+ Specifications.}}{24}{lstlisting.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{25}{subsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{isCalled(op(a$_1$, \ldots  , a$_N$))}{26}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{isCalled(op(a$_1$, \ldots  , a$_N$))}{25}{section*.15}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{becomesTrue(P)}{26}{section*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Bounded Existence Constructs}{27}{section*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{27}{section.2.3}\protected@file@percent }
-\pp@pagectr{footnote}{3}{38}{28}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{28}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bounded Existence Constructs}{26}{section*.17}\protected@file@percent }
+\abx@aux@cite{0}{TOCL2OCL}
+\abx@aux@segm{0}{0}{TOCL2OCL}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}TOCL+ Grammar}{27}{subsection.2.2.4}\protected@file@percent }
+\newlabel{lst:event_grammar}{{2.3}{27}{EBNF Grammar for Event constructs}{lstlisting.2.3}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.3}{\ignorespaces EBNF Grammar for Event constructs.}}{27}{lstlisting.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Verification approach.}}{29}{figure.caption.18}\protected@file@percent }
+\newlabel{sec:verification_approach}{{2.2}{29}{Verification approach}{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{29}{section.2.3}\protected@file@percent }
+\abx@aux@cite{0}{USE_Validator}
+\abx@aux@segm{0}{0}{USE_Validator}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Step 1: Transforming the Application Model into a Filmstrip Model}{30}{subsection.2.3.1}\protected@file@percent }
+\newlabel{lst:pre_post_load}{{2.4}{31}{Pre and post conditions for load operation}{lstlisting.2.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.4}{\ignorespaces Pre and post conditions for load operation.}}{31}{lstlisting.2.4}\protected@file@percent }
+\newlabel{lst:invariants_load_SystemOpC}{{2.5}{31}{Invariants for load\_SystemOpC}{lstlisting.2.5}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.5}{\ignorespaces Invariants for load\_SystemOpC}}{31}{lstlisting.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Step 2: Translating TOCL+ Properties into OCL Expressions}{32}{subsection.2.3.2}\protected@file@percent }
+\abx@aux@cite{0}{USE_Validator}
+\abx@aux@segm{0}{0}{USE_Validator}
+\newlabel{lst:ocl_liveness}{{2.6}{33}{OCL translation of liveness property}{lstlisting.2.6}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.6}{\ignorespaces OCL translation of liveness property.}}{33}{lstlisting.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Step 3: Verifying the translated OCL expressions}{33}{subsection.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Summary}{34}{section.2.4}\protected@file@percent }
+\pp@pagectr{footnote}{3}{45}{35}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{35}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{KẾT LUẬN}{29}{chapter.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{REFERENCES}{30}{chapter*.18}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{FFE5555F7890321DBD7FE32AA7BC51F2}
+\@writefile{toc}{\contentsline {chapter}{KẾT LUẬN}{36}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{REFERENCES}{38}{chapter*.19}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{27418BF6A32D4A1295708365DF8DEF85}
 \abx@aux@defaultrefcontext{0}{UML_Reference_Manual}{ynt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{USE}{ynt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{Filmstripping}{ynt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{TemporalAndEventOCL}{ynt/global//global/global/global}
+\abx@aux@defaultrefcontext{0}{USE_Validator}{ynt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{UML}{ynt/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{TOCL}{ynt/global//global/global/global}
-\gdef \@abspage@last{40}
+\abx@aux@defaultrefcontext{0}{TOCL2OCL}{ynt/global//global/global/global}
+\gdef \@abspage@last{48}

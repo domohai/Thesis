@@ -493,3 +493,12 @@
 % \end{equation}
 
 % These formal definitions provide the precise mathematical foundation for TOCL+'s event constructs and bounded existence operators. They capture the essential semantics while maintaining compatibility with the underlying TOCL framework, enabling the verification approach described in the next section.
+
+% The original syntax of TOCL in \cite{TOCL} was defined using mathematical notations
+% as opposed to EBNF. \cite{TOCL2OCL} adapted the original syntax and defined a EBNF 
+% grammar for TOCL. We reuse this grammar to extend the new event constructs and 
+% quantitative bounds. Events are defined as a subtype of primary expressions 
+% (primaryExp), which allows them to be used in any context where expressions are 
+% expected. We use binaryOperationExp in its production rules; provided this expression 
+% evaluates to a boolean value. The event constructs grammar is shown in Listing 
+% \ref{lst:event_grammar}. 

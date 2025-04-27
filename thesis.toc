@@ -28,18 +28,24 @@
 \contentsline {paragraph}{Transformation of associations:}{17}{section*.9}%
 \contentsline {paragraph}{Transformation of operation definitions and invariants:}{17}{section*.10}%
 \contentsline {paragraph}{Transformation of pre- and postconditions:}{17}{section*.11}%
+\contentsline {section}{\numberline {1.5}Summary}{18}{section.1.5}%
 \contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{19}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{19}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Temporal and Event Extensions to OCL}{20}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Specification of temporal properties}{20}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{20}{subsection.2.2.1}%
 \contentsline {paragraph}{Future Operators:}{20}{section*.12}%
 \contentsline {paragraph}{Past Operators:}{21}{section*.13}%
 \contentsline {subsection}{\numberline {2.2.2}Event Constructs in OCL}{23}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{25}{subsection.2.2.3}%
-\contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{26}{section*.15}%
+\contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{25}{section*.15}%
 \contentsline {paragraph}{becomesTrue(P)}{26}{section*.16}%
-\contentsline {paragraph}{Bounded Existence Constructs}{27}{section*.17}%
-\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{27}{section.2.3}%
-\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{28}{chapter.3}%
-\contentsline {chapter}{KẾT LUẬN}{29}{chapter.3}%
-\contentsline {chapter}{REFERENCES}{30}{chapter*.18}%
+\contentsline {paragraph}{Bounded Existence Constructs}{26}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.4}TOCL+ Grammar}{27}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{29}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Step 1: Transforming the Application Model into a Filmstrip Model}{30}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Step 2: Translating TOCL+ Properties into OCL Expressions}{32}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Step 3: Verifying the translated OCL expressions}{33}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Summary}{34}{section.2.4}%
+\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{35}{chapter.3}%
+\contentsline {chapter}{KẾT LUẬN}{36}{chapter.3}%
+\contentsline {chapter}{REFERENCES}{38}{chapter*.19}%
