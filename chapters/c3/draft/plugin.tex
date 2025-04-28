@@ -1,0 +1,22 @@
+\subsection{Plugin Architecture and Workflow}
+% \hspace{1cm} Figure \ref{sec:plugin_architecture} illustrates the architecture 
+% and workflow of our TOCL+ plugin. The plugin is designed to seamlessly 
+% integrate with the USE tool environment while maintaining a clear separation 
+% between the application model, the temporal property specification, and the 
+% verification process. The workflow begins with the user preparing two input files: 
+% a standard \texttt{.use} file containing the UML/OCL application model and a 
+% \texttt{.tocl} file specifying the TOCL+ properties to be verified. After loading 
+% the application model into USE, the user activates our plugin through the USE 
+% interface and is prompted to select both a destination file for the output model 
+% and the \texttt{.tocl} file containing the temporal property definitions. Internally, 
+% the plugin orchestrates a two-phase transformation process. First, it invokes the 
+% existing Filmstrip plugin to transform the application model into a filmstrip model 
+% according to the rules described in Section~\ref{subsec:filmstripping}. Then, it 
+% processes the TOCL+ expressions using our ANTLR4-generated parser and corresponding 
+% listeners that implement the transformation rules for converting temporal 
+% specifications into equivalent OCL constraints, which will be detailed in the next 
+% subsection. These generated constraints are added to the list of constraints in the output model 
+% file alongside the filmstrip model. To complete the verification process, the user loads 
+% this output model back into USE together with the configuration file to employ the Model Validator to analyze the constraints. 
+% This architecture ensures a clean separation of concerns while providing an integrated 
+% workflow that shields users from the complexities of the underlying transformation mechanisms.

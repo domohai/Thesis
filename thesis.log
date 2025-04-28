@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  27 APR 2025 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  28 APR 2025 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1114,16 +1114,25 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/ptm/m/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (c:/texlive/2025/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen312
+\TX@old@table=\dimen313
+\TX@old@col=\dimen314
+\TX@target=\dimen315
+\TX@delta=\dimen316
+\TX@cols=\count378
+\TX@ftn=\toks54
 ) (c:/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
-\@float@every@algorithm=\toks54
-\c@algorithm=\count378
+\@float@every@algorithm=\toks55
+\c@algorithm=\count379
 ) (c:/texlive/2025/texmf-dist/tex/latex/bigfoot/perpage.sty
 Package: perpage 2014/10/25 2.0 Reset/sort counters per page
 )
-\c@pp@a@footnote=\count379
+\c@pp@a@footnote=\count380
  (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 ) (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -1132,53 +1141,53 @@ File: lstlang2.sty 2024/09/23 1.10c listings language file
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count380
+\lrq@indent=\count381
  (c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count381
-\c@listtotal=\count382
-\c@listcount=\count383
-\c@liststart=\count384
-\c@liststop=\count385
-\c@citecount=\count386
-\c@citetotal=\count387
-\c@multicitecount=\count388
-\c@multicitetotal=\count389
-\c@instcount=\count390
-\c@maxnames=\count391
-\c@minnames=\count392
-\c@maxitems=\count393
-\c@minitems=\count394
-\c@citecounter=\count395
-\c@maxcitecounter=\count396
-\c@savedcitecounter=\count397
-\c@uniquelist=\count398
-\c@uniquename=\count399
-\c@refsection=\count400
-\c@refsegment=\count401
-\c@maxextratitle=\count402
-\c@maxextratitleyear=\count403
-\c@maxextraname=\count404
-\c@maxextradate=\count405
-\c@maxextraalpha=\count406
-\c@abbrvpenalty=\count407
-\c@highnamepenalty=\count408
-\c@lownamepenalty=\count409
-\c@maxparens=\count410
-\c@parenlevel=\count411
-\blx@tempcnta=\count412
-\blx@tempcntb=\count413
-\blx@tempcntc=\count414
-\c@blx@maxsection=\count415
-\blx@maxsegment@0=\count416
-\blx@notetype=\count417
-\blx@parenlevel@text=\count418
-\blx@parenlevel@foot=\count419
-\blx@sectionciteorder@0=\count420
-\blx@sectionciteorderinternal@0=\count421
-\blx@entrysetcounter=\count422
-\blx@biblioinstance=\count423
+\c@tabx@nest=\count382
+\c@listtotal=\count383
+\c@listcount=\count384
+\c@liststart=\count385
+\c@liststop=\count386
+\c@citecount=\count387
+\c@citetotal=\count388
+\c@multicitecount=\count389
+\c@multicitetotal=\count390
+\c@instcount=\count391
+\c@maxnames=\count392
+\c@minnames=\count393
+\c@maxitems=\count394
+\c@minitems=\count395
+\c@citecounter=\count396
+\c@maxcitecounter=\count397
+\c@savedcitecounter=\count398
+\c@uniquelist=\count399
+\c@uniquename=\count400
+\c@refsection=\count401
+\c@refsegment=\count402
+\c@maxextratitle=\count403
+\c@maxextratitleyear=\count404
+\c@maxextraname=\count405
+\c@maxextradate=\count406
+\c@maxextraalpha=\count407
+\c@abbrvpenalty=\count408
+\c@highnamepenalty=\count409
+\c@lownamepenalty=\count410
+\c@maxparens=\count411
+\c@parenlevel=\count412
+\blx@tempcnta=\count413
+\blx@tempcntb=\count414
+\blx@tempcntc=\count415
+\c@blx@maxsection=\count416
+\blx@maxsegment@0=\count417
+\blx@notetype=\count418
+\blx@parenlevel@text=\count419
+\blx@parenlevel@foot=\count420
+\blx@sectionciteorder@0=\count421
+\blx@sectionciteorderinternal@0=\count422
+\blx@entrysetcounter=\count423
+\blx@biblioinstance=\count424
 \labelnumberwidth=\skip173
 \labelalphawidth=\skip174
 \biblabelsep=\skip175
@@ -1190,9 +1199,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language91
-\c@mincomprange=\count424
-\c@maxcomprange=\count425
-\c@mincompwidth=\count426
+\c@mincomprange=\count425
+\c@maxcomprange=\count426
+\c@mincompwidth=\count427
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -1200,74 +1209,74 @@ File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count427
-\c@savedafterword=\count428
-\c@annotator=\count429
-\c@savedannotator=\count430
-\c@author=\count431
-\c@savedauthor=\count432
-\c@bookauthor=\count433
-\c@savedbookauthor=\count434
-\c@commentator=\count435
-\c@savedcommentator=\count436
-\c@editor=\count437
-\c@savededitor=\count438
-\c@editora=\count439
-\c@savededitora=\count440
-\c@editorb=\count441
-\c@savededitorb=\count442
-\c@editorc=\count443
-\c@savededitorc=\count444
-\c@foreword=\count445
-\c@savedforeword=\count446
-\c@holder=\count447
-\c@savedholder=\count448
-\c@introduction=\count449
-\c@savedintroduction=\count450
-\c@namea=\count451
-\c@savednamea=\count452
-\c@nameb=\count453
-\c@savednameb=\count454
-\c@namec=\count455
-\c@savednamec=\count456
-\c@translator=\count457
-\c@savedtranslator=\count458
-\c@shortauthor=\count459
-\c@savedshortauthor=\count460
-\c@shorteditor=\count461
-\c@savedshorteditor=\count462
-\c@labelname=\count463
-\c@savedlabelname=\count464
-\c@institution=\count465
-\c@savedinstitution=\count466
-\c@lista=\count467
-\c@savedlista=\count468
-\c@listb=\count469
-\c@savedlistb=\count470
-\c@listc=\count471
-\c@savedlistc=\count472
-\c@listd=\count473
-\c@savedlistd=\count474
-\c@liste=\count475
-\c@savedliste=\count476
-\c@listf=\count477
-\c@savedlistf=\count478
-\c@location=\count479
-\c@savedlocation=\count480
-\c@organization=\count481
-\c@savedorganization=\count482
-\c@origlocation=\count483
-\c@savedoriglocation=\count484
-\c@origpublisher=\count485
-\c@savedorigpublisher=\count486
-\c@publisher=\count487
-\c@savedpublisher=\count488
-\c@language=\count489
-\c@savedlanguage=\count490
-\c@origlanguage=\count491
-\c@savedoriglanguage=\count492
-\c@pageref=\count493
-\c@savedpageref=\count494
+\c@afterword=\count428
+\c@savedafterword=\count429
+\c@annotator=\count430
+\c@savedannotator=\count431
+\c@author=\count432
+\c@savedauthor=\count433
+\c@bookauthor=\count434
+\c@savedbookauthor=\count435
+\c@commentator=\count436
+\c@savedcommentator=\count437
+\c@editor=\count438
+\c@savededitor=\count439
+\c@editora=\count440
+\c@savededitora=\count441
+\c@editorb=\count442
+\c@savededitorb=\count443
+\c@editorc=\count444
+\c@savededitorc=\count445
+\c@foreword=\count446
+\c@savedforeword=\count447
+\c@holder=\count448
+\c@savedholder=\count449
+\c@introduction=\count450
+\c@savedintroduction=\count451
+\c@namea=\count452
+\c@savednamea=\count453
+\c@nameb=\count454
+\c@savednameb=\count455
+\c@namec=\count456
+\c@savednamec=\count457
+\c@translator=\count458
+\c@savedtranslator=\count459
+\c@shortauthor=\count460
+\c@savedshortauthor=\count461
+\c@shorteditor=\count462
+\c@savedshorteditor=\count463
+\c@labelname=\count464
+\c@savedlabelname=\count465
+\c@institution=\count466
+\c@savedinstitution=\count467
+\c@lista=\count468
+\c@savedlista=\count469
+\c@listb=\count470
+\c@savedlistb=\count471
+\c@listc=\count472
+\c@savedlistc=\count473
+\c@listd=\count474
+\c@savedlistd=\count475
+\c@liste=\count476
+\c@savedliste=\count477
+\c@listf=\count478
+\c@savedlistf=\count479
+\c@location=\count480
+\c@savedlocation=\count481
+\c@organization=\count482
+\c@savedorganization=\count483
+\c@origlocation=\count484
+\c@savedoriglocation=\count485
+\c@origpublisher=\count486
+\c@savedorigpublisher=\count487
+\c@publisher=\count488
+\c@savedpublisher=\count489
+\c@language=\count490
+\c@savedlanguage=\count491
+\c@origlanguage=\count492
+\c@savedoriglanguage=\count493
+\c@pageref=\count494
+\c@savedpageref=\count495
 \shorthandwidth=\skip181
 \shortjournalwidth=\skip182
 \shortserieswidth=\skip183
@@ -1291,19 +1300,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count495
-\c@textcitetotal=\count496
-\c@textcitemaxnames=\count497
-\c@biburlbigbreakpenalty=\count498
-\c@biburlbreakpenalty=\count499
-\c@biburlnumpenalty=\count500
-\c@biburlucpenalty=\count501
-\c@biburllcpenalty=\count502
+\c@textcitecount=\count496
+\c@textcitetotal=\count497
+\c@textcitemaxnames=\count498
+\c@biburlbigbreakpenalty=\count499
+\c@biburlbreakpenalty=\count500
+\c@biburlnumpenalty=\count501
+\c@biburlucpenalty=\count502
+\c@biburllcpenalty=\count503
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count503
+\c@smartand=\count504
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1313,8 +1322,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count504
-\c@bbx:relatedtotal=\count505
+\c@bbx:relatedcount=\count505
+\c@bbx:relatedtotal=\count506
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1350,45 +1359,45 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T5+lmr on input line 153.
+LaTeX Font Info:    Trying to load font information for T5+lmr on input line 154.
  (c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmr.fd
 File: t5lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (./thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
  (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count506
-\scratchdimen=\dimen312
+\scratchcounter=\count507
+\scratchdimen=\dimen317
 \scratchbox=\box94
-\nofMPsegments=\count507
-\nofMParguments=\count508
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count509
-\MPscratchDim=\dimen313
-\MPnumerator=\count510
-\makeMPintoPDFobject=\count511
-\everyMPtoPDFconversion=\toks56
+\nofMPsegments=\count508
+\nofMParguments=\count509
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count510
+\MPscratchDim=\dimen318
+\MPnumerator=\count511
+\makeMPintoPDFobject=\count512
+\everyMPtoPDFconversion=\toks57
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1404,10 +1413,10 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: scrextend package is loaded.
-\caption@addmargin@hsize=\dimen314
-\caption@addmargin@linewidth=\dimen315
+\caption@addmargin@hsize=\dimen319
+\caption@addmargin@linewidth=\dimen320
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 153.
+Package hyperref Info: Link coloring OFF on input line 154.
  (./thesis.out) (./thesis.out)
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
@@ -1447,7 +1456,7 @@ Package hyperref Info: Link coloring OFF on input line 153.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count512
+\c@lstlisting=\count513
 (c:/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
@@ -1497,10 +1506,10 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 437.
 
 )
-Package biblatex Info: Reference section=0 on input line 153.
-Package biblatex Info: Reference segment=0 on input line 153.
+Package biblatex Info: Reference section=0 on input line 154.
+Package biblatex Info: Reference segment=0 on input line 154.
  (./cover.tex
-<figures/uet.jpg, id=165, 1125.20375pt x 1125.20375pt>
+<figures/uet.jpg, id=186, 1125.20375pt x 1125.20375pt>
 File: figures/uet.jpg Graphic file (type jpg)
 <use figures/uet.jpg>
 Package pdftex.def Info: figures/uet.jpg  used on input line 18.
@@ -1520,14 +1529,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.154 \input{cover}\newpage
+l.155 \input{cover}\newpage
                            \cleardoublepage [2] (./chapters/abtract_en.tex)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 \input{chapters/abtract_en}\newpage
+l.160 \input{chapters/abtract_en}\newpage
                                          \cleardoublepage [3
 
 
@@ -1571,7 +1580,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \input{chapters/assurance}\newpage
+l.162 \input{chapters/assurance}\newpage
                                         \cleardoublepage [4
 
 
@@ -1591,13 +1600,15 @@ l.161 \input{chapters/assurance}\newpage
 
 
 
-[3] (./thesis.lof)
+[3]
+
+[4] (./thesis.lof)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
 
 
-[4
+[5
 
 
 ] (./thesis.lot)
@@ -1606,12 +1617,12 @@ l.161 \input{chapters/assurance}\newpage
 
 
 
-[5
+[6
 
 
 ] (./chapters/glossary.tex)
 
-[6
+[7
 
 ] (./chapters/introduction.tex
 
@@ -1632,40 +1643,42 @@ Chapter 1.
 
 
 
-]) (./chapters/c1/c1_uml.tex
+]) (./chapters/c1/c1_mde.tex
+
+[4]) (./chapters/c1/c1_uml.tex
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 5.
 
 
+
+[5]
+
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 18.
 
-
-
-[4]
-<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=291, 332.442pt x 130.68825pt>
+<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=331, 332.442pt x 130.68825pt>
 File: figures/c1/BankAccount/BankAccount_ClassDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BankAccount_ClassDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BankAccount_ClassDiagram.png  used on input line 52.
 (pdftex.def)             Requested size: 364.19667pt x 143.17122pt.
 LaTeX Font Info:    Trying to load font information for T5+lmtt on input line 58.
- (c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmtt.fd
+(c:/texlive/2025/texmf-dist/tex/latex/lm/t5lmtt.fd
 File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
-[5 <./figures/c1/BankAccount/BankAccount_ClassDiagram.png>]
-
 [6]
-<figures/c1/BankAccount/BA_ObjectDiagram.png, id=304, 558.28575pt x 118.64325pt>
+
+[7 <./figures/c1/BankAccount/BankAccount_ClassDiagram.png>]
+<figures/c1/BankAccount/BA_ObjectDiagram.png, id=344, 558.28575pt x 118.64325pt>
 File: figures/c1/BankAccount/BA_ObjectDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BA_ObjectDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on input line 139.
 (pdftex.def)             Requested size: 364.19667pt x 77.39598pt.
 
 
-[7 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]) (./chapters/c1/c1_ocl.tex
-<figures/c1/SoftwareSystem/SS_Ver2_Gray.png, id=312, 422.7795pt x 184.89075pt>
+[8 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]) (./chapters/c1/c1_ocl.tex
+<figures/c1/SoftwareSystem/SS_Ver2_Gray.png, id=353, 422.7795pt x 184.89075pt>
 File: figures/c1/SoftwareSystem/SS_Ver2_Gray.png Graphic file (type png)
 <use figures/c1/SoftwareSystem/SS_Ver2_Gray.png>
 Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver2_Gray.png  used on input line 16.
@@ -1677,15 +1690,15 @@ Overfull \hbox (4.23929pt too wide) in paragraph at lines 22--30
 
 
 
-[8 <./figures/c1/SoftwareSystem/SS_Ver2_Gray.png>]
+[9]
+
+[10 <./figures/c1/SoftwareSystem/SS_Ver2_Gray.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 59.
 LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <8.66673> not available
 (Font)              Font shape `T5/lmtt/b/n' tried instead on input line 60.
 
 
-[9]
-
-[10]
+[11]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 126.
@@ -1693,22 +1706,22 @@ See the caption package documentation for explanation.
 
 
 
-[11]
+[12]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 150.
 
 
 
-[12{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]) (./chapters/c1/c1_use.tex
+[13{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]) (./chapters/c1/c1_use.tex
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 5.
 
 
 
-[13]
-<figures/c1/USE_Overview.png, id=368, 420.06938pt x 198.7425pt>
+[14]
+<figures/c1/USE_Overview.png, id=408, 420.06938pt x 198.7425pt>
 File: figures/c1/USE_Overview.png Graphic file (type png)
 <use figures/c1/USE_Overview.png>
 Package pdftex.def Info: figures/c1/USE_Overview.png  used on input line 23.
@@ -1720,15 +1733,15 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[14 <./figures/c1/USE_Overview.png (PNG copy)>]
+[15 <./figures/c1/USE_Overview.png (PNG copy)>]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 53.
 
 
 
-[15]
-<figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png, id=381, 678.73575pt x 277.63725pt>
+[16]
+<figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png, id=420, 678.73575pt x 277.63725pt>
 File: figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png Graphic file (type png)
 <use figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png>
 Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png  used on input line 81.
@@ -1740,20 +1753,20 @@ Overfull \hbox (10.40192pt too wide) in paragraph at lines 86--92
 
 
 
-[16 <./figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png>]
+[17 <./figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png>]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 101.
 
 ) (./chapters/c1/c1_summary.tex
 
-[17]))
+[18]))
 
-[18] (./chapters/c2/c2_chapter.tex
+[19] (./chapters/c2/c2_chapter.tex
 Chapter 2.
 (./chapters/c2/c2_introduction.tex
 
-[19
+[20
 
 
 
@@ -1764,17 +1777,17 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[20]
+[21]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 36.
 
 
 
-[21]
-
 [22]
-<figures/c2/events_visual.png, id=447, 1137.048pt x 245.11575pt>
+
+[23]
+<figures/c2/events_visual.png, id=486, 1137.048pt x 245.11575pt>
 File: figures/c2/events_visual.png Graphic file (type png)
 <use figures/c2/events_visual.png>
 Package pdftex.def Info: figures/c2/events_visual.png  used on input line 104.
@@ -1786,9 +1799,9 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 
-[23 <./figures/c2/events_visual.png>]
+[24 <./figures/c2/events_visual.png>]
 
-[24]
+[25]
 Overfull \hbox (3.03842pt too wide) in paragraph at lines 187--194
 \T5/lmr/m/n/14 tions within the se-man-tic frame-work es-tab-lished by TOCL. Let $[] \OT1/lmr/m/n/14 = \OMS/lmsy/m/n/14 h\OML/lmm/m/it/14 ^^[[]; ^^[[]; []\OMS/lmsy/m/n/14 i$
  []
@@ -1808,26 +1821,26 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.80008> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
 
 
-[25]
-
 [26]
+
+[27]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 284.
 
 
 
-[27]) (./chapters/c2/c2_verification.tex
+[28]) (./chapters/c2/c2_verification.tex
 
-[28]
-<figures/c2/Verification_approach_1.png, id=557, 1445.4pt x 568.37344pt>
+[29]
+<figures/c2/Verification_approach_1.png, id=596, 1445.4pt x 568.37344pt>
 File: figures/c2/Verification_approach_1.png Graphic file (type png)
 <use figures/c2/Verification_approach_1.png>
 Package pdftex.def Info: figures/c2/Verification_approach_1.png  used on input line 5.
 (pdftex.def)             Requested size: 455.24411pt x 179.01256pt.
 
 
-[29 <./figures/c2/Verification_Approach_1.png>]
+[30 <./figures/c2/Verification_Approach_1.png>]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 28.
@@ -1844,61 +1857,80 @@ Overfull \hbox (40.29926pt too wide) in paragraph at lines 42--43
 
 
 
-[30]
-
 [31]
 
 [32]
 
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 125.
-
-) (./chapters/c2/c2_summary.tex))
-
 [33]
+<figures/c2/ObjectDiagram_Liveness_LoadInstall.png, id=662, 909.3975pt x 365.56575pt>
+File: figures/c2/ObjectDiagram_Liveness_LoadInstall.png Graphic file (type png)
+<use figures/c2/ObjectDiagram_Liveness_LoadInstall.png>
+Package pdftex.def Info: figures/c2/ObjectDiagram_Liveness_LoadInstall.png  used on input line 146.
+(pdftex.def)             Requested size: 455.24411pt x 183.00554pt.
 
-[34] (./chapters/c3/c3_chapter.tex
+
+Package csquotes Warning: No space factor codes for 'T5' encoding.
+(csquotes)                Punctuation tracker may fail on input line 152.
+
+
+
+[34 <./figures/c2/ObjectDiagram_Liveness_LoadInstall.png>]
+
+[35]
+
+[36]) (./chapters/c2/c2_summary.tex))
+
+[37]
+
+[38] (./chapters/c3/c3_chapter.tex
 Chapter 3.
-
-Overfull \hbox (44.82947pt too wide) in paragraph at lines 1--1
-|\T5/lmr/bx/n/22.46396 IMPLEMENTATION AND EX-PER-I-MENTS| 
- []
-
-)
-
-[35
+(./chapters/c3/c3_introduction.tex) (./chapters/c3/c3_plugin.tex
+<figures/c3/Architecture_overview.png, id=757, 1445.4pt x 813.0375pt>
+File: figures/c3/Architecture_overview.png Graphic file (type png)
+<use figures/c3/Architecture_overview.png>
+Package pdftex.def Info: figures/c3/Architecture_overview.png  used on input line 7.
+(pdftex.def)             Requested size: 455.24411pt x 256.07095pt.
 
 
+[39
 
-] (./chapters/conclusion.tex)
 
-[36
+
+]
+
+[40 <./figures/c3/Architecture_overview.png (PNG copy)>]))
+
+[41]
+
+[42] (./chapters/conclusion.tex)
+
+[43
 
 
 ]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 198.
+(csquotes)                Punctuation tracker may fail on input line 199.
 
 
-Overfull \hbox (12.4554pt too wide) in paragraph at lines 198--198
+Overfull \hbox (12.4554pt too wide) in paragraph at lines 199--199
 \T5/lmr/m/n/13 Mon-treal, Que-bec, Canada: As-so-ci-a-tion for Com-put-ing Ma-chin-ery, 2022, pp. 899^^U
  []
 
 
 
-[37
+[44
 
 
 
 ]
-Overfull \hbox (12.4554pt too wide) in paragraph at lines 198--198
+Overfull \hbox (12.4554pt too wide) in paragraph at lines 199--199
 \T5/lmr/m/n/13 Mon-treal, Que-bec, Canada: As-so-ci-a-tion for Com-put-ing Ma-chin-ery, 2022, pp. 899^^U
  []
 
 
 
-[38] (./chapters/appendix.tex) (./thesis.aux)
+[45] (./chapters/appendix.tex) (./thesis.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1908,24 +1940,24 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 17D6A5817991133D8C265691571A8F71;6934.
+(rerunfilecheck)             Checksum: 80720A380DEC92F4BE826F93DBC1D9B5;7958.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41114 strings out of 473189
- 774690 string characters out of 5719958
- 1868273 words of memory out of 5000000
- 63386 multiletter control sequences out of 15000+600000
- 760012 words of font info for 118 fonts, out of 8000000 for 9000
+ 41349 strings out of 473189
+ 779413 string characters out of 5719958
+ 1869791 words of memory out of 5000000
+ 63536 multiletter control sequences out of 15000+600000
+ 775797 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,107p,3163b,2259s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on thesis.pdf (48 pages, 657335 bytes).
+<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
+Output written on thesis.pdf (56 pages, 811368 bytes).
 PDF statistics:
- 810 PDF objects out of 1000 (max. 8388607)
- 706 compressed objects within 8 object streams
- 253 named destinations out of 1000 (max. 500000)
- 381 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 970 PDF objects out of 1000 (max. 8388607)
+ 848 compressed objects within 9 object streams
+ 325 named destinations out of 1000 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 

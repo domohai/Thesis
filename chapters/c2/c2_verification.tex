@@ -96,13 +96,31 @@ inv post_reduceMemory:
 
 \subsection{Step 2: Translating TOCL+ Properties into OCL Expressions}
 
-\hspace{1cm} After transforming the application model into a filmstrip model, the second step of our verification approach involves translating TOCL+ temporal properties into equivalent OCL constraints. These constraints must be expressed in terms of the filmstrip model structure created in Step 1, allowing them to be verified using standard OCL tools.
+\hspace{1cm} After transforming the application model into a filmstrip model, the 
+second step of our verification approach involves translating TOCL+ temporal 
+properties into equivalent OCL constraints. These constraints must be expressed in 
+terms of the filmstrip model structure created in Step 1, allowing them to be 
+verified using standard OCL tools.
 
-The translation process begins with temporal properties specified in TOCL+ for the original Software System model. Each TOCL+ property is systematically transformed into an OCL constraint that navigates through the filmstrip structure of snapshots and operation calls. This transformation preserves the semantic meaning of the original temporal specifications while expressing them through the structural elements of the filmstrip model.
+The translation process begins with temporal properties specified in TOCL+ for the 
+original Software System model. Each TOCL+ property is systematically transformed 
+into an OCL constraint that navigates through the filmstrip structure of snapshots 
+and operation calls. This transformation preserves the semantic meaning of the 
+original temporal specifications while expressing them through the structural 
+elements of the filmstrip model.
 
-Listing \ref{lst:tocl+} shows the original TOCL+ properties specified for our Software System model, including safety and liveness properties. As an example of the translation process, Listing \ref{lst:ocl_liveness} presents the OCL translation for the liveness property, demonstrating how temporal requirements are mapped to structural constraints within the filmstrip framework. The translation uses snapshot navigation and operation call existence checks to capture the temporal semantics of the original property.
+Listing \ref{lst:tocl+} shows the original TOCL+ properties specified for our 
+Software System model, including safety and liveness properties. As an example of 
+the translation process, Listing \ref{lst:ocl_liveness} presents the OCL translation 
+for the liveness property, demonstrating how temporal requirements are mapped to 
+structural constraints within the filmstrip framework. The translation uses snapshot 
+navigation and operation call existence checks to capture the temporal semantics of 
+the original property.
 
-The resulting OCL constraints serve as the input for the verification step that follows, where they will be evaluated against potential system states to determine if the model satisfies the specified temporal properties.
+The resulting OCL constraints serve as the input for the verification step that 
+follows, where they will be evaluated against potential system states to determine 
+if the model satisfies the specified temporal properties. The detailed implementation 
+of the interpretation process will be presented in Chapter 3.
 
 \begin{lstlisting}[
     style=toclstyle, 
@@ -120,16 +138,110 @@ inv liveness:
     )
 \end{lstlisting}
 
+
 \subsection{Step 3: Verifying the translated OCL expressions}
 
-Our approach uses the USE Model Validator \cite{USE_Validator} to produce
-scenarios (e.g., instances of the filmstrip model) and check if there exists a
-solution that satisfies the OCL properties generated in Step 2. The Model Validator 
-uses boolean satisfiability (SAT) solver to perform the analysis. Before the 
-analysis process begins, the modeler must configure the search space for the analysis.
-The configurations are written in text files with the extension .properties. 
-In the configuration file, a lower and upper limit can be specified for each 
-configurable base type (Integer, Real, String), each class, each attribute of a 
-class, and associations, which specifies how many instances should be there in the 
-object diagram. As such, the Model Validator enumerates all possible scenarios
-within the defined scopes and checks them against a given property. 
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/c2/ObjectDiagram_Liveness_LoadInstall.png}
+    \caption{Object Diagram returned by the Model Validator.}
+    \label{fig:object_diagram_liveness}
+\end{figure}
+
+\hspace{1cm} The final step in our verification approach employs the USE Model 
+Validator \cite{USE_Validator} to verify the OCL constraints generated in Step 2 
+against our filmstrip model. This verification process determines whether the 
+original TOCL+ properties are satisfied by the application model. The Model Validator 
+systematically explores possible system states using a boolean satisfiability (SAT) 
+solver, searching for valid instances of the filmstrip model that satisfy all 
+constraints or demonstrating that no such instance exists.
+
+Before verification, we configure the search space through a properties file 
+(.properties) that establishes bounds for model elements including types, classes, 
+and associations. These bounds define the scope within which the Model Validator 
+explores possible system configurations. Listing \ref{lst:configuration_file} shows 
+one specific configuration used in our Software System example.
+
+When executed with these parameters, the Model Validator attempts to find a valid 
+model instance that satisfies all constraints—including both the filmstrip model 
+invariants and our translated temporal properties. If such an instance exists, the 
+validator produces an object diagram as evidence; otherwise, it reports that the 
+properties cannot be satisfied within the given search bounds.
+
+Figure \ref{fig:object_diagram_liveness} displays an object diagram returned by the 
+Model Validator checking against our liveness property. This diagram illustrates a scenario where 
+the system first loads and then installs an application—a sequence that satisfies our 
+liveness requirement. The diagram shows three snapshots representing the system's 
+state at different points in time, connected by two operation calls: \texttt{load} 
+followed by \texttt{install}.
+
+You may notice the custom \texttt{id} attribute present in Figure \ref{fig:class_diagram_software_system}
+and Figure \ref{fig:object_diagram_liveness}. We manually added this attribute to help 
+identify corresponding objects across different snapshots. For example, the scenario 
+shows three Application objects with an identical \texttt{id} value of 0, indicating 
+they represent the same logical entity at different points in time. This attribute 
+is not part of the standard filmstrip model, and we will explain the implementation 
+details and necessary constraints for maintaining object identity in Chapter 3. 
+This validation confirms that our Software System model can satisfy the temporal 
+behavior specified by the liveness property.
+
+\begin{lstlisting}[
+    caption={Configuration file used for Fig. \ref{fig:object_diagram_liveness}.},
+    label={lst:configuration_file}
+]
+Integer_min = 0
+Integer_max = 100
+String_max = 10
+Real_min = -2.0
+Real_max = 2.0
+Real_step = 0.5
+
+### Classes
+# Snapshot
+Snapshot_min = 3
+Snapshot_max = 3
+# Filmstrip
+Filmstrip_min = 2
+Filmstrip_max = 2
+# System
+System_min = 3
+System_max = 3
+# Application
+Application_min = 6
+Application_max = 6
+
+### Operation Classes
+# load_SystemOpC
+load_SystemOpC_min = 1
+load_SystemOpC_max = 1
+# install_SystemOpC
+install_SystemOpC_min = 1
+install_SystemOpC_max = 1
+# run_SystemOpC
+run_SystemOpC_min = 0
+run_SystemOpC_max = 0
+# stop_SystemOpC
+stop_SystemOpC_min = 0
+stop_SystemOpC_max = 0
+
+### Associations
+# SnapshotSystem
+SnapshotSystem_min = 3
+SnapshotSystem_max = 3
+# SnapshotApplication
+SnapshotApplication_min = 6
+SnapshotApplication_max = 6
+# PredSuccSystem
+PredSuccSystem_min = 2
+PredSuccSystem_max = 2
+# PredSuccApplication
+PredSuccApplication_min = 4
+PredSuccApplication_max = 4
+# SystemApplication
+SystemApplication_min = 6
+SystemApplication_max = 6
+
+### Additional configurations
+aggregationcyclefreeness = on
+forbiddensharing = on
+\end{lstlisting}

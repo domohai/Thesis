@@ -94,3 +94,40 @@
 % corresponding TOCL+ property in the context of the Filmstrip Model. Listing \ref{lst:ocl_liveness}
 % shows the OCL translation for liveness property defined in \ref{lst:tocl+}. The full
 % OCL translations for all TOCL+ properties are provided in Appendix A.
+
+
+%%% Step 3
+%%% Version 1
+% Our approach uses the USE Model Validator \cite{USE_Validator} to produce
+% scenarios (e.g., instances of the filmstrip model) and check if there exists a
+% solution that satisfies the OCL properties generated in Step 2. The Model Validator 
+% uses a boolean satisfiability (SAT) solver to perform the analysis. Before the 
+% analysis process begins, the modeler must configure the search space for the analysis.
+% The configurations are written in text files with the extension .properties. 
+% In the configuration file, a lower and upper limit can be specified for each 
+% configurable base type (Integer, Real, String), each class, each attribute of a 
+% class, and associations, which specifies how many instances should be there in the 
+% object diagram. As such, the Model Validator enumerates all possible scenarios
+% within the defined scopes and checks them against a given property. 
+
+% Figure \ref{fig:object_diagram_liveness} shows an object diagram returned by the Model
+% Validator. Listing \ref{lst:configuration_file} shows the configuration file used to
+% generate the object diagram. The returned object diagram illustrates a scenario where
+% the system load and install an application, which is a valid scenario that satisfies
+% the liveness property. The object diagram shows that the system has three snapshots, 
+% each represents the system's state at different points in time, with the \texttt{load} 
+% followed by \texttt{install} operations being executed.
+
+%%% Version 2
+% Figure \ref{fig:object_diagram_liveness} displays an object diagram returned by the 
+% Model Validator checking against our liveness property. This diagram illustrates a scenario where 
+% the system first loads and then installs an application—a sequence that satisfies our 
+% liveness requirement. The diagram shows three snapshots representing the system's 
+% state at different points in time, connected by two operation calls: \texttt{load} 
+% followed by \texttt{install}. Note the id attribute present in Figure \ref{fig:class_diagram_software_system}
+% and Figure \ref{fig:object_diagram_liveness}. This attribute is used to identify 
+% objects in different snapshots as state representations of the same real-time object.
+% For example, the scenario in \ref{fig:object_diagram_liveness} shows three Application 
+% objects with an id value of 0. These objects represent three states of a single 
+% real-time Application instance. This validation confirms that our Software System model 
+% can satisfy the temporal behavior specified by the liveness property.

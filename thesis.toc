@@ -3,49 +3,54 @@
 \contentsline {chapter}{DECLARATION}{}{Doc-Start}%
 \contentsline {chapter}{ACKNOWLEDGEMENTS}{i}{Doc-Start}%
 \contentsline {chapter}{TABLE OF CONTENTS}{ii}{Doc-Start}%
-\contentsline {chapter}{LIST OF FIGURES}{iv}{Doc-Start}%
-\contentsline {chapter}{LIST OF TABLES}{v}{Doc-Start}%
-\contentsline {chapter}{ABBREVIATION AND TERMS}{vi}{chapter*.1}%
+\contentsline {chapter}{LIST OF FIGURES}{v}{Doc-Start}%
+\contentsline {chapter}{LIST OF TABLES}{vi}{Doc-Start}%
+\contentsline {chapter}{ABBREVIATION AND TERMS}{vii}{chapter*.1}%
 \contentsline {chapter}{INTRODUCTION}{1}{section*.2}%
 \contentsline {chapter}{\numberline {1}Backgrounds}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Unified Modeling Language (UML)}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Class Diagram}{5}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Object Diagram}{7}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Object Constraint Language (OCL)}{8}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Overview}{8}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}OCL Constraints}{9}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}OCL Limitations}{11}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}Temporal Dimension}{11}{subsubsection.1.3.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.3.2}Events}{12}{subsubsection.1.3.3.2}%
-\contentsline {section}{\numberline {1.4}UML-based Specification Environment (USE)}{13}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Overview}{13}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}USE Model Validator}{14}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Filmstripping}{15}{subsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.3.1}Overview}{15}{subsubsection.1.4.3.1}%
-\contentsline {subsubsection}{\numberline {1.4.3.2}Filmstrip Model Transformation}{16}{subsubsection.1.4.3.2}%
-\contentsline {paragraph}{Transformation of classes:}{17}{section*.8}%
-\contentsline {paragraph}{Transformation of associations:}{17}{section*.9}%
-\contentsline {paragraph}{Transformation of operation definitions and invariants:}{17}{section*.10}%
-\contentsline {paragraph}{Transformation of pre- and postconditions:}{17}{section*.11}%
-\contentsline {section}{\numberline {1.5}Summary}{18}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{19}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Specification of temporal properties}{20}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{20}{subsection.2.2.1}%
-\contentsline {paragraph}{Future Operators:}{20}{section*.12}%
-\contentsline {paragraph}{Past Operators:}{21}{section*.13}%
-\contentsline {subsection}{\numberline {2.2.2}Event Constructs in OCL}{23}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{25}{subsection.2.2.3}%
-\contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{25}{section*.15}%
-\contentsline {paragraph}{becomesTrue(P)}{26}{section*.16}%
-\contentsline {paragraph}{Bounded Existence Constructs}{26}{section*.17}%
-\contentsline {subsection}{\numberline {2.2.4}TOCL+ Grammar}{27}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{29}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Step 1: Transforming the Application Model into a Filmstrip Model}{30}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Step 2: Translating TOCL+ Properties into OCL Expressions}{32}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Step 3: Verifying the translated OCL expressions}{33}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Summary}{34}{section.2.4}%
-\contentsline {chapter}{\numberline {3}IMPLEMENTATION AND EXPERIMENTS}{35}{chapter.3}%
-\contentsline {chapter}{KẾT LUẬN}{36}{chapter.3}%
-\contentsline {chapter}{REFERENCES}{38}{chapter*.19}%
+\contentsline {section}{\numberline {1.2}Model-Driven Engineering}{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Unified Modeling Language (UML)}{5}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Class Diagram}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Object Diagram}{8}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Object Constraint Language (OCL)}{9}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Overview}{9}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}OCL Constraints}{10}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}OCL Limitations}{12}{subsection.1.4.3}%
+\contentsline {subsubsection}{\numberline {1.4.3.1}Temporal Dimension}{12}{subsubsection.1.4.3.1}%
+\contentsline {subsubsection}{\numberline {1.4.3.2}Events}{13}{subsubsection.1.4.3.2}%
+\contentsline {section}{\numberline {1.5}UML-based Specification Environment (USE)}{14}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Overview}{14}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}USE Model Validator}{15}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Filmstripping}{16}{subsection.1.5.3}%
+\contentsline {subsubsection}{\numberline {1.5.3.1}Overview}{16}{subsubsection.1.5.3.1}%
+\contentsline {subsubsection}{\numberline {1.5.3.2}Filmstrip Model Transformation}{17}{subsubsection.1.5.3.2}%
+\contentsline {paragraph}{Transformation of classes:}{18}{section*.8}%
+\contentsline {paragraph}{Transformation of associations:}{18}{section*.9}%
+\contentsline {paragraph}{Transformation of operation definitions and invariants:}{18}{section*.10}%
+\contentsline {paragraph}{Transformation of pre- and postconditions:}{18}{section*.11}%
+\contentsline {section}{\numberline {1.6}Summary}{19}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{20}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Specification of temporal properties}{21}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{21}{subsection.2.2.1}%
+\contentsline {paragraph}{Future Operators:}{21}{section*.12}%
+\contentsline {paragraph}{Past Operators:}{22}{section*.13}%
+\contentsline {subsection}{\numberline {2.2.2}Event Constructs in OCL}{24}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{26}{subsection.2.2.3}%
+\contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{26}{section*.15}%
+\contentsline {paragraph}{becomesTrue(P)}{27}{section*.16}%
+\contentsline {paragraph}{Bounded Existence Constructs}{27}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.4}TOCL+ Grammar}{28}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{30}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Step 1: Transforming the Application Model into a Filmstrip Model}{31}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Step 2: Translating TOCL+ Properties into OCL Expressions}{33}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Step 3: Verifying the translated OCL expressions}{35}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Summary}{37}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Implementation and Experiment}{39}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{39}{section.3.1}%
+\contentsline {section}{\numberline {3.2}TOCL+ Plugin Implementation}{40}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Plugin Architecture and Workflow}{40}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Implementation of TOCL+ to OCL Transformation}{41}{subsection.3.2.2}%
+\contentsline {chapter}{KẾT LUẬN}{43}{table.caption.21}%
+\contentsline {chapter}{REFERENCES}{45}{chapter*.22}%

@@ -1,12 +1,14 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Class diagram of the Bank Account Model.}}{5}{figure.caption.3}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Object diagram of the Bank Account Model.}}{7}{figure.caption.4}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Class diagram of the Software System.}}{8}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Temporal properties of the software system.}}{11}{figure.1.4}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces USE Overview.}}{14}{figure.caption.6}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Filmstrip Model Transformation.}}{16}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Class diagram of the Bank Account Model.}}{7}{figure.caption.3}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Object diagram of the Bank Account Model.}}{8}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Class diagram of the Software System.}}{10}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Temporal properties of the software system.}}{12}{figure.1.4}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces USE Overview.}}{15}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Filmstrip Model Transformation.}}{17}{figure.caption.7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Events.}}{23}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Verification approach.}}{29}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Events.}}{24}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Verification approach.}}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Object Diagram returned by the Model Validator.}}{34}{figure.caption.19}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture and Workflow of the approach.}}{40}{figure.caption.20}%
