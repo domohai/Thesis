@@ -99,6 +99,42 @@
                 isCalled, becomesTrue},
 }
 
+% Java code listing style - Add to preamble
+% Java code listing style - Update string color
+\definecolor{javakeyword}{rgb}{0.0, 0.0, 0.75}     % Dark blue for keywords
+\definecolor{javacomment}{rgb}{0.5, 0.5, 0.5}      % Gray for comments
+\definecolor{javastring}{rgb}{0.0, 0.6, 0.0}       % Changed to green for strings
+\definecolor{javaannotation}{rgb}{0.6, 0.0, 0.6}   % Purple for annotations
+\definecolor{javadoc}{rgb}{0.25, 0.5, 0.35}        % Forest green for javadoc
+\definecolor{javabackground}{rgb}{0.98, 0.98, 1.0} % Very light blue background
+\lstdefinestyle{javastyle}{
+  language=Java,
+  backgroundcolor=\color{white},
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{javakeyword}\bfseries,
+  commentstyle=\color{javacomment}\itshape,
+  stringstyle=\color{javastring},
+  numberstyle=\tiny\color{gray},
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  frame=none,
+  rulecolor=\color{black},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=4,
+  % Java-specific keywords
+  morekeywords={String, TokenStream},
+  % Handle annotations
+  moredelim=[s][\color{javaannotation}]{@}{(},
+  % Handle Javadoc comments
+  morecomment=[s][\color{javadoc}]{/*}{*/},
+  morecomment=[l][\color{javacomment}]{//},
+}
 
 \makeatletter
 \def\l@figure{\@dottedtocline{1}{1em}{2.2em}}

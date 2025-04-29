@@ -1,4 +1,5 @@
 \subsection{Plugin Architecture and Workflow}
+%%% Version 1
 % \hspace{1cm} Figure \ref{sec:plugin_architecture} illustrates the architecture 
 % and workflow of our TOCL+ plugin. The plugin is designed to seamlessly 
 % integrate with the USE tool environment while maintaining a clear separation 
@@ -20,3 +21,29 @@
 % this output model back into USE together with the configuration file to employ the Model Validator to analyze the constraints. 
 % This architecture ensures a clean separation of concerns while providing an integrated 
 % workflow that shields users from the complexities of the underlying transformation mechanisms.
+
+%%% Version 2
+% \hspace{1cm} Figure \ref{sec:plugin_support_tool_architecture} illustrates the architecture and 
+% workflow of our TOCL+ support tool. The support tool integrates with the USE tool environment 
+% while maintaining a clear separation between modeling, specification, and 
+% verification concerns. The workflow consists of five distinct steps, beginning with 
+% preparation and ending with verification. First, the user prepares two input files: 
+% a standard \texttt{.use} file containing the UML/OCL application model and a 
+% \texttt{.tocl} file containing TOCL+ property specifications. Second, the user loads 
+% the application model into USE to make it available for transformation. Third, 
+% the user activates our plugin through the USE interface, selecting both a destination 
+% path for the output model and the \texttt{.tocl} file containing the temporal 
+% properties to verify.
+
+% Internally, the plugin then executes a two-phase transformation process. In the first 
+% phase, it invokes the Filmstrip plugin to transform the application model into a 
+% filmstrip model following the rules described in Section~\ref{subsec:filmstripping}. 
+% In the second phase, it processes the TOCL+ expressions using our ANTLR4-generated 
+% parser and listener components, which implement the transformation rules for 
+% converting temporal specifications into equivalent OCL constraints (detailed in the 
+% next subsection). These generated constraints are added to the list of invariants in 
+% the output model file alongside the filmstrip model elements.
+
+% To complete the verification process, the user loads this output model back into USE 
+% together with a configuration file that establishes search bounds, and then employs 
+% the Model Validator to analyze the constraints. The validator systematically explores the search space, determining whether the temporal properties are satisfied and providing a model instance as evidence when applicable. This architecture shields users from the complexities of the underlying transformation mechanisms while providing a streamlined workflow from specification to verification.

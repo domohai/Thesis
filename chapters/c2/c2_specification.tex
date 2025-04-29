@@ -296,6 +296,16 @@ for our event extensions.
     caption={EBNF Grammar for Event constructs.}, 
     label={lst:event_grammar}
 ]
+primaryExp[Environment env] returns [ASTOclExpression ast]
+        : literalExp[$env]
+        | varExp[$env]
+        | callExp[$env, null]
+        | ifExp[$env]
+        | toclOperatorExpression[$env]
+        | LPAREN oclExpression[$env] RPAREN
+        | events[$env] { $ast = $events.ast; }
+        ;
+
 events[Environment env] returns [ASTEvent ast]
         : isCalledEvent[$env] { $ast = $isCalledEvent.ast; }
         | becomesTrueEvent[$env] { $ast = $becomesTrueEvent.ast; }
