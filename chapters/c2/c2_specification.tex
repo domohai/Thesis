@@ -1,25 +1,39 @@
 \section{Specification of temporal properties}
 
 %%%%% TOCL
-\subsection{Temporal Operators in TOCL}
+\subsection{Temporal OCL (TOCL)}
 
-\hspace{1cm} TOCL (Temporal OCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
-extends OCL with temporal operators for specifying properties across multiple system 
-states. It incorporates linear temporal logic elements while preserving OCL's familiar 
-syntax and type system. TOCL defines its semantics over an infinite sequence of states 
-$\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each operator is 
-evaluated in an environment $\tau = (\hat{\sigma}, i, \beta)$ with $i$ representing 
-the current state index and $\beta$ a variable assignment. TOCL organizes its operators 
-into two categories: future operators and past operators.
+\hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
+extends the Object Constraint Language (OCL) to address a fundamental limitation: 
+the inability to specify constraints that span multiple system states over time. 
+While standard OCL excels at defining invariants within a single state or basic 
+pre/post-condition constraints for operations, it lacks the expressiveness needed 
+for complex temporal behaviors. TOCL overcomes this limitation by incorporating 
+elements from linear temporal logic while preserving OCL's familiar syntax and 
+type system.
 
-In our work, we adopt the following temporal operators:
+TOCL defines its semantic framework over an infinite sequence of system states 
+$\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal 
+constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. 
+Here, $i$ represents the current state index in the sequence, and $\beta$ is a 
+variable assignment. This framework enables reasoning about both the future and 
+past evolution of system states, providing a comprehensive approach to temporal 
+specification.
+
+A notable feature of TOCL is its treatment of operations through "process types," 
+which represent operations as entities existing only in two consecutive states: 
+before and after execution. However, this approach remains fundamentally 
+state-centric and struggles with directly expressing event-based properties, such 
+as counting specific operation invocations.
+
+TOCL organizes its temporal operators into two categories:
 
 \paragraph{Future Operators:} 
 \begin{itemize} 
     \item \textbf{next $e$:} True if $e$ holds in the next state (state $i+1$). 
     \item \textbf{always $e$:} True if $e$ holds in the current state and all subsequent states (all states $j \geq i$). 
     \item \textbf{sometime $e$:} True if $e$ holds in the current state or at least one future state (some state $j \geq i$). 
-    \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true, or indefinitely if $e_2$ never occurs. 
+    \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true. 
     \item \textbf{sometime $e_1$ before $e_2$:} True if $e_1$ becomes true at some point before $e_2$ does. 
 \end{itemize}
 
@@ -31,9 +45,6 @@ In our work, we adopt the following temporal operators:
     \item \textbf{always $e_1$ since $e_2$:} True if $e_1$ has been true since the last time $e_2$ was true. 
     \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true. 
 \end{itemize}
-
-% For more details about TOCL's formal semantics, grammar specification, and integration with OCL, we refer readers to the original work by Ziemann and Gogolla \cite{TOCL}. Their comprehensive formalization establishes the theoretical foundation upon which we build our event extensions.
-For details regarding TOCL's formal semantics, grammar specification, and OCL integration, Ziemann and Gogolla \cite{TOCL} provide a comprehensive formalization that defines these operators over sequences of system states. Their work establishes how temporal expressions maintain OCL's type system while extending its scope to reason about multiple states. This formalization provides the theoretical foundation for our event extensions in the following section.
 
 To demonstrate TOCL's capabilities, we apply it to the first two temporal properties 
 from our Software System example \ref{fig:temporal_properties}:
@@ -79,6 +90,7 @@ constructs to identify when operations are called or to count events, it cannot
 express constraints that limit how many times an operation occurs. This limitation 
 becomes a critical barrier when specifying common safety properties that restrict 
 operation frequencies.
+
 
 %%%%% Event
 \subsection{Event Constructs in OCL}

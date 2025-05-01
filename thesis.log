@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  29 APR 2025 17:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.14)  1 MAY 2025 17:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1509,7 +1509,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 Package biblatex Info: Reference section=0 on input line 190.
 Package biblatex Info: Reference segment=0 on input line 190.
  (./cover.tex
-<figures/uet.jpg, id=186, 1125.20375pt x 1125.20375pt>
+<figures/uet.jpg, id=206, 1125.20375pt x 1125.20375pt>
 File: figures/uet.jpg Graphic file (type jpg)
 <use figures/uet.jpg>
 Package pdftex.def Info: figures/uet.jpg  used on input line 18.
@@ -1594,13 +1594,13 @@ l.198 \input{chapters/assurance}\newpage
 [2
 
 
-])
+]
+
+[3])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
 
-
-[3]
 
 [4] (./thesis.lof)
 \tf@lof=\write7
@@ -1630,7 +1630,7 @@ l.198 \input{chapters/assurance}\newpage
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 44.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 42.
  (c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
@@ -1657,7 +1657,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 18.
 
-<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=331, 332.442pt x 130.68825pt>
+<figures/c1/BankAccount/BankAccount_ClassDiagram.png, id=361, 332.442pt x 130.68825pt>
 File: figures/c1/BankAccount/BankAccount_ClassDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BankAccount_ClassDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BankAccount_ClassDiagram.png  used on input line 52.
@@ -1670,7 +1670,7 @@ File: t5lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [6]
 
 [7 <./figures/c1/BankAccount/BankAccount_ClassDiagram.png>]
-<figures/c1/BankAccount/BA_ObjectDiagram.png, id=344, 558.28575pt x 118.64325pt>
+<figures/c1/BankAccount/BA_ObjectDiagram.png, id=374, 558.28575pt x 118.64325pt>
 File: figures/c1/BankAccount/BA_ObjectDiagram.png Graphic file (type png)
 <use figures/c1/BankAccount/BA_ObjectDiagram.png>
 Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on input line 139.
@@ -1678,7 +1678,7 @@ Package pdftex.def Info: figures/c1/BankAccount/BA_ObjectDiagram.png  used on in
 
 
 [8 <./figures/c1/BankAccount/BA_ObjectDiagram.png>]) (./chapters/c1/c1_ocl.tex
-<figures/c1/SoftwareSystem/SS_Ver2_Gray.png, id=353, 422.7795pt x 184.89075pt>
+<figures/c1/SoftwareSystem/SS_Ver2_Gray.png, id=383, 422.7795pt x 184.89075pt>
 File: figures/c1/SoftwareSystem/SS_Ver2_Gray.png Graphic file (type png)
 <use figures/c1/SoftwareSystem/SS_Ver2_Gray.png>
 Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Ver2_Gray.png  used on input line 16.
@@ -1721,7 +1721,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 [14]
-<figures/c1/USE_Overview.png, id=408, 420.06938pt x 198.7425pt>
+<figures/c1/USE_Overview.png, id=438, 420.06938pt x 198.7425pt>
 File: figures/c1/USE_Overview.png Graphic file (type png)
 <use figures/c1/USE_Overview.png>
 Package pdftex.def Info: figures/c1/USE_Overview.png  used on input line 23.
@@ -1741,7 +1741,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 
 [16]
-<figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png, id=420, 678.73575pt x 277.63725pt>
+<figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png, id=451, 678.73575pt x 277.63725pt>
 File: figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png Graphic file (type png)
 <use figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png>
 Package pdftex.def Info: figures/c1/SoftwareSystem/SS_Filmstrip_Gray_Edited.png  used on input line 81.
@@ -1784,46 +1784,41 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 
 [21]
 
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 36.
-
-
-
 [22]
 
 [23]
-<figures/c2/events_visual.png, id=486, 1137.048pt x 245.11575pt>
+<figures/c2/events_visual.png, id=515, 1137.048pt x 245.11575pt>
 File: figures/c2/events_visual.png Graphic file (type png)
 <use figures/c2/events_visual.png>
-Package pdftex.def Info: figures/c2/events_visual.png  used on input line 104.
+Package pdftex.def Info: figures/c2/events_visual.png  used on input line 116.
 (pdftex.def)             Requested size: 455.24411pt x 98.13806pt.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 109.
+(csquotes)                Punctuation tracker may fail on input line 121.
 
 
 
 [24 <./figures/c2/events_visual.png>]
 
 [25]
-Overfull \hbox (3.03842pt too wide) in paragraph at lines 187--194
+Overfull \hbox (3.03842pt too wide) in paragraph at lines 199--206
 \T5/lmr/m/n/14 tions within the se-man-tic frame-work es-tab-lished by TOCL. Let $[] \OT1/lmr/m/n/14 = \OMS/lmsy/m/n/14 h\OML/lmm/m/it/14 ^^[[]; ^^[[]; []\OMS/lmsy/m/n/14 i$
  []
 
-LaTeX Font Info:    Calculating math sizes for size <13> on input line 203.
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <13> on input line 203.
+(Font)              <13> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.62007> on input line 203.
+(Font)              <9.62007> on input line 215.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.80008> on input line 203.
+(Font)              <7.80008> on input line 215.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.62007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 215.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.80008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 215.
 
 
 [26]
@@ -1831,14 +1826,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.80008> not available
 [27]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 284.
+(csquotes)                Punctuation tracker may fail on input line 296.
 
 
 
 [28]
 
 [29]) (./chapters/c2/c2_verification.tex
-<figures/c2/Verification_approach_1.png, id=606, 1445.4pt x 568.37344pt>
+<figures/c2/Verification_approach_1.png, id=635, 1445.4pt x 568.37344pt>
 File: figures/c2/Verification_approach_1.png Graphic file (type png)
 <use figures/c2/Verification_approach_1.png>
 Package pdftex.def Info: figures/c2/Verification_approach_1.png  used on input line 5.
@@ -1851,12 +1846,12 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 28.
 
 
-Overfull \hbox (24.46573pt too wide) in paragraph at lines 42--43
+Overfull \hbox (24.46573pt too wide) in paragraph at lines 46--53
 \T5/lmr/m/n/14 in our model^^V\T5/lmtt/m/n/14 load(app: Application)\T5/lmr/m/n/14 , \T5/lmtt/m/n/14 install()\T5/lmr/m/n/14 , \T5/lmtt/m/n/14 run(app: Application)\T5/lmr/m/n/14 ,
  []
 
 
-Overfull \hbox (40.29926pt too wide) in paragraph at lines 42--43
+Overfull \hbox (40.29926pt too wide) in paragraph at lines 46--53
 \T5/lmr/m/n/14 and \T5/lmtt/m/n/14 stop(app: Application)\T5/lmr/m/n/14 ^^Vare each trans-formed into con-crete \T5/lmtt/m/n/14 OperationCall
  []
 
@@ -1867,15 +1862,15 @@ Overfull \hbox (40.29926pt too wide) in paragraph at lines 42--43
 [32]
 
 [33]
-<figures/c2/ObjectDiagram_Liveness_LoadInstall.png, id=671, 909.3975pt x 365.56575pt>
+<figures/c2/ObjectDiagram_Liveness_LoadInstall.png, id=700, 909.3975pt x 365.56575pt>
 File: figures/c2/ObjectDiagram_Liveness_LoadInstall.png Graphic file (type png)
 <use figures/c2/ObjectDiagram_Liveness_LoadInstall.png>
-Package pdftex.def Info: figures/c2/ObjectDiagram_Liveness_LoadInstall.png  used on input line 146.
+Package pdftex.def Info: figures/c2/ObjectDiagram_Liveness_LoadInstall.png  used on input line 172.
 (pdftex.def)             Requested size: 455.24411pt x 183.00554pt.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 152.
+(csquotes)                Punctuation tracker may fail on input line 178.
 
 
 
@@ -1890,7 +1885,7 @@ Package csquotes Warning: No space factor codes for 'T5' encoding.
 [38] (./chapters/c3/c3_chapter.tex
 Chapter 3.
 (./chapters/c3/c3_introduction.tex) (./chapters/c3/c3_plugin.tex
-<figures/c3/Architecture_overview.png, id=768, 1445.4pt x 813.0375pt>
+<figures/c3/Architecture_overview.png, id=797, 1445.4pt x 813.0375pt>
 File: figures/c3/Architecture_overview.png Graphic file (type png)
 <use figures/c3/Architecture_overview.png>
 Package pdftex.def Info: figures/c3/Architecture_overview.png  used on input line 7.
@@ -1908,46 +1903,105 @@ Package pdftex.def Info: figures/c3/Architecture_overview.png  used on input lin
 [41]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 32.
+(csquotes)                Punctuation tracker may fail on input line 57.
 
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 33.
-
-
-Overfull \hbox (38.52544pt too wide) in paragraph at lines 46--53
-\T5/lmtt/m/n/14 snapshot.succ() \T5/lmr/m/n/14 to nav-i-gate to the pre-vi-ous and next snap-shots; and \T5/lmtt/m/n/14 object.pred
- []
+(csquotes)                Punctuation tracker may fail on input line 58.
 
 
 
 [42]
-Overfull \hbox (28.2749pt too wide) in paragraph at lines 67--68
-\T5/lmr/m/n/14 check-ing if prop-erty P holds in at least one of them. Sim-i-larly, the \T5/lmtt/m/n/14 becomesTrue(P)
- []
 
-(c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+[43] (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 LaTeX Font Info:    Font shape `T5/lmtt/bx/n' in size <10.83347> not available
-(Font)              Font shape `T5/lmtt/b/n' tried instead on input line 127.
+(Font)              Font shape `T5/lmtt/b/n' tried instead on input line 149.
 
 
-[43]
-Overfull \hbox (2.36827pt too wide) in paragraph at lines 238--238
+[44]
+Overfull \hbox (2.36827pt too wide) in paragraph at lines 178--178
 []|\T5/lmr/bx/n/10.83347 No.| 
  []
 
-))
+LaTeX Font Info:    Calculating math sizes for size <8.66673> on input line 247.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8.66673> on input line 247.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6.41342> on input line 247.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.20009> on input line 247.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.66673> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 247.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.41342> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 247.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.20009> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 247.
 
-[44]
+Overfull \hbox (12.4pt too wide) in alignment at lines 174--270
+ [] [] [] 
+ []
 
-[45] (./chapters/conclusion.tex)
+[45] [46]) (./chapters/c3/c3_case_study.tex
 
-[46
+[47]
+Overfull \hbox (1.2174pt too wide) in paragraph at lines 25--31
+\T5/lmtt/m/n/14 sameRunning\T5/lmr/m/n/14 , \T5/lmtt/m/n/14 sameMemory\T5/lmr/m/n/14 , \T5/lmtt/m/n/14 sameLoaded\T5/lmr/m/n/14 , \T5/lmtt/m/n/14 sameInstalled\T5/lmr/m/n/14 , and the \T5/lmtt/m/n/14 unchanged
+ []
+
+
+
+[48]
+
+[49]
+
+[50]
+
+[51]
+
+[52]
+<figures/c3/CaseStudy_ObjectDiagram.png, id=1042, 1046.7105pt x 350.5095pt>
+File: figures/c3/CaseStudy_ObjectDiagram.png Graphic file (type png)
+<use figures/c3/CaseStudy_ObjectDiagram.png>
+Package pdftex.def Info: figures/c3/CaseStudy_ObjectDiagram.png  used on input line 239.
+(pdftex.def)             Requested size: 455.24411pt x 152.449pt.
+<figures/c3/OCL_result_full_edited.png, id=1043, 235.47975pt x 322.806pt>
+File: figures/c3/OCL_result_full_edited.png Graphic file (type png)
+<use figures/c3/OCL_result_full_edited.png>
+Package pdftex.def Info: figures/c3/OCL_result_full_edited.png  used on input line 246.
+(pdftex.def)             Requested size: 182.09486pt x 249.63023pt.
+) (./chapters/c3/c3_summary.tex
+Overfull \hbox (6.88052pt too wide) in paragraph at lines 2--12
+  \T5/lmr/m/n/14 In this chap-ter, we pre-sented the prac-ti-cal im-ple-men-ta-tion of our TOCL+
+ []
+
+
+
+[53 <./figures/c3/CaseStudy_ObjectDiagram.png> <./figures/c3/OCL_result_full_edited.png>]))
+
+[54] (./chapters/conclusion.tex
+
+[55
 
 
 ]
+
+[56]
+Overfull \hbox (12.0496pt too wide) in paragraph at lines 94--97
+[]\T5/lmr/bx/n/14 Real-time ex-ten-sions: \T5/lmr/m/n/14 In-cor-po-rat-ing quan-ti-ta-tive time con-straints would
+ []
+
+
+
+[57]
+Overfull \hbox (0.21448pt too wide) in paragraph at lines 98--101
+[]\T5/lmr/bx/n/14 Counterexample vi-su-al-iza-tion: \T5/lmr/m/n/14 En-hanc-ing the plu-gin to pro-vide more
+ []
+
+)
+
+[58]
 
 Package csquotes Warning: No space factor codes for 'T5' encoding.
 (csquotes)                Punctuation tracker may fail on input line 235.
@@ -1959,7 +2013,7 @@ Overfull \hbox (12.4554pt too wide) in paragraph at lines 235--235
 
 
 
-[47
+[59
 
 
 
@@ -1970,30 +2024,30 @@ Overfull \hbox (12.4554pt too wide) in paragraph at lines 235--235
 
 
 
-[48] (./chapters/appendix.tex) (./thesis.aux)
+[60] (./chapters/appendix.tex) (./thesis.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7D7B10EAD7CFA681382FECD7729DAE8A;7976.
+(rerunfilecheck)             Checksum: 132930386B6D461099A0A0966FCA27D8;8803.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41535 strings out of 473189
- 782129 string characters out of 5719958
- 1870709 words of memory out of 5000000
- 63673 multiletter control sequences out of 15000+600000
+ 41784 strings out of 473189
+ 786434 string characters out of 5719958
+ 1994189 words of memory out of 5000000
+ 63757 multiletter control sequences out of 15000+600000
  791627 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,17n,107p,3163b,2259s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtti10.pfb>
-Output written on thesis.pdf (59 pages, 874527 bytes).
+Output written on thesis.pdf (71 pages, 941329 bytes).
 PDF statistics:
- 1049 PDF objects out of 1200 (max. 8388607)
- 915 compressed objects within 10 object streams
- 362 named destinations out of 1000 (max. 500000)
- 431 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1317 PDF objects out of 1440 (max. 8388607)
+ 1163 compressed objects within 12 object streams
+ 521 named destinations out of 1000 (max. 500000)
+ 481 words of extra memory for PDF output out of 10000 (max. 10000000)
 

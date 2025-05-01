@@ -279,3 +279,18 @@
 %     \end{tabular}
 %     \caption{Expression 1}
 % \end{table}
+
+%%% Sample 1
+% An event is a predicate that holds at different instants of time. It can be seen as a function P : Time →{true, false}
+% which indicates at each instant, if the event is triggered. The subset {t ∈ Time | P(t)}⊆Time stands then for all time instants
+% at which the event P occurs. When quantifying time, we need to select such subsets of Time that correspond to events.
+% We commonly distinguish five kinds of events in the object-oriented paradigm:
+% Operation call instants when a sender calls an operation of a receiver object
+% Operation start instants when a receiver object starts executing an operation
+% Operation end instants when the execution of an operation is finished
+% Time-triggered event that occurs when a specified instant is reached
+% State change that occurs each time the system state changes (e.g. when the value of an attribute changes). Such an event
+% may have an OCL expression as a parameter and occurs each time the OCL expression value changes.
+% OCL only provides an implicit universal quantification over operation call events within pre-conditions and a universal quan
+% tification over operation end events within post-conditions. However, it lacks the finest type of events which is state change.
+% State change events are very simple, but powerful construct. It can replace other types of events.

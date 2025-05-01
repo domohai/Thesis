@@ -1,53 +1,107 @@
 \begin{center}
-  \textbf{\fontsize{20}{24}\selectfont KẾT LUẬN}
+  \textbf{\fontsize{20}{24}\selectfont Conclusion}
 \end{center}
 
-\addcontentsline{toc}{chapter}{KẾT LUẬN}
+\addcontentsline{toc}{chapter}{Conclusion}
 
-% Khóa luận này đặt trọng tâm vào việc phát triển một nền tảng tạo lập và giao
-% dịch token trên các chuỗi khối khác nhau. Kết quả đạt
-% được của khóa luận đã giúp phát triển một sàn giao dịch phi tập trung với nhiều
-% tính năng bổ sung độc đáo hỗ trợ mạnh mẽ hệ sinh thái tài chính phi tập trung
-% như tạo mới, giao dịch hay gửi tiết kiệm các loại token khác nhau. Những tính
-% năng này được nghiên cứu
-% từ hiện trạng và nhu cầu thực tế và đáp ứng được các mục tiêu đã đặt ra bao
-% gồm:
-% Tối ưu hóa chi phí tạo token, tăng cường độ tin cậy của các dịch vụ tài chính
-% thông qua việc sử dụng hợp đồng thôn minh.
-% Kết quả nghiên cứu, phát triển và kiểm thử cho thấy rằng hệ thống hoạt động ổn
-% định và đáp ứng các yêu cầu chức năng và phi chức năng ban đầu đã đặt ra. Hệ
-% thống cũng có giao diện thân thiện và nhận được phản hồi tích cực từ người dùng
-% mẫu.
-% Mặc dù đã đạt được các mục tiêu đề ra, nền tảng LaunchCrypt vẫn phải đối mặt
-% với một số thách thức. Đầu tiên là tốc độ xử lý có thể chưa đạt
-% được mức độ nhanh nhất để đáp ứng nhu cầu của người dùng thực tế. Điều này
-% gây ra bởi môi trường, tài nguyên và thời gian phát triển còn hạn chế. Hơn nữa,
-% quá trình vận hành và kiểm thử diễn ra chủ yếu trong môi trường phát triển và
-% cộng đồng người dùng thử nghiệm còn nhỏ. Do đó, hệ thống có thể không đáp ứng
-% hoàn toàn nhu cầu sử dụng thực thế và cần thiết được nghiên cứu và phát triển
-% thêm. Khi các hạn chế và tài nguyên thiết bị được cải thiện, hệ thống có thể
-% đáp
-% ứng được nhu cầu sử dụng của người dùng thực tế.
+\section*{Summary of Contributions}
 
-\hspace{-1cm}\textbf{Phương hướng phát triển trong tương lai}
+This thesis has addressed the challenge of specifying and verifying temporal 
+properties in UML/OCL models without requiring specialized temporal verification 
+tools. By extending OCL with temporal operators and event constructs, and providing 
+a transformation mechanism to standard OCL, we have created an approach that enables 
+modelers to verify complex behavioral properties while remaining within familiar 
+modeling environments.
 
-% Trong quá trình tiến hành nghiên cứu và phát triển nền tảng LaunchCrypt,
-% khóa luận đã xem xét các phương hướng phát triển trong tương lai để nâng cao
-% hiệu quả sử dụng và tiếp cận thêm được nhiều người dùng cuối. Các phương hướng
-% này không chỉ là cơ hội để cải thiện hiệu suất hoạt động của hệ thống mà còn là
-% cơ hội để mở rộng phạm vi ứng dụng và tạo ra những trải nghiệm người dùng tốt
-% hơn. Trước hết, hệ thống sẽ hoàn thành việc triển khai trên các chuỗi khối
-% layer 1 khác nhau, bao gồm Aptos và Solana. Điều này sẽ giúp tăng lượng người
-% dùng mới, giúp hệ sinh thái của dự án trở nên đa dạng và phổ biến hơn.
+Our work has made several significant contributions to the field of model verification:
 
-% \hspace{-1cm}Tiếp theo, hệ thống có thể tích hợp các tính năng liên quan đến
-% thanh toán trực tiếp bằng tiền pháp định (fiat). Điều này sẽ giúp nền tảng mở
-% rộng không chỉ dừng lại ở tài chính phi tập trung mà còn hướng tới mảng tài
-% chính truyền thống.
+First, we introduced TOCL+ (Temporal OCL+), an extension of OCL that incorporates 
+temporal operators (such as "always," "eventually," and "until") and event constructs 
+(like "becomesTrue" and "isCalled"). This extension enables modelers to express 
+complex temporal properties in a concise and intuitive way, addressing a significant 
+limitation of standard OCL.
 
-% \hspace{-1cm}Cuối cùng, sử dụng AI để giúp người dùng thống kê thông số của các
-% token hay lên các chiến lược giao dịch là một mục tiêu mà nền tảng hướng tới.
-% Điều này không chỉ giúp những người dùng mới sử dụng dịch vụ tốt hơn mà còn
-% giúp những người dùng đã có kinh nghiệm dễ dàng phân tích và có một cái nhìn
-% tổng quan về hoạt động của nền tảng cũng như dữ liệu về những loại token mà họ
-% quan tâm.
+Second, we developed a transformation approach that converts TOCL+ expressions into 
+equivalent standard OCL constraints that can be verified over filmstrip models. This 
+approach leverages existing OCL tools for temporal verification without requiring 
+specialized temporal logic model checkers. The transformation systematically maps 
+temporal operators and event constructs to structural navigations through snapshots, 
+handling the complexities of object identity and state transitions.
+
+Third, we implemented our approach as a plugin for the USE tool, demonstrating its 
+practical applicability. The plugin uses ANTLR4 for parsing TOCL+ expressions and 
+employs a listener-based approach to generate the corresponding OCL constraints. 
+This implementation bridges the gap between the theoretical foundations and practical 
+verification tasks.
+
+Fourth, we validated our approach through a detailed case study of a Software System 
+model, verifying various types of temporal properties including safety, uniqueness, 
+and liveness constraints. The experimental results confirmed that our transformation 
+approach correctly preserves the semantics of temporal properties while remaining 
+practical for real-world modeling scenarios.
+
+\section*{Significance of the Work}
+
+The significance of our work lies in making temporal verification accessible within 
+standard modeling environments. By allowing modelers to specify temporal properties 
+at a high level of abstraction while handling the verification complexity behind 
+the scenes, we enable more comprehensive model verification without requiring 
+modelers to learn specialized temporal logics or verification tools.
+
+Our approach is particularly valuable for verifying behavioral properties that cannot 
+be expressed in standard OCL, such as correct operational sequencing, eventual 
+progress, and bounded existence constraints. These properties are essential for 
+ensuring the correctness of dynamic system behavior, especially in domains where 
+operational sequences and timing constraints are critical.
+
+\section*{Limitations}
+
+While our approach has proven effective in practice, several limitations should be 
+acknowledged. Most notably, we have not formally defined the transformation from TOCL+ to OCL, 
+nor have we provided a metamodel for the TOCL+ language extension. These would provide 
+a more rigorous foundation for our approach and enable formal analysis of the language itself.
+Similarly, we have not formally proven the correctness of our 
+transformation rules mathematically. Although empirical evidence from our experiments 
+supports their correctness, a formal proof would provide stronger guarantees about 
+the preservation of temporal semantics.
+
+Additionally, the OCL constraints generated by our transformation can be complex 
+and potentially impact verification performance for large models with numerous 
+temporal properties. The constraints involve intricate navigation through snapshots 
+and careful handling of object identity, which may affect scalability for very large 
+systems.
+
+\section*{Future Work}
+
+Several directions for future research emerge from our work:
+
+\begin{itemize}
+    \item \textbf{Formal verification:} Developing formal proofs for the correctness 
+    of our transformation rules would strengthen the theoretical foundations of our 
+    approach.
+
+    \item \textbf{Optimization techniques:} Exploring optimization strategies to 
+    reduce the complexity of generated OCL constraints could improve verification 
+    performance for large models.
+
+    \item \textbf{Pattern library:} Creating a library of common temporal verification 
+    patterns with optimized translations would make the approach more accessible to 
+    practitioners.
+
+    \item \textbf{Tool integration:} Extending our approach to other UML modeling 
+    tools beyond USE would broaden its applicability.
+
+    \item \textbf{Real-time extensions:} Incorporating quantitative time constraints 
+    would enable verification of real-time properties, extending the approach to 
+    time-critical systems.
+
+    \item \textbf{Counterexample visualization:} Enhancing the plugin to provide 
+    more intuitive visualizations of counterexamples when temporal properties are 
+    violated would improve usability.
+\end{itemize}
+
+In conclusion, our TOCL+ approach successfully bridges the gap between standard 
+UML/OCL modeling and temporal verification, enabling modelers to specify and verify 
+complex behavioral properties without specialized temporal verification tools. While 
+there remain opportunities for improvement and extension, the approach provides a 
+practical solution to an important problem in model verification.

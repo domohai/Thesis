@@ -33,8 +33,8 @@
 \contentsline {chapter}{\numberline {2}Specification and Verification of Temporal Properties in OCL}{20}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introduction}{20}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Specification of temporal properties}{21}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Temporal Operators in TOCL}{21}{subsection.2.2.1}%
-\contentsline {paragraph}{Future Operators:}{21}{section*.12}%
+\contentsline {subsection}{\numberline {2.2.1}Temporal OCL (TOCL)}{21}{subsection.2.2.1}%
+\contentsline {paragraph}{Future Operators:}{22}{section*.12}%
 \contentsline {paragraph}{Past Operators:}{22}{section*.13}%
 \contentsline {subsection}{\numberline {2.2.2}Event Constructs in OCL}{24}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{26}{subsection.2.2.3}%
@@ -52,5 +52,10 @@
 \contentsline {section}{\numberline {3.2}TOCL+ Tool Support and Implementation}{40}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}Support tool architecture}{40}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Implementation of TOCL+ to OCL Transformation}{41}{subsection.3.2.2}%
-\contentsline {chapter}{KẾT LUẬN}{46}{table.caption.21}%
-\contentsline {chapter}{REFERENCES}{48}{chapter*.22}%
+\contentsline {section}{\numberline {3.3}Case study: Software System model}{47}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Model Specification}{47}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Temporal Property Verification}{50}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Analysis of Results}{52}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Summary}{53}{section.3.4}%
+\contentsline {chapter}{Conclusion}{55}{section.3.4}%
+\contentsline {chapter}{REFERENCES}{60}{chapter*.27}%
