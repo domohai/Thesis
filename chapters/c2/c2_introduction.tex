@@ -12,13 +12,23 @@ barrier for practitioners comfortable with UML/OCL but not with formal temporal 
 
 This chapter presents two main contributions:
 
-First, TOCL+ extends OCL with temporal and event capabilities. It adds temporal 
-operators like \textit{always}, \textit{sometime}, and \textit{until} for reasoning 
-about system evolution over time, and introduces event constructs for detecting 
-specific system occurrences such as operation calls and state changes. TOCL+ maintains 
-OCL's familiar syntax while enabling complex dynamic specifications.
+First, we build upon the existing Temporal OCL (TOCL) extension, which already 
+incorporates temporal operators like \textit{always}, \textit{sometime}, and 
+\textit{until} for reasoning about system evolution over time. However, TOCL remains 
+limited in its ability to express event-based properties. Our TOCL+ extension 
+addresses this limitation by introducing enhanced event constructs for detecting 
+specific system occurrences such as operation calls and state changes, along with 
+support for bounded existence properties (e.g., "an operation is called exactly n 
+times" or "at most n times"). TOCL+ maintains OCL's familiar syntax while 
+significantly expanding its capabilities for specifying event-driven and quantified 
+temporal behaviors.
+% First, TOCL+ extends OCL with temporal and event capabilities. It adds temporal 
+% operators like \textit{always}, \textit{sometime}, and \textit{until} for reasoning 
+% about system evolution over time, and introduces event constructs for detecting 
+% specific system occurrences such as operation calls and state changes. TOCL+ maintains 
+% OCL's familiar syntax while enabling complex dynamic specifications.
 
-Second, we introduce a approach that enables verification of TOCL+ 
+Second, we introduce an approach that enables verification of TOCL+ 
 specifications using existing tools. This approach transforms UML/OCL models into 
 filmstrip models representing state sequences, and translates TOCL+ specifications 
 into standard OCL constraints verifiable within these models.

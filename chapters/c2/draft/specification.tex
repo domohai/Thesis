@@ -578,3 +578,26 @@ Safety 2 uses the before operator to enforce that installation occurs between lo
 
 While TOCL effectively handles such properties through state-based reasoning, it has limitations. For instance, it cannot directly specify Safety 3: "Each application can be loaded at most one time." This property requires counting operation calls or detecting specific events, capabilities TOCL lacks due to its focus on state sequences rather than event occurrences. This limitation highlights the need for extensions like TOCL+, which we introduce later to address event-based specifications.
 TOCL’s foundation in OCL, combined with its temporal enhancements, makes it a powerful tool for reasoning about dynamic system behaviors, though its scope remains constrained to state-centric properties. The following sections build on this base to overcome its identified shortcomings.
+
+
+
+% \hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
+% extends the Object Constraint Language (OCL) to address a fundamental limitation: 
+% the inability to specify constraints that span multiple system states over time. 
+% While standard OCL excels at defining invariants within a single state or basic 
+% pre/post-condition constraints for operations, it lacks the expressiveness needed 
+% for complex temporal behaviors. TOCL overcomes this limitation by incorporating 
+% elements from linear temporal logic while preserving OCL's familiar syntax and 
+% type system.
+
+% TOCL defines its semantic framework over an infinite sequence of system states 
+% $\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal 
+% constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. 
+% Here, $i$ represents the current state index in the sequence, and $\beta$ is a 
+% variable assignment. This framework enables reasoning about both the future and 
+% past evolution of system states, providing a comprehensive approach to temporal 
+% specification.
+
+% A notable feature of TOCL is its treatment of operations through "process types," 
+% which represent operations as entities existing only in two consecutive states: 
+% before and after execution.

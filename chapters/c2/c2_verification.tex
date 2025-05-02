@@ -211,10 +211,14 @@ details and necessary constraints for maintaining object identity in Chapter 3.
 This validation confirms that our Software System model can satisfy the temporal 
 behavior specified by the liveness property.
 
-\begin{lstlisting}[
-    caption={Configuration file used for Fig. \ref{fig:object_diagram_liveness}.},
-    label={lst:configuration_file}
-]
+
+
+\begin{figure}[htbp]
+\caption{Configuration file used for Fig. \ref{fig:object_diagram_liveness}.}
+\label{lst:configuration_file}
+
+\begin{minipage}[t]{0.48\textwidth}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
 Integer_min = 0
 Integer_max = 100
 String_max = 10
@@ -243,6 +247,11 @@ load_SystemOpC_max = 1
 # install_SystemOpC
 install_SystemOpC_min = 1
 install_SystemOpC_max = 1
+\end{lstlisting}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
 # run_SystemOpC
 run_SystemOpC_min = 0
 run_SystemOpC_max = 0
@@ -271,3 +280,66 @@ SystemApplication_max = 6
 aggregationcyclefreeness = on
 forbiddensharing = on
 \end{lstlisting}
+\end{minipage}
+\end{figure}
+    
+% \begin{lstlisting}[
+%     caption={Configuration file used for Fig. \ref{fig:object_diagram_liveness}.},
+%     label={lst:configuration_file}
+% ]
+% Integer_min = 0
+% Integer_max = 100
+% String_max = 10
+% Real_min = -2.0
+% Real_max = 2.0
+% Real_step = 0.5
+
+% ### Classes
+% # Snapshot
+% Snapshot_min = 3
+% Snapshot_max = 3
+% # Filmstrip
+% Filmstrip_min = 2
+% Filmstrip_max = 2
+% # System
+% System_min = 3
+% System_max = 3
+% # Application
+% Application_min = 6
+% Application_max = 6
+
+% ### Operation Classes
+% # load_SystemOpC
+% load_SystemOpC_min = 1
+% load_SystemOpC_max = 1
+% # install_SystemOpC
+% install_SystemOpC_min = 1
+% install_SystemOpC_max = 1
+% # run_SystemOpC
+% run_SystemOpC_min = 0
+% run_SystemOpC_max = 0
+% # stop_SystemOpC
+% stop_SystemOpC_min = 0
+% stop_SystemOpC_max = 0
+
+% ### Associations
+% # SnapshotSystem
+% SnapshotSystem_min = 3
+% SnapshotSystem_max = 3
+% # SnapshotApplication
+% SnapshotApplication_min = 6
+% SnapshotApplication_max = 6
+% # PredSuccSystem
+% PredSuccSystem_min = 2
+% PredSuccSystem_max = 2
+% # PredSuccApplication
+% PredSuccApplication_min = 4
+% PredSuccApplication_max = 4
+% # SystemApplication
+% SystemApplication_min = 6
+% SystemApplication_max = 6
+
+% ### Additional configurations
+% aggregationcyclefreeness = on
+% forbiddensharing = on
+% \end{lstlisting}

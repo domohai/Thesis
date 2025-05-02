@@ -3,14 +3,17 @@
 %%%%% TOCL
 \subsection{Temporal OCL (TOCL)}
 
+\subsection{Temporal OCL (TOCL)}
+
 \hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
 extends the Object Constraint Language (OCL) to address a fundamental limitation: 
 the inability to specify constraints that span multiple system states over time. 
 While standard OCL excels at defining invariants within a single state or basic 
 pre/post-condition constraints for operations, it lacks the expressiveness needed 
 for complex temporal behaviors. TOCL overcomes this limitation by incorporating 
-elements from linear temporal logic while preserving OCL's familiar syntax and 
-type system.
+elements from linear temporal logic while preserving OCL's familiar syntax and type 
+system, making it particularly valuable for modeling reactive systems, concurrent 
+processes, and real-time applications where temporal reasoning is essential.
 
 TOCL defines its semantic framework over an infinite sequence of system states 
 $\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal 
@@ -18,13 +21,26 @@ constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$.
 Here, $i$ represents the current state index in the sequence, and $\beta$ is a 
 variable assignment. This framework enables reasoning about both the future and 
 past evolution of system states, providing a comprehensive approach to temporal 
-specification.
+specification. Unlike standard OCL invariants that apply to a single state, TOCL 
+invariants implicitly apply an "always" condition, meaning constraints must hold 
+across the entire state sequence unless otherwise specified.
 
-A notable feature of TOCL is its treatment of operations through "process types," 
+A notable feature of TOCL is its treatment of operations through "process types", 
 which represent operations as entities existing only in two consecutive states: 
-before and after execution. However, this approach remains fundamentally 
-state-centric and struggles with directly expressing event-based properties, such 
-as counting specific operation invocations.
+before and after execution. Each operation in a class has a corresponding process 
+type that exists across these two states—the pre-state where the process instance is 
+"new" (\texttt{process.oclIsNew()} is true), and the post-state after the operation 
+completes. This mechanism allows TOCL to track operation occurrences and their 
+effects on the system state. While TOCL reuses OCL's navigation 
+expressions, collection operations, and quantifiers, it extends these with temporal 
+capabilities that span multiple states rather than being limited to a single snapshot.
+
+The expressive power of TOCL comes from its temporal operators, which enable precise 
+specification of how properties evolve over time. These operators form the core of 
+TOCL's extension to standard OCL, allowing constraints to reference past states, 
+future states, and temporal relationships between events. By providing mechanisms 
+to reason about both historical behavior and future evolution of the system, these 
+operators significantly enhance OCL's ability to express dynamic properties.
 
 TOCL organizes its temporal operators into two categories:
 
