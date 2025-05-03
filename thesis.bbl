@@ -68,6 +68,41 @@
       \verb https://dl.acm.org/doi/book/10.5555/294049
       \endverb
     \endentry
+    \entry{MDE}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=cd9a678ef0b3bbf984c7b14f37bcd23b}{%
+           family={France},
+           familyi={F\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c2b5a72fd30b6844022c3e1189390301}{%
+           family={Rumpe},
+           familyi={R\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{24376de1522eb823479598a13aec78fe}
+      \strng{fullhash}{24376de1522eb823479598a13aec78fe}
+      \strng{fullhashraw}{24376de1522eb823479598a13aec78fe}
+      \strng{bibnamehash}{24376de1522eb823479598a13aec78fe}
+      \strng{authorbibnamehash}{24376de1522eb823479598a13aec78fe}
+      \strng{authornamehash}{24376de1522eb823479598a13aec78fe}
+      \strng{authorfullhash}{24376de1522eb823479598a13aec78fe}
+      \strng{authorfullhashraw}{24376de1522eb823479598a13aec78fe}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Future of Software Engineering (FOSE '07)}
+      \field{title}{Model-driven Development of Complex Software: A Research Roadmap}
+      \field{year}{2007}
+      \field{pages}{37\bibrangedash 54}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1109/FOSE.2007.14
+      \endverb
+      \keyw{Software systems;Model driven engineering;Programming;Computer science;Unified modeling language;Software testing;Systems engineering and theory;Computer industry;Streaming media;Reliability engineering}
+    \endentry
     \entry{USE}{article}{}{}
       \name{author}{3}{}{%
         {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
@@ -124,6 +159,189 @@
       \verb https://doi.org/10.1016/j.scico.2007.01.013
       \endverb
       \keyw{Constraint,Invariant,Model,Model certification,Model execution,Model validation,OCL,Pre- and post-conditions,UML}
+    \endentry
+    \entry{Kodkod}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=891b5b8af87210ad697663a0f5e1e379}{%
+           family={Torlak},
+           familyi={T\bibinitperiod},
+           given={Emina},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cb6c47b8514016726e35197230c2f7d6}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Braga, Portugal}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{fullhash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{fullhashraw}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{bibnamehash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{authorbibnamehash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{authornamehash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{authorfullhash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \strng{authorfullhashraw}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The key design challenges in the construction of a SAT-based relational model finder are described, and novel techniques are proposed to address them. An efficient model finder must have a mechanism for specifying partial solutions, an effective symmetry detection and breaking scheme, and an economical translation from relational to boolean logic. These desiderata are addressed with three new techniques: a symmetry detection algorithm that works in the presence of partial solutions, a sparse-matrix representation of relations, and a compact representation of boolean formulas inspired by boolean expression diagrams and reduced boolean circuits. The presented techniques have been implemented and evaluated, with promising results.}
+      \field{booktitle}{Proceedings of the 13th International Conference on Tools and Algorithms for the Construction and Analysis of Systems}
+      \field{isbn}{9783540712084}
+      \field{series}{TACAS'07}
+      \field{title}{Kodkod: a relational model finder}
+      \field{year}{2007}
+      \field{pages}{632\bibrangedash 647}
+      \range{pages}{16}
+    \endentry
+    \entry{Combemale_related_work_2}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=6f3b947c184a0a68629cdd19bed5b0f3}{%
+           family={Combemale},
+           familyi={C\bibinitperiod},
+           given={Beno{ı}t},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d6a041075bb7d60b9f5ff9c61a26facb}{%
+           family={Crégut},
+           familyi={C\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=b5e8f779996b3405f07efd52b4a6bf66}{%
+           family={Garoche},
+           familyi={G\bibinitperiod},
+           given={Pierre-Loı̈c},
+           giveni={P\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=ce3661d255dceacc29e564445e73b691}{%
+           family={Thirioux},
+           familyi={T\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=726e61e2efb020b61846700946e8c343}{%
+           family={Vernadat},
+           familyi={V\bibinitperiod},
+           given={Francois},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8f7a7cb38000c2d78d68d322d39ff84c}
+      \strng{fullhash}{4b5d49f38fdd411e57d1278bdf19e465}
+      \strng{fullhashraw}{4b5d49f38fdd411e57d1278bdf19e465}
+      \strng{bibnamehash}{8f7a7cb38000c2d78d68d322d39ff84c}
+      \strng{authorbibnamehash}{8f7a7cb38000c2d78d68d322d39ff84c}
+      \strng{authornamehash}{8f7a7cb38000c2d78d68d322d39ff84c}
+      \strng{authorfullhash}{4b5d49f38fdd411e57d1278bdf19e465}
+      \strng{authorfullhashraw}{4b5d49f38fdd411e57d1278bdf19e465}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Enterprise Information Systems: 9th International Conference, ICEIS 2007, Funchal, Madeira, June 12-16, 2007, Revised Selected Papers 9}
+      \field{title}{A property-driven approach to formal verification of process models}
+      \field{year}{2008}
+      \field{pages}{286\bibrangedash 300}
+      \range{pages}{15}
+    \endentry
+    \entry{Model_Validator_2}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=8d920724aa1a4932b1d01cd2903a2be6}{%
+           family={Kuhlmann},
+           familyi={K\bibinitperiod},
+           given={Mirco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8565c1d4f1042f88753e2da935654c0d}{%
+           family={Hamann},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zurich, Switzerland}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{194837867b4689b08f1d497470d76340}
+      \strng{fullhash}{194837867b4689b08f1d497470d76340}
+      \strng{fullhashraw}{194837867b4689b08f1d497470d76340}
+      \strng{bibnamehash}{194837867b4689b08f1d497470d76340}
+      \strng{authorbibnamehash}{194837867b4689b08f1d497470d76340}
+      \strng{authornamehash}{194837867b4689b08f1d497470d76340}
+      \strng{authorfullhash}{194837867b4689b08f1d497470d76340}
+      \strng{authorfullhashraw}{194837867b4689b08f1d497470d76340}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Object Constraint Language (OCL) substantially enriches modeling languages like UML, MOF or EMF with respect to formulating meaningful model properties. In model-centric approaches, an accurately defined model is a requisite for further use. During development of a model, continuous validation of properties and feedback to developers is required, since many design flaws can then be directly discovered and corrected. For this purpose, lightweight validation approaches which allow developers to perform automatic model analysis are particularly helpful. We provide a new method for efficiently searching for model instances. The existence or non-existence of model instances with certain properties allows significant conclusions about model properties. Our approach is based on the translation of UML and OCL concepts into relational logic and its realization with SAT solvers. We explain various use cases of our proposal, for example, completion of partly defined model instances so that particular properties hold in the completed model instances. Our proposal is realized by integrating a model validator as a plugin into the UML and OCL tool USE}
+      \field{booktitle}{Proceedings of the 49th International Conference on Objects, Models, Components, Patterns}
+      \field{isbn}{9783642219511}
+      \field{series}{TOOLS'11}
+      \field{title}{Extensive validation of OCL models by integrating SAT solving into USE}
+      \field{year}{2011}
+      \field{pages}{290\bibrangedash 306}
+      \range{pages}{17}
+    \endentry
+    \entry{AM2Filmstrip}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8565c1d4f1042f88753e2da935654c0d}{%
+           family={Hamann},
+           familyi={H\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7c0f27b233effd66fe3132dc2d195282}{%
+           family={Hilken},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8d920724aa1a4932b1d01cd2903a2be6}{%
+           family={Kuhlmann},
+           familyi={K\bibinitperiod},
+           given={Mirco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cd9a678ef0b3bbf984c7b14f37bcd23b}{%
+           family={France},
+           familyi={F\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Gesellschaft für Informatik eV}%
+      }
+      \strng{namehash}{d54c915b6f7a9bdb5c5c9aa0ea22b5f5}
+      \strng{fullhash}{efed236b202110a16c52a6ccff4e26c3}
+      \strng{fullhashraw}{efed236b202110a16c52a6ccff4e26c3}
+      \strng{bibnamehash}{d54c915b6f7a9bdb5c5c9aa0ea22b5f5}
+      \strng{authorbibnamehash}{d54c915b6f7a9bdb5c5c9aa0ea22b5f5}
+      \strng{authornamehash}{d54c915b6f7a9bdb5c5c9aa0ea22b5f5}
+      \strng{authorfullhash}{efed236b202110a16c52a6ccff4e26c3}
+      \strng{authorfullhashraw}{efed236b202110a16c52a6ccff4e26c3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Modellierung 2014}
+      \field{title}{From application models to filmstrip models: An approach to automatic validation of model dynamics}
+      \field{year}{2014}
+      \field{pages}{273\bibrangedash 288}
+      \range{pages}{16}
     \endentry
     \entry{Filmstripping}{inproceedings}{}{}
       \name{author}{3}{}{%
@@ -185,7 +403,7 @@
       \field{pages}{170\bibrangedash 185}
       \range{pages}{16}
     \endentry
-    \entry{TemporalAndEventOCL}{article}{}{}
+    \entry{TOCL_Taha}{article}{}{}
       \name{author}{2}{}{%
         {{hash=1b87cd8f0cbd100c9433a8f809a36c21}{%
            family={Kanso},
@@ -229,6 +447,199 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0167642314000963
       \endverb
       \keyw{OCL,Temporal patterns,Eclipse/MDT,Model-driven engineering,Formal methods}
+    \endentry
+    \entry{ProMoBox_related_work_3}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=c2b630bb10fba112fb4e2ba0931c2bfe}{%
+           family={Meyers},
+           familyi={M\bibinitperiod},
+           given={Bart},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5f94fdd8cbfb27c742629507a4310f2e}{%
+           family={Deshayes},
+           familyi={D\bibinitperiod},
+           given={Romuald},
+           giveni={R\bibinitperiod}}}%
+        {{hash=37fc5884c05ebc81d53944daaace2990}{%
+           family={Lucio},
+           familyi={L\bibinitperiod},
+           given={Levi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=46d4580f7536c437b6fce9f765a6f23f}{%
+           family={Syriani},
+           familyi={S\bibinitperiod},
+           given={Eugene},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ae584fbe3b96986d19b980d159d31458}{%
+           family={Vangheluwe},
+           familyi={V\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod}}}%
+        {{hash=515762f385a3afa5b8d98ae225c0daf3}{%
+           family={Wimmer},
+           familyi={W\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{09d6f5f55212721e766437261e6ad85e}
+      \strng{fullhash}{a5bbed9b00263c44ab84f247a8b93953}
+      \strng{fullhashraw}{a5bbed9b00263c44ab84f247a8b93953}
+      \strng{bibnamehash}{09d6f5f55212721e766437261e6ad85e}
+      \strng{authorbibnamehash}{09d6f5f55212721e766437261e6ad85e}
+      \strng{authornamehash}{09d6f5f55212721e766437261e6ad85e}
+      \strng{authorfullhash}{a5bbed9b00263c44ab84f247a8b93953}
+      \strng{authorfullhashraw}{a5bbed9b00263c44ab84f247a8b93953}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Software Language Engineering: 7th International Conference, SLE 2014, Väster{å}s, Sweden, September 15-16, 2014. Proceedings 7}
+      \field{title}{ProMoBox: a framework for generating domain-specific property languages}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 20}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1007/978-3-319-42063-6_15
+      \endverb
+    \endentry
+    \entry{MADES}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=f3b494be90f755f8335a03d6bc05c67c}{%
+           family={Baresi},
+           familyi={B\bibinitperiod},
+           given={Luciano},
+           giveni={L\bibinitperiod}}}%
+        {{hash=79ff658b0561abf72910942862b6ae3f}{%
+           family={Blohm},
+           familyi={B\bibinitperiod},
+           given={Gundula},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a2e998fe589c9730eaca57892d5c9aec}{%
+           family={Kolovos},
+           familyi={K\bibinitperiod},
+           given={Dimitrios\bibnamedelima S},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=60dafaffc5c4158e6c62301787a29421}{%
+           family={Matragkas},
+           familyi={M\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=c2470f0370309e3002cdf58463065049}{%
+           family={Motta},
+           familyi={M\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fe70c68255f380ae4b2ac5e5a776e21c}{%
+           family={Paige},
+           familyi={P\bibinitperiod},
+           given={Richard\bibnamedelima F},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=a4737a31f7ce47cc0fca4fbce2ce023e}{%
+           family={Radjenovic},
+           familyi={R\bibinitperiod},
+           given={Alek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6dbf06ea317877d15011ebe3bd589d78}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{efa605ccffc6d35adf159f5e124d7011}
+      \strng{fullhash}{968b7016cc927f1a177f81ed022bfb77}
+      \strng{fullhashraw}{968b7016cc927f1a177f81ed022bfb77}
+      \strng{bibnamehash}{efa605ccffc6d35adf159f5e124d7011}
+      \strng{authorbibnamehash}{efa605ccffc6d35adf159f5e124d7011}
+      \strng{authornamehash}{efa605ccffc6d35adf159f5e124d7011}
+      \strng{authorfullhash}{968b7016cc927f1a177f81ed022bfb77}
+      \strng{authorfullhashraw}{968b7016cc927f1a177f81ed022bfb77}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software \& Systems Modeling}
+      \field{title}{Formal verification and validation of embedded systems: the UML-based MADES approach}
+      \field{volume}{14}
+      \field{year}{2015}
+      \field{pages}{343\bibrangedash 363}
+      \range{pages}{21}
+    \endentry
+    \entry{Properties_file}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7c0f27b233effd66fe3132dc2d195282}{%
+           family={Hilken},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Gesellschaft für Informatik eV}%
+      }
+      \strng{namehash}{0b8c8b4933e38362db765546aa241953}
+      \strng{fullhash}{0b8c8b4933e38362db765546aa241953}
+      \strng{fullhashraw}{0b8c8b4933e38362db765546aa241953}
+      \strng{bibnamehash}{0b8c8b4933e38362db765546aa241953}
+      \strng{authorbibnamehash}{0b8c8b4933e38362db765546aa241953}
+      \strng{authornamehash}{0b8c8b4933e38362db765546aa241953}
+      \strng{authorfullhash}{0b8c8b4933e38362db765546aa241953}
+      \strng{authorfullhashraw}{0b8c8b4933e38362db765546aa241953}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Modellierung 2016}
+      \field{title}{Model validation and verification options in a contemporary UML and OCL analysis tool}
+      \field{year}{2016}
+      \field{pages}{205\bibrangedash 220}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/978-3-319-42063-6_15
+      \endverb
+    \endentry
+    \entry{verifying_filmstripping}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=7c0f27b233effd66fe3132dc2d195282}{%
+           family={Hilken},
+           familyi={H\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{fullhash}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{fullhashraw}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{bibnamehash}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{authorbibnamehash}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{authornamehash}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{authorfullhash}{90ac254a38e8cd500950be3ad2078a3e}
+      \strng{authorfullhashraw}{90ac254a38e8cd500950be3ad2078a3e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 Euromicro Conference on Digital System Design (DSD)}
+      \field{title}{Verifying linear temporal logic properties in UML/OCL class diagrams using filmstripping}
+      \field{year}{2016}
+      \field{pages}{708\bibrangedash 713}
+      \range{pages}{6}
     \endentry
     \entry{USE_Validator}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -287,6 +698,22 @@
       \verb 10.1109/MoDeVVa.2016.10
       \endverb
     \endentry
+    \entry{OCL}{manual}{}{}
+      \list{publisher}{1}{%
+        {Object Management Group}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{Object Constraint Language Specification}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.omg.org/spec/OCL/2.5.1
+      \endverb
+      \verb{url}
+      \verb https://www.omg.org/spec/OCL/2.5.1
+      \endverb
+    \endentry
     \entry{UML}{manual}{}{}
       \list{publisher}{1}{%
         {Object Management Group}%
@@ -302,6 +729,46 @@
       \verb{url}
       \verb https://www.omg.org/spec/UML/2.5.1
       \endverb
+    \endentry
+    \entry{verification_TOCL_Taha}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5af6783ba848e65dd5ebe78f7edfaf05}{%
+           family={Dadeau},
+           familyi={D\bibinitperiod},
+           given={Frédéric},
+           giveni={F\bibinitperiod}}}%
+        {{hash=856a0a2300da003560fd4fa7c89e98f4}{%
+           family={Fourneret},
+           familyi={F\bibinitperiod},
+           given={Elizabeta},
+           giveni={E\bibinitperiod}}}%
+        {{hash=53d1ad868f6b3a43a4930bdd489fa379}{%
+           family={Bouchelaghem},
+           familyi={B\bibinitperiod},
+           given={Abir},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{fullhash}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{fullhashraw}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{bibnamehash}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{authorbibnamehash}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{authornamehash}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{authorfullhash}{1cd87df27748ee634626fec8f3a2e88f}
+      \strng{authorfullhashraw}{1cd87df27748ee634626fec8f3a2e88f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software \& Systems Modeling}
+      \field{title}{Temporal property patterns for model-based testing from UML/OCL}
+      \field{volume}{18}
+      \field{year}{2019}
+      \field{pages}{865\bibrangedash 888}
+      \range{pages}{24}
     \endentry
     \entry{TOCL}{inproceedings}{}{}
       \name{author}{5}{}{%
@@ -434,6 +901,71 @@
       \verb https://doi.org/10.1145/3550356.3563132
       \endverb
       \keyw{OCL,TOCL,UML,temporal properties,transformation}
+    \endentry
+    \entry{TPV}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=47969297cd4fdc8aa224cb39e908357d}{%
+           family={Al\bibnamedelima Lail},
+           familyi={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Mustafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2d50e24e9fc9b74453dd6980a9b1e380}{%
+           family={Viesca},
+           familyi={V\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=730a7182d15c0fe2548d9523f023fc4b}{%
+           family={Cardenas},
+           familyi={C\bibinitperiod},
+           given={Hector},
+           giveni={H\bibinitperiod}}}%
+        {{hash=48477bd4d1033817c70fc331d8eae25a}{%
+           family={Zarour},
+           familyi={Z\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b3bf172c5c6954c3a908fd512f16ff4f}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lisbon, Portugal}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{1a0f53bf862e4caf54e5200c4ec1965d}
+      \strng{fullhash}{a8b1bed3841bece5b25643cc8bb11e06}
+      \strng{fullhashraw}{a8b1bed3841bece5b25643cc8bb11e06}
+      \strng{bibnamehash}{1a0f53bf862e4caf54e5200c4ec1965d}
+      \strng{authorbibnamehash}{1a0f53bf862e4caf54e5200c4ec1965d}
+      \strng{authornamehash}{1a0f53bf862e4caf54e5200c4ec1965d}
+      \strng{authorfullhash}{a8b1bed3841bece5b25643cc8bb11e06}
+      \strng{authorfullhashraw}{a8b1bed3841bece5b25643cc8bb11e06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Software scientists and practitioners have criticized Model-driven engineering (MDE) for lacking effective tooling. Although progress has been made, most MDE analysis tools rely on complex, heavyweight mathematical techniques that are not based on UML. Such tools require a steep learning curve and suffer from many accidental complexities. We developed the Temporal Property Validator (TPV) to tackle this issue. TPV allows designers to specify and analyze temporal properties using UML notations, techniques, and tools. We evaluated TPV using the user experience evaluation method and obtained promising results in all aspects of user needs. You can download TPV and view the demo video from https://github.com/mustafalail/TPV-Tool.}
+      \field{booktitle}{Proceedings of the 2024 IEEE/ACM 46th International Conference on Software Engineering: Companion Proceedings}
+      \field{isbn}{9798400705021}
+      \field{series}{ICSE-Companion '24}
+      \field{title}{TPV: A Tool for Validating Temporal Properties in UML Class Diagrams}
+      \field{year}{2024}
+      \field{pages}{114\bibrangedash 118}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/3639478.3640044
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3639478.3640044
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3639478.3640044
+      \endverb
+      \keyw{temporal propeties,OCL,UML,tool,model checking,verification}
     \endentry
   \enddatalist
 \endrefsection

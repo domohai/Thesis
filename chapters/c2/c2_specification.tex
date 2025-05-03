@@ -3,8 +3,6 @@
 %%%%% TOCL
 \subsection{Temporal OCL (TOCL)}
 
-\subsection{Temporal OCL (TOCL)}
-
 \hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
 extends the Object Constraint Language (OCL) to address a fundamental limitation: 
 the inability to specify constraints that span multiple system states over time. 
@@ -134,22 +132,30 @@ between consecutive states.
     \label{fig:event_constructs}
 \end{figure}
 
-We adopt the concept of events from \cite{TemporalAndEventOCL}, which defines events 
+We adopt the concept of events from \cite{TOCL_Taha}, which defines events 
 as predicates identifying specific instants in time. As discussed in Section 
 \ref{sec:ocl}, object-oriented systems typically recognize operation events, 
 time-triggered events, and state change events. TOCL+ focuses on operation and 
 state change events as they capture the fundamental interactions in object-oriented 
 systems.
 
-In addition, TOCL+ supports bounded existence properties with constructs like:
+In addition, TOCL+ supports bounded existence properties specifically for the 
+\texttt{isCalled} event construct, allowing developers to specify constraints on 
+operation call frequency:
 \begin{itemize}
-    \item \texttt{at most \textit{k} times} - limiting event occurrences to no more 
-    than \textit{k}
-    \item \texttt{exactly \textit{k} times} - requiring precisely \textit{k} 
-    occurrences of an event
-    \item \texttt{at least \textit{k} times} - requiring event occurrences to be 
-    \textit{k} or more
+    \item \texttt{isCalled(...) at most \textit{k} times} - limiting operation call occurrences to no more than \textit{k}
+    \item \texttt{isCalled(...) \textit{k} times} - requiring precisely \textit{k} occurrences of an operation call
+    \item \texttt{isCalled(...) at least \textit{k} times} - requiring operation call occurrences to be \textit{k} or more
 \end{itemize}
+% In addition, TOCL+ supports bounded existence properties with constructs like:
+% \begin{itemize}
+%     \item \texttt{at most \textit{k} times} - limiting event occurrences to no more 
+%     than \textit{k}
+%     \item \texttt{exactly \textit{k} times} - requiring precisely \textit{k} 
+%     occurrences of an event
+%     \item \texttt{at least \textit{k} times} - requiring event occurrences to be 
+%     \textit{k} or more
+% \end{itemize}
 
 Applying TOCL+ to our Software System example from Chapter 1, we can express all 
 four temporal properties from Figure \ref{fig:temporal_properties}:
@@ -282,21 +288,37 @@ I[\text{becomesTrue}(P)](\tau) = I[P \text{ and not previous } P](\tau)
 \end{equation}
 
 \paragraph{Bounded Existence Constructs}
-For the bounded existence constructs, we extend the semantics to count event 
-occurrences within a temporal scope. For an event $e$ and temporal scope $S$ 
+For the bounded existence constructs, we extend the semantics to count specifically \texttt{isCalled} event 
+occurrences within a temporal scope. For an \texttt{isCalled} event $e_{ic}$ and temporal scope $S$ 
 (e.g., all past states for \texttt{sometimePast}):
 \begin{equation}
-\text{count}(e, S) = |\{j \in S \mid I[e](\hat{\sigma}, j, \beta) = \text{true}\}|
+\text{count}(e_{ic}, S) = |\{j \in S \mid I[e_{ic}](\hat{\sigma}, j, \beta) = \text{true}\}|
 \vspace{-1em}
 \end{equation}
 Then:
 \begin{equation}
 \begin{split}
-I[e \text{ at most } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) \leq k \\
-I[e \text{  } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) = k \\
-I[e \text{ at least } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) \geq k
+I[e_{ic} \text{ at most } k \text{ times}](\tau) = \text{true} \iff \text{count}(e_{ic}, S) \leq k \\
+I[e_{ic} \text{  } k \text{ times}](\tau) = \text{true} \iff \text{count}(e_{ic}, S) = k \\
+I[e_{ic} \text{ at least } k \text{ times}](\tau) = \text{true} \iff \text{count}(e_{ic}, S) \geq k
 \end{split}
 \end{equation}
+% \paragraph{Bounded Existence Constructs}
+% For the bounded existence constructs, we extend the semantics to count event 
+% occurrences within a temporal scope. For an event $e$ and temporal scope $S$ 
+% (e.g., all past states for \texttt{sometimePast}):
+% \begin{equation}
+% \text{count}(e, S) = |\{j \in S \mid I[e](\hat{\sigma}, j, \beta) = \text{true}\}|
+% \vspace{-1em}
+% \end{equation}
+% Then:
+% \begin{equation}
+% \begin{split}
+% I[e \text{ at most } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) \leq k \\
+% I[e \text{  } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) = k \\
+% I[e \text{ at least } k \text{ times}](\tau) = \text{true} \iff \text{count}(e, S) \geq k
+% \end{split}
+% \end{equation}
 
 These formal definitions provide a clean, process-type-free semantics for TOCL+'s 
 event constructs and bounded existence operators. By directly associating events with 

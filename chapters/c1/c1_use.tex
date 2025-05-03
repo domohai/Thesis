@@ -30,14 +30,14 @@ The Model Validator extends USE's capabilities through a specialized plugin that
 automates the generation of object diagrams from class diagrams within a configurable 
 search space \cite{USE}. This plugin bridges the gap between manual model animation 
 and systematic verification by employing a transformation-based approach. The 
-validator converts UML/OCL models into relational logic using Kodkod, which is 
+validator converts UML/OCL models into relational logic using Kodkod \cite{Kodkod}, which is 
 subsequently transformed into a boolean satisfiability (SAT) problem for efficient 
 analysis. When a solution is found, it is immediately displayed as an object diagram 
-in the USE interface, with the option to explore alternative valid states. Developers 
+in the USE interface, with the option to explore alternative valid states \cite{Model_Validator_2}. Developers 
 control the validation process through configuration files (.properties) that define 
 search parameters, including upper and lower bounds for classes, attributes, and 
 associations. These configurations can be supplemented with additional OCL invariants 
-to target specific scenarios. When executed via the validate command, the Model 
+to target specific scenarios \cite{Properties_file}. When executed via the validate command, the Model 
 Validator systematically searches for system states that satisfy all constraints, 
 reporting either SATISFIABLE (with a corresponding object diagram) when a valid 
 configuration exists, or UNSATISFIABLE when the constraints cannot be collectively 
@@ -50,7 +50,7 @@ through manual testing alone.
 \label{subsec:filmstripping}
 \subsubsection{Overview}
 Filmstripping is a model transformation technique developed to extend USE's 
-verification capabilities from static structure to dynamic behavior \cite{Filmstripping}. 
+verification capabilities from static structure to dynamic behavior \cite{AM2Filmstrip} \cite{Filmstripping}. 
 While standard OCL validation tools (including USE's Model Validator) primarily 
 focus on structural aspects like invariants, the filmstrip approach enables 
 verification of behavioral properties by transforming dynamic specifications into 
@@ -90,7 +90,7 @@ equivalent. The original application model—classes \texttt{System} and
 \texttt{Application} with their \texttt{SystemApplication} association—remains 
 intact within the filmstrip model, visually distinguished by gray borders.
 
-The transformation is performed automatically by the Filmstrip Plugin for USE, which 
+The transformation is performed automatically by the Filmstrip Plugin for USE \cite{Filmstripping}, which 
 augments the original model with additional elements (shown without gray borders). 
 These elements include \texttt{Snapshot} objects that capture individual system 
 states and \texttt{OperationCall} classes (with suffix \texttt{OpC}) that represent 

@@ -89,13 +89,14 @@ model. The patterns use placeholders (indicated by square brackets) that get
 substituted during the transformation process: \texttt{[s |= P]} indicates that 
 property P holds in snapshot s; \texttt{[ContextSnapshot]} is the snapshot in which 
 the property is evaluated; \texttt{[ContextObject]} is the object on which the 
-property is evaluated; and \texttt{[OpClassName]} is the class representing an 
-operation call in the filmstrip model. When applying these patterns, each placeholder 
-is replaced with the appropriate expression based on the model context. For example, 
-in the liveness property translation shown in Listing \ref{lst:ocl_liveness}, the 
-\texttt{[ContextSnapshot]} is replaced with the local variable \texttt{s} inside the 
-\texttt{exists} query. The bounded quantifiers (e.g., \texttt{at most}, \texttt{at least}) 
-are translated into corresponding comparators (\texttt{<=}, \texttt{>=}). 
+property is evaluated; \texttt{[OpClassName]} is the class representing an 
+operation call in the filmstrip model; and \texttt{[ContextClass]} is the class name
+representing the context of the current evaluation. When applying these patterns, 
+each placeholder is replaced with the appropriate expression based on the model 
+context. For example, in the liveness property translation shown in Listing 
+\ref{lst:ocl_liveness}, the \texttt{[ContextSnapshot]} is replaced with the local variable 
+\texttt{s} inside the \texttt{exists} query; the bounded quantifiers (e.g., \texttt{at most}, 
+\texttt{at least}) are translated into corresponding comparators (\texttt{<=}, \texttt{>=}). 
 The bounded quantifiers in TOCL+ expressions are systematically translated into their 
 corresponding OCL comparators: \texttt{at most} becomes less than or equal to 
 (\texttt{<=}), while \texttt{at least} becomes greater than or equal to (\texttt{>=}). 
@@ -179,15 +180,15 @@ eventStack.push(originalEvent);
     \hline
     1 & 
     next P &
-    let nextSnapshot:Snapshot = self.snapshot.succ() in [nextSnapshot |= P] \\
+    let nextSnapshot:Snapshot = self.snapshot[ContextClass].succ() in [nextSnapshot |= P] \\
     \hline
     2 &
     always P &
-    let CS:Snapshot = self.snapshot in Set\{CS\}->closure(s | s.succ())->forAll(s | [s |= P]) \\
+    let CS:Snapshot = self.snapshot[ContextClass] in Set\{CS\}->closure(s | s.succ())->forAll(s | [s |= P]) \\
     \hline  
     3 &
     always P until Q &
-    let CS:Snapshot = self.snapshot
+    let CS:Snapshot = self.snapshot[ContextClass]
     in let FS:Set(Snapshot) = Set\{CS.succ()\}->closure(s | s.succ())
     in let AllFSQ:Set(Snapshot) = FS->select(s | [s |= Q])
     in let FSQ:Snapshot = AllFSQ->any(s | Set\{s\}->closure(s | s.succ())->includesAll(AllFSQ))
@@ -197,7 +198,7 @@ eventStack.push(originalEvent);
     \hline
     4 &
     always P since Q &
-    let CS:Snapshot = self.snapshot
+    let CS:Snapshot = self.snapshot[ContextClass]
     in let PS:Set(Snapshot) = Set\{CS.pred()\}->closure(s | s.pred())
     in let AllPSQ:Set(Snapshot) = PS->select(s | [s |= Q])
     in let PSQ:Snapshot = AllPSQ->any(s | Set\{s\}->closure(s | s.pred())->includesAll(AllPSQ))
@@ -207,12 +208,12 @@ eventStack.push(originalEvent);
     \hline
     5 &
     sometime P &
-    let CS:Snapshot = self.snapshot in Set\{CS\}->closure(s | s.succ())->exists(s | [s |= P]) \\
+    let CS:Snapshot = self.snapshot[ContextClass] in Set\{CS\}->closure(s | s.succ())->exists(s | [s |= P]) \\
     \hline
     6 &
     sometime P before Q &
-    let FS:Set(Snapshot) = Set\{self.snapshot\}->closure(s | s.succ())
-    in let PreS:Set(Snapshot) = Set\{self.snapshot.pred()\}->closure(s | s.pred())
+    let FS:Set(Snapshot) = Set\{self.snapshot[ContextClass]\}->closure(s | s.succ())
+    in let PreS:Set(Snapshot) = Set\{self.snapshot[ContextClass].pred()\}->closure(s | s.pred())
     in let AllFSQ:Set(Snapshot) = FS->select(s | [s |= Q])
     in let FSQ:Snapshot = AllFSQ->any(s | Set\{s\}->closure(s | s.succ())->includesAll(AllFSQ))
     in let FSP:Set(Snapshot) = FS->select(s | [s |= P])
@@ -220,7 +221,7 @@ eventStack.push(originalEvent);
     \hline
     7 &
     sometime P since Q &
-    let CS:Snapshot = self.snapshot
+    let CS:Snapshot = self.snapshot[ContextClass]
     in let PS:Set(Snapshot) = Set\{CS.pred()\}->closure(s | s.pred())
     in let AllPSQ:Set(Snapshot) = PS->select(s | [s |= Q])
     in let PSQ:Snapshot = AllPSQ->any(s | Set\{s\}->closure(s | s.pred())->includesAll(AllPSQ))
@@ -229,15 +230,15 @@ eventStack.push(originalEvent);
     \hline
     8 &
     previous P &
-    let previousSnapshot:Snapshot = self.snapshot.pred() in [previousSnapshot |= P] \\
+    let previousSnapshot:Snapshot = self.snapshot[ContextClass].pred() in [previousSnapshot |= P] \\
     \hline
     9 &
     sometimePast P &
-    let CS:Snapshot = self.snapshot in Set\{CS.pred()\}->closure(s | s.pred())->exists(s | [s |= P]) \\
+    let CS:Snapshot = self.snapshot[ContextClass] in Set\{CS.pred()\}->closure(s | s.pred())->exists(s | [s |= P]) \\
     \hline
     10 &
     alwaysPast P &
-    let CS:Snapshot = self.snapshot in Set\{CS.pred()\}->closure(s | s.pred())->forAll(s | [s |= P]) \\
+    let CS:Snapshot = self.snapshot[ContextClass] in Set\{CS.pred()\}->closure(s | s.pred())->forAll(s | [s |= P]) \\
     \hline
     11 &
     isCalled(Op()) &
@@ -263,8 +264,8 @@ eventStack.push(originalEvent);
     \hline
     15 &
     becomesTrue(P) &
-    let currentObject = self.snapshot.[ContextObject]->any(o | o.id = self.id) in
-    let previousObject = self.snapshot.pred().[ContextObject]->any(o | o.id = self.id) in 
+    let currentObject = self.snapshot[ContextClass].[ContextObject]->any(o | o.id = self.id) in
+    let previousObject = self.snapshot[ContextClass].pred().[ContextObject]->any(o | o.id = self.id) in 
     not [previousObject |= P] and [currentObject |= P] \\
     \hline
 \end{longtable}
