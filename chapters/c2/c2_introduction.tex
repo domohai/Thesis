@@ -6,7 +6,7 @@ or individual transitions, OCL cannot express properties spanning multiple state
 responding to system events. This limitation is significant for modern systems 
 requiring temporal and reactive behaviors.
 
-Temporal logics like LTL and CTL offer formal frameworks for temporal properties but 
+Temporal logics like LTL \cite{LTL} and CTL offer formal frameworks for temporal properties but 
 require specialized knowledge unfamiliar to most UML designers. This creates a practical 
 barrier for practitioners comfortable with UML/OCL but not with formal temporal notations.
 
@@ -33,11 +33,16 @@ specifications using existing tools. This approach transforms UML/OCL models int
 filmstrip models representing state sequences, and translates TOCL+ specifications 
 into standard OCL constraints verifiable within these models.
 
+% Third: Implementation of TOCL+ to OCL transformation
+Third, we present our implementation approach for transforming TOCL+ expressions into standard OCL constraints. This transformation defines practical translation patterns for temporal operators and event constructs, mapping them to structural navigations through snapshots and operation calls in the filmstrip model. These translations enable the verification of complex temporal properties using existing OCL verification tools without requiring specialized temporal logic model checkers.
+
 The chapter is organized as follows:
 \begin{itemize}
     \item Section 2.2 presents the specification approach.
     
     \item Section 2.3 details the verification approach.
+    
+    \item Section 2.4 describes the implementation of TOCL+ to OCL transformation.
 \end{itemize}
 
 Together, these contributions provide a complete solution for both specifying and 

@@ -4,12 +4,22 @@
 visualizing, specifying, constructing, and documenting software-intensive systems. 
 This language is maintained by the Object Management Group (OMG) \cite{UML}.
 
-UML is one of the most widely used modeling languages for describing real-world 
-application domains. It works with various object and component methods to represent 
-software systems. As software systems grow in size, complexity, and distribution, 
-building and maintaining them becomes more challenging. UML helps reduce this 
-complexity by providing a high level of abstraction that captures essential 
-information needed for designing and developing software systems.
+UML serves as a standardized modeling language for visualizing and documenting 
+software-intensive systems \cite{UML}. It incorporates various object-oriented 
+and component-based methods to represent software architectures and designs. 
+Software development projects face inherent complexity challenges when systems 
+increase in size, functionality, and distribution across networks. UML addresses 
+these challenges by offering structured graphical representations that abstract 
+complex systems into comprehensible models, capturing essential structural and 
+behavioral elements required for effective design and implementation processes. 
+The notation system provides developers with a common vocabulary for communicating 
+system architecture and behavior among stakeholders \cite{UML_Reference_Manual}.
+% UML is one of the most widely used modeling languages for describing real-world 
+% application domains. It works with various object and component methods to represent 
+% software systems. As software systems grow in size, complexity, and distribution, 
+% building and maintaining them becomes more challenging. UML helps reduce this 
+% complexity by providing a high level of abstraction that captures essential 
+% information needed for designing and developing software systems.
 
 UML includes multiple diagram types, each focusing on different aspects of a design. 
 These diagrams fall into two main categories: (1) structural diagrams that represent 
@@ -21,7 +31,7 @@ For this thesis, two related structural diagrams are particularly relevant and w
 
 
 \subsection{Class Diagram}
-Class diagrams are the foundation of structural modeling in UML and the most widely 
+\hspace{1cm} Class diagrams are the foundation of structural modeling in UML and the most widely 
 used diagram type in object-oriented systems. They illustrate the static structure 
 of a system by depicting classes, their attributes, operations, and the relationships 
 between classes. These concepts can be observed in Figure 
@@ -57,6 +67,7 @@ In our example, the \texttt{BankAccount} class defines three operations:
     \item \texttt{withdraw(amount)}: deducts the specified amount from the balance
     \item \texttt{assignNewCard()}: creates and assigns a new debit card to the bank account
 \end{itemize}
+
 These operations represent the functional capabilities of \texttt{BankAccount} objects, 
 defining how they can interact with other objects and how their state can change over 
 time. While attributes describe what an object knows, operations describe what an 
@@ -77,7 +88,7 @@ behavioral specifications build upon.
 
 
 \subsection{Object Diagram}
-Object diagrams are structural diagrams that represent real-world entities or 
+\hspace{1cm} Object diagrams are structural diagrams that represent real-world entities or 
 modeled system elements as concrete instances of classes. While class diagrams 
 show abstract structures, object diagrams provide snapshots of a system at specific 
 points in time, showing actual objects with specific attribute values and the links 

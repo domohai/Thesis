@@ -1,4 +1,12 @@
 \section{Specification of temporal properties}
+% add section introduction here
+\hspace{1cm} This section introduces approaches for specifying temporal properties 
+in UML/OCL models, focusing on extensions that address OCL's limitations with temporal 
+and event-based constraints. We examine Temporal OCL (TOCL) as a foundational extension, 
+then introduce our TOCL+ language that enhances temporal specification with event 
+constructs and bounded existence operators. The formal definitions and grammar 
+provided establish a precise foundation for both specification and subsequent 
+verification of temporal properties.
 
 %%%%% TOCL
 \subsection{Temporal OCL (TOCL)}
@@ -107,7 +115,7 @@ operation frequencies.
 
 
 %%%%% Event
-\subsection{Event Constructs in OCL}
+\subsection{TOCL+: An Extension of TOCL}
 
 \hspace{1cm} To address TOCL's limitations in expressing event-based properties, 
 we propose TOCL+, which extends TOCL with explicit event specification capabilities. 
@@ -344,7 +352,8 @@ for our event extensions.
 
 \begin{lstlisting}[
     caption={EBNF Grammar for Event constructs.}, 
-    label={lst:event_grammar}
+    label={lst:event_grammar},
+    captionpos=b
 ]
 primaryExp[Environment env] returns [ASTOclExpression ast]
         : literalExp[$env]

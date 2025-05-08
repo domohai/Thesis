@@ -1,7 +1,7 @@
 \section{UML-based Specification Environment (USE)}
 
 \subsection{Overview}
-The UML-based Specification Environment (USE) is a system for the specification and 
+\hspace{1cm} The UML-based Specification Environment (USE) is a system for the specification and 
 validation of information systems based on a subset of UML and OCL \cite{USE}. 
 Models in USE are specified in textual form (as .use files) containing classes with 
 their attributes and operations, associations, and OCL constraints. These constraints 
@@ -26,7 +26,7 @@ gives a general view of the USE approach.
 \end{figure}
 
 \subsection{USE Model Validator}
-The Model Validator extends USE's capabilities through a specialized plugin that 
+\hspace{1cm} The Model Validator extends USE's capabilities through a specialized plugin that 
 automates the generation of object diagrams from class diagrams within a configurable 
 search space \cite{USE}. This plugin bridges the gap between manual model animation 
 and systematic verification by employing a transformation-based approach. The 
@@ -49,7 +49,7 @@ through manual testing alone.
 \subsection{Filmstripping}
 \label{subsec:filmstripping}
 \subsubsection{Overview}
-Filmstripping is a model transformation technique developed to extend USE's 
+\hspace{1cm} Filmstripping is a model transformation technique developed to extend USE's 
 verification capabilities from static structure to dynamic behavior \cite{AM2Filmstrip} \cite{Filmstripping}. 
 While standard OCL validation tools (including USE's Model Validator) primarily 
 focus on structural aspects like invariants, the filmstrip approach enables 
@@ -83,10 +83,10 @@ transformed into invariants and how system state progression is represented.
     \label{fig:filmstrip_model}
 \end{figure}
 
-The filmstrip transformation process is best illustrated through an example. 
+\hspace{1cm} The filmstrip transformation process is best illustrated through an example. 
 Figure \ref{fig:filmstrip_model} shows the transformation of our Software System 
 model from Figure \ref{fig:class_diagram_software_system} into its filmstrip 
-equivalent. The original application model—classes \texttt{System} and 
+equivalent. The original application model —classes \texttt{System} and 
 \texttt{Application} with their \texttt{SystemApplication} association—remains 
 intact within the filmstrip model, visually distinguished by gray borders.
 

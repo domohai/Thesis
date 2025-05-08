@@ -1,501 +1,118 @@
-% \begin{center}
-% \textbf{\fontsize{22}{0}\selectfont APPENDIX	}
-% \end{center}
-% \addcontentsline{toc}{chapter}{APPENDIX}
+\begin{center}
+\textbf{\fontsize{22}{0}\selectfont APPENDIX}
+\end{center}
+\addcontentsline{toc}{chapter}{APPENDIX}
 
-% \subsection*{A. The algorithms presented in section 3.1.2 of the thesis}
+\subsection*{A. The USE specification for Software System case study.}
 
-% \hspace{1cm}The algorithm equivalent to the formula (1):
-% % \noindent
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 1:} \textit{Each player gets to play at least once every week}} \\ \hline
-%     1   & \textbf{for each} player from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} week from $1$ to num\_weeks: \\
-%     3  & \hspace{2em} Initialize an empty list called clause \\
-%     4  & \hspace{2em} \textbf{for each} position from $1$ to players\_per\_group: \\
-%     5  & \hspace{3em} \textbf{for each} group from $1$ to num\_groups: \\
-%     6  & \hspace{4em} Add get\_variable(player, position, group, week) to clause \\
-%     7  & \hspace{3em} \textbf{end for} \\
-%     8  & \hspace{2em} \textbf{end for} \\
-%     9  & \hspace{2em} \textbf{Print} clause \\
-%     10 & \hspace{2em} Add clause to sat\_solver \\
-%     11 & \hspace{1em} \textbf{end for} \\
-%     12  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
+\begin{lstlisting}[
+    % caption={Specification of the Software System model in USE environment.},
+    label={lst:software_system_specification}
+]
+model SoftwareSystem
+-- Classes
+class System
+attributes
+    id : Integer
+    freeMemory : Integer init = 10
+    loadedApps : Set(Application) init = Set{}
+    installedApps : Set(Application) init = Set{}
+    runningApps : Set(Application) init = Set{}
+operations
+    load(app : Application)
+    begin
+        self.loadedApps := self.loadedApps->including(app);
+        self.freeMemory := self.freeMemory - app.size;
+    end
+    install()
+    begin
+        self.installedApps := self.installedApps->union(self.loadedApps);
+        self.loadedApps := self.loadedApps->reject(true)->excluding(null);
+    end
+    run(app : Application)
+    begin
+        self.runningApps := self.runningApps->including(app);
+    end
+    stop(app : Application)
+    begin
+        self.runningApps := self.runningApps->excluding(app);
+    end
+end
+class Application
+attributes
+    id : Integer
+    size : Integer
+end
+-- Associations
+association SystemApplication between
+    System[1] role system
+    Application[0..*] role apps
+end
+-- Invariants
+constraints
+context System
+    inv memoryConstraint: self.freeMemory >= 0
+    inv notLoadedAndInstalled: self.loadedApps->intersection(self.installedApps)->isEmpty()
+    inv sets: let appNumber: Integer = self.apps->size() in
+        (self.loadedApps->size() <= appNumber and
+        self.installedApps->size() <= appNumber and
+        self.runningApps->size() <= appNumber)
+    inv notContainsNull:
+        not self.loadedApps->includes(null) and
+        not self.installedApps->includes(null) and
+        not self.runningApps->includes(null)
 
-% \vspace{12pt}
-% The algorithm equivalent to the formula (2):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 2:} \textit{Each person plays at most once in each group per week}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_players, num\_weeks, players\_per\_group, num\_groups, sat\_solver,} \\
-%     \multicolumn{2}{l}{function get\_variable, all\_clauses.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\ 
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\\hline
-%     1   & \textbf{for each} golfer from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} week from $1$ to num\_weeks: \\
-%     3  & \hspace{2em} \textbf{for each} position from $1$ to players\_per\_group: \\
+context Application
+    inv sizeConstraint: self.size > 0
 
-%     \hline
-%     \end{tabular}
-% \end{center}
+context System::load(app: Application)
+    pre notLoaded: not self.loadedApps->includes(app) and
+                    not self.installedApps->includes(app) and
+                    not self.runningApps->includes(app)
+    pre enoughMemory: self.freeMemory >= app.size
+    post loaded: self.loadedApps = self.loadedApps@pre->including(app)
+    post freeMemory: self.freeMemory = self.freeMemory@pre - app.size
+    post unchanged:
+        self.apps->forAll(app |
+            app.size = app.size@pre and
+            app.id = app.id@pre)
+    post sameInstalledAndRunning:
+        self.installedApps = self.installedApps@pre and
+        self.runningApps = self.runningApps@pre
 
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     4  & \hspace{3em} \textbf{for each} group from $1$ to num\_groups: \\
-%     5  & \hspace{4em} \textbf{for each} other\_position from position $+ 1$ to players\_per\_group: \\
-%     6  & \hspace{5em} Initialize an empty list called clause \\
-%     7  & \hspace{5em} Add $-1 *$ get\_variable(golfer, position, group, week) to clause \\
-%     8  & \hspace{5em} Add $-1 *$ get\_variable(golfer, other\_position, group, week) to clause \\
-%     9  & \hspace{5em} Add clause to sat\_solver \\
-%     10 & \hspace{5em} Add clause to all\_clauses \\
-%     11 & \hspace{4em} \textbf{end for} \\
-%     12 & \hspace{3em} \textbf{end for} \\
-%     13 & \hspace{2em} \textbf{end for} \\
-%     14 & \hspace{1em} \textbf{end for} \\
-%     15  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
+context System::install()
+    pre hasLoadedApps: self.loadedApps->notEmpty()
+    post installed: self.installedApps = self.installedApps@pre->union(self.loadedApps@pre)
+    post loadedAppsEmpty: self.loadedApps = self.loadedApps@pre->reject(true)->excluding(null)
+    post sameRunning: self.runningApps = self.runningApps@pre
+    post sameMemory: self.freeMemory = self.freeMemory@pre
+    post unchanged:
+        self.apps->forAll(app |
+            app.size = app.size@pre and
+            app.id = app.id@pre)
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%3333333333333333333333%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (12):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 3:} \textit{Each person plays at most once in each group per week}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_players, num\_weeks, players\_per\_group, num\_groups, sat\_solver,} \\
-%     \multicolumn{2}{l}{function get\_variable, all\_clauses.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\ \hline
-%     1   & \textbf{for each} golfer from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} week from $1$ to num\_weeks: \\
-%     3  & \hspace{2em} \textbf{for each} position from $1$ to players\_per\_group: \\
-%     4  & \hspace{3em} \textbf{for each} group from $1$ to num\_groups: \\
-%     5  & \hspace{4em} \textbf{for each} other\_group from group $+ 1$ to num\_groups: \\
-%     6  & \hspace{5em} \textbf{for each} other\_position from $1$ to players\_per\_group: \\
-%     7  & \hspace{6em} Initialize an empty list called clause \\
-%     \hline
-%     \end{tabular}
-% \end{center}
+context System::run(app : Application)
+    pre isInstalled: self.installedApps->includes(app)
+    pre notRunning: not self.runningApps->includes(app)
+    post running: self.runningApps = self.runningApps@pre->including(app)
+    post sameLoaded: self.loadedApps = self.loadedApps@pre
+    post sameInstalled: self.installedApps = self.installedApps@pre
+    post sameMemory: self.freeMemory = self.freeMemory@pre
+    post unchanged:
+        self.apps->forAll(app |
+            app.size = app.size@pre and
+            app.id = app.id@pre)
 
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     8  & \hspace{6em} Add $-1 *$ get\_variable(golfer, position, group, week) to clause \\
-%     9  & \hspace{5em} Add $-1 *$ get\_variable(golfer, other\_position, other\_group, week) to clause \\
-%     10 & \hspace{6em} Add clause to sat\_solver \\
-%     11 & \hspace{6em} Add clause to all\_clauses \\
-%     12 & \hspace{5em} \textbf{end for} \\
-%     13 & \hspace{4em} \textbf{end for} \\
-%     14 & \hspace{3em} \textbf{end for} \\
-%     15 & \hspace{2em} \textbf{end for} \\
-%     16 & \hspace{1em} \textbf{end for} \\
-%     17  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%4444444444444444444444%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (4):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 4:} \textit{A player cannot play in two different groups in the same week}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_weeks, num\_groups, players\_per\_group, num\_players, sat\_solver,} \\
-%     \multicolumn{2}{l}{function get\_variable, all\_clauses.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\ 
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\ \hline
-%     1   & \textbf{for each} week from $1$ to num\_weeks: \\
-%     2  & \hspace{1em} \textbf{for each} group from $1$ to num\_groups: \\
-%     3  & \hspace{2em} \textbf{for each} position from $1$ to players\_per\_group: \\
-%     4  & \hspace{3em} Initialize an empty list called clause \\
-%     5  & \hspace{3em} \textbf{for each} golfer from $1$ to num\_players: \\
-%     6  & \hspace{4em} Add get\_variable(golfer, position, group, week) to clause \\
-%     7  & \hspace{3em} Add clause to sat\_solver \\
-%     8  & \hspace{3em} Add clause to all\_clauses \\
-%     9  & \hspace{2em} \textbf{end for} \\
-%     10 & \hspace{1em} \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     11  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555555555555555555555555555555555555%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (13):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 5:} \textit{Each player appears only once in one group per week}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_players, num\_weeks, players\_per\_group, num\_groups, sat\_solver,} \\
-%     \multicolumn{2}{l}{function get\_variable, all\_clauses.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\ 
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\ \hline
-%     1   & \textbf{for each} week from $1$ to num\_weeks: \\
-%     2  & \hspace{1em} \textbf{for each} group from $1$ to num\_groups: \\
-%     3  & \hspace{2em} \textbf{for each} position from $1$ to players\_per\_group: \\
-%     4  & \hspace{3em} Initialize an empty list called clause \\
-%     5  & \hspace{3em} \textbf{for each} golfer from $1$ to num\_players: \\
-%     6  & \hspace{4em} Add get\_variable(golfer, position, group, week) to clause \\
-%     7  & \hspace{3em} Add clause to sat\_solver \\
-%     8  & \hspace{3em} Add clause to all\_clauses \\
-%     9  & \hspace{2em} \textbf{end for} \\
-%     10 & \hspace{1em} \textbf{end for} \\
-%     11  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%^6666666666666666666666666666666666665%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (6):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 6:} \textit{Ensure that if a player is in a group in one week, they must}} \\
-%     \multicolumn{2}{l}{\textit{occupy one of the positions in that group, and vice versa.}} \\\hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_players, num\_groups, num\_weeks, players\_per\_group, sat\_solver,} \\
-%     \multicolumn{2}{l}{function get\_variable, function get\_variable2, all\_clauses.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     1   & \textbf{for each} golfer from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} group from $1$ to num\_groups: \\
-%     3  & \hspace{2em} \textbf{for each} week from $1$ to num\_weeks: \\
-%     4  & \hspace{3em} Initialize an empty list called clause \\
-%     5  & \hspace{3em} Add $-1 *$ get\_variable2(golfer, group, week) to clause \\
-%     6  & \hspace{3em} \textbf{for each} position from $1$ to players\_per\_group: \\
-%     7  & \hspace{4em} Add get\_variable(golfer, position, group, week) to clause \\
-%     8  & \hspace{4em} Initialize another empty list called clause2 \\
-%     9  & \hspace{4em} Add get\_variable2(golfer, group, week) to clause2 \\
-%     10 & \hspace{4em} Add $-1 *$ get\_variable(golfer, position, group, week) to clause2 \\
-%     11 & \hspace{4em} Add clause2 to sat\_solver \\
-%     12 & \hspace{3em} Add clause to sat\_solver \\
-%     13 & \hspace{3em} Add clause to all\_clauses \\
-%     14 & \hspace{2em} \textbf{end for} \\
-%     15 & \hspace{1em} \textbf{end for} \\
-%     16  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&77777777777777777777777777777777777%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (14):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 7:} \textit{Each pair of players can only appear in a maximum of one}} \\
-%     \multicolumn{2}{l}{\textit{group.}} \\\hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_weeks, num\_groups, num\_players, sat\_solver,  all\_clauses,} \\
-%     \multicolumn{2}{l}{function get\_variable2.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\ 
-%     \hline
-%     1  & \textbf{ for each} week from $1$ to num\_weeks: \\
-%     2  & \hspace{1em} \textbf{for each} group from $1$ to num\_groups: \\
-%     3  & \hspace{2em} \textbf{for each} golfer1 from $1$ to num\_players: \\
-%     4  & \hspace{3em} \textbf{for each} golfer2 from golfer1 $+ 1$ to num\_players: \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     5  & \hspace{4em} \textbf{for each} other\_group from $1$ to num\_groups: \\
-%     6  & \hspace{5em} \textbf{for each} other\_week from week $+ 1$ to num\_weeks: \\
-%     7  & \hspace{6em} Initialize an empty list called clause \\
-%     8  & \hspace{6em} Add $-1 *$ get\_variable2(golfer1, group, week) to clause \\
-%     9  & \hspace{6em} Add $-1 *$ get\_variable2(golfer2, group, week) to clause \\
-%     10 & \hspace{6em} Add $-1 *$ get\_variable2(golfer1, other\_group, other\_week) to clause \\
-%     11 & \hspace{6em} Add $-1 *$ get\_variable2(golfer2, other\_group, other\_week) to clause \\
-%     12 & \hspace{6em} Add clause to sat\_solver \\
-%     13 & \hspace{6em} Add clause to all\_clauses \\
-%     14 & \hspace{5em} \textbf{end for} \\
-%     15 & \hspace{4em} \textbf{end for} \\
-%     16 & \hspace{3em} \textbf{end for} \\
-%     17 & \hspace{2em} \textbf{end for} \\
-%     18 & \hspace{1em} \textbf{end for} \\
-%     19  & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%8888888888888888888888888888888888%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (15):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 8:} \textit{Require players in the same group to be in alphabetical order.}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_weeks, num\_groups, num\_players, sat\_solver, all\_clauses,} \\
-%     \multicolumn{2}{l}{function get\_variable2.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions } \\
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\ \hline
-%     1  & \textbf{for each} golfer1 from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} position1 from $1$ to players\_per\_group $- 1$: \\
-%     3  & \hspace{2em} \textbf{for each} group from $1$ to num\_groups: \\
-%     4  & \hspace{3em} \textbf{for each} week from $1$ to num\_weeks: \\
-%     \hline
-
-%     \end{tabular}
-% \end{center}
-
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     5  & \hspace{4em} \textbf{for each} golfer2 from golfer1 $+ 1$ to num\_players: \\
-%     6  & \hspace{5em} Initialize an empty list called clause \\
-%     7  & \hspace{5em} Add $-1 *$ get\_variable(golfer1, position1, group, week) to clause \\
-%     8  & \hspace{5em} Add $-1 *$ get\_variable(golfer2, position1 $+ 1$, group, week) to clause \\
-%     9  & \hspace{5em} Add clause to sat\_solver \\
-%     10 & \hspace{5em} Add clause to all\_clauses \\
-%     11 & \hspace{4em} \textbf{end for} \\
-%     12 & \hspace{3em} \textbf{end for} \\
-%     13 & \hspace{2em} \textbf{end for} \\
-%     14 & \hspace{1em} \textbf{end for} \\
-%     15  & end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%9999999999%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (16):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 9:} \textit{Arrange the first players of each group in the same week in}} \\ 
-%     \multicolumn{2}{l}{\textit{alphabetical order.}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_players, num\_groups, num\_weeks, sat\_solver, all\_clauses,} \\
-%     \multicolumn{2}{l}{function get\_variable} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\
-%     \hline
-%     1   & for each} golfer1 from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} group from $1$ to num\_groups $- 1$: \\
-%     3  & \hspace{2em} \textbf{for each} week from $1$ to num\_weeks: \\
-%     4  & \hspace{3em} \textbf{for each} golfer2 from $1$ to golfer1 $- 1$: \\
-%     5  & \hspace{4em} Initialize an empty list called clause \\
-%     6  & \hspace{4em} Add $-1 *$ get\_variable(golfer1, $1$, group, week) to clause \\
-%     7  & \hspace{4em} Add $-1 *$ get\_variable(golfer2, $1$, group $+ 1$, week) to clause \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     8  & \hspace{4em} Add clause to sat\_solver \\
-%     9  & \hspace{4em} Add clause to all\_clauses \\
-%     10 & \hspace{3em} \textbf{end for} \\
-%     11 & \hspace{2em} \textbf{end for} \\
-%     12 & \hspace{1em} \textbf{end for} \\
-%     13  & end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%XXXXXXXXXXXXXXXXXXXXXXXXXXXXX%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{12pt}
-% The algorithm equivalent to the formula (18):
-% \begin{center}
-%     \begin{tabular}{c p{0.9\textwidth}}
-%     \hline
-%     \multicolumn{2}{l}{\textbf{Algorithm 10:} \textit{Set alphabetical order among the second golf players in the}} \\
-%     \multicolumn{2}{l}{\textit{first group each week.}} \\ \hline
-%     \multicolumn{2}{l}{\textbf{Input:} num\_players, num\_weeks, function get\_variable, sat\_solver, all\_clauses.} \\
-%     \multicolumn{2}{l}{\textbf{Output:} sat\_solver, all\_clauses have been updated with the new propositions} \\
-%     \multicolumn{2}{l}{to ensure compliance with the constraint requirements.} \\\hline
-%     1  & \textbf{for each} golfer1 from $1$ to num\_players: \\
-%     2  & \hspace{1em} \textbf{for each} week from $1$ to num\_weeks $- 1$: \\
-%     3  & \hspace{2em} \textbf{for each} golfer2 from $1$ to golfer1 $+ 1$: \\
-%     4  & \hspace{3em} Initialize an empty list called clause \\
-%     5  & \hspace{3em} Add $-1 *$ get\_variable(golfer1, $2$, $1$, week) to clause \\
-%     6  & \hspace{3em} Add $-1 *$ get\_variable(golfer2, $2$, $1$, week $+ 1$) to clause \\
-%     7  & \hspace{3em} Add clause to sat\_solver \\
-%     8  & \hspace{3em} Add clause to all\_clauses \\
-%     9  & \hspace{2em} \textbf{end for} \\
-%     10 & \hspace{1em} \textbf{end for} \\
-%     11 & \textbf{end for} \\
-%     \hline
-%     \end{tabular}
-% \end{center}
-
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newpage
-% \subsection*{B. Detailed statistical tables regarding the experimental results}
-% \begin{longtable}{|>{\centering\arraybackslash}p{0.5cm}|c|c|c|c|c|c|c|}
-% \caption{Comparison of results for various solvers with the input dataset.} \label{tab:solver_comparison} \\
-
-% \hline
-% ID &   Problem &   binomial &   binary &   commander &   sequential &   product &   PyCSP \\ \hline
-% \endfirsthead
-
-% \hline
-%   ID &   Problem &   binomial &   binary &   commander &  sequential &   product &   PyCSP \\ \hline
-% \endhead
-
-% % \hline
-% % \multicolumn{8}{|c|}{\textit{Continued on next page...}} \\ \hline
-% % \endfoot
-
-% % \hline
-% % \multicolumn{8}{|c|}{\textit{End of table}} \\ \hline
-% % \endlastfoot
-
-% 1 & 3-2-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 2 & 5-3-2 & sat & sat & timeout & timeout & sat & unsat \\ \hline
-% 3 & 4-3-3 & sat & sat & timeout & sat & sat & sat \\ \hline
-% 4 & 7-4-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 5 & 9-5-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 6 & 5-4-4 & sat & sat & sat & sat & sat & sat \\ \hline
-% 7 & 11-6-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 8 & 7-6-3 & sat & sat & sat & sat & sat & sat \\ \hline
-% 9 & 13-7-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 10 & 6-5-5 & timeout & sat & timeout & timeout & timeout & timeout \\ \hline
-% 11 & 7-7-3 & sat & sat & sat & sat & sat & sat \\ \hline
-% 12 & 5-8-3 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 13 & 3-6-6 & unsat & unsat & unsat & unsat & unsat & unsat \\ \hline
-% 14 & 15-8-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 15 & 6-7-4 & timeout & timeout & timeout & timeout & timeout & unsat \\ \hline
-% 16 & 3-8-5 & unsat & unsat & unsat & unsat & unsat & sat \\ \hline
-% 17 & 5-7-5 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 18 & 17-9-2 & sat & sat & sat & unsat & sat & unsat \\ \hline
-% 19 & 4-7-6 & unsat & unsat & unsat & unsat & unsat & unsat \\ \hline
-% 20 & 3-9-5 & unsat & unsat & unsat & unsat & unsat & sat \\ \hline
-% 21 & 10-9-3 & sat & timeout & sat & sat & sat & unsat \\ \hline
-% 22 & 6-9-4 & timeout & timeout & timeout & timeout & timeout & unsat \\ \hline
-% 23 & 8-10-3 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 24 & 19-10-2 & timeout & timeout & timeout & timeout & timeout & unsat \\ \hline
-% 25 & 3-9-6 & unsat & unsat & unsat & unsat & unsat & unsat \\ \hline
-% 26 & 10-4 & timeout & timeout & timeout & timeout & timeout & sat \\ \hline
-% 27 & 8-7 & unsat & unsat & unsat & unsat & unsat & unsat \\ \hline
-% 28 & 5-10-5 & timeout & timeout & timeout & timeout & timeout & unsat \\ \hline
-% 29 & 4-9-7 & unsat & unsat & unsat & timeout & timeout & unsat \\ \hline
-% 30 & 5-3-1 & sat & sat & sat & sat & sat & unsat \\ \hline
-% 31 & 5-3-3 & sat & sat & sat & sat & sat & unsat \\ \hline
-% 32 & 5-3-4 & sat & sat & sat & sat & sat & sat \\ \hline
-% 33 & 5-3-5 & sat & sat & sat & sat & sat & sat \\ \hline
-% 34 & 5-3-6 & sat & sat & sat & sat & sat & sat \\ \hline
-% 35 & 8-4-1 & sat & sat & sat & sat & sat & sat \\ \hline
-% 36 & 8-4-2 & sat & sat & sat & sat & sat & sat \\ \hline
-% 37 & 8-4-3 & sat & sat & sat & sat & sat & unsat \\ \hline
-% 38 & 8-4-4 & sat & sat & sat & sat & sat & sat \\ \hline
-% 39 & 8-4-5 & sat & sat & sat & sat & sat & sat \\ \hline
-% 40 & 8-4-6 & sat & sat & sat & sat & sat & sat \\ \hline
-% 41 & 5-3-7 & sat & sat & sat & sat & sat & sat \\ \hline
-% 42 & 8-4-7 & sat & sat & sat & sat & sat & sat \\ \hline
-% 43 & 8-4-8 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 44 & 8-4-9 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 45 & 8-4-10 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 46 & 9-4-6 & sat & sat & sat & sat & sat & timeout \\ \hline
-% 47 & 9-4-7 & sat & sat & sat & sat & sat & timeout \\ \hline
-% 48 & 9-4-8 & sat & sat & sat & sat & sat & sat \\ \hline
-% 49 & 9-4-9 & timeout & timeout & timeout & timeout & timeout & sat \\ \hline
-% 50 & 9-4-10 & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-
-% \end{longtable}
-
-% \newpage
-% To illustrate the results of running with the input dataset, I have compared the running times (in seconds) and summarized them in \textit{Table 4.3} as follows:
-% \begin{longtable}{|c|c|c|c|c|c|c|c|}
-% \caption{The measured time results of the experimental dataset.} \label{tab:measured_times} \\
-
-% \hline
-% ID  & Problem & binomial  & binary  & commander  & sequential  & product  & PyCSP \\ \hline
-% \endfirsthead
-
-% \hline
-% ID  & Problem  & binomial  & binary  & commander  & sequential  & product  & PyCSP \\ \hline
-% \endhead
-
-% \hline
-% \endlastfoot
-
-% \hline
-% 1  & 10-9-3  & 594.491 & timeout & 414.43  & 388.385 & 517.661 & 11.053 \\ \hline
-% 2  & 11-6-2  & 1.046   & 0.563   & 0.575   & 1.009   & 0.497   & 4.379  \\ \hline
-% 3  & 13-7-2  & 6.248   & 5.799   & 5.292   & 2.234   & 2.557   & 6.846  \\ \hline
-% 4  & 15-8-2  & 4.970   & 52.624  & 14.054  & 6.699   & 11.866  & 6.230  \\ \hline
-% 5  & 17-9-2  & 111.867 & 557.91  & 216.578 & 130.808 & 94.718  & 6.465  \\ \hline
-% 6  & 19-10-2 & timeout & timeout & timeout & timeout & timeout & 26.64  \\ \hline
-% 7  & 3-2-2   & 0.000   & 0.000   & 56.972  & 0.000   & 0.000   & 2.093  \\ \hline
-% 8  & 3-6-6   & 0.180   & 0.205   & 0.109   & 0.278   & 0.169   & 10.312 \\ \hline
-% 9  & 3-8-5   & 0.502   & 1.717   & 1.418   & 1.547   & 0.628   & 56.358 \\ \hline
-% 10 & 3-9-5   & 1.069   & 0.655   & 1.340   & 1.380   & 0.640   & 82.176 \\ \hline
-% 11 & 3-9-6   & 306.944 & 0.580   & 4.140   & 1.477   & 0.533   & 31.607 \\ \hline
-% 12 & 4-3-3   & 0.002   & 0.003   & timeout & 0.002   & 0.001   & 2.007  \\ \hline
-% 13 & 4-7-6   & 81.296  & 77.511  & 50.199  & 72.194  & 44.430  & 9.751  \\ \hline
-% 14 & 4-8-7   & 125.053 & 152.723 & 160.164 & 136.409 & 130.173 & 15.065 \\ \hline
-% 15 & 4-9-7   & 465.916 & 527.547 & 395.003 & timeout & 355.345 & 19.324 \\ \hline
-% 16 & 5-10-4  & timeout & timeout & 0.109   & timeout & timeout & 285.259 \\ \hline
-% 17 & 5-10-5  & timeout & timeout & 1.418   & timeout & timeout & 18.652 \\ \hline
-% 18 & 5-3-1   & 0.001   & 0.002   & 0.001   & 0.001   & 0.000   & 22.976 \\ \hline
-% 19 & 5-3-2   & 0.001   & 0.002   & timeout & timeout & 0.001   & 2.400  \\ \hline
-% 20 & 5-3-3   & 0.004   & 0.009   & 0.008   & 0.003   & 0.004   & 23.833 \\ \hline
-% 21 & 5-3-4   & 0.008   & 0.024   & 0.015   & 0.015   & 0.016   & 3.322  \\ \hline
-% 22 & 5-3-5   & 0.053   & 0.047   & 0.048   & 0.044   & 0.026   & 6.579  \\ \hline
-% 23 & 5-3-6   & 0.390   & 0.292   & 0.447   & 0.162   & 0.152   & 6.753  \\ \hline
-% 24 & 5-3-7   & 3.063   & 0.997   & 1.135   & 0.698   & 1.663   & 11.83  \\ \hline
-% 25 & 5-4-4   & 0.209   & 0.091   & 0.177   & 0.169   & 0.219   & 3.125  \\ \hline
-% 26 & 5-7-5   & timeout & timeout & timeout & timeout & timeout & 13.990 \\ \hline
-% 27 & 5-8-3   & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 28 & 6-5-5   & timeout & 529.862 & 14.572  & timeout & timeout & 9.513  \\ \hline
-% 29 & 6-7-4   & timeout & timeout & timeout & timeout & timeout & 7.886  \\ \hline
-% 30 & 6-9-4   & timeout & timeout & timeout & timeout & timeout & 9.702  \\ \hline
-% 31 & 7-4-2   & 0.008   & 0.036   & 0.042   & 0.016   & 0.005   & 2.776  \\ \hline
-% 32 & 7-6-3   & 1.539   & 1.311   & 2.033   & 1.694   & 0.918   & 6.238  \\ \hline
-% 33 & 7-7-3   & 3.252   & 7.394   & 3.936   & 5.278   & 3.054   & 13.089 \\ \hline
-% 34 & 8-10-3  & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 35 & 8-4-1   & 0.004   & 0.007   & 0.006   & 0.003   & 0.003   & 9.092  \\ \hline
-% 36 & 8-4-10  & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 37 & 8-4-2   & 0.015   & 0.064   & 0.035   & 0.008   & 0.016   & 48.209 \\ \hline
-% 38 & 8-4-3   & 0.154   & 0.219   & 0.174   & 0.107   & 0.052   & 5.156  \\ \hline
-% 39 & 8-4-4   & 0.489   & 0.571   & 0.365   & 0.327   & 0.143   & 5.747  \\ \hline
-% 40 & 8-4-5   & 0.782   & 2.303   & 1.659   & 0.957   & 0.658   & 9.535  \\ \hline
-% 41 & 8-4-6   & 3.218   & 5.499   & 3.779   & 1.531   & 2.534   & 11.801 \\ \hline
-% 42 & 8-4-7   & 35.053  & 15.349  & 31.913  & 65.934  & 16.980  & 23.403 \\ \hline
-% 43 & 8-4-8   & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 44 & 8-4-9   & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 45 & 9-4-10  & timeout & timeout & timeout & timeout & timeout & timeout \\ \hline
-% 46 & 9-4-6   & 4.690   & 4.616   & 3.055   & 3.099   & 2.693   & timeout \\ \hline
-% 47 & 9-4-7   & 22.127  & 23.446  & 8.997   & 11.715  & 4.909   & timeout \\ \hline
-% 48 & 9-4-8   & 85.763  & 56.972  & 197.205 & 156.77  & 95.362  & 73.525 \\ \hline
-% 49 & 9-4-9   & timeout & timeout & timeout & timeout & timeout & 76.347 \\ \hline
-% 50 & 9-5-2   & 0.151   & 0.351   & 0.193   & 0.215   & 0.106   & 3.932  \\ \hline
-% \end{longtable}
-
-
-
-
-
-
+context System::stop(app : Application)
+    pre isRunning: self.runningApps->includes(app)
+            and self.installedApps->includes(app)
+    post notRunning: self.runningApps = self.runningApps@pre->excluding(app)
+    post sameInstalled: self.installedApps = self.installedApps@pre
+    post sameLoaded: self.loadedApps = self.loadedApps@pre
+    post sameMemory: self.freeMemory = self.freeMemory@pre
+    post unchanged:
+        self.apps->forAll(app |
+            app.size = app.size@pre and
+            app.id = app.id@pre)
+\end{lstlisting}
 

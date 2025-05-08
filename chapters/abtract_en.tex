@@ -6,80 +6,27 @@
 
 \begin{small}
 
-\textbf{Abstract:} In Model-Driven Engineering (MDE), models serve as central artifacts 
+\textbf{Abstract:} In Model-Driven Engineering (MDE), models serve as primary artifacts 
 for abstracting and designing software systems. The Unified Modeling Language (UML) and 
 the Object Constraint Language (OCL) are widely used for specifying structural and 
-behavioral properties of these models. However, OCL is fundamentally limited in expressing 
-properties that span multiple system states or involve event occurrences, making it 
-challenging to specify and verify dynamic aspects of systems. This thesis addresses this 
-limitation by introducing TOCL+ (Temporal OCL+), an extension of OCL with temporal operators
-and event constructs. TOCL+ enables developers to specify complex temporal properties such as
-safety, and liveness constraints using familiar OCL syntax, while incorporating 
-temporal logic concepts. We present a systematic transformation approach that converts
-TOCL+ expressions into standard OCL constraints interpreted over filmstrip models—representations
-of system execution paths as sequences of snapshots. This transformation enables verification 
-of temporal properties using existing OCL tools without requiring specialized temporal logic
+behavioral properties of these models. However, OCL has fundamental limitations in 
+expressing properties that span multiple system states or involve event occurrences, 
+making it challenging to specify and verify dynamic aspects of systems. This thesis 
+addresses these limitations by introducing TOCL+ (Temporal OCL+), an extension of OCL 
+with temporal operators and event constructs. TOCL+ enables developers to specify 
+complex temporal properties such as safety and liveness constraints using familiar 
+OCL syntax, while incorporating temporal logic concepts. We present a systematic 
+transformation approach that converts TOCL+ expressions into standard OCL constraints 
+interpreted over filmstrip models—representations of system execution paths as 
+sequences of snapshots. This transformation enables verification of temporal 
+properties using existing OCL tools without requiring specialized temporal logic
 model checkers. We implement this approach as a plugin for the UML-based Specification 
-Environment (USE) tool and demonstrate its effectiveness through a software system case study,
-showing how our approach bridges the gap between intuitive temporal specification and 
-practical model verification.
+Environment (USE) tool and demonstrate its effectiveness through a software system 
+case study, showing how our approach bridges the gap between intuitive temporal 
+specification and practical model verification.
   
+\textbf{Keywords}: \textit{Model-Driven Engineering, Object Constraint Language, 
+Temporal Properties, Event Specification, Model Verification, Filmstrip Models, 
+OCL Extensions, USE Tool, Formal Verification}
 
-% \textbf{Abstract:} In Model-Driven Engineering (MDE), models serve as central artifacts 
-% for abstracting and designing software systems. Modern software systems often need 
-% to express and verify behaviors that involve temporal constraints and event-driven 
-% conditions. The Unified Modeling Language (UML) and the Object Constraint Language
-% (OCL) are widely used in MDE to model systems and specify constraints. While OCL is
-% effective for defining structural and simple behavioral properties, it lacks the
-% ability to express temporal constraints and event-based behaviors. This limitation
-% makes it challenging to specify and verify dynamic aspects of systems. This thesis
-% proposes an extension of OCL with temporal and event-based constructs to enhance
-% its ability to express and verify behavioral properties. We implement this extension
-% as a plugin, called TemporalOCL, for the UML-based Specification Environment (USE) tool.
-
-\textbf{Keywords}: \textit{Model-Driven Engineering, Object Constraints Language, Temporal Properties, Model Checking}
-  
 \end{small}
-
-% Khoá luận của tôi sẽ được sử dụng một công cụ tên USE (UML-based Specification Environment), công cụ này hỗ trợ đặc tả mô hình theo cú pháp của uml và ocl. Công cụ còn có một plugin là Model Validator. USE Model Validator sẽ hỗ trợ validate mô hình trên các ocl  constraints đã định nghĩa, nó sẽ trả về một object diagram nếu mô hình có thể thoả mãn (SATISFIABLE case) hoặc UNSATISFIABLE. Nhưng mô hình uml và ocl chỉ đặc tả các thuộc tính cấu trúc mà không thể hiện được thuộc tính thời gian (system execution path). Tôi sẽ sử dụng một plugin khác của USE để chuyển đổi mô hình ban đầu thành dạng filmstrip (là mô hình gốc ban đầu và thêm các class Snapshot, OperationCall) để thể hiện system execution path thành dạng sequence of snapshot.
-  % tôi đang viết khoá luận của mình với đề tài: "A SUPPORT TOOL TO SPECIFY AND VERIFY TEMPORAL PROPERTIES IN OCL". Mục tiêu chính của khoá luận là mở rộng ngôn ngữ ocl để hỗ trợ đặc tả thuộc tính thời gian (temporal properties) và sự kiện (event) từ đó kiểm tra tính đúng đắn của mô hình trong kỹ thuật model-driven engineering. Khoá luận của tôi sẽ được sử dụng một công cụ tên USE (UML-based Specification Environment), công cụ này hỗ trợ đặc tả mô hình theo cú pháp của uml và ocl. Công cụ còn có một plugin là Model Validator. USE Model Validator sẽ hỗ trợ validate mô hình trên các ocl  constraints đã định nghĩa, nó sẽ trả về một object diagram nếu mô hình có thể thoả mãn (SATISFIABLE case) hoặc UNSATISFIABLE. Nhưng mô hình uml và ocl chỉ đặc tả các thuộc tính cấu trúc mà không thể hiện được thuộc tính thời gian (system execution path). Tôi sẽ sử dụng một plugin khác của USE để chuyển đổi mô hình ban đầu thành dạng filmstrip (là mô hình gốc ban đầu và thêm các class Snapshot, OperationCall) để thể hiện system execution path thành dạng sequence of snapshot.. tôi muốn bạn đóng vai một giáo sư giúp tôi cấu trúc khoá luận của tôi. Hiện tại tôi đang dự kiến khoá luận sẽ có 5 phần chính. Phần 1 introduction sẽ giới thiệu về bài toán xoay quanh model-driven engineering và việc đảm bảo tính đúng đắn của mô hình và việc validate chúng. Nhưng hiện tại OCL có những giới hạn về việc đặc tả các thuộc tính thời gian và event. Phần 2: Foundational Knowledge sẽ tập trung và các kiến thức nền tảng (kiến thức về mde, ocl, USE tool, Filmstrip model, antlr4, TOCL operators, events trong OOP paradigm, ...). Phần 3: OCL Extension sẽ là phần trình bày về phương pháp mà tôi đã sử dụng (phần đóng góp chính). Khoá luận của tôi sử dụng TOCL operators (always P, sometime P, sometime P before Q, next P, previous P, ...) là kết quả của một bài báo khác, họ áp dụng cho mô hình STM (Snpashot Transition Model) (Khác với Filmstrip của tôi một chút). Tôi có tận dụng kết quả đó và điều chỉnh cho mô hình Filmstrip của tôi, bên cạnh đó  tôi còn mở rộng định nghĩa event cho ocl (isCalled(operation) =  operation (call/start/end) events in OOP paradigm, becomesTrue(P) = state change events in OOP paradigm). Phần 4: Implementation and Experiments, tôi thực hiện phương pháp đưa ra bằng việc phát triển một plugin của công cụ USE. Plugin này sẽ thực hiện việc chuyển đổi TOCL (định nghĩa dựa trên UML&OCL Application model) sang OCL thông thường (Định nghĩa trên Filmstrip model). Phần 5 là kết luận.  
-
-%%% Version 3
-% In Model-Driven Engineering (MDE), models serve as central artifacts 
-% for abstracting and designing software systems. The Unified Modeling Language (UML) and 
-% the Object Constraint Language (OCL) are widely used to define structural and behavioral 
-% aspects of these models. As system models grow in size and complexity, the need for effective 
-% validation and verification becomes critical. However, current UML modeling and verification tools 
-% primarily focus on structural analysis and offer limited support for specifying dynamic system 
-% behavior over time, due to OCL's foundation in first-order logic which cannot express properties across different model states. 
-% This thesis proposes an extension of OCL with temporal and event-based constructs to enhance its 
-% ability to express and verify behavioral properties. We implement this extension as a plugin, called 
-% TemporalOCL, for the UML-based Specification Environment (USE). USE is a tool that supports the 
-% development of UML models enhanced with OCL constraints and includes a model validator component for 
-% analyzing structural properties of UML models. To enable practical validation of temporal specifications, 
-% we employ a technique known as filmstripping, which transforms dynamic model properties into structural 
-% constraints that can be analyzed using our USE model validator.
-
-%%% Version 2
-% In Model-Driven Engineering (MDE), models serve as central artifacts 
-% for abstracting and designing software systems. The Unified Modeling Language (UML) and 
-% the Object Constraint Language (OCL) are widely used to define structural and behavioral 
-% aspects of these models. As system models grow in size and complexity, the need for effective 
-% validation and verification becomes critical. However, current UML modeling and verification 
-% tools primarily focus on structural analysis and offer limited support for specifying temporal behaviors and system 
-% events, due to OCL’s foundation in first-order logic. This thesis proposes an extension of 
-% OCL with temporal and event-based constructs to improve its expressiveness. We implement this 
-% extension as a plugin, called TemporalOCL, for the UML-based Specification Environment (USE). 
-% To enable validation of temporal properties, we adopt a technique known as filmstripping, 
-% which allows dynamic aspects of models to be analyzed using the USE model validator.
-  
-%%% Version 1
-% In Model-Driven Engineering (MDE), models are used as an abstraction
-% of a system. The Unified Modeling Language (UML) and the Object Constraint Language (OCL) 
-% is widely used for modeling and specifying constraints in MDE. As the size and complexity
-% of models increase, the need for validation and verification becomes crucial. There are 
-% a variety of verification and validation techniques available which mainly concentrate on structural
-% characteristics of the model. Another problem is that OCL lacks the expressiveness to specify
-% temporal properties and system events. In this thesis, we propose an extension of OCL
-% to support the specification of temporal properties and events. We also present a plugin for the
-% UML-based Specification Environment (USE) that allows users to specify and verify temporal properties. 

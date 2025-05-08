@@ -13,10 +13,11 @@ Modern software development faces significant challenges as
 systems grow increasingly complex. Traditional development approaches relying on 
 manual coding often struggle to manage this complexity, leading to higher error
 rates and extended development cycles. These problems often come from the development 
-process, not the system requirements. Model-Driven Engineering (MDE) \cite{MDE} helps 
-solve this by shifting the focus to models instead of code. In MDE, developers use 
-models to design systems, and tools can automatically generate code, documentation, 
-and tests from them. The Unified Modeling Language (UML) \cite{UML} and the Object 
+process, not the system requirements. Model-Driven Engineering (MDE) \cite{MDE} 
+addresses these challenges by shifting the focus from code to models. 
+In MDE, developers use models to design systems, and tools can automatically generate 
+code, documentation, and tests from those models. 
+The Unified Modeling Language (UML) \cite{UML} and the Object 
 Constraint Language (OCL) \cite{OCL} have become the \textit{de facto} standards 
 for model-driven approaches. UML provides a rich set of visual modeling concepts to 
 represent the structural and behavioral aspects of a system, while OCL allows 
@@ -27,19 +28,33 @@ lacks the expressiveness to model these dynamic aspects, which limits its abilit
 to specify and verify temporal properties and event-based behaviors.
 
 This thesis aims to address this limitation by extending OCL with constructs for
-temporal properties and events, enhancing its expressiveness in modeling dynamic 
-system aspects. We implement this extension as a plugin, called TOCL+, for the 
+temporal properties and events, thereby enhancing its expressiveness in modeling dynamic 
+system aspects. We implement this extension, called TOCL+, as a plugin for the 
 UML-based Specification Environment (USE) \cite{USE}, a tool that supports the 
-specification and validation of software systems using UML and OCL. To enable not 
-only specification but also verification of temporal properties, we employ a 
+specification and validation of software systems using UML and OCL. To enable both
+specification and verification of temporal properties, we employ a 
 technique known as filmstripping \cite{Filmstripping}, which transforms models 
 with dynamic temporal constraints into structurally equivalent models that can 
 be analyzed using existing verification tools. Our plugin automatically translates 
-temporal OCL expressions into standard OCL constraints on a filmstrip model, 
+temporal OCL expressions into standard OCL constraints on filmstrip models, 
 allowing modelers to leverage the existing USE model validator \cite{USE_Validator} 
 for verification. This approach bridges the gap between expressing temporal 
 requirements and verifying them, providing a complete solution that integrates 
 seamlessly with the established USE environment and its validation capabilities.
+% This thesis aims to address this limitation by extending OCL with constructs for
+% temporal properties and events, enhancing its expressiveness in modeling dynamic 
+% system aspects. We implement this extension as a plugin, called TOCL+, for the 
+% UML-based Specification Environment (USE) \cite{USE}, a tool that supports the 
+% specification and validation of software systems using UML and OCL. To enable not 
+% only specification but also verification of temporal properties, we employ a 
+% technique known as filmstripping \cite{Filmstripping}, which transforms models 
+% with dynamic temporal constraints into structurally equivalent models that can 
+% be analyzed using existing verification tools. Our plugin automatically translates 
+% temporal OCL expressions into standard OCL constraints on a filmstrip model, 
+% allowing modelers to leverage the existing USE model validator \cite{USE_Validator} 
+% for verification. This approach bridges the gap between expressing temporal 
+% requirements and verifying them, providing a complete solution that integrates 
+% seamlessly with the established USE environment and its validation capabilities.
 
 The thesis is structured as follows:
 \begin{itemize}
@@ -51,74 +66,3 @@ The thesis is structured as follows:
 
   \item \textbf{Conclusion} summarizes the contributions of this thesis and discusses future work.
 \end{itemize}
-% The thesis is structured as follows:
-% \begin{itemize}
-%   \item \textbf{Chapter 1}: This chapter lays the foundation for the background of this thesis.
-%   We explore theoretical concepts and tools that are used in this thesis.
-  
-%   \item \textbf{Chapter 2}: This chapter presents our OCL extension to specify temporal properties and events.
-
-%   \item \textbf{Chapter 3}: This chapter describes the implementation and evaluation of the USE-TemporalOCL plugin. 
-
-%   \item \textbf{Conclusion}: This chapter summarizes the contributions of this thesis and discusses future work.
-% \end{itemize}
-
-%%% Version 2
-% Model-Driven Engineering (MDE) \cite{MDE} approaches system development 
-% by emphasizing models over source code. Through modeling languages such as UML 
-% and OCL, developers construct models that abstract the system complexity and serve as primary development artifacts. 
-% These models can then be transformed into executable code, documentation, and test cases using automated 
-% model transformation techniques. Techniques like validation and verification help 
-% ensure the models’ quality, with structural aspects-represented by class and object 
-% diagrams-being particularly important.
-
-% The Unified Modeling Language (UML) offers a standard way to create diagrams that show 
-% a system’s structure and behavior, while the Object Constraint Language (OCL) adds precise 
-% rules to these models. OCL uses simple logic to define conditions that must always be true 
-% or requirements for operations. However, it lacks the expressive power to model temporal properties 
-% that involve different states of the model or depend on event occurrences. 
-% This limitation stems from the absence of built-in constructs for handling time and events in OCL.
-
-% In this thesis, we extend OCL to support the specification of temporal properties and 
-% event-based behaviors, aiming to enhance its expressiveness in modeling dynamic system 
-% aspects. 
-% Our approach is implemented within the UML-based Specification Environment (USE) \cite{USE}, 
-% a tool that supports specification, and validation of software systems using UML and OCL. 
-% USE allows modelers to work with various UML diagrams and define constraints through invariants and 
-% pre-/postconditions. It also provides validation and verification capabilities via the model 
-% validator component, which translates models and properties into relational logic using Kodkod. 
-% As a realization of this thesis, we worked on a plugin for USE that called USE-TemporalOCL, 
-% which allows users to specify temporal properties and events in OCL.
-
-
-%%% Version 1
-% Model-driven engineering (MDE) takes a view on system development focusing on
-% models rather than on code. Using modeling languages like UML and OCL, developers create models 
-% that abstract the system’s complexity and serve as the central artifacts 
-% in MDE. From these models, code, documentation, and test cases can be 
-% automatically generated through model transformations. Techniques like validation 
-% and verification help ensure the models’ quality, with structural aspects - 
-% represented by class and object diagrams - being particularly important.
-
-% Traditional software engineering, reliant on manual coding, 
-% struggles with increasingly large, complex projects despite aiming for reliable and efficient systems. 
-% This causes inefficiencies not from software requirements but from development 
-% process limitations, driving the need for simpler, more flexible approaches. 
-% To address these challenges, 
-% Model Driven Engineering (MDE) \cite{MDE} offers a promising methodology 
-% aimed at reducing accidental complexities by focusing on models over code. 
-% Using modeling languages like UML and OCL, developers create models 
-% that abstract the system’s complexity and serve as the central artifacts 
-% in MDE. From these models, code, documentation, and test cases can be 
-% automatically generated through model transformations. Techniques like validation 
-% and verification help ensure the models’ quality, with structural aspects - 
-% represented by class and object diagrams - being particularly important.
-
-% Software engineering aims to build reliable and 
-% efficient systems, but as projects become larger and more complex, 
-% traditional development methods face many challenges. These methods 
-% often rely heavily on manual coding, which can’t always keep up with 
-% growing demands. As a result, problems and inefficiencies can occur—not 
-% because of the software’s requirements, but because of how the 
-% development process is handled. This shows the need for new approaches 
-% that can make development easier and more flexible.

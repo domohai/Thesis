@@ -19,54 +19,68 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
-    \entry{UML_Reference_Manual}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=b8ace965f1ffa84dd4512f7e64c62d75}{%
-           family={Rumbaugh},
-           familyi={R\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod}}}%
-        {{hash=3e8f03cc324f52193ab00c1fab4df61a}{%
-           family={Jacobson},
-           familyi={J\bibinitperiod},
-           given={Ivar},
-           giveni={I\bibinitperiod}}}%
-        {{hash=e4f07715269e006a4d4a4efa3ce3f996}{%
-           family={Booch},
-           familyi={B\bibinitperiod},
-           given={Grady},
-           giveni={G\bibinitperiod}}}%
+    \entry{LTL}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=48771ab1876a9bd3472621189d78fe6f}{%
+           family={Pnueli},
+           familyi={P\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {GBR}%
+      \list{organization}{1}{%
+        {IEEE}%
       }
-      \list{publisher}{1}{%
-        {Addison-Wesley Longman Ltd.}%
-      }
-      \strng{namehash}{6385cf8d48142625a33e857e6f69df87}
-      \strng{fullhash}{6385cf8d48142625a33e857e6f69df87}
-      \strng{fullhashraw}{6385cf8d48142625a33e857e6f69df87}
-      \strng{bibnamehash}{6385cf8d48142625a33e857e6f69df87}
-      \strng{authorbibnamehash}{6385cf8d48142625a33e857e6f69df87}
-      \strng{authornamehash}{6385cf8d48142625a33e857e6f69df87}
-      \strng{authorfullhash}{6385cf8d48142625a33e857e6f69df87}
-      \strng{authorfullhashraw}{6385cf8d48142625a33e857e6f69df87}
+      \strng{namehash}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{fullhash}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{fullhashraw}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{bibnamehash}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{authorbibnamehash}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{authornamehash}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{authorfullhash}{48771ab1876a9bd3472621189d78fe6f}
+      \strng{authorfullhashraw}{48771ab1876a9bd3472621189d78fe6f}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{020130998X}
-      \field{title}{The Unified Modeling Language reference manual}
-      \field{year}{1998}
-      \verb{doi}
-      \verb 10.5555/294049
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/book/10.5555/294049
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/book/10.5555/294049
-      \endverb
+      \field{booktitle}{18th annual symposium on foundations of computer science (sfcs 1977)}
+      \field{title}{The temporal logic of programs}
+      \field{year}{1977}
+      \field{pages}{46\bibrangedash 57}
+      \range{pages}{12}
+    \endentry
+    \entry{TOCL}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=7290cdc4a20752c0b93a480d5a984b8c}{%
+           family={Ziemann},
+           familyi={Z\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=efee28c1804bcc4a8a6d23461cb0dcc1}{%
+           family={Gogolla},
+           familyi={G\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d809eea49991801fc6699d2de18f8b64}
+      \strng{fullhash}{d809eea49991801fc6699d2de18f8b64}
+      \strng{fullhashraw}{d809eea49991801fc6699d2de18f8b64}
+      \strng{bibnamehash}{d809eea49991801fc6699d2de18f8b64}
+      \strng{authorbibnamehash}{d809eea49991801fc6699d2de18f8b64}
+      \strng{authornamehash}{d809eea49991801fc6699d2de18f8b64}
+      \strng{authorfullhash}{d809eea49991801fc6699d2de18f8b64}
+      \strng{authorfullhashraw}{d809eea49991801fc6699d2de18f8b64}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Andrei Ershov Memorial Conference on Perspectives of System Informatics}
+      \field{title}{OCL extended with temporal logic}
+      \field{year}{2003}
+      \field{pages}{351\bibrangedash 357}
+      \range{pages}{7}
     \endentry
     \entry{MDE}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -81,6 +95,9 @@
            given={Bernhard},
            giveni={B\bibinitperiod}}}%
       }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
       \strng{namehash}{24376de1522eb823479598a13aec78fe}
       \strng{fullhash}{24376de1522eb823479598a13aec78fe}
       \strng{fullhashraw}{24376de1522eb823479598a13aec78fe}
@@ -93,15 +110,11 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Future of Software Engineering (FOSE '07)}
-      \field{title}{Model-driven Development of Complex Software: A Research Roadmap}
+      \field{booktitle}{Future of Software Engineering (FOSE'07)}
+      \field{title}{Model-driven development of complex software: A research roadmap}
       \field{year}{2007}
       \field{pages}{37\bibrangedash 54}
       \range{pages}{18}
-      \verb{doi}
-      \verb 10.1109/FOSE.2007.14
-      \endverb
-      \keyw{Software systems;Model driven engineering;Programming;Computer science;Unified modeling language;Software testing;Systems engineering and theory;Computer industry;Streaming media;Reliability engineering}
     \endentry
     \entry{USE}{article}{}{}
       \name{author}{3}{}{%
@@ -121,11 +134,8 @@
            given={Mark},
            giveni={M\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {USA}%
-      }
       \list{publisher}{1}{%
-        {Elsevier North-Holland, Inc.}%
+        {Elsevier}%
       }
       \strng{namehash}{3cfa4d6a80f6fddf63f05f5cec1355db}
       \strng{fullhash}{3cfa4d6a80f6fddf63f05f5cec1355db}
@@ -139,26 +149,13 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Unified Modeling Language (UML) is accepted today as an important standard for developing software. UML tools however provide little support for validating and checking models in early development phases. There is also no substantial support for the Object Constraint Language (OCL). We present an approach for the validation of UML models and OCL constraints based on animation and certification. The USE tool (UML-based Specification Environment) supports analysts, designers and developers in executing UML models and checking OCL constraints and thus enables them to employ model-driven techniques for software production.}
-      \field{issn}{0167-6423}
-      \field{journaltitle}{Sci. Comput. Program.}
-      \field{month}{12}
-      \field{number}{1–3}
+      \field{journaltitle}{Science of Computer Programming}
+      \field{number}{1-3}
       \field{title}{USE: A UML-based specification environment for validating UML and OCL}
       \field{volume}{69}
       \field{year}{2007}
       \field{pages}{27\bibrangedash 34}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.1016/j.scico.2007.01.013
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1016/j.scico.2007.01.013
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1016/j.scico.2007.01.013
-      \endverb
-      \keyw{Constraint,Invariant,Model,Model certification,Model execution,Model validation,OCL,Pre- and post-conditions,UML}
     \endentry
     \entry{Kodkod}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -173,11 +170,8 @@
            given={Daniel},
            giveni={D\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Braga, Portugal}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Verlag}%
+      \list{organization}{1}{%
+        {Springer}%
       }
       \strng{namehash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
       \strng{fullhash}{c8538fcc3ee5f474896e0ce1cdc6e7ff}
@@ -191,11 +185,8 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The key design challenges in the construction of a SAT-based relational model finder are described, and novel techniques are proposed to address them. An efficient model finder must have a mechanism for specifying partial solutions, an effective symmetry detection and breaking scheme, and an economical translation from relational to boolean logic. These desiderata are addressed with three new techniques: a symmetry detection algorithm that works in the presence of partial solutions, a sparse-matrix representation of relations, and a compact representation of boolean formulas inspired by boolean expression diagrams and reduced boolean circuits. The presented techniques have been implemented and evaluated, with promising results.}
-      \field{booktitle}{Proceedings of the 13th International Conference on Tools and Algorithms for the Construction and Analysis of Systems}
-      \field{isbn}{9783540712084}
-      \field{series}{TACAS'07}
-      \field{title}{Kodkod: a relational model finder}
+      \field{booktitle}{International Conference on Tools and Algorithms for the Construction and Analysis of Systems}
+      \field{title}{Kodkod: A relational model finder}
       \field{year}{2007}
       \field{pages}{632\bibrangedash 647}
       \range{pages}{16}
@@ -267,11 +258,8 @@
            given={Martin},
            giveni={M\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Zurich, Switzerland}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Verlag}%
+      \list{organization}{1}{%
+        {Springer}%
       }
       \strng{namehash}{194837867b4689b08f1d497470d76340}
       \strng{fullhash}{194837867b4689b08f1d497470d76340}
@@ -285,10 +273,7 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Object Constraint Language (OCL) substantially enriches modeling languages like UML, MOF or EMF with respect to formulating meaningful model properties. In model-centric approaches, an accurately defined model is a requisite for further use. During development of a model, continuous validation of properties and feedback to developers is required, since many design flaws can then be directly discovered and corrected. For this purpose, lightweight validation approaches which allow developers to perform automatic model analysis are particularly helpful. We provide a new method for efficiently searching for model instances. The existence or non-existence of model instances with certain properties allows significant conclusions about model properties. Our approach is based on the translation of UML and OCL concepts into relational logic and its realization with SAT solvers. We explain various use cases of our proposal, for example, completion of partly defined model instances so that particular properties hold in the completed model instances. Our proposal is realized by integrating a model validator as a plugin into the UML and OCL tool USE}
-      \field{booktitle}{Proceedings of the 49th International Conference on Objects, Models, Components, Patterns}
-      \field{isbn}{9783642219511}
-      \field{series}{TOOLS'11}
+      \field{booktitle}{International Conference on Modelling Techniques and Tools for Computer Performance Evaluation}
       \field{title}{Extensive validation of OCL models by integrating SAT solving into USE}
       \field{year}{2011}
       \field{pages}{290\bibrangedash 306}
@@ -361,23 +346,8 @@
            given={Martin},
            giveni={M\bibinitperiod}}}%
       }
-      \name{editor}{2}{}{%
-        {{hash=4f89e18da939d2df2931b7fb2951afb5}{%
-           family={Di\bibnamedelima Ruscio},
-           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
-           given={Davide},
-           giveni={D\bibinitperiod}}}%
-        {{hash=f54190ff266e02128b40dbab3fe1f605}{%
-           family={Varró},
-           familyi={V\bibinitperiod},
-           given={Dániel},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Cham}%
-      }
-      \list{publisher}{1}{%
-        {Springer International Publishing}%
+      \list{organization}{1}{%
+        {Springer}%
       }
       \strng{namehash}{b70560ea83e0b855644d3a83570fa78c}
       \strng{fullhash}{b70560ea83e0b855644d3a83570fa78c}
@@ -387,18 +357,12 @@
       \strng{authornamehash}{b70560ea83e0b855644d3a83570fa78c}
       \strng{authorfullhash}{b70560ea83e0b855644d3a83570fa78c}
       \strng{authorfullhashraw}{b70560ea83e0b855644d3a83570fa78c}
-      \strng{editorbibnamehash}{562520ebd044e52b7930109e3f8505c8}
-      \strng{editornamehash}{562520ebd044e52b7930109e3f8505c8}
-      \strng{editorfullhash}{562520ebd044e52b7930109e3f8505c8}
-      \strng{editorfullhashraw}{562520ebd044e52b7930109e3f8505c8}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This contribution presents an automatic transformation from UML and OCL models into enriched UML and OCL models, so-called filmstrip models, which embody temporal information when employing OCL while maintaining the same functionality as the original model. The approach uses a combination of object and sequence diagrams that allows for a wide range of possible OCL constraints about sequences of operation calls and their temporal properties. The modeler does not need to account for such properties while creating the original model. Errors found by constraints for the filmstrip model can easily be related back to the original model, as the elements of the filmstrip model are synchronized with the original model and the backwards calculation is generally simple. The approach is implemented in a UML and OCL modeling tool.}
-      \field{booktitle}{Theory and Practice of Model Transformations}
-      \field{isbn}{978-3-319-08789-4}
-      \field{title}{Transformation of UML and OCL Models into Filmstrip Models}
+      \field{booktitle}{International Conference on Theory and Practice of Model Transformations}
+      \field{title}{Transformation of UML and OCL models into filmstrip models}
       \field{year}{2014}
       \field{pages}{170\bibrangedash 185}
       \range{pages}{16}
@@ -416,6 +380,9 @@
            given={Safouan},
            giveni={S\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
       \strng{namehash}{24c7c863856e394adc47593456b96bd6}
       \strng{fullhash}{24c7c863856e394adc47593456b96bd6}
       \strng{fullhashraw}{24c7c863856e394adc47593456b96bd6}
@@ -428,25 +395,12 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Object Constraint Language (OCL) is widely used to express static constraints on models and object-oriented systems. However, the notion of dynamic constraints, controlling the system behavior over time, has not been natively supported. Such dynamic constraints are necessary to handle temporal and real-time properties of systems. In this paper, we first add a temporal layer to the OCL language, based syntactically on Dwyer et al.'s specification patterns. We enrich it with formal scenario-based semantics and integrate it into the current Eclipse OCL plug-in. Second, we translate, with a compositional approach, OCL temporal properties into finite-state automata and we connect our framework to automatic test generators. This way, we create a bridge linking model driven engineering and usual formal methods.}
-      \field{issn}{0167-6423}
-      \field{journaltitle}{Science of Computer Programming}
-      \field{note}{Selected Papers from the Fifth International Conference on Software Language Engineering (SLE 2012)}
+      \field{journaltitle}{Science of Computer programming}
       \field{title}{Specification of temporal properties with OCL}
       \field{volume}{96}
       \field{year}{2014}
       \field{pages}{527\bibrangedash 551}
       \range{pages}{25}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.scico.2014.02.029
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0167642314000963
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0167642314000963
-      \endverb
-      \keyw{OCL,Temporal patterns,Eclipse/MDT,Model-driven engineering,Formal methods}
     \endentry
     \entry{ProMoBox_related_work_3}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -501,9 +455,6 @@
       \field{year}{2014}
       \field{pages}{1\bibrangedash 20}
       \range{pages}{20}
-      \verb{doi}
-      \verb 10.1007/978-3-319-42063-6_15
-      \endverb
     \endentry
     \entry{MADES}{article}{}{}
       \name{author}{8}{}{%
@@ -603,9 +554,6 @@
       \field{year}{2016}
       \field{pages}{205\bibrangedash 220}
       \range{pages}{16}
-      \verb{doi}
-      \verb 10.1007/978-3-319-42063-6_15
-      \endverb
     \endentry
     \entry{verifying_filmstripping}{inproceedings}{}{}
       \name{author}{2}{}{%
@@ -694,9 +642,6 @@
       \field{year}{2016}
       \field{pages}{40\bibrangedash 45}
       \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/MoDeVVa.2016.10
-      \endverb
     \endentry
     \entry{OCL}{manual}{}{}
       \list{publisher}{1}{%
@@ -770,71 +715,33 @@
       \field{pages}{865\bibrangedash 888}
       \range{pages}{24}
     \endentry
-    \entry{TOCL}{inproceedings}{}{}
-      \name{author}{5}{}{%
-        {{hash=b886be6d961c9c7d500ed76bc5c2a5fd}{%
-           family={Lail},
-           familyi={L\bibinitperiod},
-           given={Mustafa\bibnamedelima Al},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=9f75bb10fbf1dc39d97fd389232f4568}{%
-           family={Rosales},
-           familyi={R\bibinitperiod},
-           given={Antonio},
-           giveni={A\bibinitperiod}}}%
-        {{hash=730a7182d15c0fe2548d9523f023fc4b}{%
-           family={Cardenas},
-           familyi={C\bibinitperiod},
-           given={Hector},
-           giveni={H\bibinitperiod}}}%
-        {{hash=8565c1d4f1042f88753e2da935654c0d}{%
-           family={Hamann},
-           familyi={H\bibinitperiod},
-           given={Lars},
+    \entry{UML_Reference_Manual}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=3bfa04cfb22c75d1949463c08259a56c}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Lvar},
            giveni={L\bibinitperiod}}}%
-        {{hash=b3bf172c5c6954c3a908fd512f16ff4f}{%
-           family={Perez},
-           familyi={P\bibinitperiod},
-           given={Alfredo},
-           giveni={A\bibinitperiod}}}%
+        {{hash=d3c59b74daca22a421fbe2a63e6590c7}{%
+           family={Booch},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelimb Rumbaugh\bibnamedelima Grady},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Montreal, Quebec, Canada}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
-      \strng{namehash}{b55098733766b3ddb34ed942dcd48dcd}
-      \strng{fullhash}{c5150dd12cdf17514ac52c99aabb2375}
-      \strng{fullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
-      \strng{bibnamehash}{b55098733766b3ddb34ed942dcd48dcd}
-      \strng{authorbibnamehash}{b55098733766b3ddb34ed942dcd48dcd}
-      \strng{authornamehash}{b55098733766b3ddb34ed942dcd48dcd}
-      \strng{authorfullhash}{c5150dd12cdf17514ac52c99aabb2375}
-      \strng{authorfullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
-      \field{extraname}{1}
+      \strng{namehash}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{fullhash}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{fullhashraw}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{bibnamehash}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{authorbibnamehash}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{authornamehash}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{authorfullhash}{9f14bce1ab78ba1ed6340b6d06473aad}
+      \strng{authorfullhashraw}{9f14bce1ab78ba1ed6340b6d06473aad}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Specifying and verifying the temporal properties of UML-based systems can be challenging. Although there exist some extensions of OCL to support the specification of temporal properties, most of the approaches depend on using non-UML formalisms such as LTL, CTL, and CTL*. The approaches also rely on transforming the under-development UML models into non-UML model checking frameworks for verification. These approaches introduce complexities and relies on techniques and tools that are not within the UML spectrum. In this paper, we show how TOCL (one OCL extension for temporal properties specification) can be transformed into OCL for verification purposes. Towards this end, we created a formal EBNF grammar for TOCL, based on which a parser and a MOF metamodel were generated. To facilitate the analysis of the TOCL properties, we formally defined transformation rules from the TOCL metamodel to the OCL metamodel using QVTo. We validated the implementations of the transformation rules using USE.}
-      \field{booktitle}{Proceedings of the 25th International Conference on Model Driven Engineering Languages and Systems: Companion Proceedings}
-      \field{isbn}{9781450394673}
-      \field{series}{MODELS '22}
-      \field{title}{Transformation of TOCL temporal properties into OCL}
-      \field{year}{2022}
-      \field{pages}{899\bibrangedash 907}
-      \range{pages}{9}
-      \verb{doi}
-      \verb 10.1145/3550356.3563132
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3550356.3563132
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3550356.3563132
-      \endverb
-      \keyw{transformation,temporal propeties,UML,TOCL,OCL}
+      \field{title}{The unified modeling language reference manual}
+      \field{year}{2021}
     \endentry
     \entry{TOCL2OCL}{inproceedings}{}{}
       \name{author}{5}{}{%
@@ -864,12 +771,6 @@
            given={Alfredo},
            giveni={A\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Montreal, Quebec, Canada}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
       \strng{namehash}{b55098733766b3ddb34ed942dcd48dcd}
       \strng{fullhash}{c5150dd12cdf17514ac52c99aabb2375}
       \strng{fullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
@@ -878,29 +779,15 @@
       \strng{authornamehash}{b55098733766b3ddb34ed942dcd48dcd}
       \strng{authorfullhash}{c5150dd12cdf17514ac52c99aabb2375}
       \strng{authorfullhashraw}{c5150dd12cdf17514ac52c99aabb2375}
-      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Specifying and verifying the temporal properties of UML-based systems can be challenging. Although there exist some extensions of OCL to support the specification of temporal properties, most of the approaches depend on using non-UML formalisms such as LTL, CTL, and CTL*. The approaches also rely on transforming the under-development UML models into non-UML model checking frameworks for verification. These approaches introduce complexities and relies on techniques and tools that are not within the UML spectrum. In this paper, we show how TOCL (one OCL extension for temporal properties specification) can be transformed into OCL for verification purposes. Towards this end, we created a formal EBNF grammar for TOCL, based on which a parser and a MOF metamodel were generated. To facilitate the analysis of the TOCL properties, we formally defined transformation rules from the TOCL metamodel to the OCL metamodel using QVTo. We validated the implementations of the transformation rules using USE.}
       \field{booktitle}{Proceedings of the 25th International Conference on Model Driven Engineering Languages and Systems: Companion Proceedings}
-      \field{isbn}{9781450394673}
-      \field{series}{MODELS '22}
-      \field{title}{Transformation of TOCL temporal properties into OCL}
+      \field{title}{Transformation of tocl temporal properties into ocl}
       \field{year}{2022}
       \field{pages}{899\bibrangedash 907}
       \range{pages}{9}
-      \verb{doi}
-      \verb 10.1145/3550356.3563132
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3550356.3563132
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3550356.3563132
-      \endverb
-      \keyw{OCL,TOCL,UML,temporal properties,transformation}
     \endentry
     \entry{TPV}{inproceedings}{}{}
       \name{author}{5}{}{%
@@ -930,12 +817,6 @@
            given={Alfredo},
            giveni={A\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Lisbon, Portugal}%
-      }
-      \list{publisher}{1}{%
-        {Association for Computing Machinery}%
-      }
       \strng{namehash}{1a0f53bf862e4caf54e5200c4ec1965d}
       \strng{fullhash}{a8b1bed3841bece5b25643cc8bb11e06}
       \strng{fullhashraw}{a8b1bed3841bece5b25643cc8bb11e06}
@@ -948,24 +829,11 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Software scientists and practitioners have criticized Model-driven engineering (MDE) for lacking effective tooling. Although progress has been made, most MDE analysis tools rely on complex, heavyweight mathematical techniques that are not based on UML. Such tools require a steep learning curve and suffer from many accidental complexities. We developed the Temporal Property Validator (TPV) to tackle this issue. TPV allows designers to specify and analyze temporal properties using UML notations, techniques, and tools. We evaluated TPV using the user experience evaluation method and obtained promising results in all aspects of user needs. You can download TPV and view the demo video from https://github.com/mustafalail/TPV-Tool.}
       \field{booktitle}{Proceedings of the 2024 IEEE/ACM 46th International Conference on Software Engineering: Companion Proceedings}
-      \field{isbn}{9798400705021}
-      \field{series}{ICSE-Companion '24}
-      \field{title}{TPV: A Tool for Validating Temporal Properties in UML Class Diagrams}
+      \field{title}{Tpv: A tool for validating temporal properties in uml class diagrams}
       \field{year}{2024}
       \field{pages}{114\bibrangedash 118}
       \range{pages}{5}
-      \verb{doi}
-      \verb 10.1145/3639478.3640044
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1145/3639478.3640044
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1145/3639478.3640044
-      \endverb
-      \keyw{temporal propeties,OCL,UML,tool,model checking,verification}
     \endentry
   \enddatalist
 \endrefsection

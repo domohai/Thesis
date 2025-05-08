@@ -1,12 +1,5 @@
 \section{Verification of TOCL+ Properties}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1\textwidth]{figures/c2/Verification_approach_1.png}
-    \caption{Verification approach.}
-    \label{sec:verification_approach}
-\end{figure}
-
 \hspace{1cm} Figure \ref{sec:verification_approach} presents a comprehensive overview 
 of our verification approach for TOCL+ properties. The process begins when a UML 
 modeler creates an Application Model and specifies temporal properties using TOCL+. 
@@ -30,6 +23,13 @@ the translated constraints within a configurable search space defined in a prope
 file. The validator explores possible system states, reporting either SATISFIABLE 
 (when a valid system state exists that satisfies all constraints) or UNSATISFIABLE 
 (when no valid state can satisfy all constraints simultaneously).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/c2/Verification_approach_1.png}
+    \caption{Verification approach.}
+    \label{sec:verification_approach}
+\end{figure}
 
 In the following subsections, we explain each step in detail using our Software 
 System example from Figure \ref{fig:class_diagram_software_system}.
@@ -143,11 +143,6 @@ structural constraints within the filmstrip framework. The translation uses snap
 navigation and operation call existence checks to capture the temporal semantics of 
 the original property.
 
-The resulting OCL constraints serve as the input for the verification step that 
-follows, where they will be evaluated against potential system states to determine 
-if the model satisfies the specified temporal properties. The detailed implementation 
-of the interpretation process will be presented in Chapter 3.
-
 \begin{lstlisting}[
     style=toclstyle, 
     caption={OCL translation of liveness property.}, 
@@ -164,15 +159,19 @@ inv liveness:
     )
 \end{lstlisting}
 
+The resulting OCL constraints serve as the input for the verification step that 
+follows, where they will be evaluated against potential system states to determine 
+if the model satisfies the specified temporal properties. While this section has 
+provided an overview of the translation approach, the detailed implementation 
+of the transformation process from TOCL+ to OCL will be presented in the next section
+(Section \ref{sec:translation}).
+% The resulting OCL constraints serve as the input for the verification step that 
+% follows, where they will be evaluated against potential system states to determine 
+% if the model satisfies the specified temporal properties. The detailed implementation 
+% of the interpretation process will be presented in Chapter 3.
+
 
 \subsection{Step 3: Verifying the translated OCL expressions}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=1\textwidth]{figures/c2/ObjectDiagram_Liveness_LoadInstall.png}
-    \caption{Object Diagram returned by the Model Validator.}
-    \label{fig:object_diagram_liveness}
-\end{figure}
 
 \hspace{1cm} The final step in our verification approach employs the USE Model 
 Validator \cite{USE_Validator} to verify the OCL constraints generated in Step 2 
@@ -188,6 +187,75 @@ and associations. These bounds define the scope within which the Model Validator
 explores possible system configurations. Listing \ref{lst:configuration_file} shows 
 one specific configuration used in our Software System example.
 
+\begin{figure}[htbp]
+    \begin{minipage}[t]{0.48\textwidth}
+    \begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
+    Integer_min = 0
+    Integer_max = 100
+    String_max = 10
+    Real_min = -2.0
+    Real_max = 2.0
+    Real_step = 0.5
+    
+    ### Classes
+    # Snapshot
+    Snapshot_min = 3
+    Snapshot_max = 3
+    # Filmstrip
+    Filmstrip_min = 2
+    Filmstrip_max = 2
+    # System
+    System_min = 3
+    System_max = 3
+    # Application
+    Application_min = 6
+    Application_max = 6
+    
+    ### Operation Classes
+    # load_SystemOpC
+    load_SystemOpC_min = 1
+    load_SystemOpC_max = 1
+    # install_SystemOpC
+    install_SystemOpC_min = 1
+    install_SystemOpC_max = 1
+    \end{lstlisting}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+    \begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
+    # run_SystemOpC
+    run_SystemOpC_min = 0
+    run_SystemOpC_max = 0
+    # stop_SystemOpC
+    stop_SystemOpC_min = 0
+    stop_SystemOpC_max = 0
+    
+    ### Associations
+    # SnapshotSystem
+    SnapshotSystem_min = 3
+    SnapshotSystem_max = 3
+    # SnapshotApplication
+    SnapshotApplication_min = 6
+    SnapshotApplication_max = 6
+    # PredSuccSystem
+    PredSuccSystem_min = 2
+    PredSuccSystem_max = 2
+    # PredSuccApplication
+    PredSuccApplication_min = 4
+    PredSuccApplication_max = 4
+    # SystemApplication
+    SystemApplication_min = 6
+    SystemApplication_max = 6
+    
+    ### Additional configurations
+    aggregationcyclefreeness = on
+    forbiddensharing = on
+    \end{lstlisting}
+    \end{minipage}
+    \caption{Configuration file used for Fig. \ref{fig:object_diagram_liveness}.}
+    \label{lst:configuration_file}
+\end{figure}
+
 When executed with these parameters, the Model Validator attempts to find a valid 
 model instance that satisfies all constraints—including both the filmstrip model 
 invariants and our translated temporal properties. If such an instance exists, the 
@@ -201,145 +269,20 @@ liveness requirement. The diagram shows three snapshots representing the system'
 state at different points in time, connected by two operation calls: \texttt{load} 
 followed by \texttt{install}.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=1\textwidth]{figures/c2/ObjectDiagram_Liveness_LoadInstall.png}
+    \caption{Object Diagram returned by the Model Validator.}
+    \label{fig:object_diagram_liveness}
+\end{figure}
+
 You may notice the custom \texttt{id} attribute present in Figure \ref{fig:class_diagram_software_system}
 and Figure \ref{fig:object_diagram_liveness}. We manually added this attribute to help 
 identify corresponding objects across different snapshots. For example, the scenario 
 shows three Application objects with an identical \texttt{id} value of 0, indicating 
 they represent the same logical entity at different points in time. This attribute 
 is not part of the standard filmstrip model, and we will explain the implementation 
-details and necessary constraints for maintaining object identity in Chapter 3. 
+details and necessary constraints for maintaining object identity in section \ref{sec:translation}. 
 This validation confirms that our Software System model can satisfy the temporal 
 behavior specified by the liveness property.
-
-
-
-\begin{figure}[htbp]
-\caption{Configuration file used for Fig. \ref{fig:object_diagram_liveness}.}
-\label{lst:configuration_file}
-
-\begin{minipage}[t]{0.48\textwidth}
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
-Integer_min = 0
-Integer_max = 100
-String_max = 10
-Real_min = -2.0
-Real_max = 2.0
-Real_step = 0.5
-
-### Classes
-# Snapshot
-Snapshot_min = 3
-Snapshot_max = 3
-# Filmstrip
-Filmstrip_min = 2
-Filmstrip_max = 2
-# System
-System_min = 3
-System_max = 3
-# Application
-Application_min = 6
-Application_max = 6
-
-### Operation Classes
-# load_SystemOpC
-load_SystemOpC_min = 1
-load_SystemOpC_max = 1
-# install_SystemOpC
-install_SystemOpC_min = 1
-install_SystemOpC_max = 1
-\end{lstlisting}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
-# run_SystemOpC
-run_SystemOpC_min = 0
-run_SystemOpC_max = 0
-# stop_SystemOpC
-stop_SystemOpC_min = 0
-stop_SystemOpC_max = 0
-
-### Associations
-# SnapshotSystem
-SnapshotSystem_min = 3
-SnapshotSystem_max = 3
-# SnapshotApplication
-SnapshotApplication_min = 6
-SnapshotApplication_max = 6
-# PredSuccSystem
-PredSuccSystem_min = 2
-PredSuccSystem_max = 2
-# PredSuccApplication
-PredSuccApplication_min = 4
-PredSuccApplication_max = 4
-# SystemApplication
-SystemApplication_min = 6
-SystemApplication_max = 6
-
-### Additional configurations
-aggregationcyclefreeness = on
-forbiddensharing = on
-\end{lstlisting}
-\end{minipage}
-\end{figure}
     
-% \begin{lstlisting}[
-%     caption={Configuration file used for Fig. \ref{fig:object_diagram_liveness}.},
-%     label={lst:configuration_file}
-% ]
-% Integer_min = 0
-% Integer_max = 100
-% String_max = 10
-% Real_min = -2.0
-% Real_max = 2.0
-% Real_step = 0.5
-
-% ### Classes
-% # Snapshot
-% Snapshot_min = 3
-% Snapshot_max = 3
-% # Filmstrip
-% Filmstrip_min = 2
-% Filmstrip_max = 2
-% # System
-% System_min = 3
-% System_max = 3
-% # Application
-% Application_min = 6
-% Application_max = 6
-
-% ### Operation Classes
-% # load_SystemOpC
-% load_SystemOpC_min = 1
-% load_SystemOpC_max = 1
-% # install_SystemOpC
-% install_SystemOpC_min = 1
-% install_SystemOpC_max = 1
-% # run_SystemOpC
-% run_SystemOpC_min = 0
-% run_SystemOpC_max = 0
-% # stop_SystemOpC
-% stop_SystemOpC_min = 0
-% stop_SystemOpC_max = 0
-
-% ### Associations
-% # SnapshotSystem
-% SnapshotSystem_min = 3
-% SnapshotSystem_max = 3
-% # SnapshotApplication
-% SnapshotApplication_min = 6
-% SnapshotApplication_max = 6
-% # PredSuccSystem
-% PredSuccSystem_min = 2
-% PredSuccSystem_max = 2
-% # PredSuccApplication
-% PredSuccApplication_min = 4
-% PredSuccApplication_max = 4
-% # SystemApplication
-% SystemApplication_min = 6
-% SystemApplication_max = 6
-
-% ### Additional configurations
-% aggregationcyclefreeness = on
-% forbiddensharing = on
-% \end{lstlisting}

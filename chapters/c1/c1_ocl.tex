@@ -39,9 +39,9 @@ The \texttt{System} class defines the following operations:
     \item \texttt{stop(app : Application)}: stops the application \textit{app} given as a parameter that should be running, removing it from the \texttt{runningApps} collection.
 \end{itemize}
 
-\subsection{OCL Constraints}
 
-Listing \ref{lst:ocl_constraints} demonstrates three typical aspects of OCL constraints. 
+\subsection{OCL Constraints}
+\hspace{1cm} Listing \ref{lst:ocl_constraints} demonstrates three typical aspects of OCL constraints. 
 First, the \texttt{memoryConstraint} ensures system integrity by verifying that the 
 system's free memory is non-negative, preventing memory overallocation. 
 Second, the \texttt{notLoadedAndInstalled} constraint demonstrates OCL's ability to work with 
@@ -115,17 +115,19 @@ and quantifiers (forAll, exists) for building complex logical statements.
 \subsection{OCL Limitations}
 
 \subsubsection{Temporal Dimension}
-To illustrate the temporal limits of OCL, let us consider the following temporal 
+\hspace{1cm} To illustrate the temporal limits of OCL, let us consider the following temporal 
 properties of our software system: 
 
-\begin{mdframed}
-    \item \textbf{Safety 1:} An application loading must precede its run.
-    \item \textbf{Safety 2:} There must be an install operation between an application's loading and its running.
-    \item \textbf{Safety 3:} Each application can be loaded at most one time.
-    \item \textbf{Liveness:} Every loaded application will eventually be installed.
+\begin{figure}
+    \begin{mdframed}
+        \item \textbf{Safety 1:} An application loading must precede its run.
+        \item \textbf{Safety 2:} There must be an install operation between an application's loading and its running.
+        \item \textbf{Safety 3:} Each application can be loaded at most one time.
+        \item \textbf{Liveness:} Every loaded application will eventually be installed.
+    \end{mdframed}        
     \captionof{figure}{Temporal properties of the software system.}
     \label{fig:temporal_properties}
-\end{mdframed}
+\end{figure}
 
 Such temporal properties are impossible to specify in OCL without at least enriching 
 the model structure with state variables. In temporal logics, we formally distinguish 
@@ -141,7 +143,7 @@ states of the model at arbitrary points in time—OCL has a very limited tempora
 dimension.
 
 \subsubsection{Events}
-OCL also has significant limitations in handling events. An event is a predicate that 
+\hspace{1cm} OCL also has significant limitations in handling events. An event is a predicate that 
 holds at different instants of time . Mathematically, it can be represented as a 
 function 
 $P : \text{Time} \rightarrow {\text{true}, \text{false}}$ 
