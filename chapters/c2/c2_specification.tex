@@ -11,42 +11,16 @@ verification of temporal properties.
 %%%%% TOCL
 \subsection{Temporal OCL (TOCL)}
 
-\hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
-extends the Object Constraint Language (OCL) to address a fundamental limitation: 
-the inability to specify constraints that span multiple system states over time. 
-While standard OCL excels at defining invariants within a single state or basic 
-pre/post-condition constraints for operations, it lacks the expressiveness needed 
-for complex temporal behaviors. TOCL overcomes this limitation by incorporating 
-elements from linear temporal logic while preserving OCL's familiar syntax and type 
-system, making it particularly valuable for modeling reactive systems, concurrent 
-processes, and real-time applications where temporal reasoning is essential.
+\hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, extends the Object Constraint Language (OCL) to address a fundamental limitation: the inability to specify constraints that span multiple system states over time. While standard OCL excels at defining invariants within a single state or basic pre/post-condition constraints for operations, it lacks the expressiveness needed for complex temporal behaviors. TOCL overcomes this limitation by incorporating elements from linear temporal logic while preserving OCL's familiar syntax and type system, making it particularly valuable for modeling reactive systems, concurrent processes, and real-time applications where temporal reasoning is essential.
 
-TOCL defines its semantic framework over an infinite sequence of system states 
-$\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal 
-constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. 
-Here, $i$ represents the current state index in the sequence, and $\beta$ is a 
-variable assignment. This framework enables reasoning about both the future and 
-past evolution of system states, providing a comprehensive approach to temporal 
-specification. Unlike standard OCL invariants that apply to a single state, TOCL 
-invariants implicitly apply an "always" condition, meaning constraints must hold 
-across the entire state sequence unless otherwise specified.
-
-A notable feature of TOCL is its treatment of operations through "process types", 
-which represent operations as entities existing only in two consecutive states: 
-before and after execution. Each operation in a class has a corresponding process 
-type that exists across these two states—the pre-state where the process instance is 
-"new" (\texttt{process.oclIsNew()} is true), and the post-state after the operation 
-completes. This mechanism allows TOCL to track operation occurrences and their 
-effects on the system state. While TOCL reuses OCL's navigation 
-expressions, collection operations, and quantifiers, it extends these with temporal 
-capabilities that span multiple states rather than being limited to a single snapshot.
+TOCL defines its semantic framework over an infinite sequence of system states $\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. Here, $i$ represents the current state index in the sequence, and $\beta$ is a variable assignment. This framework enables reasoning about both the future and past evolution of system states, providing a comprehensive approach to temporal specification. Unlike standard OCL invariants that apply to a single state, TOCL invariants implicitly apply an "always" condition, meaning constraints must hold across the entire state sequence unless otherwise specified.
 
 The expressive power of TOCL comes from its temporal operators, which enable precise 
 specification of how properties evolve over time. These operators form the core of 
 TOCL's extension to standard OCL, allowing constraints to reference past states, 
-future states, and temporal relationships between events. By providing mechanisms 
-to reason about both historical behavior and future evolution of the system, these 
-operators significantly enhance OCL's ability to express dynamic properties.
+future states. By providing mechanisms to reason about both historical behavior and 
+future evolution of the system, these operators significantly enhance OCL's ability 
+to express dynamic properties.
 
 TOCL organizes its temporal operators into two categories:
 
@@ -68,8 +42,11 @@ TOCL organizes its temporal operators into two categories:
     \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true. 
 \end{itemize}
 
-To demonstrate TOCL's capabilities, we apply it to the first two temporal properties 
-from our Software System example \ref{fig:temporal_properties}:
+In TOCL, the expressions $e$, $e_1$, and $e_2$ represent boolean OCL expressions that evaluate to either true or false within a specific system state. These expressions may encompass standard OCL constructs, such as attribute access, navigation through associations, or operations on collections. The temporal operators specify the conditions under which these expressions must hold across a sequence of states, thereby extending OCL's traditionally static constraints into a dynamic, temporal framework.
+
+The semantics of TOCL's temporal operators are formally grounded in state sequences and set theory, providing a rigorous basis for their evaluation. Consider a state sequence beginning at an initial state $i = 0$. The operator \texttt{next $e$} holds true at state $i$ if $e$ is true at state $i+1$, while \texttt{always $e$} requires $e$ to hold for all states $j \geq i$. Conversely, \texttt{sometime $e$} is satisfied if $e$ holds for at least one state $j \geq i$. For past-oriented operators, \texttt{previous $e$} is true at state $i$ if $e$ held at state $i-1$, with special consideration at the initial state ($i = 0$). These definitions enable precise reasoning about temporal relationships, making TOCL a powerful tool for specifying and verifying system properties.
+
+To demonstrate TOCL's capabilities, we apply it to the first two temporal properties from our Software System example \ref{fig:temporal_properties}:
 
 \begin{lstlisting}[
     style=toclstyle, 
@@ -96,22 +73,129 @@ inv safety2:
     )
 \end{lstlisting}
 
-TOCL can express properties spanning multiple states through state-based workarounds, 
-as shown in Listing \ref{lst:tocl_safety12}. For Safety 1, rather than directly 
-detecting the \texttt{load} operation call, TOCL uses \texttt{sometimePast} with 
-state predicates to infer that loading occurred before running based on collection 
-membership. Similarly, for Safety 2, TOCL uses the \texttt{before} operator with 
-state predicates to infer the sequencing of operations through their effects on 
-system state. While indirect, these specifications work because they only need to 
-track the order of state changes, not count specific events.
+TOCL can express properties spanning multiple states through state-based workarounds, as shown in Listing \ref{lst:tocl_safety12}. For Safety 1, rather than directly detecting the \texttt{load} operation call, TOCL uses \texttt{sometimePast} with state predicates to infer that loading occurred before running based on collection membership. Similarly, for Safety 2, TOCL uses the \texttt{before} operator with state predicates to infer the sequencing of operations through their effects on system state. While indirect, these specifications work because they only need to track the order of state changes, not count specific events.
 
-However, TOCL fundamentally cannot specify Safety 3: \textit{"Each application can 
-be loaded at most one time"}. This property requires counting operation call 
-occurrences, which cannot be inferred from state changes alone. Since TOCL lacks 
-constructs to identify when operations are called or to count events, it cannot 
-express constraints that limit how many times an operation occurs. This limitation 
-becomes a critical barrier when specifying common safety properties that restrict 
-operation frequencies.
+However, TOCL fundamentally cannot specify Safety 3: \textit{"Each application can be loaded at most one time"}. This property requires counting operation call occurrences, which cannot be inferred from state changes alone. Since TOCL lacks constructs to identify when operations are called or to count events, it cannot express constraints that limit how many times an operation occurs. This limitation becomes a critical barrier when specifying common safety properties that restrict operation frequencies.
+% \hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
+% extends the Object Constraint Language (OCL) to address a fundamental limitation: 
+% the inability to specify constraints that span multiple system states over time. 
+% While standard OCL excels at defining invariants within a single state or basic 
+% pre/post-condition constraints for operations, it lacks the expressiveness needed 
+% for complex temporal behaviors. TOCL overcomes this limitation by incorporating 
+% elements from linear temporal logic while preserving OCL's familiar syntax and type 
+% system, making it particularly valuable for modeling reactive systems, concurrent 
+% processes, and real-time applications where temporal reasoning is essential.
+
+% TOCL defines its semantic framework over an infinite sequence of system states 
+% $\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal 
+% constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. 
+% Here, $i$ represents the current state index in the sequence, and $\beta$ is a 
+% variable assignment. This framework enables reasoning about both the future and 
+% past evolution of system states, providing a comprehensive approach to temporal 
+% specification. Unlike standard OCL invariants that apply to a single state, TOCL 
+% invariants implicitly apply an "always" condition, meaning constraints must hold 
+% across the entire state sequence unless otherwise specified.
+
+% A notable feature of TOCL is its treatment of operations through "process types", 
+% which represent operations as entities existing only in two consecutive states: 
+% before and after execution. Each operation in a class has a corresponding process 
+% type that exists across these two states—the pre-state where the process instance is 
+% "new" (\texttt{process.oclIsNew()} is true), and the post-state after the operation 
+% completes. This mechanism allows TOCL to track operation occurrences and their 
+% effects on the system state. While TOCL reuses OCL's navigation 
+% expressions, collection operations, and quantifiers, it extends these with temporal 
+% capabilities that span multiple states rather than being limited to a single snapshot.
+
+% The expressive power of TOCL comes from its temporal operators, which enable precise 
+% specification of how properties evolve over time. These operators form the core of 
+% TOCL's extension to standard OCL, allowing constraints to reference past states, 
+% future states, and temporal relationships between events. By providing mechanisms 
+% to reason about both historical behavior and future evolution of the system, these 
+% operators significantly enhance OCL's ability to express dynamic properties.
+
+% TOCL organizes its temporal operators into two categories:
+
+% \paragraph{Future Operators:} 
+% \begin{itemize} 
+%     \item \textbf{next $e$:} True if $e$ holds in the next state (state $i+1$). 
+%     \item \textbf{always $e$:} True if $e$ holds in the current state and all subsequent states (all states $j \geq i$). 
+%     \item \textbf{sometime $e$:} True if $e$ holds in the current state or at least one future state (some state $j \geq i$). 
+%     \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true. 
+%     \item \textbf{sometime $e_1$ before $e_2$:} True if $e_1$ becomes true at some point before $e_2$ does. 
+% \end{itemize}
+
+% \paragraph{Past Operators:} 
+% \begin{itemize} 
+%     \item \textbf{previous $e$:} True if $e$ was true in the previous state or if at the initial state ($i = 0$). 
+%     \item \textbf{alwaysPast $e$:} True if $e$ was true in all past states (all states $0 \leq j < i$). 
+%     \item \textbf{sometimePast $e$:} True if $e$ was true in at least one past state (some state $0 \leq j < i$). 
+%     \item \textbf{always $e_1$ since $e_2$:} True if $e_1$ has been true since the last time $e_2$ was true. 
+%     \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true. 
+% \end{itemize}
+
+% In TOCL, the expressions $e$, $e_1$, and $e_2$ represent boolean OCL expressions 
+% that evaluate to either true or false within a specific system state. These 
+% expressions may encompass standard OCL constructs, such as attribute access, 
+% navigation through associations, or operations on collections. The temporal 
+% operators specify the conditions under which these expressions must hold across 
+% a sequence of states, thereby extending OCL’s traditionally static constraints 
+% into a dynamic, temporal framework. This capability allows TOCL to capture the 
+% evolution of system properties over time with precision and clarity.
+
+% % Highlighting the role of invariants in TOCL
+% Temporal operators play a critical role in defining invariants within TOCL, which are constraints required to hold across an entire state sequence. By default, TOCL invariants are implicitly prefixed with the \texttt{always} operator, mandating their truth in every state unless explicitly altered by other temporal operators. This flexibility allows for the specification of complex temporal properties. For instance, \texttt{always (self.state = 'active' implies sometime self.state = 'idle')} ensures that whenever the system enters an active state, it will eventually transition to an idle state. Similarly, \texttt{always self.running since self.started} stipulates that the system remains running continuously from the moment it starts, demonstrating TOCL’s capacity to express both liveness and persistence properties.
+
+% % Formalizing the semantics of TOCL operators
+% The semantics of TOCL’s temporal operators are formally grounded in state sequences and set theory, providing a rigorous basis for their evaluation. Consider a state sequence beginning at an initial state $i = 0$. The operator \texttt{next $e$} holds true at state $i$ if $e$ is true at state $i+1$, while \texttt{always $e$} requires $e$ to hold for all states $j \geq i$. Conversely, \texttt{sometime $e$} is satisfied if $e$ holds for at least one state $j \geq i$. For past-oriented operators, \texttt{previous $e$} is true at state $i$ if $e$ held at state $i-1$, with special consideration at the initial state ($i = 0$). These definitions enable precise reasoning about temporal relationships, making TOCL a powerful tool for specifying and verifying system properties.
+
+% % Illustrating practical applications of TOCL operators
+% The practical utility of TOCL’s temporal operators is evident in their ability to specify a diverse range of system properties. For safety properties, \texttt{always not self.errorState} ensures that the system never enters an erroneous condition. Liveness properties, such as \texttt{sometime self.goalState}, guarantee that a desired state is eventually achieved. Fairness constraints, like \texttt{always sometime self.resourceAllocated}, ensure that resources are allocated repeatedly over time. A concrete example from a traffic light system, \texttt{always (self.color = 'red' implies sometime self.color = 'green')}, captures the critical liveness property that a red light must eventually be followed by a green light, illustrating TOCL’s applicability to real-world dynamic systems.
+
+
+% To demonstrate TOCL's capabilities, we apply it to the first two temporal properties 
+% from our Software System example \ref{fig:temporal_properties}:
+
+% \begin{lstlisting}[
+%     style=toclstyle, 
+%     caption={TOCL Specification for Safety Properties.}, 
+%     label={lst:tocl_safety12}
+% ]
+% context System 
+% /*
+% An application loading must precede its run.
+% */
+% inv safety1: 
+%     self.runningApps->notEmpty() implies 
+%     self.runningApps->forAll(app | 
+%         sometimePast self.loadedApps->includes(app)
+%     )
+% /*
+% There must be an install operation between loading and running.
+% */
+% inv safety2: 
+%     self.loadedApps->notEmpty() implies 
+%     self.loadedApps->forAll(app | 
+%         sometime self.installedApps->includes(app) 
+%         before self.runningApps->includes(app)
+%     )
+% \end{lstlisting}
+
+% TOCL can express properties spanning multiple states through state-based workarounds, 
+% as shown in Listing \ref{lst:tocl_safety12}. For Safety 1, rather than directly 
+% detecting the \texttt{load} operation call, TOCL uses \texttt{sometimePast} with 
+% state predicates to infer that loading occurred before running based on collection 
+% membership. Similarly, for Safety 2, TOCL uses the \texttt{before} operator with 
+% state predicates to infer the sequencing of operations through their effects on 
+% system state. While indirect, these specifications work because they only need to 
+% track the order of state changes, not count specific events.
+
+% However, TOCL fundamentally cannot specify Safety 3: \textit{"Each application can 
+% be loaded at most one time"}. This property requires counting operation call 
+% occurrences, which cannot be inferred from state changes alone. Since TOCL lacks 
+% constructs to identify when operations are called or to count events, it cannot 
+% express constraints that limit how many times an operation occurs. This limitation 
+% becomes a critical barrier when specifying common safety properties that restrict 
+% operation frequencies.
 
 
 %%%%% Event
@@ -328,10 +412,12 @@ I[e_{ic} \text{ at least } k \text{ times}](\tau) = \text{true} \iff \text{count
 % \end{split}
 % \end{equation}
 
-These formal definitions provide a clean, process-type-free semantics for TOCL+'s 
-event constructs and bounded existence operators. By directly associating events with 
-state transitions and state changes, we establish a foundation for the verification 
-approach described in the next section.
+These formal definitions provide a clean, precise semantics for TOCL+'s event constructs and bounded existence operators. By directly associating events with concrete state transitions and state changes, we establish a solid mathematical foundation for the verification approach described in the next section.
+
+% These formal definitions provide a clean, process-type-free semantics for TOCL+'s 
+% event constructs and bounded existence operators. By directly associating events with 
+% state transitions and state changes, we establish a foundation for the verification 
+% approach described in the next section.
 
 
 \subsection{TOCL+ Grammar}

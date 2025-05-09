@@ -37,27 +37,27 @@
 \contentsline {paragraph}{Future Operators:}{23}{section*.13}%
 \contentsline {paragraph}{Past Operators:}{23}{section*.14}%
 \contentsline {subsection}{\numberline {2.2.2}TOCL+: An Extension of TOCL}{25}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{27}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Formal Definition for Event constructs}{28}{subsection.2.2.3}%
 \contentsline {paragraph}{isCalled(op(a$_1$, \ldots , a$_N$))}{28}{section*.16}%
-\contentsline {paragraph}{becomesTrue(P)}{28}{section*.17}%
+\contentsline {paragraph}{becomesTrue(P)}{29}{section*.17}%
 \contentsline {paragraph}{Bounded Existence Constructs}{29}{section*.18}%
 \contentsline {subsection}{\numberline {2.2.4}TOCL+ Grammar}{30}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Verification of TOCL+ Properties}{32}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Step 1: Transforming the Application Model into a Filmstrip Model}{33}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Step 1: Transforming the Application Model into a Filmstrip Model}{34}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Step 2: Translating TOCL+ Properties into OCL Expressions}{35}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Step 3: Verifying the translated OCL expressions}{36}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}Implementation of TOCL+ to OCL Transformation}{38}{section.2.4}%
+\contentsline {subsection}{\numberline {2.3.3}Step 3: Verifying the translated OCL expressions}{37}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Implementation of TOCL+ to OCL Transformation}{39}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Related Work}{45}{section.2.5}%
 \contentsline {section}{\numberline {2.6}Summary}{46}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Implementation and Experiment}{47}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{47}{section.3.1}%
-\contentsline {section}{\numberline {3.2}TOCL+ Tool Support and Implementation}{48}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Case study: Software System model}{49}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Model Specification}{49}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Temporal Property Verification}{51}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Analysis of Results}{53}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Discussion}{54}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Summary}{56}{section.3.5}%
-\contentsline {chapter}{Conclusion}{59}{section.3.5}%
-\contentsline {chapter}{REFERENCES}{63}{chapter*.25}%
-\contentsline {chapter}{APPENDIX}{64}{chapter*.25}%
+\contentsline {chapter}{\numberline {3}Implementation and Experiment}{48}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{48}{section.3.1}%
+\contentsline {section}{\numberline {3.2}TOCL+ Tool Support and Implementation}{49}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Case study: Software System model}{50}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Model Specification}{50}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Temporal Property Verification}{52}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Analysis of Results}{54}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Discussion}{55}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Summary}{57}{section.3.5}%
+\contentsline {chapter}{Conclusion}{60}{section.3.5}%
+\contentsline {chapter}{REFERENCES}{64}{chapter*.25}%
+\contentsline {chapter}{APPENDIX}{65}{chapter*.25}%

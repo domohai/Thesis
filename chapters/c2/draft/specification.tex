@@ -136,6 +136,92 @@
 % the software system case study introduced in Chapter 1:
 
 
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Description of TOCL Temporal Operators}
+
+The expressive power of TOCL comes from its temporal operators, which enable precise specification of how properties evolve over time. These operators form the core of TOCL's extension to standard OCL, allowing constraints to reference past states, future states, and temporal relationships between events. By providing mechanisms to reason about both historical behavior and future evolution of the system, these operators significantly enhance OCL's ability to express dynamic properties.
+
+TOCL organizes its temporal operators into two categories:
+
+\subsection*{Future Operators:}
+\begin{itemize}
+    \item \textbf{next $e$:} True if $e$ holds in the next state (state $i+1$).
+    \item \textbf{always $e$:} True if $e$ holds in the current state and all subsequent states (all states $j \geq i$).
+    \item \textbf{sometime $e$:} True if $e$ holds in the current state or at least one future state (some state $j \geq i$).
+    \item \textbf{always $e_1$ until $e_2$:} True if $e_1$ remains true until $e_2$ becomes true.
+    \item \textbf{sometime $e_1$ before $e_2$:} True if $e_1$ becomes true at some point before $e_2$ does.
+\end{itemize}
+
+\subsection*{Past Operators:}
+\begin{itemize}
+    \item \textbf{previous $e$:} True if $e$ was true in the previous state or if at the initial state ($i = 0$).
+    \item \textbf{alwaysPast $e$:} True if $e$ was true in all past states (all states $0 \leq j < i$).
+    \item \textbf{sometimePast $e$:} True if $e$ was true in at least one past state (some state $0 \leq j < i$).
+    \item \textbf{always $e_1$ since $e_2$:} True if $e_1$ has been true since the last time $e_2$ was true.
+    \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true.
+\end{itemize}
+
+% Adding detailed explanation below the original description
+\section*{Detailed Explanation of TOCL Temporal Operators}
+
+\subsection*{What is $e$?}
+In the context of TOCL’s temporal operators, $e$, $e_1$, and $e_2$ represent \textbf{boolean expressions} written in OCL. These expressions evaluate to true or false in a given system state and can leverage OCL’s full expressive power, including attribute access (e.g., \texttt{self.balance > 0}), navigation through associations (e.g., \texttt{self.orders->size() > 0}), or collection operations (e.g., \texttt{collection->isEmpty()}). The role of $e$ is critical because temporal operators define \textit{when} and \textit{how} these expressions must hold across a sequence of states, extending OCL’s static constraints into the temporal domain.
+
+\subsection*{Integration into OCL Expressions}
+TOCL’s temporal operators are integrated into OCL as \textbf{prefix operators}, meaning they are placed before the boolean OCL expressions they modify. For example, an expression like \texttt{always self.balance >= 0} applies the \texttt{always} operator to the condition \texttt{self.balance >= 0}. This structure allows temporal operators to seamlessly extend OCL’s syntax while maintaining compatibility with its existing constructs.
+
+The production rules for TOCL extend OCL’s grammar to include these temporal expressions. A simplified representation of the syntax might look like:
+\begin{verbatim}
+TemporalExpr ::= 'next' OclExpression
+               | 'always' OclExpression
+               | 'sometime' OclExpression
+               | 'always' OclExpression 'until' OclExpression
+               | 'sometime' OclExpression 'before' OclExpression
+               | 'previous' OclExpression
+               | 'alwaysPast' OclExpression
+               | 'sometimePast' OclExpression
+               | 'always' OclExpression 'since' OclExpression
+               | 'sometime' OclExpression 'since' OclExpression
+\end{verbatim}
+Here, \texttt{OclExpression} is any valid OCL expression that evaluates to a boolean value. This formal extension ensures that temporal operators can be parsed and evaluated within the OCL framework.
+
+\subsection*{Role in Invariants}
+In TOCL, temporal operators are particularly significant within \textbf{invariants}, which are constraints that must hold across the entire state sequence of a system. By default, invariants in TOCL are implicitly prefixed with \texttt{always}, meaning they must be true in every state unless explicitly modified. Temporal operators enhance this by allowing more flexible and dynamic specifications. For instance:
+\begin{itemize}
+    \item \texttt{always (self.state = 'active' implies sometime self.state = 'idle')} ensures that whenever the system is active, it will eventually transition to an idle state.
+    \item \texttt{always self.running since self.started} guarantees that once the system starts, it remains running continuously.
+\end{itemize}
+This capability makes TOCL ideal for specifying properties like safety (e.g., “something bad never happens”) and liveness (e.g., “something good eventually happens”).
+
+\subsection*{Formal Semantics}
+The behavior of TOCL’s temporal operators is rigorously defined using state sequences and set theory, as outlined in the TOCL paper. For a state sequence starting at an initial state $i = 0$, key definitions include:
+\begin{itemize}
+    \item \texttt{next $e$}: True at state $i$ if $e$ is true at state $i+1$.
+    \item \texttt{always $e$}: True at state $i$ if $e$ holds for all states $j \geq i$.
+    \item \texttt{sometime $e$}: True at state $i$ if $e$ holds for some state $j \geq i$.
+    \item \texttt{previous $e$}: True at state $i$ if $e$ was true at state $i-1$ (or at $i = 0$ if no prior state exists).
+\end{itemize}
+These formal definitions provide a precise foundation for reasoning about system behavior over time.
+
+\subsection*{Practical Applications}
+Temporal operators in TOCL enable the specification of a wide range of dynamic properties. Common use cases include:
+\begin{itemize}
+    \item \textbf{Safety}: \texttt{always not self.errorState} ensures that the system never enters an error state.
+    \item \textbf{Liveness}: \texttt{sometime self.goalState} guarantees that a desired state is eventually reached.
+    \item \textbf{Fairness}: \texttt{always sometime self.resourceAllocated} ensures that a resource is allocated repeatedly over time.
+\end{itemize}
+A practical example might be a traffic light system: \texttt{always (self.color = 'red' implies sometime self.color = 'green')} ensures that after a red light, the system will eventually turn green, capturing a critical liveness property.
+
+This enhanced description provides a deeper understanding of TOCL’s temporal operators, their syntax, and their practical utility in modeling dynamic systems.
+
+\end{document}
+
 \subsection{Event Constructs in OCL}
 % To overcome the limitations of TOCL in specifying event-based properties, we
 % we propose an extension to TOCL that supports specifying events. The notion of event is
