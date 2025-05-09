@@ -1,7 +1,5 @@
 \section{TOCL+ Tool Support and Implementation}
 
-% \subsection{Support tool architecture}
-
 \hspace{1cm} Figure \ref{sec:plugin_support_tool_architecture} illustrates the 
 architecture and workflow of our TOCL+ support tool. This integrated verification 
 framework combines several components: the existing USE environment, the Filmstrip 
@@ -26,13 +24,14 @@ converting temporal specifications into equivalent OCL constraints. These genera
 constraints are added to the list of invariants in the output model file alongside 
 the filmstrip model elements.
 
-To complete the verification process, the user loads this output model back into 
-USE together with a configuration file that establishes search bounds, and then 
-employs the Model Validator to analyze the constraints. The validator systematically 
-explores the search space, determining whether the temporal properties are satisfied 
-and providing a model instance as evidence when applicable.
+Finally, the user loads the output model into USE with a configuration file setting search bounds, then uses the Model Validator to analyze the constraints. The validator explores the search space to determine property satisfaction and provides model instances as evidence when applicable.
+% To complete the verification process, the user loads this output model back into 
+% USE together with a configuration file that establishes search bounds, and then 
+% employs the Model Validator to analyze the constraints. The validator systematically 
+% explores the search space, determining whether the temporal properties are satisfied 
+% and providing a model instance as evidence when applicable.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/c3/Architecture_overview.png}
     \caption{Support Tool Architecture and Verification Workflow.}
@@ -46,6 +45,7 @@ process, including the translation rules for different temporal operators and ev
 constructs, were presented previously in Section \ref{sec:translation}. Our implementation 
 follows the transformation patterns established in Chapter 2 and integrates them into 
 the workflow described above.
+
 % Our primary contribution in this architecture is the TOCL+ plugin, specifically 
 % the TOCL+ to OCL transformation component that enables the verification of temporal 
 % properties using existing OCL tools. The implementation details of this transformation 

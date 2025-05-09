@@ -24,7 +24,7 @@ file. The validator explores possible system states, reporting either SATISFIABL
 (when a valid system state exists that satisfies all constraints) or UNSATISFIABLE 
 (when no valid state can satisfy all constraints simultaneously).
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/c2/Verification_approach_1.png}
     \caption{Verification approach.}
@@ -39,10 +39,10 @@ System example from Figure \ref{fig:class_diagram_software_system}.
 
 \hspace{1cm} The first step in our verification approach applies the filmstripping 
 technique (described in Section~\ref{subsec:filmstripping}) to transform our Software 
-System model into a static representation. Rather than repeating the general 
-transformation process, we focus here on the specific application to our example 
-and how it enables subsequent verification steps.
-
+System model into a static representation. 
+% Rather than repeating the general 
+% transformation process, we focus here on the specific application to our example 
+% and how it enables subsequent verification steps.
 For our Software System model from Figure \ref{fig:class_diagram_software_system}, 
 the filmstrip transformation preserves the original classes (\texttt{System} and 
 \texttt{Application}) and their associations while introducing the filmstrip 
@@ -75,8 +75,9 @@ filmstrip model.
 
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={Pre and post conditions for load operation.}, 
-    label={lst:pre_post_load}
+    caption={Pre and post conditions for load operation}, 
+    label={lst:pre_post_load},
+    float=htb
 ]
 context System::load(app: Application)
     pre notLoaded: 
@@ -93,8 +94,9 @@ context System::load(app: Application)
 
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={Invariants for load\_SystemOpC}, 
-    label={lst:invariants_load_SystemOpC}
+    caption={Invariants for load\_SystemOpC class}, 
+    label={lst:invariants_load_SystemOpC},
+    float=htb
 ]
 context load_SystemOpC 
 inv pre_notLoaded:
@@ -145,8 +147,9 @@ the original property.
 
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={OCL translation of liveness property.}, 
-    label={lst:ocl_liveness}
+    caption={OCL translation of liveness property}, 
+    label={lst:ocl_liveness},
+    float=htb
 ]
 context System
 inv liveness:
@@ -187,7 +190,7 @@ and associations. These bounds define the scope within which the Model Validator
 explores possible system configurations. Listing \ref{lst:configuration_file} shows 
 one specific configuration used in our Software System example.
 
-\begin{figure}[htbp]
+\begin{figure}[htb]
     \begin{minipage}[t]{0.48\textwidth}
     \begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single]
     Integer_min = 0
@@ -252,7 +255,7 @@ one specific configuration used in our Software System example.
     forbiddensharing = on
     \end{lstlisting}
     \end{minipage}
-    \caption{Configuration file used for Fig. \ref{fig:object_diagram_liveness}.}
+    \caption{Configuration file used to verify the liveness property.}
     \label{lst:configuration_file}
 \end{figure}
 

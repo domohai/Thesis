@@ -11,9 +11,25 @@ verification of temporal properties.
 %%%%% TOCL
 \subsection{Temporal OCL (TOCL)}
 
-\hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, extends the Object Constraint Language (OCL) to address a fundamental limitation: the inability to specify constraints that span multiple system states over time. While standard OCL excels at defining invariants within a single state or basic pre/post-condition constraints for operations, it lacks the expressiveness needed for complex temporal behaviors. TOCL overcomes this limitation by incorporating elements from linear temporal logic while preserving OCL's familiar syntax and type system, making it particularly valuable for modeling reactive systems, concurrent processes, and real-time applications where temporal reasoning is essential.
+\hspace{1cm} Temporal OCL (TOCL), introduced by Ziemann and Gogolla \cite{TOCL}, 
+extends the Object Constraint Language (OCL) to address a fundamental limitation: 
+the inability to specify constraints that span multiple system states over time. 
+While standard OCL excels at defining invariants within a single state or basic 
+pre/post-condition constraints for operations, it lacks the expressiveness needed 
+for complex temporal behaviors. TOCL overcomes this limitation by incorporating 
+elements from linear temporal logic while preserving OCL's familiar syntax and type 
+system, making it particularly valuable for modeling reactive systems, concurrent 
+processes, and real-time applications where temporal reasoning is essential.
 
-TOCL defines its semantic framework over an infinite sequence of system states $\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. Here, $i$ represents the current state index in the sequence, and $\beta$ is a variable assignment. This framework enables reasoning about both the future and past evolution of system states, providing a comprehensive approach to temporal specification. Unlike standard OCL invariants that apply to a single state, TOCL invariants implicitly apply an "always" condition, meaning constraints must hold across the entire state sequence unless otherwise specified.
+TOCL defines its semantic framework over an infinite sequence of system states 
+$\hat{\sigma} = \langle \sigma_0, \sigma_1, \ldots \rangle$, where each temporal 
+constraint is evaluated within an environment $\tau = (\hat{\sigma}, i, \beta)$. 
+Here, $i$ represents the current state index in the sequence, and $\beta$ is a 
+variable assignment. This framework enables reasoning about both the future and 
+past evolution of system states, providing a comprehensive approach to temporal 
+specification. Unlike standard OCL invariants that apply to a single state, TOCL 
+invariants implicitly apply an "always" condition, meaning constraints must hold 
+across the entire state sequence unless otherwise specified.
 
 The expressive power of TOCL comes from its temporal operators, which enable precise 
 specification of how properties evolve over time. These operators form the core of 
@@ -42,16 +58,33 @@ TOCL organizes its temporal operators into two categories:
     \item \textbf{sometime $e_1$ since $e_2$:} True if $e_1$ has been true at some point since the last time $e_2$ was true. 
 \end{itemize}
 
-In TOCL, the expressions $e$, $e_1$, and $e_2$ represent boolean OCL expressions that evaluate to either true or false within a specific system state. These expressions may encompass standard OCL constructs, such as attribute access, navigation through associations, or operations on collections. The temporal operators specify the conditions under which these expressions must hold across a sequence of states, thereby extending OCL's traditionally static constraints into a dynamic, temporal framework.
+In TOCL, the expressions $e$, $e_1$, and $e_2$ represent boolean OCL expressions 
+that evaluate to either true or false within a specific system state. These 
+expressions may encompass standard OCL constructs, such as attribute access, 
+navigation through associations, or operations on collections. The temporal 
+operators specify the conditions under which these expressions must hold across 
+a sequence of states, thereby extending OCL's traditionally static constraints 
+into a dynamic, temporal framework.
 
-The semantics of TOCL's temporal operators are formally grounded in state sequences and set theory, providing a rigorous basis for their evaluation. Consider a state sequence beginning at an initial state $i = 0$. The operator \texttt{next $e$} holds true at state $i$ if $e$ is true at state $i+1$, while \texttt{always $e$} requires $e$ to hold for all states $j \geq i$. Conversely, \texttt{sometime $e$} is satisfied if $e$ holds for at least one state $j \geq i$. For past-oriented operators, \texttt{previous $e$} is true at state $i$ if $e$ held at state $i-1$, with special consideration at the initial state ($i = 0$). These definitions enable precise reasoning about temporal relationships, making TOCL a powerful tool for specifying and verifying system properties.
+The semantics of TOCL's temporal operators are formally grounded in state sequences 
+and set theory, providing a rigorous basis for their evaluation. Consider a state 
+sequence beginning at an initial state $i = 0$. The operator \texttt{next $e$} holds 
+true at state $i$ if $e$ is true at state $i+1$, while \texttt{always $e$} requires 
+$e$ to hold for all states $j \geq i$. Conversely, \texttt{sometime $e$} is satisfied 
+if $e$ holds for at least one state $j \geq i$. For past-oriented operators, 
+\texttt{previous $e$} is true at state $i$ if $e$ held at state $i-1$, with special 
+consideration at the initial state ($i = 0$). These definitions enable precise 
+reasoning about temporal relationships, making TOCL a powerful tool for specifying 
+and verifying system properties.
 
-To demonstrate TOCL's capabilities, we apply it to the first two temporal properties from our Software System example \ref{fig:temporal_properties}:
+To demonstrate TOCL's capabilities, we apply it to the first two temporal properties 
+from our Software System example \ref{fig:temporal_properties}:
 
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={TOCL Specification for Safety Properties.}, 
-    label={lst:tocl_safety12}
+    caption={TOCL Specification for Safety Properties}, 
+    label={lst:tocl_safety12},
+    float=htb
 ]
 context System 
 /*
@@ -217,7 +250,7 @@ transition from pre-state to post-state.
 boolean expression P. It identifies transitions where P changes from false to true 
 between consecutive states.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{figures/c2/events_visual.png}
     \caption{Events.}
@@ -251,11 +284,11 @@ operation call frequency:
 
 Applying TOCL+ to our Software System example from Chapter 1, we can express all 
 four temporal properties from Figure \ref{fig:temporal_properties}:
-
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={TOCL+ Specifications.}, 
-    label={lst:tocl+}
+    caption={TOCL+ Specifications}, 
+    label={lst:tocl+},
+    float=htb
 ]
 context System
 /*
@@ -412,7 +445,10 @@ I[e_{ic} \text{ at least } k \text{ times}](\tau) = \text{true} \iff \text{count
 % \end{split}
 % \end{equation}
 
-These formal definitions provide a clean, precise semantics for TOCL+'s event constructs and bounded existence operators. By directly associating events with concrete state transitions and state changes, we establish a solid mathematical foundation for the verification approach described in the next section.
+These formal definitions provide a clean, precise semantics for TOCL+'s event 
+constructs and bounded existence operators. By directly associating events with 
+concrete state transitions and state changes, we establish a solid mathematical 
+foundation for the verification approach described in the next section.
 
 % These formal definitions provide a clean, process-type-free semantics for TOCL+'s 
 % event constructs and bounded existence operators. By directly associating events with 
@@ -437,9 +473,9 @@ constructs. Listing \ref{lst:event_grammar} shows the key grammar productions
 for our event extensions.
 
 \begin{lstlisting}[
-    caption={EBNF Grammar for Event constructs.}, 
+    caption={EBNF Grammar for Event constructs}, 
     label={lst:event_grammar},
-    captionpos=b
+    float=htb
 ]
 primaryExp[Environment env] returns [ASTOclExpression ast]
         : literalExp[$env]

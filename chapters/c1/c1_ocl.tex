@@ -11,7 +11,7 @@ developed the Object Constraint Language (OCL) to address this limitation \cite{
 OCL is a formal assertion language with precise semantics that extends UML by 
 allowing developers to specify constraints that cannot be expressed graphically. 
 
-\begin{figure}
+\begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.8\textwidth]{figures/c1/SoftwareSystem/SS_Ver2_Gray.png}
         \caption{Class diagram of the Software System.}
@@ -54,7 +54,7 @@ applications have a positive size.
 
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={OCL constraints.}, 
+    caption={OCL constraints}, 
     label={lst:ocl_constraints}
 ]
 context System
@@ -88,7 +88,7 @@ available memory is reduced by the application's size.
 
 \begin{lstlisting}[
     style=toclstyle, 
-    caption={OCL rules.}, 
+    caption={OCL rules}, 
     label={lst:ocl_rules}
 ]
 pre notLoaded: not self.loadedApps->includes(app) and
@@ -118,7 +118,7 @@ and quantifiers (forAll, exists) for building complex logical statements.
 \hspace{1cm} To illustrate the temporal limits of OCL, let us consider the following temporal 
 properties of our software system: 
 
-\begin{figure}
+\begin{figure}[H]
     \begin{mdframed}
         \item \textbf{Safety 1:} An application loading must precede its run.
         \item \textbf{Safety 2:} There must be an install operation between an application's loading and its running.

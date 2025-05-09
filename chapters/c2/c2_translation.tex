@@ -25,7 +25,7 @@ respectively. For objects to navigate to their corresponding versions in adjacen
 states, we use the two associations \texttt{.pred[ObjectClass]} and \texttt{.succ[ObjectClass]}. These navigation mechanisms 
 form the foundation for implementing our temporal operator translations.
 The expressions contain square brackets that are placeholders; these placeholders
-will be explained below.
+will be explained later in this section.
 % To transform TOCL+ expressions, we defined translations for TOCL+ operators and 
 % events to OCL, as shown in Table \ref{tab:TOCL2OCL}. To create these translations, 
 % we utilized several query operations provided by the filmstrip structure. 
@@ -37,7 +37,7 @@ will be explained below.
 % form the foundation for implementing our temporal operator translations.
 
 Note that filmstrip model does not inherently provide any means to identify the same 
-logical object across different states - it only provides the \texttt{.pred} and \texttt{.succ} 
+logical object across different states - it only provides the \texttt{.pred[ObjectClass]} and \texttt{.succ[ObjectClass]} 
 associations to navigate between corresponding objects in adjacent snapshots. 
 In order to overcome this limitation, we require modelers to add an \texttt{id} attribute 
 to all classes in the application model. As seen in Figure \ref{fig:object_diagram_liveness}, 
@@ -46,7 +46,7 @@ Internally, when the TOCL+ plugin transforms the model, we add additional
 constraints (see Listing \ref{lst:additional_constraints}) to ensure this \texttt{id} remains consistent between different states. 
 This \texttt{id} attribute is critical in the OCL translation, particularly for event 
 constructs like \texttt{becomesTrue}. When navigating with expressions like 
-\texttt{self.snapshot.pred().[ContextObject]}, we get a collection of objects of the same 
+\texttt{self.snapshot.pred()}-\texttt{.[ContextObject]}, we get a collection of objects of the same 
 type, and we select the one with matching identity using \texttt{->any(o | o.id = self.id)}.
 % Note that filmstrip model does not inherently provide any means to identify the same 
 % logical object across different states - it only provides the .pred and .succ 
@@ -63,8 +63,9 @@ type, and we select the one with matching identity using \texttt{->any(o | o.id 
 
 \begin{lstlisting}[
     style=toclstyle,
-    caption={Additional constraints.},
-    label={lst:additional_constraints}
+    caption={Additional constraints},
+    label={lst:additional_constraints},
+    float=htb
 ]
 context Application
 inv ApplicationSameId: 
@@ -131,29 +132,16 @@ the \texttt{becomesTrue} event construct, showing how we extract the expression
 to be evaluated, establish the necessary context, and construct the translated OCL 
 expression. 
 
-After processing all the nodes in the parse tree, our implementation finalizes the 
-translation in the root node visit. Since TOCL+ is an extension of OCL, many 
-constructs remain unchanged and are directly preserved during translation. The 
-completion process begins by accessing the token stream to retrieve the complete 
-original expression text. Our implementation then systematically pops each translated 
-OCL fragment and its corresponding original TOCL+ expression from the stack. Using 
-string replacement operations, it substitutes each temporal construct with its 
-equivalent OCL translation while preserving the structure of the original expression. 
-This approach allows us to handle nested temporal operators naturally, as inner 
-expressions are processed before their containing expressions. The final translated 
-OCL constraint is then attached to the root of the parse tree and ultimately added 
-to the output model as an invariant. This complete process ensures that complex 
-temporal properties are accurately transformed into standard OCL constraints that 
-can be verified by the Model Validator.
-
 \begin{lstlisting}[
     style=javastyle,
-    caption={Translation of becomesTrue event to OCL.},
-    label={lst:becomesTrue_translation}
+    caption={Translation of becomesTrue event to OCL},
+    label={lst:becomesTrue_translation},
+    float=htb
 ]
 TokenStream tokens = parser.getTokenStream();
 String originalEvent = tokens.getText(ctx);
 String translatedEvent;
+
 // P
 String expressionToSatisfy = getOCL(ctx.getChild(2)); 
 // e.g., "system", "application"
@@ -176,8 +164,66 @@ eventStack.push(translatedEvent);
 eventStack.push(originalEvent);    
 \end{lstlisting}
 
+After processing all the nodes in the parse tree, our implementation finalizes the 
+translation in the root node visit. Since TOCL+ is an extension of OCL, many 
+constructs remain unchanged and are directly preserved during translation. The 
+completion process begins by accessing the token stream to retrieve the complete 
+original expression text. Our implementation then systematically pops each translated 
+OCL fragment and its corresponding original TOCL+ expression from the stack. Using 
+string replacement operations, it substitutes each temporal construct with its 
+equivalent OCL translation while preserving the structure of the original expression. 
+This approach allows us to handle nested temporal operators naturally, as inner 
+expressions are processed before their containing expressions. The final translated 
+OCL constraint is then attached to the root of the parse tree and ultimately added 
+to the output model as an invariant. This complete process ensures that complex 
+temporal properties are accurately transformed into standard OCL constraints that 
+can be verified by the Model Validator.
+
+% To demonstrate the translation process, we provide an example of a TOCL+ expression
+% for the liveness property specified using the \texttt{becomesTrue} event construct.
+% Listing \ref{lst:liveness_becomesTrue} shows the original TOCL+ expression and 
+% Listing \ref{lst:liveness_becomesTrue_translation} presents the corresponding
+% OCL translation.
+% Listing \ref{lst:liveness_becomesTrue} 
+% shows a TOCL+ specification for the liveness property using the \texttt{becomesTrue} 
+% event construct, while Listing \ref{lst:liveness_becomesTrue_translation} displays 
+% its corresponding OCL translation using the translation process presented in \ref{lst:becomesTrue_translation}. 
+% This example demonstrates how our implementation 
+% converts a concise, intuitive TOCL+ expression into a more complex OCL constraint 
+% that navigates through snapshots, accesses corresponding objects across states using 
+% identity attributes, and applies the temporal semantics defined in our translation 
+% patterns. By comparing these listings, readers can observe how the transformation 
+% preserves the original property's semantics while adapting it to the filmstrip model 
+% structure.
+Listing \ref{lst:liveness_becomesTrue} shows a TOCL+ specification for the liveness property using the \texttt{becomesTrue} event construct, while Listing \ref{lst:liveness_becomesTrue_translation} displays its corresponding OCL translation produced by the process presented in Listing \ref{lst:becomesTrue_translation}. This example illustrates our transformation approach, converting a concise TOCL+ expression into an equivalent OCL constraint that operates within the filmstrip model structure.
+
+\begin{lstlisting}[
+    style=toclstyle,
+    caption={Liveness property specification using becomesTrue event},
+    label={lst:liveness_becomesTrue},
+    float=htb
+]
+context Application
+inv livenessBecomesTrue:
+    self.system.loadedApps->includes(self) implies
+    sometime becomesTrue(self.system.installedApps->includes(self))
+\end{lstlisting}
+
+\begin{lstlisting}[
+    style=toclstyle,
+    caption={OCL translation of liveness property in Listing \ref{lst:liveness_becomesTrue}},
+    label={lst:liveness_becomesTrue_translation},
+    float=htb
+]
+context Application
+inv livenessBecomesTrue:
+    self.system.loadedApps->includes(self) implies
+    (let CS:Snapshot = self.snapshotApplication in Set{CS}->closure(s | s.succ())->excluding(null)->exists(s | (let currentObject = s.application->any(o | o.id = self.id) in let previousObject = s.pred().application->any(o | o.id = self.id) in not (previousObject.system.installedApps->includes(previousObject)) and (currentObject.system.installedApps->includes(currentObject)))))
+\end{lstlisting}
+
+\captionsetup{labelsep=space}
 \begin{longtable}{|>{\footnotesize}p{0.6cm}|>{\scriptsize\raggedright\arraybackslash}p{4cm}|>{\scriptsize\raggedright\arraybackslash}p{\dimexpr\textwidth-4.6cm-4\tabcolsep-3\arrayrulewidth\relax}|}
-    \caption{Translation of TOCL+ operators and events to OCL.}
+    \caption{Translation of TOCL+ operators and events to OCL}
     \label{tab:TOCL2OCL} \\
     \hline
     \textbf{No.} & \textbf{TOCL+} & \textbf{OCL Translation} \\
